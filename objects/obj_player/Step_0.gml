@@ -5,19 +5,20 @@ if(hp <= 0) game_restart();
 
 
 //Movement Variables
-left = keyboard_check(vk_left);
-right = keyboard_check(vk_right);
-down = keyboard_check(vk_down);
-up = keyboard_check(vk_up);
-z = keyboard_check(ord("Z"));
+left = keyboard_check(ord("A"));
+right = keyboard_check(ord("D"));
+down = keyboard_check(ord("S"));
+up = keyboard_check(ord("W"));
+shoot = mouse_check_button(mb_left);
 focus = keyboard_check(vk_shift);
+dodge = mouse_check_button_pressed(mb_right)
 var s = focus ? fspd:spd;
 
 //X & Y Direction Setting
 dx = (right - left);
 dy = (down - up);
 
-//Enemy Lock Mechanism
+/*//Enemy Lock Mechanism
 if(keyboard_check_pressed(vk_control) || !instance_exists(lock)) {
 	var ex = instance_exists(lock);
 	if(!ex) lock = instance_nearest(x, y, obj_enemy);
@@ -40,8 +41,8 @@ if(keyboard_check_pressed(vk_control) || !instance_exists(lock)) {
 	lcd = 120;
 }
 
-if(!(dx == 0 && dy == 0) && !(z || lock != noone)) image_angle= point_direction(0, 0, dx, dy);
-
+if(!(dx == 0 && dy == 0) && !(shoot || lock != noone)) image_angle= point_direction(0, 0, dx, dy);
+*/
 //Movement
 var theta = arctan2(dy, dx);
 
@@ -73,8 +74,12 @@ x += dx;
 y += dy;
 
 //Fireing bullets
-if(z && cd <= 0) {
-	var r = 50;
+if(shoot && cd <= 0) {
+	var theta = point_direction(x, y, mouse_x, mouse_y);
+	b =  instance_create_depth(x, y, 0, obj_bullet);
+	b.image_angle = theta;
+	b.theta = pi * (theta/180);
+	/*var r = 50;
 	for(c = -1; c < 2; c++) {
 		if(lock != noone) image_angle= point_direction(x, y, lock.x, lock.y);
 		b = focus ? instance_create_depth(x+c*r*cos(pi*c), y+c*r*sin(pi*c), 0, obj_bullet)
@@ -86,7 +91,7 @@ if(z && cd <= 0) {
 		b.t0 = t;
 		t++;
 	}
-	cd = 4;
+	cd = 4;*/
 }
 
 //Cooldown Updates

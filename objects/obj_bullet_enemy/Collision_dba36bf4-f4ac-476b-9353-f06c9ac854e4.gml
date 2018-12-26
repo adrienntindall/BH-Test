@@ -1,7 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-with(other) {
+if(other.dodging == false) {
+	with(other) {
 	hp--;	
-}
+	}
 
-instance_destroy();
+	instance_destroy();
+}

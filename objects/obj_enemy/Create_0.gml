@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Set variables
 // You can write your code in this editor
 t = 0;
 r = random(100) + 50;

@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "491d9954-6342-4136-ac58-8cba4c4b6140",
+            "Value": {
+                "id": "b39359b1-21eb-4193-9484-445d5fd9c4b4",
+                "resourcePath": "sprites\\sprite7\\sprite7.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4e00bb17-2603-461f-9a1e-e5f9adde4df9",
             "Value": {
                 "id": "223f9ab0-bfa1-4201-b67a-e1d16c263204",
@@ -287,11 +295,27 @@
             }
         },
         {
+            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
+            "Value": {
+                "id": "30483673-c504-438b-a63f-f1ac61fe30d4",
+                "resourcePath": "options\\linux\\options_linux.yy",
+                "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
             "Key": "aa391c9e-2cdd-4219-8e7a-f4e001e99723",
             "Value": {
                 "id": "c80be921-4691-410f-8bed-62660997b3cc",
                 "resourcePath": "views\\aa391c9e-2cdd-4219-8e7a-f4e001e99723.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ac984a4e-1b77-46e8-918b-c9a1bcdc9937",
+            "Value": {
+                "id": "f8a7a88a-aee1-4929-8c77-54f37e35728f",
+                "resourcePath": "sprites\\spr_bullet_enemy_2\\spr_bullet_enemy_2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -436,6 +460,14 @@
                 "id": "c2fd856b-a187-433c-bf0b-fa1fc7d629e9",
                 "resourcePath": "sprites\\spr_enemy\\spr_enemy.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
+            "Value": {
+                "id": "10902ff7-5b82-41c5-a98d-f631ceb34819",
+                "resourcePath": "options\\mac\\options_mac.yy",
+                "resourceType": "GMMacOptions"
             }
         }
     ],

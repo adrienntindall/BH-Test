@@ -11,3 +11,4 @@ fspd = 4;
 locks[0] = lock;
 t = 0;
 tilemap = layer_tilemap_get_id("Borders");
+dodging = false;
