@@ -5,3 +5,4 @@ parent = noone;
 spd = 3;
 life = 360;
 tilemap = layer_tilemap_get_id("Borders");
+t0 = 0;

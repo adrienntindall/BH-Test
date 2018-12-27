@@ -13,4 +13,5 @@ for (c = 0; c < n; c++) {
 	b.image_angle = theta*c;
 	b.theta = b.image_angle*pi/180;
 	b.parent = argument2;
+	b.t0 = t;
 }

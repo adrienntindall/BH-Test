@@ -54,24 +54,29 @@ y += dy;
 
 //Fireing bullets
 if(shoot && cd <= 0) {
-	var theta = point_direction(x, y, mouse_x, mouse_y);
-	b =  instance_create_depth(x, y, 0, obj_bullet);
-	b.image_angle = theta;
-	b.theta = pi * (theta/180);
-	cd = 4;
-	/*var r = 50;
-	for(c = -1; c < 2; c++) {
-		if(lock != noone) image_angle= point_direction(x, y, lock.x, lock.y);
-		b = focus ? instance_create_depth(x+c*r*cos(pi*c), y+c*r*sin(pi*c), 0, obj_bullet)
-				  : instance_create_depth(x, y, 0, obj_bullet);
-		//b.direction = image_angle;
-		b.image_angle = focus ? image_angle : image_angle+15*c;
-		b.theta = pi*b.image_angle/180;
-		b.image_alpha = .7;
-		b.t0 = t;
-		t++;
+	switch(focus ? global.weapon_alt : global.weapon) {
+		case weapon_list.simple:
+			var theta = point_direction(x, y, mouse_x, mouse_y);
+			b =  instance_create_depth(x, y, 0, obj_bullet);
+			b.image_angle = theta;
+			b.theta = pi * (theta/180);
+			cd = 4;
+			break;
+		case weapon_list.simple_alt:
+			var theta = point_direction(x, y, mouse_x, mouse_y);
+			b =  instance_create_depth(x, y, 0, obj_bullet_sin);
+			b.image_angle = theta;
+			b.theta = pi * (theta/180);
+			b.t0 = t;
+			t+=2;
+			cd = 4;
+			break;
+		case weapon_list.octo:
+			spawn_circular(8, obj_bullet_sin, id)
+			cd = 8;
+			t+=3;
+			break;
 	}
-	cd = 4;*/
 }
 
 if(bomb && bombs > 0) {

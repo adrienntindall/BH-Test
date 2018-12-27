@@ -8,3 +8,4 @@ t0 = 0;
 x0 = x;
 y0 = y;
 tilemap = layer_tilemap_get_id("Borders");
+parent = noone;

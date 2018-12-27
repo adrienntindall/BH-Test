@@ -11,7 +11,7 @@ if(select) switch(mpos) {
 		room_goto(room0);
 		break;
 	case options.weapons:
-		//room_goto(room_menu_weapons);
+		room_goto(room_menu_weapons);
 		break;
 	case options.armour:
 		//room_goto(room_menu_armour);
