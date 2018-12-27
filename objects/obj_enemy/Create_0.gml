@@ -12,6 +12,4 @@ n = random(5) + 3;
 
 dt = 1;
 
-locked = false;
-
 tilemap=layer_tilemap_get_id("Borders");

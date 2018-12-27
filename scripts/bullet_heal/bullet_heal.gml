@@ -1,11 +1,10 @@
-///bullet_heal(amnt, id)
+///bullet_heal(amnt)
 //@param {real} amnt  amount healed
-//@param {real} id  id of parent of bullet to destroy
 var amnt = argument0;
-var i = argument1;
+var i = id;
 
 with(obj_bullet_enemy) {
-	if(parent = i) {
+	if(parent == i) {
 		obj_player.hp += amnt;
 		instance_destroy();
 	}

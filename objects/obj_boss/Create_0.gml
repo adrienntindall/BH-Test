@@ -6,5 +6,3 @@ y0 = y;
 t = 0;
 
 hp = 250;
-
-locked = false;

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if(hp <= 0) {
-	bullet_heal(.002, id);
+	bullet_heal(.002);
 	instance_destroy();
 }
 
@@ -23,10 +23,5 @@ x = x0+r*cos(t/30);
 y = y0+r*sin(t/30);
 
 if(hp >3 ? t%40 == 0:t%20 == 0) {
-	spawn_circular(x, y, n, obj_bullet_enemy, id);
+	spawn_circular(n, obj_bullet_enemy, id);
 }
-
-if(locked) {
-	image_blend = c_red;	
-}
-else image_blend = -1;

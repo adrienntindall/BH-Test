@@ -4,13 +4,7 @@
 
 
 if(hp <= 0) {
-	var i = id;
-	with(obj_bullet_enemy) {
-		if(parent == i) {
-			obj_player.hp += .01;
-			instance_destroy();	
-		}
-	}
+	bullet_heal(.02);
 	instance_destroy();
 }
 
@@ -19,7 +13,7 @@ x = x0 + 150*sin(t/40);
 if(hp < 125) image_angle = (image_angle + 1) % 360;
 
 if(t % 60 == 0 && hp > 124) {
-	spawn_circular(x, y, 16, obj_bullet_enemy, id);
+	spawn_circular(16, obj_bullet_enemy, id);
 }
 else if (hp < 125 && t %40 == 0) {
 	for(c = 0; c < 16; c++) {
