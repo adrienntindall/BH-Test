@@ -2,8 +2,10 @@
 
 //Death
 if(hp <= 0) game_restart();
-
-
+if(keyboard_check_pressed(vk_escape)) {
+	
+	room_goto(room_menu_pause);
+}
 //Movement Variables
 left = keyboard_check(ord("A"));
 right = keyboard_check(ord("D"));
