@@ -3,6 +3,7 @@
 cd = 2;
 lock = noone;
 hp = 3;
+maxhp = 3;
 spd = 7;
 fspd = 4;
 t = 0;
