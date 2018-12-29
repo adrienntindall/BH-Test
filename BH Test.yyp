@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "4e07a7ac-dd45-4eb0-b78c-ff0c3083a81a",
+            "Value": {
+                "id": "157b5a45-3fdb-4a75-8a05-9915bcb03c0a",
+                "resourcePath": "scripts\\split_room\\split_room.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "53bdf5f9-e4a3-4a49-9471-c720d8e126ac",
             "Value": {
                 "id": "5453b2b8-da76-48e5-930f-f23101398733",
@@ -431,6 +439,14 @@
             }
         },
         {
+            "Key": "bd8d2c49-12df-4956-8be3-2bdeb3b2d1b6",
+            "Value": {
+                "id": "44a4be61-8e54-482d-8055-667328493b30",
+                "resourcePath": "views\\bd8d2c49-12df-4956-8be3-2bdeb3b2d1b6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "bfcf5f2d-6099-4381-8b17-cd34e268b215",
             "Value": {
                 "id": "d3c85537-c8ed-4409-b40a-d35158b39e54",
@@ -492,6 +508,14 @@
                 "id": "dd87104f-1960-43a5-90f4-accd722b46dc",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "da02e70b-9d2f-4987-ad3d-0955889d7e91",
+            "Value": {
+                "id": "be656edc-223b-421b-81eb-db9a1d65ea5c",
+                "resourcePath": "scripts\\generate_dungeon_layout\\generate_dungeon_layout.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -582,7 +606,9 @@
         "c5ebbad6-9e51-41a7-98d3-b394ca53a234",
         "916d1bcf-1ebb-446e-b6ca-fad471074ce3",
         "b67bdc08-1f1a-4786-b2ae-15fc52661689",
-        "2679b7a3-0983-4be1-8ddb-8ccc5a29b411"
+        "2679b7a3-0983-4be1-8ddb-8ccc5a29b411",
+        "da02e70b-9d2f-4987-ad3d-0955889d7e91",
+        "4e07a7ac-dd45-4eb0-b78c-ff0c3083a81a"
     ],
     "tutorial": ""
 }
