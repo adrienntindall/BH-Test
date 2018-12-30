@@ -431,6 +431,14 @@
             }
         },
         {
+            "Key": "b918023e-745b-43ab-a376-435583e21970",
+            "Value": {
+                "id": "30f63793-1521-4a48-8c40-e8ff301fba15",
+                "resourcePath": "scripts\\paint_line\\paint_line.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ba915b3b-5ae5-4fb2-a4aa-526df9cabaf2",
             "Value": {
                 "id": "4b71d381-2c54-43ba-a100-500b3f5f2ec8",
@@ -608,7 +616,8 @@
         "b67bdc08-1f1a-4786-b2ae-15fc52661689",
         "2679b7a3-0983-4be1-8ddb-8ccc5a29b411",
         "da02e70b-9d2f-4987-ad3d-0955889d7e91",
-        "4e07a7ac-dd45-4eb0-b78c-ff0c3083a81a"
+        "4e07a7ac-dd45-4eb0-b78c-ff0c3083a81a",
+        "b918023e-745b-43ab-a376-435583e21970"
     ],
     "tutorial": ""
 }

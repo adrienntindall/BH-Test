@@ -10,7 +10,7 @@ var dx = x2-x1;
 var dy = y2-y1;
 
 if(n == 0) {
-	var max_size = .5*dx*dy;
+	var max_size = .3*dx*dy;
 	var min_size = .15*dx*dy;
 	var size = max_size+1;
 	var x3, x4, y3, y4;
@@ -47,32 +47,21 @@ else {
 				xbot = floor(random(dir ? dxy2 : dx) + (dir ? x1 + dxy1 : x1));
 				ytop = floor(random(dir ? dy : dxy1) + y1);
 				ybot = floor(random(dir ? dy : dxy2) + (dir ? y1 : y1 + dxy1));
-				if(!(tilemap_get(map_id, xtop, ytop) == floor_tile)
-				   || !(tilemap_get(map_id, xbot, ytop) == floor_tile)) continue;
+				
+				if((tilemap_get(map_id, xtop, ytop) != floor_tile)
+				   || (tilemap_get(map_id, xbot, ybot) != floor_tile)) continue;
+				
 				var cruxx = floor(random(abs(xtop-xbot)) + min(xtop, xbot));
 				var cruxy = floor(random(abs(ytop-ybot)) + min(ytop, ybot));
-				var dirx = xtop > cruxx;
-				var diry = ytop > cruxy;
-				for(var a = dir ? xtop : ytop; 
-					dir ? (dirx ? (a > cruxx) : (a < cruxx)) : (diry ? (a > cruxy) : (a < cruxy));
-					a += dir ? (dirx ? -1 : 1) : (diry ? -1 : 1)) {
-					tilemap_set(map_id, floor_tile, dir ? a : xtop, dir ? ytop : a);
-				} //go from (xtop, ytop) -> (cruxx, ytop) or (xtop, cruxy)
-				for(var b = dir ? ytop : xtop;
-					dir ? (diry ? (b > cruxy) : (b < cruxy)) : (dirx ? (b > cruxx) : (b < cruxx));
-					b += dir ? (diry ? -1 : 1) : (dirx ? -1 : 1)) {
-					tilemap_set(map_id, floor_tile, dir ? cruxx : b, dir ? b : cruxy);	
-				} //go from (cruxx, ytop) or (xtop, cruxy) -> (cruxx, cruxy)
-				for(var c = dir ? cruxx : cruxy;
-					dir ? (dirx ? (c > xbot) : (c < xbot)) : (diry ? (c > ybot) : (c < ybot));
-					c += dir ? (dirx ? -1 : 1) : (diry ? -1 : 1)) {
-					tilemap_set(map_id, floor_tile, dir ? c : cruxx, dir ? cruxy : c);
-				} //go from (cruxx, cruxy) -> (xbot, cruxy) or (cruxx, ybot)
-				for(var d = dir ? cruxy : cruxx; 
-					dir ? (diry ? (d > ybot) : (d < ybot)) : (dirx ? (d > xbot) : (d < xbot));
-					d += dir ? (diry ? -1 : 1) : (dirx ? -1 : 1)) {
-					tilemap_set(map_id, floor_tile, dir ? xbot : d, dir ? d : ybot);
-				} //go from (xbot, cruxy) or (cruxx, ybot) -> (xbot, ybot)
+				
+				paint_line(dir ? xtop : ytop, dir ? cruxx : cruxy, dir ? ytop : xtop, dir, map_id, floor_tile);
+				//go from (xtop, ytop) -> (cruxx, ytop) or (xtop, cruxy)
+				paint_line(dir ? ytop : xtop, dir ? cruxy : cruxx, dir ? cruxx : cruxy, !dir, map_id, floor_tile); 
+				//go from (cruxx, ytop) or (xtop, cruxy) -> (cruxx, cruxy)
+				paint_line(dir ? cruxx : cruxy, dir ? xbot : ybot, dir ? cruxy : cruxx, dir, map_id, floor_tile);
+				//go from (cruxx, cruxy) -> (xbot, cruxy) or (cruxx, ybot)
+				paint_line(dir ? cruxy : cruxx, dir ? ybot : xbot, dir ? xbot : ybot, !dir, map_id, floor_tile);
+				//go from (xbot, cruxy) or (cruxx, ybot) -> (xbot, ybot)
 				break;
 			}
 			break;
