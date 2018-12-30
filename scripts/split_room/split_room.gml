@@ -28,6 +28,27 @@ if(n == 0) {
 			tilemap_set(map_id, floor_tile, xx, yy);
 		}
 	}
+	if(size >= broom_min_size && !broom_set) {
+		broom_set = true;
+		broom_x1 = x1*64;
+		broom_x2 = x2*64;
+		broom_y1 = y1*64;
+		broom_y2 = y2*64;
+		var b = instance_create_depth((broom_x1+broom_x2)/2, (broom_y1+broom_y2)/2, 1, boss);
+		b.image_xscale = 5;
+		b.image_yscale = 5;
+	}
+	else {
+		var m = round(.1*size);
+		for(var r = 0; r < m; r++)
+			while(true) {
+				var ex = random(dx) + x1;
+				var ey = random(dy) + y1;
+				if(tilemap_get(map_id, ex, ey) != floor_tile) continue;
+				break;
+			}
+			instance_create_depth(ex*64, ey*64, 1, enemies[floor(random(array_length_1d(enemies)))]);	
+	}
 }
 else if(dx < 17 || dy < 17) split_room(x1, y1, x2, y2, 0);
 else {
