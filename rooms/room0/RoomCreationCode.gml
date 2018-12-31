@@ -30,3 +30,9 @@ while(true) {
 		break;
 	}
 }
+
+global.broom_x1 = broom_x1;
+global.broom_x2 = broom_x2;
+global.broom_y1 = broom_y1;
+global.broom_y2 = broom_y2;
+global.boss = boss;

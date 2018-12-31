@@ -15,12 +15,14 @@ dt = 1;
 
 tilemap=layer_tilemap_get_id("Borders");
 
-stile = tilemap_get_at_pixel("Tiles", x, y);
+tm = layer_tilemap_get_id("Tiles");
+
+stile = tilemap_get_at_pixel(tm, x, y);
 while(true) {
-	if(tilemap_get_at_pixel("Tiles", bbox_left+r*cos(t/30), bbox_bottom+r*sin(t/30)) != stile
-		|| tilemap_get_at_pixel("Tiles", bbox_left+r*cos(t/30), bbox_top+r*sin(t/30)) != stile
-		|| tilemap_get_at_pixel("Tiles", bbox_right+r*cos(t/30), bbox_bottom+r*sin(t/30)) != stile
-		|| tilemap_get_at_pixel("Tiles", bbox_right+r*cos(t/30), bbox_top+r*sin(t/30)) != stile) {
+	if(tilemap_get_at_pixel(tm, bbox_left+r*cos(t/30), bbox_bottom+r*sin(t/30)) != stile
+		|| tilemap_get_at_pixel(tm, bbox_left+r*cos(t/30), bbox_top+r*sin(t/30)) != stile
+		|| tilemap_get_at_pixel(tm, bbox_right+r*cos(t/30), bbox_bottom+r*sin(t/30)) != stile
+		|| tilemap_get_at_pixel(tm, bbox_right+r*cos(t/30), bbox_top+r*sin(t/30)) != stile) {
 		t++;
 		continue;
 	}

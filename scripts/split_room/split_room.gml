@@ -30,10 +30,10 @@ if(n == 0) {
 	}
 	if(size >= broom_min_size && !broom_set) {
 		broom_set = true;
-		broom_x1 = x1*64;
-		broom_x2 = x2*64;
-		broom_y1 = y1*64;
-		broom_y2 = y2*64;
+		broom_x1 = x3*64;
+		broom_x2 = x4*64;
+		broom_y1 = y3*64;
+		broom_y2 = y4*64;
 		var b = instance_create_depth((broom_x1+broom_x2)/2, (broom_y1+broom_y2)/2, 1, boss);
 		b.image_xscale = 5;
 		b.image_yscale = 5;
