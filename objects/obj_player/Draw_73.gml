@@ -8,7 +8,7 @@ if(focus) {
 draw_healthbar(x-30, y+30, x+30, y+35, hp/maxhp*100, c_purple, c_red, c_green, 0, false, true);
 
 //Boss HP Bar
-if((x > global.broom_x1) && (x < global.broom_x2) && (y > global.broom_y1) && (y < global.broom_y2)) {
+if((x >= global.broom_x1-64) && (x <= global.broom_x2+65) && (y >= global.broom_y1-64) && (y <= global.broom_y2+65)) {
 	var vx = camera_get_view_x(view_camera[0]);
 	var vy = camera_get_view_y(view_camera[0]);
 	var vh = camera_get_view_height(view_camera[0]);

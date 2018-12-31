@@ -15,11 +15,11 @@ if(n == 0) {
 	var size = max_size+1;
 	var x3, x4, y3, y4;
 	while(size > max_size || size < min_size) {
-		x3 = random(dx)+x1;
-		x4 = random(x2-x3)+x3;
+		x3 = random(dx-2)+x1+1;
+		x4 = random(x2-x3-2)+x3+1;
 		var ddx = x4-x3;
-		y3 = random(dy)+y1;
-		y4 = random(y2-y3)+y3;
+		y3 = random(dy-2)+y1+1;
+		y4 = random(y2-y3-2)+y3+1;
 		var ddy = y4-y3;
 		size = (ddx > 4 && ddy > 4) ? ddx*ddy : max_size+1;
 	}
