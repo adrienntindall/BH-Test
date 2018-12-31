@@ -72,9 +72,13 @@ else {
 				if((tilemap_get(map_id, xtop, ytop) != floor_tile)
 				   || (tilemap_get(map_id, xbot, ybot) != floor_tile)) continue;
 				
-				var cruxx = floor(random(abs(xtop-xbot)) + min(xtop, xbot));
-				var cruxy = floor(random(abs(ytop-ybot)) + min(ytop, ybot));
-				
+				var cruxx, cruxy;
+				while(true) {
+					cruxx = floor(random(abs(xtop-xbot)) + min(xtop, xbot));
+					cruxy = floor(random(abs(ytop-ybot)) + min(ytop, ybot));
+					if((abs(cruxx-x1) == 1) || (abs(cruxx-x2) == 1) || (abs(cruxy-y1) == 1) || (abs(cruxy-y2) == 1))continue;
+					break;
+				}
 				paint_line(dir ? xtop : ytop, dir ? cruxx : cruxy, dir ? ytop : xtop, dir, map_id, floor_tile);
 				//go from (xtop, ytop) -> (cruxx, ytop) or (xtop, cruxy)
 				paint_line(dir ? ytop : xtop, dir ? cruxy : cruxx, dir ? cruxx : cruxy, !dir, map_id, floor_tile); 

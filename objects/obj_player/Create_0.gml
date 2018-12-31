@@ -13,6 +13,7 @@ mask_index = spr_player;
 bombs = 2;
 bomb_r = 200;
 bomb_damage = 20;
+boss_defeated = false;
 
 enum weapon_list {
 	simple,
