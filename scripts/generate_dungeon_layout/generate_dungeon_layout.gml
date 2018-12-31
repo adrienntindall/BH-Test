@@ -67,7 +67,7 @@ for(var a = 0; a < floor(room_width/64); a++) {
 			else tilemap_set(map_id, wall_e, a, b);
 			cur_layer++;
 		}
-		else if(w) tilemap_set(map_id, wall_w, a, b);
+		else if(w) { tilemap_set(map_id, wall_w, a, b); cur_layer++; }
 		if(ne && !(n || e)) { tilemap_set(layers[cur_layer], corn_ne, a, b); cur_layer+=1; }
 		if(se && !(s || e)) { tilemap_set(layers[cur_layer], corn_se, a, b); cur_layer+=1; }
 		if(nw && !(n || w)) { tilemap_set(layers[cur_layer], corn_nw, a, b); cur_layer+=1; }

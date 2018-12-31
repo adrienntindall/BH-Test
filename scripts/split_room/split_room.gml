@@ -76,7 +76,13 @@ else {
 				while(true) {
 					cruxx = floor(random(abs(xtop-xbot)) + min(xtop, xbot));
 					cruxy = floor(random(abs(ytop-ybot)) + min(ytop, ybot));
-					if((abs(cruxx-x1) == 1) || (abs(cruxx-x2) == 1) || (abs(cruxy-y1) == 1) || (abs(cruxy-y2) == 1))continue;
+					var con = false;
+					if(tilemap_get(map_id, cruxx, cruxy) == floor_tile) break;
+					else {
+						for(var a = -1; a < 2; a++) for(var b = -1; b < 2; b++)
+							if(tilemap_get(map_id, cruxx+a, cruxy+b) == floor_tile) con = true;
+					}
+					if(con) continue
 					break;
 				}
 				paint_line(dir ? xtop : ytop, dir ? cruxx : cruxy, dir ? ytop : xtop, dir, map_id, floor_tile);
