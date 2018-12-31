@@ -39,15 +39,20 @@ if(n == 0) {
 		b.image_yscale = 5;
 	}
 	else {
-		var m = round(.1*size);
-		for(var r = 0; r < m; r++)
+		var m = round(.02*size);
+		for(var r = 0; r < m; r++) {
 			while(true) {
 				var ex = random(dx) + x1;
 				var ey = random(dy) + y1;
 				if(tilemap_get(map_id, ex, ey) != floor_tile) continue;
 				break;
 			}
-			instance_create_depth(ex*64, ey*64, 1, enemies[floor(random(array_length_1d(enemies)))]);	
+			var e = instance_create_depth(ex*64, ey*64, 1, enemies[floor(random(array_length_1d(enemies)))]);
+			e.rx1 = x3*64;
+			e.rx2 = x4*64;
+			e.ry1 = y3*64;
+			e.ry2 = y4*64;
+		}
 	}
 }
 else if(dx < 17 || dy < 17) split_room(x1, y1, x2, y2, 0);
@@ -79,8 +84,11 @@ else {
 					var con = false;
 					if(tilemap_get(map_id, cruxx, cruxy) == floor_tile) break;
 					else {
-						for(var a = -1; a < 2; a++) for(var b = -1; b < 2; b++)
+						for(var a = -1; a < 2; a++) for(var b = -1; b < 2; b++) {
 							if(tilemap_get(map_id, cruxx+a, cruxy+b) == floor_tile) con = true;
+							if(tilemap_get(map_id, (dir ? cruxx : xtop) + a, (dir ? ytop : cruxy)+b) == floor_tile) con = true;
+							if(tilemap_get(map_id, (dir ? xbot : cruxx)+a, (dir ? cruxy : ybot)+b) == floor_tile) con = true;
+						}
 					}
 					if(con) continue
 					break;

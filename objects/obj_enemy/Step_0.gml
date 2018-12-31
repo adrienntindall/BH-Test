@@ -6,6 +6,12 @@ if(hp <= 0) {
 	instance_destroy();
 }
 
+if((obj_player.x >= rx1) && (obj_player.x <= rx2) && (obj_player.y >= ry1) && (obj_player.y <= ry2)) {
+	var theta = point_direction(x0, y0, obj_player.x, obj_player.y)*pi/180;
+	x0 += cos(theta)*fspd;
+	y0 -= sin(theta)*fspd;
+}
+
 
 if(tilemap_get_at_pixel(tilemap, x0+r*cos((t+dt)/30), bbox_top) != 0 
 	|| tilemap_get_at_pixel(tilemap, x0+r*cos((t+dt)/30), bbox_bottom) != 0) {

@@ -29,3 +29,9 @@ while(true) {
 	else if(t == 190) instance_destroy();
 	break;
 }
+
+rx1 = 0;
+rx2 = 0;
+ry1 = 0;
+ry2 = 0;
+fspd = 2;
