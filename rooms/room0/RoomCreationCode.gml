@@ -12,6 +12,10 @@ broom_x1 = 0;
 broom_x2 = room_width;
 broom_y1 = 0;
 broom_y2 = room_height;
+sroom_x1 = 0;
+sroom_x2 = 0;
+sroom_y1 = 0;
+sroom_y2 = 0;
 broom_set = false;
 broom_min_size = 5*5;
 
@@ -40,11 +44,11 @@ layers[2] = layer_tilemap_get_id(layer_get_id("Tiles_3"));
 layers[3] = layer_tilemap_get_id(layer_get_id("Tiles_4"));
 for(var a = 0; a < 6; a++) for(var b = 0; b < 4; b++) tilemap_set(map_id, 0, a, b);
 
-generate_dungeon_layout(7, 0);
+generate_dungeon_layout(3, 3);
 
 while(true) {
-	var sx = random(room_width);
-	var sy = random(room_height);
+	var sx = random(sroom_x2-sroom_x1)+sroom_x1;
+	var sy = random(sroom_y2-sroom_y1)+sroom_y1;
 	if(tilemap_get_at_pixel(map_id, sx, sy) != floor_tile) continue;
 	else if ((sx > broom_x1) && (sx < broom_x2) && (sy > broom_y1) && (sy < broom_y2)) continue;
 	else {
