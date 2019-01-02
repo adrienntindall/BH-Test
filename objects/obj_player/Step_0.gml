@@ -52,6 +52,26 @@ if(tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + dy) != 0
 x += dx;
 y += dy;
 
+//Misc.
+if((global.weapon == weapon_list.knives) || (global.weapon_alt == weapon_list.knives)) {
+	if(!instance_exists(obj_knife)) for(var z = 0; z < 5; z++) {
+		var k = instance_create_depth(x, y, 1, obj_knife);
+		k.index = z;
+		k.t = z*k.w/5;
+	}
+	else {
+		for(var z = 0; z < 5; z++) {
+			var flag = false;
+			with(obj_knife) if(index == z) flag = true;
+			if(!flag) {
+				var k = instance_create_depth(x, y, 1, obj_knife);
+				k.index = z;
+				k.t = z*k.w/5;
+			}
+		}
+	}
+}
+
 //Fireing bullets
 if(shoot && cd <= 0) {
 	switch(focus ? global.weapon_alt : global.weapon) {
@@ -76,6 +96,19 @@ if(shoot && cd <= 0) {
 			cd = 8;
 			t+=3;
 			break;
+		case weapon_list.knives:
+			with(obj_knife) {
+				if((index == other.kix) && (obj_player.kcd <= 0) && (mode == 0)) {
+					obj_knife.theta = point_direction(x, y, mouse_x, mouse_y)*pi/180;
+					mode = 1;
+					obj_player.kcd = 15;
+					obj_player.kix = (other.kix + 1) % 5;
+					maxd = min(max(sqrt((x-mouse_x)*(x-mouse_x) + (y-mouse_y)*(y-mouse_y)), 100), defmaxd);
+					image_angle = obj_knife.theta*180/pi;
+					break;
+				}
+			}
+			break;
 	}
 }
 
@@ -94,3 +127,4 @@ if(bomb && bombs > 0) {
 
 //Cooldown Updates
 cd--;
+kcd--;

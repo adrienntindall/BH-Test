@@ -47,11 +47,27 @@
             }
         },
         {
+            "Key": "0813e108-5704-40ae-bb64-be0f81d215f5",
+            "Value": {
+                "id": "a20cd2ea-057f-44c7-ac79-8478eff80096",
+                "resourcePath": "sprites\\sprite8\\sprite8.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0c569a12-4160-49a2-ac8e-3575a7197ba5",
             "Value": {
                 "id": "94e5b91f-6c3b-43ee-83cf-276ad9ccb876",
                 "resourcePath": "objects\\obj_spawner_enemy\\obj_spawner_enemy.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "0e917468-3869-41ef-b7ee-b9dea47de76a",
+            "Value": {
+                "id": "389dc59a-4235-496c-8de9-243d0763018e",
+                "resourcePath": "sprites\\sprite9\\sprite9.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -108,6 +124,14 @@
                 "id": "1fcb4110-92aa-425f-9cf1-b8613ef33546",
                 "resourcePath": "views\\311ba04e-8e62-4010-bee2-5478a1cc003d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3235ee56-fdd8-4421-a8b9-8f3498fa6d81",
+            "Value": {
+                "id": "1f174bed-8272-4afe-aead-d536140e39ca",
+                "resourcePath": "objects\\obj_knife\\obj_knife.yy",
+                "resourceType": "GMObject"
             }
         },
         {
