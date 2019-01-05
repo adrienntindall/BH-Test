@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if(mode == 1) {
 	with(other) {
-		hp-=dmg;
+		hp-=other.dmg;
 	}
 
 	mode = 2;

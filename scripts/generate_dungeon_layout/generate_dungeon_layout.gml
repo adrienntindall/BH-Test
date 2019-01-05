@@ -10,44 +10,19 @@ ry1[0] = 0;
 ry2[0] = 0;
 rpath[0] = 1;
 rn = 0;
-split_room(1, 1, floor(room_width/64)-1, floor(room_height/64)-1, splits, 1);
+split_room(splits);
 
 //Put stuff in room borders
 var sroom_set = false;
 while(true) {	
 	var pbroom, psroom, ptroom;
 	var pbrc = 0, psrc = 0, ptrc = 0;
-	for(var c = 0; c < rn; c++) {
-		var dx = rx2[c]-rx1[c];
-		var dy = ry2[c]-ry1[c];
-		if((dx > 16) && (dy > 16)) {
-			pbroom[pbrc] = c;
-			pbrc++;
-		}
-		if((dx < 10) && (dy > 14)) {
-			ptroom[ptrc] = c;
-			ptrc++;
-		}
-		if((dx > 7) && (dy > 7)) {
-			psroom[psrc] = c;
-			psrc++;
-		}
-	}
-	if((pbrc == 0) || (psrc == 0)) {
-		rn = 0;
-		split_room(1, 1, floor(room_width/64)-1, floor(room_height/64)-1, splits, 1);	
-		continue;
-	}
-	var broom_id = pbroom[floor(random(pbrc))];
-	var sroom_id = psroom[floor(random(psrc))];
-	if (broom_id == sroom_id) {
-		if(pbrc == 1 && psrc == 1) {
-			rn = 0;
-			split_room(1, 1, floor(room_width/64)-1, floor(room_height/64)-1, splits, 1);
-			continue;
-		}
-		else if(psrc == 1) while(broom_id == sroom_id) broom_id = pbroom[floor(random(pbrc))];
-		else while(broom_id == sroom_id) sroom_id = psroom[floor(random(psrc))];
+	var broom_id, sroom_id;
+	while(true) {
+		broom_id = floor(random(array_length_1d(ry1)));
+		sroom_id = floor(random(array_length_1d(ry1)));
+		if(broom_id == sroom_id) continue;
+		break;
 	}
 	//Placing Boss Room
 	var x3, x4, y3, y4;
@@ -154,7 +129,7 @@ while(true) {
 			if(p > 1) {
 				while(true) {
 					var destroid;
-					for(var d = 0; d < p; d++) destroid[d] = (random(1) > .7) ? 1 : 0;
+					for(var d = 0; d < p; d++) destroid[d] = (random(1) > .33) ? 1 : 0;
 					var flag = true;
 					for(var d = 0; d < p; d++) if(destroid[d] == 1) flag = false;
 					if(flag) continue;

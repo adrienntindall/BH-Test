@@ -5,8 +5,8 @@ y0 = y;
 t0 = 0;
 index = 0;
 r = 60;
-maxd = 250;
-defmaxd = 250;
+maxd = 350;
+defmaxd = maxd;
 w = 300; //angular velocity
 mode = 0; //0 = idle; 1 = active; 2 = return
 spd = 25;
