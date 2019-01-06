@@ -2,7 +2,7 @@
 {
     "name": "level_editor",
     "id": "64fa15de-5395-41ab-b754-e4d85228fec8",
-    "creationCodeFile": "",
+    "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,
     "inheritCreationOrder": false,
     "inheritLayers": false,

@@ -14,3 +14,9 @@ if(mclick) {
 else if(mhold) {
 	if(mouse_x > bbox_right) tilemap_set_at_pixel(curtm, cur_tile, mouse_x, mouse_y);	
 }
+
+var save = keyboard_check(vk_control) && keyboard_key_press(ord("S"));
+if(save) {
+	
+	
+}

@@ -8,6 +8,7 @@ for(var xpos = 0; xpos < floor((room_width/64)/size); xpos++) {
 		rx2[rn] = size*(xpos+1);
 		ry1[rn] = size*ypos;
 		ry2[rn] = size*(ypos+1);
+		instance_create_depth(64*rx1[rn], 64*ry1[rn], 0, obj_fow);
 		rn++;
 	}
 }
