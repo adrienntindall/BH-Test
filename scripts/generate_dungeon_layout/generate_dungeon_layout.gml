@@ -15,7 +15,6 @@ split_room(splits);
 //Put stuff in room borders
 var sroom_set = false;
 while(true) {	
-	var pbroom, psroom, ptroom;
 	var pbrc = 0, psrc = 0, ptrc = 0;
 	var broom_id, sroom_id;
 	while(true) {
@@ -42,9 +41,9 @@ while(true) {
 	broom_y1 = 64*y3; broom_y2 = 64*y4;
 	
 	//Placing Starting Room
-	x3 = random(rx2[sroom_id]-rx1[sroom_id]-6) + rx1[sroom_id] + 1;
+	x3 = random(rx2[sroom_id]-rx1[sroom_id]-7) + rx1[sroom_id] + 1;
 	x4 = x3 + 5;
-	y3 = random(ry2[sroom_id]-ry1[sroom_id]-6) + ry1[sroom_id] + 1;
+	y3 = random(ry2[sroom_id]-ry1[sroom_id]-7) + ry1[sroom_id] + 1;
 	y4 = y3 + 5;
 	for(var xx = x3; xx < x4+1; xx++) {
 		for(var yy = y3; yy < y4+1; yy++) {
@@ -58,16 +57,16 @@ while(true) {
 	for(var c = 0; c < rn; c++) if((c != sroom_id) && (c != broom_id)) {
 		var dx = rx2[c]-rx1[c];
 		var dy = ry2[c]-ry1[c];
-		var max_size = .3*dx*dy;
+		var max_size = .4*dx*dy;
 		var min_size = .15*dx*dy;
 		var size = max_size+1;
 		var x3, x4, y3, y4;
 		while(size > max_size || size < min_size) {
 			x3 = random(dx-2)+rx1[c]+1;
-			x4 = random(rx2[c]-x3-2)+x3+1;
+			x4 = random(rx2[c]-x3-2)+x3-1;
 			var ddx = x4-x3;
 			y3 = random(dy-2)+ry1[c]+1;
-			y4 = random(abs(ry2[c]-y3)-2)+y3+1;
+			y4 = random(abs(ry2[c]-y3)-2)+y3-1;
 			var ddy = y4-y3;
 			size = (ddx > 4 && ddy > 4) ? ddx*ddy : max_size+1;
 		}
@@ -102,20 +101,23 @@ while(true) {
 			for(var w = 0; w < rn; w++) {
 				var xw1 = rx1[w], xw2 = rx2[w], xz1 = rx1[z], xz2 = rx2[z];
 				var yw1 = ry1[w], yw2 = ry2[w], yz1 = ry1[z], yz2 = ry2[z];
+				var bordx = (xw1 == xz2) || (xw2 == xz1);
+				var bordy = (yw1 == yz2) || (yw2 == yz2);
+				var samex = (xw1 == xz1) || (xw2 == xz2);
+				var samey = (yw1 == yz1) || (yw2 == yz2);
 				if(((w == broom_id) && (z == sroom_id)) || ((w == sroom_id) && (z == broom_id))) cnxs[w] = -1;
-				else if(((xw1 == xz2) || (xw2 == xz1)) 
-					|| ((yw1 == yz2) || (yw2 == yz2))) {
+				else if((bordx && samey) || (bordy && samex)) {
 					cnxs[w] = (w < z) ? 0 : 1;
 				}
 				else {
 					cnxs[w] = -1;
 				}
-				if((w+1) == z) w++;
+				if((w+1) == z) { cnxs[w] = -1; w++; }
 			}
 			graph[z] = cnxs;
 		}
 		//cutting down on the hallways
-		for(var w = 0; w < array_length_1d(graph)-1; w++) {
+		/*for(var w = 0; w < array_length_1d(graph)-1; w++) {
 			var cnxs = graph[w];
 			cnxs[w] = -1;
 			var ccnt = 0;
@@ -133,7 +135,21 @@ while(true) {
 					var flag = true;
 					for(var d = 0; d < p; d++) if(destroid[d] == 1) flag = false;
 					if(flag) continue;
-					for(var d = 0; d < p; d++) cnxs[carr[d]] = (destroid[d]) ? cnxs[carr[d]] : -1;
+					for(var d = 0; d < p; d++)  {
+						if(destroid[d] == 1) {
+							var gud = graph[carr[d]];
+							var temp = 0;
+							for(var q = 0; q < array_length_1d(gud); q++) { gud[q] = gud[q]; if(gud[q] != -1) temp++; }
+							if(temp > 1) {
+								cnxs[carr[d]] = -1;
+								gud[w] = -1;
+								graph[carr[d]] = gud;
+							}
+						}
+						else {
+							cnxs[carr[d]] = cnxs[carr[d]];	
+						}
+					}
 					break;
 				}
 				graph[w] = cnxs;
@@ -142,7 +158,7 @@ while(true) {
 				cnxs[floor(random(array_length_1d(cnxs)))] = 1;
 				graph[w] = cnxs
 			}
-		}
+		}*/
 		for(var w = 0; w < array_length_1d(graph)-1; w++) {
 			var cnxs = graph[w];
 			for(var z = 0; (z < array_length_1d(cnxs)); z++) {
