@@ -19,6 +19,9 @@ if(select) switch(mpos) {
 	case options.quit:
 		game_end();
 		break;
+	case options.level_edit:
+		room_goto(level_editor);
+		break;
 	default:
 		break;
 }

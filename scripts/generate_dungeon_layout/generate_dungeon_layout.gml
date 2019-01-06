@@ -55,7 +55,7 @@ while(true) {
 	
 	//Placing Every Other Room
 	for(var c = 0; c < rn; c++) if((c != sroom_id) && (c != broom_id)) {
-		var dx = rx2[c]-rx1[c];
+		/*var dx = rx2[c]-rx1[c];
 		var dy = ry2[c]-ry1[c];
 		var max_size = .4*dx*dy;
 		var min_size = .15*dx*dy;
@@ -74,8 +74,31 @@ while(true) {
 			for(var yy = y3; yy < y4+1; yy++) {
 				tilemap_set(map_id, floor_tile, xx, yy);
 			}
+		}*/
+		
+
+
+
+//New Room
+var cx1 = rx1[c]; var cx2 = rx2[c]; var cy1 = ry1[c]; var cy2 = ry2[c];
+var f = 0;
+var chart = array(0,1,1,1,0,0,0,1,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,);
+var dx = cx2-cx1; var dy = cy2-cy1;
+var sx = floor(random(dx-1-11))+1+cx1;
+var sy = floor(random(dy-1-9))+1+cy1;;
+for(var q = 0; q < 9; q++) {
+	for(var l = 0; l < 11; l++) {
+		if(chart[f] == 1) {
+			tilemap_set(map_id, floor_tile, sx+l, sy+q);
 		}
-		var m = round(.02*size);
+		f++;
+	}
+}
+
+
+
+		//var m = round(.02*size);
+		var m = 0;
 		for(var r = 0; r < m; r++) {
 			while(true) {
 				var ex = random(dx) + rx1[c];

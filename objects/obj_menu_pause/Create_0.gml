@@ -5,12 +5,14 @@ enum options
 	resume,
 	weapons,
 	armour,
+	level_edit,
 	quit
 }
 
 menu[options.resume] = "Resume";
 menu[options.weapons] = "Change Weapons";
 menu[options.armour] = "Change Armoour";
+menu[options.level_edit] = "Level Editor";
 menu[options.quit] = "Quit";
 
 space = 64;
