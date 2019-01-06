@@ -112,6 +112,63 @@ if(shoot && cd <= 0) {
 	}
 }
 
+//Focus Mode
+if(tscd <= 0) tslim = 90;
+if(shcd <= 0) { fshbr = false; shcd = 180; }
+if(focus) switch(global.focus) {
+	case focus_list.basic:
+		break;
+	case focus_list.time_slow:
+		if(tslim > 0) {
+			with(obj_bullet_enemy) {
+				if(!feff) {
+					image_blend = c_silver;
+					spd	/= 2;
+					feff = true;
+				}
+			}
+		tslim--;
+		}
+		else {
+			with(obj_bullet_enemy) {
+				if(feff) {
+					image_blend = -1;
+					spd = defspd;
+					feff = false;
+				}
+			}
+		}
+		tscd = 180;
+		break;
+	case focus_list.shield:
+		if(!instance_exists(obj_focus_shield) && !fshbr) {
+			instance_create_depth(x, y, 0, obj_focus_shield);
+		}
+		break;
+	default:
+		break;
+}
+var end_focus = keyboard_check_released(vk_shift);
+if(end_focus) switch(global.focus) {	
+	case focus_list.basic:
+		break;
+	case focus_list.time_slow:
+		with(obj_bullet_enemy) {
+			if(feff) {
+				image_blend = -1;
+				spd = defspd;
+				feff = false;
+			}
+		}
+		break;
+	case focus_list.shield:
+		if(instance_exists(obj_focus_shield)) with(obj_focus_shield) instance_destroy();
+		break;
+	default:
+		break;
+}
+
+//Bombs
 if(bomb && bombs > 0) {
 	bombs--;
 	var xx = x;
@@ -128,3 +185,5 @@ if(bomb && bombs > 0) {
 //Cooldown Updates
 cd--;
 kcd--;
+tscd--;
+shcd--;

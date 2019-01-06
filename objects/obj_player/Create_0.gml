@@ -29,3 +29,17 @@ global.weapon_inv[0] = weapon_list.simple;
 global.weapon_inv[1] = weapon_list.simple_alt;
 global.weapon_inv[2] = weapon_list.octo;
 global.weapon_inv[3] = weapon_list.knives;
+
+enum focus_list {
+	basic,
+	time_slow,
+	shield
+}
+global.focus = focus_list.basic;
+global.focus_inv[0] = focus_list.basic;
+global.focus_inv[1] = focus_list.time_slow;
+global.focus_inv[2] = focus_list.shield;
+tscd = 0;
+tslim = 90;
+shcd = 180;
+fshbr = false;

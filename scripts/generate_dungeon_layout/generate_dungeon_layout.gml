@@ -98,7 +98,7 @@ for(var q = 0; q < 9; q++) {
 
 
 		//var m = round(.02*size);
-		var m = 0;
+		var m = 1;
 		for(var r = 0; r < m; r++) {
 			while(true) {
 				var ex = random(dx) + rx1[c];

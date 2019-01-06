@@ -3,6 +3,8 @@
 theta = 0;
 parent = noone;
 spd = 3;
+defspd = spd;
 life = 360;
 tilemap = layer_tilemap_get_id("Borders");
 t0 = 0;
+feff = false;
