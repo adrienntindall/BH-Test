@@ -122,7 +122,7 @@
             "Key": "253e7248-50b7-4edf-a8f9-b153e2b5c8cc",
             "Value": {
                 "id": "07ed43d6-30dc-4cfa-a2df-4d00662946ae",
-                "resourcePath": "sprites\\spr_ts_Mystic1\\spr_ts_Mystic1.yy",
+                "resourcePath": "sprites\\spr_ts_le\\spr_ts_le.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -471,6 +471,14 @@
             }
         },
         {
+            "Key": "ae8af467-64a2-4790-b8d4-45a5f2f73f1d",
+            "Value": {
+                "id": "6812e6b3-8ed3-4b53-99dc-0ff33bf5ffb7",
+                "resourcePath": "sprites\\spr_le_select\\spr_le_select.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b3b19119-40b5-4bc3-93de-9ef145def097",
             "Value": {
                 "id": "87bbf56e-c2cf-420b-908d-d658b509b894",
@@ -660,6 +668,14 @@
                 "id": "1afd01b1-4c6e-40fa-a118-5079fec6f916",
                 "resourcePath": "views\\e3d27fde-691c-4fe7-8432-15ec4d9c6ddd.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e8dbc8c7-deb9-4366-b3eb-914754c83731",
+            "Value": {
+                "id": "b96981d9-42ee-4244-8a49-73fdfc7e0184",
+                "resourcePath": "tilesets\\ts_level_editor\\ts_level_editor.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
