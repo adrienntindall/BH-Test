@@ -208,31 +208,29 @@ while(true) {
 								break;
 						}
 						
-						var cruxx, cruxy;
+						var crux;
 						var dir = graph[w, z] > 2;
 						while(true) {
-							cruxx = floor(random(abs(xtop-xbot)) + min(xtop, xbot));
-							cruxy = floor(random(abs(ytop-ybot)) + min(ytop, ybot));
+							crux = dir ? floor(random(abs(xtop-xbot)-4) + min(xtop, xbot)+2)
+										: floor(random(abs(ytop-ybot)-4) + min(ytop, ybot)+2);
 							var con = false;
-							if(tilemap_get(map_id, cruxx, cruxy) == floor_tile) break;
+							/*if(tilemap_get(map_id, cruxx, cruxy) == floor_tile) break;
 							else {
 								for(var a = -1; a < 2; a++) for(var b = -1; b < 2; b++) {
 									if(tilemap_get(map_id, cruxx+a, cruxy+b) == floor_tile) con = true;
 									if(tilemap_get(map_id, (dir ? cruxx : xtop) + a, (dir ? ytop : cruxy)+b) == floor_tile) con = true;
 									if(tilemap_get(map_id, (dir ? xbot : cruxx)+a, (dir ? cruxy : ybot)+b) == floor_tile) con = true;
 								}
-							}
+							}*/
 							if(con) continue
 							break;
 						}
-						paint_line(dir ? xtop : ytop, dir ? cruxx : cruxy, dir ? ytop : xtop, dir, map_id, floor_tile);
-						//go from (xtop, ytop) -> (cruxx, ytop) or (xtop, cruxy)
-						paint_line(dir ? ytop : xtop, dir ? cruxy : cruxx, dir ? cruxx : cruxy, !dir, map_id, floor_tile); 
-						//go from (cruxx, ytop) or (xtop, cruxy) -> (cruxx, cruxy)
-						paint_line(dir ? cruxx : cruxy, dir ? xbot : ybot, dir ? cruxy : cruxx, dir, map_id, floor_tile);
-						//go from (cruxx, cruxy) -> (xbot, cruxy) or (cruxx, ybot)
-						paint_line(dir ? cruxy : cruxx, dir ? ybot : xbot, dir ? xbot : ybot, !dir, map_id, floor_tile);
-						//go from (xbot, cruxy) or (cruxx, ybot) -> (xbot, ybot)
+						paint_line(dir ? xtop : ytop, crux, dir ? ytop : xtop, dir, map_id, floor_tile);
+						//go from (xtop, ytop) -> (crux, ytop) or (xtop, crux)
+						paint_line(dir ? ytop : xtop, dir ? ybot : xbot, crux, !dir, map_id, floor_tile);
+						//go from (crux, ytop) or (xtop, crux) -> (crux, ybot) or (xbot, crux)
+						paint_line(crux, dir ? xbot : ybot, dir ? ybot : xbot, dir, map_id, floor_tile);
+						//go from (xbot, crux) or (crux, ybot) -> (xbot, ybot)
 						break;
 					}
 				}
