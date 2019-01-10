@@ -1,6 +1,8 @@
 ///move_linear()
 
-if(tilemap_get_at_pixel(tilemap, x+spd*cos(theta), y-spd*sin(theta)) != 0) instance_destroy();
+dt = global.dt;
 
-x += spd*cos(theta);
-y += -spd*sin(theta);
+if(tilemap_get_at_pixel(tilemap, x+spd*dt*cos(theta), y-spd*dt*sin(theta)) != 0) instance_destroy();
+
+x += spd*dt*cos(theta);
+y += -spd*dt*sin(theta);

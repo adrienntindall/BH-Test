@@ -4,7 +4,9 @@ var spd = argument0;
 var theta = argument1;
 var tilemap = argument2;
 
-if(tilemap_get_at_pixel(tilemap, x+spd*cos(theta), y-spd*sin(theta)) != 0) instance_destroy();
+dt = global.dt;
 
-x += spd*cos(theta);
-y += -spd*sin(theta);
+if(tilemap_get_at_pixel(tilemap, x+dt*spd*cos(theta), y-dt*spd*sin(theta)) != 0) instance_destroy();
+
+x += dt*spd*cos(theta);
+y += -dt*spd*sin(theta);

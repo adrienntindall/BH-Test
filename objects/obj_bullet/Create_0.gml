@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-life = 100;
-spd = 15;
+life = 1.5;
+spd = 450;
 theta = 0;
 t = 0;
 t0 = 0;

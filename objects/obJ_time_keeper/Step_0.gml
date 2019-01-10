@@ -1,12 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-x0 = x;
-y0 = y;
-t = 0;
-
-hp = 250;
-maxhp = 250;
-
-p1cd = .7;
-p2cd = .3;
+global.dt = delta_time/1000000;

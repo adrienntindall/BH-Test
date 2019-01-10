@@ -11,7 +11,9 @@ y0 = y;
 
 n = random(5) + 3;
 
-dt = 1;
+sdt = 1;
+p1cd = 1.2;
+p2cd = .7;
 
 tilemap=layer_tilemap_get_id("Borders");
 
@@ -34,4 +36,4 @@ rx1 = 0;
 rx2 = 0;
 ry1 = 0;
 ry2 = 0;
-fspd = 2;
+fspd = 30;

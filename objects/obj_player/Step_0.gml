@@ -1,4 +1,5 @@
 /// @description Movement + Shooting
+var dt = global.dt;
 
 //Death
 if(hp <= 0) game_restart();
@@ -14,7 +15,7 @@ up = keyboard_check(ord("W"));
 shoot = mouse_check_button(mb_left);
 focus = keyboard_check(vk_shift);
 dodge = mouse_check_button_pressed(mb_right)
-var s = focus ? fspd:spd;
+var s = dt*(focus ? fspd:spd);
 if(focus) draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
 bomb = keyboard_check_pressed(vk_space);
 
@@ -80,7 +81,7 @@ if(shoot && cd <= 0) {
 			b =  instance_create_depth(x, y, 0, obj_bullet);
 			b.image_angle = theta;
 			b.theta = pi * (theta/180);
-			cd = 4;
+			cd = .07;
 			break;
 		case weapon_list.simple_alt:
 			var theta = point_direction(x, y, mouse_x, mouse_y);
@@ -89,11 +90,11 @@ if(shoot && cd <= 0) {
 			b.theta = pi * (theta/180);
 			b.t0 = t;
 			t+=2;
-			cd = 4;
+			cd = .07;
 			break;
 		case weapon_list.octo:
 			spawn_circular(8, obj_bullet_sin, id)
-			cd = 8;
+			cd = 8/30;
 			t+=3;
 			break;
 		case weapon_list.knives:
@@ -101,7 +102,7 @@ if(shoot && cd <= 0) {
 				if((index == other.kix) && (obj_player.kcd <= 0) && (mode == 0)) {
 					obj_knife.theta = point_direction(x, y, mouse_x, mouse_y)*pi/180;
 					mode = 1;
-					obj_player.kcd = 15;
+					obj_player.kcd = .5;
 					obj_player.kix = (other.kix + 1) % 5;
 					maxd = min(max(sqrt((x-mouse_x)*(x-mouse_x) + (y-mouse_y)*(y-mouse_y)), 100), defmaxd);
 					image_angle = obj_knife.theta*180/pi;
@@ -113,8 +114,8 @@ if(shoot && cd <= 0) {
 }
 
 //Focus Mode
-if(tscd <= 0) tslim = 90;
-if(shcd <= 0) { fshbr = false; shcd = 180; }
+if(tscd <= 0) tslim = 3;
+if(shcd <= 0) { fshbr = false; shcd = 5; }
 if(focus) switch(global.focus) {
 	case focus_list.basic:
 		break;
@@ -127,7 +128,7 @@ if(focus) switch(global.focus) {
 					feff = true;
 				}
 			}
-		tslim--;
+		tslim-=dt;
 		}
 		else {
 			with(obj_bullet_enemy) {
@@ -138,7 +139,7 @@ if(focus) switch(global.focus) {
 				}
 			}
 		}
-		tscd = 180;
+		tscd = 3;
 		break;
 	case focus_list.shield:
 		if(!instance_exists(obj_focus_shield) && !fshbr) {
@@ -183,7 +184,7 @@ if(bomb && bombs > 0) {
 }
 
 //Cooldown Updates
-cd--;
-kcd--;
-tscd--;
-shcd--;
+cd-=dt;
+kcd-=dt;
+tscd-=dt;
+shcd-=dt;

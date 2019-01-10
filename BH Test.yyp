@@ -735,6 +735,14 @@
             }
         },
         {
+            "Key": "f2d26568-dfe4-43e2-ad59-8c9d39f8fac8",
+            "Value": {
+                "id": "af93948d-24c5-4f8f-8dfa-17f4c05921c1",
+                "resourcePath": "objects\\obJ_time_keeper\\obJ_time_keeper.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f3892f53-a6a2-4172-8bf5-c012c6dbb400",
             "Value": {
                 "id": "44033eef-969b-438a-a1ad-603718016cf2",

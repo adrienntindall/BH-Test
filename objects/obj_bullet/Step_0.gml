@@ -6,7 +6,7 @@ move_linear();
 
 t++;
 t0++;
-life -= 1;
+life -= global.dt;
 if (life <= 0) {
 	instance_destroy();	
 }

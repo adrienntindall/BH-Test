@@ -9,6 +9,6 @@ maxd = 350;
 defmaxd = maxd;
 w = 300; //angular velocity
 mode = 0; //0 = idle; 1 = active; 2 = return
-spd = 25;
+spd = 750;
 dmg = 10;
 tilemap = layer_tilemap_get_id("Null");
