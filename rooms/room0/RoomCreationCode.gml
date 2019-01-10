@@ -8,6 +8,7 @@ border_tile = tilemap_get(bmap_id, 1, 1);
 tilemap_set(bmap_id, 0, 1 ,1);
 boss = obj_boss;
 enemies[0] = obj_enemy;
+enemies[1] = obj_enemy_ring;
 broom_x1 = 0;
 broom_x2 = room_width;
 broom_y1 = 0;

@@ -6,33 +6,33 @@ if(mode == 0) {
 	x0 = obj_player.x;
 	y0 = obj_player.y;
 	
-	x = x0+r*dt*cos(2*pi*t/w);
-	y = y0+r*dt*sin(2*pi*t/w);
+	x = x0+r*cos(2*pi*t/w);
+	y = y0+r*sin(2*pi*t/w);
 	
 	image_angle = point_direction(x0, y0, x, y);
 	
 }
 else if(mode == 1) {
-	spd = 25;
+	spd = 500;
 	if((x-x0)*(x-x0) + (y-y0)*(y-y0) < maxd*maxd) {
 		move_linear();
 	}
 	else  mode = 2;
 }
 if(mode == 2) {
-	spd = 10;
+	spd = 300;
 	
 	x0 = obj_player.x;
 	y0 = obj_player.y;
 	
-	theta = point_direction(x, y, x0+r*dt*cos(2*pi*t/w), y0+r*dt*sin(2*pi*t/w))*pi/180;
+	theta = point_direction(x, y, x0+r*cos(2*pi*t/w), y0+r*sin(2*pi*t/w))*pi/180;
 	
 	image_angle = theta*180/pi;
 	
 	move_linear();
 	
-	var tx = x0+dt*r*cos(2*pi*t/w);
-	var ty = y0+dt*r*sin(2*pi*t/w);
+	var tx = x0+r*cos(2*pi*t/w);
+	var ty = y0+r*sin(2*pi*t/w);
 	var dx = dt*spd*cos(theta);
 	var dy = -dt*spd*sin(theta);
 	var sx = x > tx;
@@ -43,4 +43,4 @@ if(mode == 2) {
 	}
 }
 
-t++;
+t+=dt;

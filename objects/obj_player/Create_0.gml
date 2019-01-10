@@ -1,7 +1,7 @@
 /// @description Defining Variables
 // You can write your code in this editor
 cd = 0;
-kcd = 15;
+kcd = .5;
 lock = noone;
 hp = 3;
 maxhp = 3;
