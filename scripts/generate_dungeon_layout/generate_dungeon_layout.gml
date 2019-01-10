@@ -45,8 +45,8 @@ while(true) {
 	broom_y1 = 64*y3; broom_y2 = 64*y4;
 	ndx[broom_id, 0] = x3+round((x4-x3)/2); ndy[broom_id, 0] = y3;
 	sdx[broom_id, 0] = x3+round((x4-x3)/2); sdy[broom_id, 0] = y4;
-	edx[broom_id, 0] = y4; edy[broom_id, 0] = y3+round((y4-y3)/2);
-	wdx[broom_id, 0] = y3; wdy[broom_id, 0] = y3+round((y4-y3)/2);
+	edx[broom_id, 0] = x4; edy[broom_id, 0] = y3+round((y4-y3)/2);
+	wdx[broom_id, 0] = x3; wdy[broom_id, 0] = y3+round((y4-y3)/2);
 	
 	//Placing Starting Room
 	x3 = random(rx2[sroom_id]-rx1[sroom_id]-7) + rx1[sroom_id] + 1;
@@ -62,8 +62,8 @@ while(true) {
 	sroom_y1 = 64*y3; sroom_y2 = 64*y4;
 	ndx[sroom_id, 0] = x3+round((x4-x3)/2); ndy[sroom_id, 0] = y3;
 	sdx[sroom_id, 0] = x3+round((x4-x3)/2); sdy[sroom_id, 0] = y4;
-	edx[sroom_id, 0] = y4; edy[sroom_id, 0] = y3+round((y4-y3)/2);
-	wdx[sroom_id, 0] = y3; wdy[sroom_id, 0] = y3+round((y4-y3)/2);
+	edx[sroom_id, 0] = x4; edy[sroom_id, 0] = y3+round((y4-y3)/2);
+	wdx[sroom_id, 0] = x3; wdy[sroom_id, 0] = y3+round((y4-y3)/2);
 	
 	//Placing Every Other Room
 	for(var c = 0; c < rn; c++) if((c != sroom_id) && (c != broom_id)) {
