@@ -98,7 +98,7 @@
             "Key": "19de2457-407c-4325-a26e-a2334bfb89b4",
             "Value": {
                 "id": "80d1f449-ea18-43bc-bf49-22098d20be78",
-                "resourcePath": "sprites\\sprite12\\sprite12.yy",
+                "resourcePath": "sprites\\spr_focus_shield\\spr_focus_shield.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -156,6 +156,14 @@
                 "id": "c4e0a057-04c2-49b8-941d-f7f026154e8a",
                 "resourcePath": "scripts\\rotate_3d\\rotate_3d.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "29b3836e-f28d-4bbc-9b93-60595ae3b1e2",
+            "Value": {
+                "id": "385b4156-c757-406a-8c29-0e753f9aaf9f",
+                "resourcePath": "sprites\\spr_next_button_le\\spr_next_button_le.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -671,6 +679,14 @@
             }
         },
         {
+            "Key": "cc00f76a-e5ed-4b8b-869a-1f11378ed0e3",
+            "Value": {
+                "id": "2f2a8c35-7bfe-44a0-8477-02d52b124e58",
+                "resourcePath": "objects\\obj_button_next_le\\obj_button_next_le.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "dd87104f-1960-43a5-90f4-accd722b46dc",
@@ -724,6 +740,14 @@
                 "id": "b96981d9-42ee-4244-8a49-73fdfc7e0184",
                 "resourcePath": "tilesets\\ts_level_editor\\ts_level_editor.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "e915c807-6fc4-45a6-ae82-6aefb28aeb13",
+            "Value": {
+                "id": "07c7a153-c895-48dd-98ca-fbeeba965c68",
+                "resourcePath": "objects\\obj_button_prev_le\\obj_button_prev_le.yy",
+                "resourceType": "GMObject"
             }
         },
         {

@@ -2,7 +2,7 @@
     "id": "19de2457-407c-4325-a26e-a2334bfb89b4",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sprite12",
+    "name": "spr_focus_shield",
     "For3D": false,
     "HTile": false,
     "VTile": false,
