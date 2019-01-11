@@ -120,10 +120,10 @@ while(true) {
 				var bordy = (yw1 == yz2) || (yw2 == yz2);
 				var samex = (xw1 == xz1) || (xw2 == xz2);
 				var samey = (yw1 == yz1) || (yw2 == yz2);
-				if(((w == broom_id) && (z == sroom_id)) || ((w == sroom_id) && (z == broom_id))) cnxs[w] = -1;
-				else if((bordx && samey) || (bordy && samex)) {
+				//if(((w == broom_id) && (z == sroom_id)) || ((w == sroom_id) && (z == broom_id))) cnxs[w] = -1;
+				if((bordx && samey) || (bordy && samex)) {
 					//1 - Borders n, 2 - s, 3 - e, 4 - w
-					graph[z, w] = (w < z) ? 0 : (bordx ? ((xw1==xz2) ? 3 : 4) : ((yw1==yz2) ? 2 : 1));
+					graph[z, w] = (bordx ? ((xw1==xz2) ? 3 : 4) : ((yw1==yz2) ? 2 : 1));
 				}
 				else {
 					graph[z, w] = -1;
@@ -131,49 +131,118 @@ while(true) {
 				if((w+1) == z) { graph[z, z] = -1; w++; }
 			}
 		}
-		//cutting down on the hallways
-		/*for(var w = 0; w < array_length_1d(graph)-1; w++) {
-			var cnxs = graph[w];
-			cnxs[w] = -1;
-			var ccnt = 0;
-			var carr;
-			var p = 0;
-			for(var z = 0; (z < array_length_1d(cnxs)); z++) if(cnxs[z] != -1) {
-				ccnt++;
-				carr[p] = z;
-				p++;
+		
+		//pathfinding
+		var path;
+		path[0] = sroom_id;
+		var cur = 0;
+		var broom_x = rx1[broom_id];
+		var broom_y = ry1[broom_id];
+		var sroom_x = rx1[sroom_id];
+		var sroom_y = ry1[sroom_id];
+		var curx = sroom_x; var cury = sroom_y;
+		while(true) {
+			var dx = broom_x-curx;
+			var dy = broom_y-cury;
+			
+			if(dx != 0) && (dy != 0) var dir = floor(random(2));	
+			else if(dy != 0) dir = 0;
+			else if(dx != 0) dir = 1;
+			
+			dir  = dir ? (dx > 0 ? 3 : 4) : (dy > 0 ? 2 : 1);
+			var nxt = -1;
+			for(var l = 0; l < array_length_2d(graph, path[cur]); l++) if(graph[path[cur], l] == dir) nxt = l;
+			if(nxt != -1) && (findIndex(nxt, path) == -1) {
+				path[cur+1] = nxt;
+				cur++;
 			}
-			if(p > 1) {
-				while(true) {
-					var destroid;
-					for(var d = 0; d < p; d++) destroid[d] = (random(1) > .33) ? 1 : 0;
-					var flag = true;
-					for(var d = 0; d < p; d++) if(destroid[d] == 1) flag = false;
-					if(flag) continue;
-					for(var d = 0; d < p; d++)  {
-						if(destroid[d] == 1) {
-							var gud = graph[carr[d]];
-							var temp = 0;
-							for(var q = 0; q < array_length_1d(gud); q++) { gud[q] = gud[q]; if(gud[q] != -1) temp++; }
-							if(temp > 1) {
-								cnxs[carr[d]] = -1;
-								gud[w] = -1;
-								graph[carr[d]] = gud;
-							}
-						}
-						else {
-							cnxs[carr[d]] = cnxs[carr[d]];	
+			else {
+				cur = 0;
+				curx = sroom_x; cury = sroom_y;
+				path = 0;
+				path[0] = sroom_id;
+				continue;
+			}
+			if(path[cur] == broom_id)  && (array_length_1d(path) >= mpl+2) break;
+			else if(path[cur] == broom_id) {
+				while(array_length_1d(path) < mpl+2) {
+					var temp = sroom_id; var temp = broom_id;
+					var ins = floor(random(array_length_1d(path)-1));
+					var dxi = (rx1[ins] - rx1[ins+1] == 0)
+					var r1 = -1, r2 = -1;
+					var d2 = floor(random(2))+ (dxi ? 1 : 3);
+					for(var l = 0; l < array_length_2d(graph, path[ins]); l++) if(graph[path[ins], l] == d2) r1 = l;
+					var d3 = dxi ?  ((rx1[ins] - rx1[ins+1] > 0) ? 3 : 4) : ((ry1[ins] - ry1[ins+1] > 0) ? 2 : 1);
+					for(var l = 0; l < array_length_2d(graph, r2); l++) if(graph[r1, l] == d3) r2 = l;
+					if(r1 != -1) && (r2 != -1) {
+						for(var ch = array_length_1d(path); ch > ins; ch--) {
+							if(ch == ins+2) path[ch] = r2;
+							else if(ch == ins+1) path[ch] = r1;
+							else path[ch+2] = path[ch];	
 						}
 					}
+					
+				}
+				break;
+			}			
+		}
+
+		for(var m = 0; m < array_length_1d(path)-1; m++) {
+			w = path[m]; z = path[m+1];
+			var xtop, xbot, ytop, ybot;
+			while(true) {
+				switch(graph[w, z]) {
+					case 1: //North
+						var dtop = floor(random(array_length_2d(ndx, w)));
+						var dbot = floor(random(array_length_2d(sdx, z)));
+						xtop = ndx[w, dtop]; ytop = ndy[w, dtop];
+						xbot = sdx[z, dbot]; ybot = sdy[z, dbot];
+						break;
+					case 2: //South
+						var dtop = floor(random(array_length_2d(sdx, w)));
+						var dbot = floor(random(array_length_2d(ndx, z)));
+						xtop=sdx[w, dtop]; ytop = sdy[w, dtop];
+						xbot = ndx[z, dbot]; ybot = ndy[z, dbot];
+						break;
+					case 3: //East
+						var dtop = floor(random(array_length_2d(edx, w)));
+						var dbot = floor(random(array_length_2d(wdx, z)));
+						xtop=edx[w, dtop]; ytop = edy[w, dtop];
+						xbot = wdx[z, dbot]; ybot = wdy[z, dbot];
+						break;
+					case 4: //West
+						var dtop = floor(random(array_length_2d(wdx, w)));
+						var dbot = floor(random(array_length_2d(edx, z)));
+						xtop=wdx[w, dtop]; ytop = wdy[w, dtop];
+						xbot = edx[z, dbot]; ybot = edy[z, dbot];
+						break;
+					default:
+						break;
+				}
+						
+				var crux;
+				var dir = graph[w, z] > 2;
+				while(true) {
+					crux = dir ? floor(random(abs(xtop-xbot)-4) + min(xtop, xbot)+2)
+								: floor(random(abs(ytop-ybot)-4) + min(ytop, ybot)+2);
+					var con = false;
+					if(con) continue
 					break;
 				}
-				graph[w] = cnxs;
+				paint_line(dir ? xtop : ytop, crux, dir ? ytop : xtop, dir, map_id, floor_tile);
+				//go from (xtop, ytop) -> (crux, ytop) or (xtop, crux)
+				paint_line(dir ? ytop : xtop, dir ? ybot : xbot, crux, !dir, map_id, floor_tile);
+				//go from (crux, ytop) or (xtop, crux) -> (crux, ybot) or (xbot, crux)
+				paint_line(crux, dir ? xbot : ybot, dir ? ybot : xbot, dir, map_id, floor_tile);
+				//go from (xbot, crux) or (crux, ybot) -> (xbot, ybot)
+				break;
 			}
-			else if(p == 0) {
-				cnxs[floor(random(array_length_1d(cnxs)))] = 1;
-				graph[w] = cnxs
-			}
-		}*/
+		}
+		break;
+	}
+	break;
+}
+/*		
 		for(var w = 0; w < array_length_1d(graph)-1; w++) {
 			for(var z = 0; (z < array_length_2d(graph, w)); z++) {
 				if(graph[w, z] >= 1) {
@@ -221,7 +290,7 @@ while(true) {
 									if(tilemap_get(map_id, (dir ? cruxx : xtop) + a, (dir ? ytop : cruxy)+b) == floor_tile) con = true;
 									if(tilemap_get(map_id, (dir ? xbot : cruxx)+a, (dir ? cruxy : ybot)+b) == floor_tile) con = true;
 								}
-							}*/
+							}
 							if(con) continue
 							break;
 						}
@@ -240,7 +309,7 @@ while(true) {
 	}
 	break;
 }
-
+*/
 for(var a = 0; a < floor(room_width/64); a++) {
 	for(var b = 0; b < floor(room_height/64); b++) {
 		if(tilemap_get(map_id, a, b) != floor_tile) {
