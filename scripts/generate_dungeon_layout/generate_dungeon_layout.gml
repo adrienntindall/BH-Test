@@ -88,7 +88,6 @@ while(true) {
 			}
 		}
 
-
 		//var m = round(.02*size);
 		var m = 1;
 		for(var r = 0; r < m; r++) {
@@ -177,13 +176,11 @@ while(true) {
 					var ins = floor(random(array_length_1d(path)-1));
 					var indx1 = path[ins], indx2 = path[ins+1];
 					var dxi = (rx1[indx1] - rx1[indx2] == 0)
-					var r1 = -1, r2 = -1;
 					var d2 = floor(random(2))+ (!dxi ? 1 : 3);
-					for(var l = 0; l < array_length_2d(graph, indx1); l++) if(graph[indx1, l] == d2) r1 = l;
+					var r1 = findIndex_2d(graph, indx1, d2);
 					var d3 = dxi ? (((ry1[indx1] - ry1[indx2]) > 0) ? 1 : 2) : (((rx1[indx1] - rx1[indx2]) > 0) ? 4 : 3);
-					if(r1 != -1) for(var l = 0; l < array_length_2d(graph, r1); l++) 
-						if(graph[r1, l] == d3) 
-							r2 = l;
+					var r2;
+					if(r1 != -1) r2 = findIndex_2d(graph, r1, d3);
 					if(r1 != -1) && (r2 != -1) && (findIndex(path, r1) == -1) && (findIndex(path, r2) == -1) {
 						var len = array_length_1d(path);
 						for(var ch = len-1; ch > ins; ch--) path[ch+2] = path[ch];
@@ -203,52 +200,61 @@ while(true) {
 		}
 
 		if(redo) continue;
-
+		
+		var branch;
+		branch[0, 0] = -1;
+		var initset = false;
+		var pcnt = array_length_1d(path);
+		var cnct_path, cnct_room;
+		cnct_path[0] = -1; //here -1 will stand for the main path and anything else stands for the index of sub paths
+		cnct_room[0] = -1; //room where the path branches off 
+		var cnp = 1;
+		while(pcnt < rn) {
+			var cur = floor(random(rn));
+			if(findIndex(path, cur) != -1) continue;
+			var exist = false;
+			for(var h = 0; h < array_length_1d(branch); h++) if(findIndex_2d(branch, h, cur) != -1) exist = true;
+			if(exist) continue;
+			var dir = floor(random(4));
+			for(var q = 0; q < 4; q++) {
+				var r = findIndex_2d(graph, cur, ((dir+q)%4)+1);
+				if(r == -1) continue;
+				var st = false; var rw = 0;
+				for(var h = 0; h < array_length_1d(branch); h++) if(findIndex_2d(branch, h, r) != -1) { st = true; rw = h; }
+				if(findIndex(path, r) != -1) ||  st {
+					if(st) {
+						if(findIndex_2d(branch, rw, r) == array_length_2d(branch, rw)-1) branch[rw, array_length_2d(branch, rw)] = cur;
+						else {
+							branch[cnp, 0] = cur; 
+							cnct_path[cnp] = -1;
+							cnct_room[cnp] = r;
+							cnp++;
+						}
+					}
+					else if(!initset) { branch[0, 0] = cur; initset = true; cnct_room[0] = r; }
+					else { 
+						branch[cnp, 0] = cur; 
+						cnct_path[cnp] = -1;
+						cnct_room[cnp] = r;
+						cnp++;
+					}
+					pcnt++;
+					q = 4;
+				}
+			}
+		}
+		
 		for(var m = 0; m < array_length_1d(path)-1; m++) {
 			w = path[m]; z = path[m+1];
-			var xtop, xbot, ytop, ybot;
-			while(true) {
-				switch(graph[w, z]) {
-					case 1: //North
-						var dtop = floor(random(array_length_2d(ndx, w)));
-						var dbot = floor(random(array_length_2d(sdx, z)));
-						xtop = ndx[w, dtop]; ytop = ndy[w, dtop];
-						xbot = sdx[z, dbot]; ybot = sdy[z, dbot];
-						break;
-					case 2: //South
-						var dtop = floor(random(array_length_2d(sdx, w)));
-						var dbot = floor(random(array_length_2d(ndx, z)));
-						xtop = sdx[w, dtop]; ytop = sdy[w, dtop];
-						xbot = ndx[z, dbot]; ybot = ndy[z, dbot];
-						break;
-					case 3: //East
-						var dtop = floor(random(array_length_2d(edx, w)));
-						var dbot = floor(random(array_length_2d(wdx, z)));
-						xtop = edx[w, dtop]; ytop = edy[w, dtop];
-						xbot = wdx[z, dbot]; ybot = wdy[z, dbot];
-						break;
-					case 4: //West
-						var dtop = floor(random(array_length_2d(wdx, w)));
-						var dbot = floor(random(array_length_2d(edx, z)));
-						xtop = wdx[w, dtop]; ytop = wdy[w, dtop];
-						xbot = edx[z, dbot]; ybot = edy[z, dbot];
-						break;
-					default:
-						break;
-				}
-										
-				var dir = graph[w, z] > 2;	
-				var crux = dir ? floor(random(abs(xtop-xbot)-4) + min(xtop, xbot)+2)
-							: floor(random(abs(ytop-ybot)-4) + min(ytop, ybot)+2);
-				
-				paint_line(dir ? xtop : ytop, crux, dir ? ytop : xtop, dir, map_id, floor_tile);
-				//go from (xtop, ytop) -> (crux, ytop) or (xtop, crux)
-				paint_line(dir ? ytop : xtop, dir ? ybot : xbot, crux, !dir, map_id, floor_tile);
-				//go from (crux, ytop) or (xtop, crux) -> (crux, ybot) or (xbot, crux)
-				paint_line(crux, dir ? xbot : ybot, dir ? ybot : xbot, dir, map_id, floor_tile);
-				//go from (xbot, crux) or (crux, ybot) -> (xbot, ybot)
-				break;
-			}
+			gen_path(w, z, graph);
+		}
+		for(var m = 0; m < array_length_1d(branch); m++) for(var n = 0; n < array_length_2d(branch, m)-1; n++) {
+			w = branch[m, n]; z = branch[m, n+1];
+			gen_path(w, z, graph);
+		}
+		for(var m = 0; m < cnp; m++) {
+			w = cnct_room[m]; z = branch[m, 0];
+			gen_path(w, z, graph);
 		}
 		break;
 	}
