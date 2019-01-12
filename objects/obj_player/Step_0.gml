@@ -111,6 +111,22 @@ if(shoot && cd <= 0) {
 				}
 			}
 			break;
+		case weapon_list.pow_orb:
+			if!(instance_exists(obj_bullet_pow_orb)) {
+				instance_create_depth(x, y, 1, obj_bullet_pow_orb);	
+			}
+			break;
+	}
+}
+
+var end_fire = mouse_check_button_released(mb_left);
+if(end_fire) {
+	switch(focus ? global.weapon_alt : global.weapon) {
+		case weapon_list.pow_orb:
+			instance_destroy(obj_bullet_pow_orb);
+			break;
+		default:
+			break;
 	}
 }
 

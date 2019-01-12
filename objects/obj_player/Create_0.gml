@@ -22,24 +22,20 @@ enum weapon_list {
 	simple,
 	simple_alt,
 	octo,
-	knives
+	knives,
+	pow_orb
 }
 global.weapon = weapon_list.simple;
 global.weapon_alt = weapon_list.simple_alt;
-global.weapon_inv[0] = weapon_list.simple;
-global.weapon_inv[1] = weapon_list.simple_alt;
-global.weapon_inv[2] = weapon_list.octo;
-global.weapon_inv[3] = weapon_list.knives;
-
+global.weapon_inv = array(weapon_list.simple, weapon_list.simple_alt, weapon_list.octo, weapon_list.knives,
+							weapon_list.pow_orb);
 enum focus_list {
 	basic,
 	time_slow,
 	shield
 }
 global.focus = focus_list.basic;
-global.focus_inv[0] = focus_list.basic;
-global.focus_inv[1] = focus_list.time_slow;
-global.focus_inv[2] = focus_list.shield;
+global.focus_inv = array(focus_list.basic, focus_list.time_slow, focus_list.shield);
 tscd = 0;
 tslim = 90;
 shcd = 180;
