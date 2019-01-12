@@ -447,6 +447,14 @@
             }
         },
         {
+            "Key": "8e8efaf6-9687-4d78-99ca-8d79259f4ceb",
+            "Value": {
+                "id": "0dbfbcd0-e7a5-4889-8ba4-59a3c02d763e",
+                "resourcePath": "scripts\\findIndex_2d\\findIndex_2d.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "916d1bcf-1ebb-446e-b6ca-fad471074ce3",
             "Value": {
                 "id": "7041edb7-075e-49c8-be95-1e6a429d8daa",
@@ -848,6 +856,7 @@
         "916d1bcf-1ebb-446e-b6ca-fad471074ce3",
         "2679b7a3-0983-4be1-8ddb-8ccc5a29b411",
         "c13b7cfa-a9b2-4bb8-9cae-3bb9683b6636",
+        "8e8efaf6-9687-4d78-99ca-8d79259f4ceb",
         "da02e70b-9d2f-4987-ad3d-0955889d7e91",
         "4e07a7ac-dd45-4eb0-b78c-ff0c3083a81a",
         "b918023e-745b-43ab-a376-435583e21970"

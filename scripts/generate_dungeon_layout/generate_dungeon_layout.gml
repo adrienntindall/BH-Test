@@ -108,6 +108,7 @@ while(true) {
 	
 	//H A L L W A Y S
 	while(true) {
+		var redo = false;
 		var graph;
 		graph[0, 0] = 0;
 		//max hallways
@@ -170,29 +171,38 @@ while(true) {
 			}
 			if(path[cur] == broom_id)  && (array_length_1d(path) >= mpl+2) break;
 			else if(path[cur] == broom_id) {
+				var cnt = 0;
 				while(array_length_1d(path) < mpl+2) {
 					var temp = sroom_id; var temp = broom_id;
 					var ins = floor(random(array_length_1d(path)-1));
-					var dxi = (rx1[ins] - rx1[ins+1] == 0)
+					var indx1 = path[ins], indx2 = path[ins+1];
+					var dxi = (rx1[indx1] - rx1[indx2] == 0)
 					var r1 = -1, r2 = -1;
-					var d2 = floor(random(2))+ (dxi ? 1 : 3);
-					for(var l = 0; l < array_length_2d(graph, path[ins]); l++) if(graph[path[ins], l] == d2) r1 = l;
-					var d3 = dxi ? (((ry1[ins] - ry1[ins+1]) > 0) ? 2 : 1) : (((rx1[ins] - rx1[ins+1]) > 0) ? 3 : 4);
-					for(var l = 0; l < array_length_2d(graph, r1); l++) 
+					var d2 = floor(random(2))+ (!dxi ? 1 : 3);
+					for(var l = 0; l < array_length_2d(graph, indx1); l++) if(graph[indx1, l] == d2) r1 = l;
+					var d3 = dxi ? (((ry1[indx1] - ry1[indx2]) > 0) ? 1 : 2) : (((rx1[indx1] - rx1[indx2]) > 0) ? 4 : 3);
+					if(r1 != -1) for(var l = 0; l < array_length_2d(graph, r1); l++) 
 						if(graph[r1, l] == d3) 
 							r2 = l;
-					if(r1 != -1) && (r2 != -1) {
-						for(var ch = array_length_1d(path)-1; ch > ins; ch--) {
-							if(ch == ins+2) path[ch] = r2;
-							else if(ch == ins+1) path[ch] = r1;
-							else path[ch+2] = path[ch];	
-						}
+					if(r1 != -1) && (r2 != -1) && (findIndex(path, r1) == -1) && (findIndex(path, r2) == -1) {
+						var len = array_length_1d(path);
+						for(var ch = len-1; ch > ins; ch--) path[ch+2] = path[ch];
+						path[ins+2] = r2;
+						path[ins+1] = r1;
 					}
-					
+					else cnt++;
+					if(cnt > 9999) { redo = true; break; }
+					///Note that there's currently 1 case where this code will NEVER work:
+					   //Basically there's only 1 room decided between the broom and the sroom,
+					   //and that room also happens to be a corner room, meaning that the only places
+					   //that border and have free space to expand outward by 2 are blocked by the bounds
+					   //of the level or the sroom and broom, making it not work
 				}
 				break;
 			}			
 		}
+
+		if(redo) continue;
 
 		for(var m = 0; m < array_length_1d(path)-1; m++) {
 			w = path[m]; z = path[m+1];
@@ -208,34 +218,29 @@ while(true) {
 					case 2: //South
 						var dtop = floor(random(array_length_2d(sdx, w)));
 						var dbot = floor(random(array_length_2d(ndx, z)));
-						xtop=sdx[w, dtop]; ytop = sdy[w, dtop];
+						xtop = sdx[w, dtop]; ytop = sdy[w, dtop];
 						xbot = ndx[z, dbot]; ybot = ndy[z, dbot];
 						break;
 					case 3: //East
 						var dtop = floor(random(array_length_2d(edx, w)));
 						var dbot = floor(random(array_length_2d(wdx, z)));
-						xtop=edx[w, dtop]; ytop = edy[w, dtop];
+						xtop = edx[w, dtop]; ytop = edy[w, dtop];
 						xbot = wdx[z, dbot]; ybot = wdy[z, dbot];
 						break;
 					case 4: //West
 						var dtop = floor(random(array_length_2d(wdx, w)));
 						var dbot = floor(random(array_length_2d(edx, z)));
-						xtop=wdx[w, dtop]; ytop = wdy[w, dtop];
+						xtop = wdx[w, dtop]; ytop = wdy[w, dtop];
 						xbot = edx[z, dbot]; ybot = edy[z, dbot];
 						break;
 					default:
 						break;
 				}
-						
-				var crux;
-				var dir = graph[w, z] > 2;
-				while(true) {
-					crux = dir ? floor(random(abs(xtop-xbot)-4) + min(xtop, xbot)+2)
-								: floor(random(abs(ytop-ybot)-4) + min(ytop, ybot)+2);
-					var con = false;
-					if(con) continue
-					break;
-				}
+										
+				var dir = graph[w, z] > 2;	
+				var crux = dir ? floor(random(abs(xtop-xbot)-4) + min(xtop, xbot)+2)
+							: floor(random(abs(ytop-ybot)-4) + min(ytop, ybot)+2);
+				
 				paint_line(dir ? xtop : ytop, crux, dir ? ytop : xtop, dir, map_id, floor_tile);
 				//go from (xtop, ytop) -> (crux, ytop) or (xtop, crux)
 				paint_line(dir ? ytop : xtop, dir ? ybot : xbot, crux, !dir, map_id, floor_tile);

@@ -3,6 +3,7 @@ var dt = global.dt;
 
 //Death
 if(hp <= 0) game_restart();
+if(keyboard_check(ord("K"))) game_restart();
 if(keyboard_check_pressed(vk_escape)) {
 	
 	room_goto(room_menu_pause);

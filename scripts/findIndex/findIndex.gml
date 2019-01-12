@@ -1,5 +1,6 @@
-///findIndex(i, array)
-
+///findIndex(array, i)
+///@param array the array to search
+///@param i the value to find
 var i, tempArray;
 tempArray = argument[0];
 for(i=0; i<array_length_1d(tempArray); i++){
