@@ -11,7 +11,7 @@ y0 = y;
 
 n = random(5) + 3;
 
-sdt = 1;
+sdt = floor(random(2)) ? -1 : 1;
 p1cd = 1.2;
 p2cd = .7;
 
@@ -21,10 +21,10 @@ tm = layer_tilemap_get_id("Tiles");
 
 stile = tilemap_get_at_pixel(tm, x, y);
 while(true) {
-	if(tilemap_get_at_pixel(tm, bbox_left+r*cos(t/30), bbox_bottom+r*sin(t/30)) != stile
-		|| tilemap_get_at_pixel(tm, bbox_left+r*cos(t/30), bbox_top+r*sin(t/30)) != stile
-		|| tilemap_get_at_pixel(tm, bbox_right+r*cos(t/30), bbox_bottom+r*sin(t/30)) != stile
-		|| tilemap_get_at_pixel(tm, bbox_right+r*cos(t/30), bbox_top+r*sin(t/30)) != stile) {
+	if(tilemap_get_at_pixel(tm, bbox_left+r*cos(t/30), bbox_bottom-r*sin(t/30)) != stile)
+		|| (tilemap_get_at_pixel(tm, bbox_left+r*cos(t/30), bbox_top-r*sin(t/30)) != stile)
+		|| (tilemap_get_at_pixel(tm, bbox_right+r*cos(t/30), bbox_bottom-r*sin(t/30)) != stile)
+		|| (tilemap_get_at_pixel(tm, bbox_right+r*cos(t/30), bbox_top-r*sin(t/30)) != stile) {
 		t++;
 		continue;
 	}
