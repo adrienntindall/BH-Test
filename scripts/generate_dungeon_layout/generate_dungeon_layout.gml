@@ -205,9 +205,8 @@ while(true) {
 		branch[0, 0] = -1;
 		var initset = false;
 		var pcnt = array_length_1d(path);
-		var cnct_path, cnct_room;
-		cnct_path[0] = -1; //here -1 will stand for the main path and anything else stands for the index of sub paths
-		cnct_room[0] = -1; //room where the path branches off 
+		var cnct_room
+		cnct_room[0] = -1; //room where the path of branch[c] branches off 
 		var cnp = 1;
 		while(pcnt < rn) {
 			var cur = floor(random(rn));
@@ -222,24 +221,33 @@ while(true) {
 				var st = false; var rw = 0;
 				for(var h = 0; h < array_length_1d(branch); h++) if(findIndex_2d(branch, h, r) != -1) { st = true; rw = h; }
 				if(findIndex(path, r) != -1) ||  st {
-					if(st) {
-						if(findIndex_2d(branch, rw, r) == array_length_2d(branch, rw)-1) branch[rw, array_length_2d(branch, rw)] = cur;
-						else {
-							branch[cnp, 0] = cur; 
-							cnct_path[cnp] = -1;
-							cnct_room[cnp] = r;
-							cnp++;
-						}
-					}
+					if(st) && (findIndex_2d(branch, rw, r) == array_length_2d(branch, rw)-1) branch[rw, array_length_2d(branch, rw)] = cur;
 					else if(!initset) { branch[0, 0] = cur; initset = true; cnct_room[0] = r; }
 					else { 
 						branch[cnp, 0] = cur; 
-						cnct_path[cnp] = -1;
 						cnct_room[cnp] = r;
 						cnp++;
 					}
 					pcnt++;
 					q = 4;
+				}
+			}
+		}
+		
+		var loop;
+		loop[0] = -1;
+		for(var m = 0; m < array_length_1d(branch); m++) {
+			var cur = branch[m, array_length_2d(branch, m)-1];
+			var dir = floor(random(4));
+			for(var q = 0; q < 4; q++) {
+				var r = findIndex_2d(graph, cur, ((dir+q)%4)+1);
+				if(r != -1) {
+					var pindex = findIndex(path, r);
+					if(pindex == -1) || (array_length_2d(branch, m) + pindex-1 > mpl) {
+						loop[m] = r;
+						q = 4;
+					}
+					else loop[m] = -1;
 				}
 			}
 		}
@@ -251,6 +259,9 @@ while(true) {
 		for(var m = 0; m < array_length_1d(branch); m++) for(var n = 0; n < array_length_2d(branch, m)-1; n++) {
 			w = branch[m, n]; z = branch[m, n+1];
 			gen_path(w, z, graph);
+			if (loop[m] != -1) && (n = array_length_2d(branch, m)-2) {
+				gen_path(loop[m], z, graph);
+			}
 		}
 		for(var m = 0; m < cnp; m++) {
 			w = cnct_room[m]; z = branch[m, 0];
