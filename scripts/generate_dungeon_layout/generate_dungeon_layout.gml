@@ -212,14 +212,14 @@ while(true) {
 			var cur = floor(random(rn));
 			if(findIndex(path, cur) != -1) continue;
 			var exist = false;
-			for(var h = 0; h < array_length_1d(branch); h++) if(findIndex_2d(branch, h, cur) != -1) exist = true;
+			for(var h = 0; h < cnp; h++) if(findIndex_2d(branch, h, cur) != -1) exist = true;
 			if(exist) continue;
 			var dir = floor(random(4));
 			for(var q = 0; q < 4; q++) {
 				var r = findIndex_2d(graph, cur, ((dir+q)%4)+1);
 				if(r == -1) continue;
 				var st = false; var rw = 0;
-				for(var h = 0; h < array_length_1d(branch); h++) if(findIndex_2d(branch, h, r) != -1) { st = true; rw = h; }
+				for(var h = 0; h < cnp; h++) if(findIndex_2d(branch, h, r) != -1) { st = true; rw = h; }
 				if(findIndex(path, r) != -1) ||  st {
 					if(st) && (findIndex_2d(branch, rw, r) == array_length_2d(branch, rw)-1) branch[rw, array_length_2d(branch, rw)] = cur;
 					else if(!initset) { branch[0, 0] = cur; initset = true; cnct_room[0] = r; }
@@ -236,7 +236,7 @@ while(true) {
 		
 		var loop;
 		loop[0] = -1;
-		for(var m = 0; m < array_length_1d(branch); m++) {
+		for(var m = 0; m < cnp; m++) {
 			var cur = branch[m, array_length_2d(branch, m)-1];
 			var dir = floor(random(4));
 			for(var q = 0; q < 4; q++) {
@@ -251,11 +251,12 @@ while(true) {
 				}
 			}
 		}
-		
+		//Generate Main Path
 		for(var m = 0; m < array_length_1d(path)-1; m++) {
 			w = path[m]; z = path[m+1];
 			gen_path(w, z, graph);
 		}
+		//Generate Sub-Paths
 		for(var m = 0; m < array_length_1d(branch); m++) for(var n = 0; n < array_length_2d(branch, m)-1; n++) {
 			w = branch[m, n]; z = branch[m, n+1];
 			gen_path(w, z, graph);
@@ -263,6 +264,8 @@ while(true) {
 				gen_path(loop[m], z, graph);
 			}
 		}
+		
+		//Connect All Paths together
 		for(var m = 0; m < cnp; m++) {
 			w = cnct_room[m]; z = branch[m, 0];
 			gen_path(w, z, graph);

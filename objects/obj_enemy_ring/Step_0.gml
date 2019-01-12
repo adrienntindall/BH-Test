@@ -7,8 +7,10 @@ if(hp <= 0) {
 	instance_destroy();
 }
 
-if((obj_player.x >= rx1) && (obj_player.x <= rx2) && (obj_player.y >= ry1) && (obj_player.y <= ry2)) {
-	
+if(!following) {
+	if((obj_player.x >= rx1) && (obj_player.x <= rx2) && (obj_player.y >= ry1) && (obj_player.y <= ry2)) following = true;
+}
+else {
 	var theta = point_direction(x, y, obj_player.x, obj_player.y)*pi/180;
 	var dx = cos(theta)*fspd*dt;
 	var dy = -sin(theta)*fspd*dt;
@@ -36,8 +38,5 @@ if((obj_player.x >= rx1) && (obj_player.x <= rx2) && (obj_player.y >= ry1) && (o
 	
 	x += dx;
 	y += dy;
-	if(fspd < fspdmax) fspd += fspda*dt;
-}
-else {
-	fspd = fspd0;	
+	if(fspd < fspdmax) fspd += fspda*dt;	
 }

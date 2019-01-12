@@ -6,6 +6,8 @@ r = random(50) + 25;
 
 hp = 10;
 
+following = false;
+
 x0 = x;
 y0 = y;
 
