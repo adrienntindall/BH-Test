@@ -7,3 +7,9 @@ if(mode == 1) {
 
 	mode = 2;
 }
+else if(mode == 0) && (icd <= 0) {
+	with(other) {
+		hp -= other.dmg/4;	
+	}
+	icd = .5;
+}

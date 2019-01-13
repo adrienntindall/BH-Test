@@ -251,6 +251,7 @@ while(true) {
 				}
 			}
 		}
+		
 		//Generate Main Path
 		for(var m = 0; m < array_length_1d(path)-1; m++) {
 			w = path[m]; z = path[m+1];

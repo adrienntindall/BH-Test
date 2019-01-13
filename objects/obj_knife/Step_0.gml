@@ -11,12 +11,11 @@ if(mode == 0) {
 	
 	image_angle = point_direction(x0, y0, x, y);
 	
+	icd -= dt;
 }
 else if(mode == 1) {
 	spd = 500;
-	if((x-x0)*(x-x0) + (y-y0)*(y-y0) < maxd*maxd) {
-		move_linear();
-	}
+	if((x-x0)*(x-x0) + (y-y0)*(y-y0) < maxd*maxd) move_linear();
 	else  mode = 2;
 }
 if(mode == 2) {

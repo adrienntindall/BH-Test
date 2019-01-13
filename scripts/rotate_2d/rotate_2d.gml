@@ -5,5 +5,5 @@
 
 var X = argument0, Y = argument1, theta = argument2;
 
-x = X*cos(theta) - Y*sin(theta);
-y = X*sin(theta) + Y*cos(theta);
+x = x0 + X*cos(theta) - Y*sin(theta);
+y = y0 - (X*sin(theta) + Y*cos(theta));

@@ -11,4 +11,5 @@ w = 8; //angular velocity
 mode = 0; //0 = idle; 1 = active; 2 = return
 spd = 750;
 dmg = 10;
-tilemap = layer_tilemap_get_id("Null");
+tilemap = layer_tilemap_get_id("Borders");
+icd = .5;
