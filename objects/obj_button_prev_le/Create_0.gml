@@ -3,4 +3,11 @@
 
 image_xscale = -1;
 
-global.cur_menu = tiles;
+enum le_menu {
+	tiles,
+	enemies,
+	length
+}
+
+global.cur_menu = le_menu.tiles;
+global.menus = array(obj_menu_tile_select, obj_menu_enemy_placer);

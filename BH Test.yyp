@@ -743,6 +743,14 @@
             }
         },
         {
+            "Key": "da0cd7de-a5fd-416e-a002-df6e718005f8",
+            "Value": {
+                "id": "8dd377b5-cf69-4614-afcb-165210c6ed08",
+                "resourcePath": "objects\\obj_menu_enemy_placer\\obj_menu_enemy_placer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "db14f107-c993-49d6-821f-9130fc595b30",
             "Value": {
                 "id": "8d651f9e-42a8-4976-83c8-2d775cac98c8",
