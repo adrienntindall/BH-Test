@@ -35,7 +35,7 @@ x = x0+r*cos(t);
 y = y0+r*sin(t);
 
 if(hp >3 ? (p1cd <= 0):(p2cd <= 0)) {
-	spawn_circular(n, obj_bullet_enemy, id);
+	spawn_circular(n, obj_bullet_enemy, id, 0);
 	p1cd = 1.2;
 	p2cd = .7;
 }

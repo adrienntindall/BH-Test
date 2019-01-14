@@ -23,12 +23,14 @@ enum weapon_list {
 	simple_alt,
 	octo,
 	knives,
-	pow_orb
+	pow_orb,
+	split_orb
 }
 global.weapon = weapon_list.simple;
 global.weapon_alt = weapon_list.simple_alt;
 global.weapon_inv = array(weapon_list.simple, weapon_list.simple_alt, weapon_list.octo, weapon_list.knives,
-							weapon_list.pow_orb);
+							weapon_list.pow_orb, weapon_list.split_orb);
+
 enum focus_list {
 	basic,
 	time_slow,

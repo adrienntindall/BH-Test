@@ -2,15 +2,15 @@
     "id": "ac984a4e-1b77-46e8-918b-c9a1bcdc9937",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_bullet_enemy_2",
+    "name": "spr_bullet_2",
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 43,
-    "bbox_left": 21,
-    "bbox_right": 52,
-    "bbox_top": 15,
-    "bboxmode": 0,
+    "bbox_bottom": 41,
+    "bbox_left": 26,
+    "bbox_right": 42,
+    "bbox_top": 27,
+    "bboxmode": 2,
     "colkind": 1,
     "coltolerance": 0,
     "edgeFiltering": false,
@@ -54,8 +54,8 @@
             "visible": true
         }
     ],
-    "origin": 0,
-    "originLocked": false,
+    "origin": 9,
+    "originLocked": true,
     "playbackSpeed": 15,
     "playbackSpeedType": 0,
     "premultiplyAlpha": false,
@@ -65,6 +65,6 @@
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
     "width": 64,
-    "xorig": 0,
-    "yorig": 0
+    "xorig": 41,
+    "yorig": 34
 }

@@ -94,7 +94,7 @@ if(shoot && cd <= 0) {
 			cd = .07;
 			break;
 		case weapon_list.octo:
-			spawn_circular(8, obj_bullet_sin, id)
+			spawn_circular(8, obj_bullet_sin, id, 0)
 			cd = 8/30;
 			t+=3;
 			break;
@@ -116,6 +116,14 @@ if(shoot && cd <= 0) {
 				instance_create_depth(x, y, 1, obj_bullet_pow_orb);	
 			}
 			break;
+		case weapon_list.split_orb:
+			var ss = instance_create_depth(x, y, 1, obj_split_spawner);
+			var theta = point_direction(x, y, mouse_x, mouse_y)*pi/180;
+			ss.theta = theta;
+			cd = 1;
+			break;
+		default:
+			break;
 	}
 }
 
@@ -128,6 +136,7 @@ if(end_fire) {
 		default:
 			break;
 	}
+	cd = .25;
 }
 
 //Focus Mode

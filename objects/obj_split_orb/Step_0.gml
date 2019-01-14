@@ -1,13 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-move_linear();
-
 var dt = global.dt;
 
-t++;
-t0++;
-life -= dt;
-if (life <= 0) {
-	instance_destroy();	
+if(tts <= 0) {
+	spawn_circular(2, obj_split_bullet, noone, theta);
+	instance_destroy();
 }
+
+tts -= dt;
