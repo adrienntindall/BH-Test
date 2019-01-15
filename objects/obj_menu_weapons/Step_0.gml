@@ -10,7 +10,7 @@ var change = keyboard_check_pressed(ord("D"))-keyboard_check_pressed(ord("A"));
 
 switch(mpos) {
 	case options_w.back:
-		if(select) room_goto(room_menu_pause);
+		if(select) room_goto(room0);
 		break;
 	case options_w.weapon:
 		if(change != 0) {

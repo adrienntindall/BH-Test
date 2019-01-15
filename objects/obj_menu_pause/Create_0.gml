@@ -26,3 +26,8 @@ tot = array_length_1d(menu);
 tot_focus = array_length_1d(global.focus_inv);
 
 prev_room = 0;
+
+menu_obj = array(obj_menu_pause);
+
+screenShot = -1;
+global.pause = false;
