@@ -10,6 +10,11 @@ enum options
 	quit
 }
 
+enum menus {
+	pause,
+	weapons
+}
+
 menu[options.resume] = "Resume";
 menu[options.weapons] = "Change Weapons";
 menu[options.armour] = "Change Armoour";
@@ -29,5 +34,7 @@ prev_room = 0;
 
 menu_obj = array(obj_menu_pause);
 
-screenShot = -1;
+global.screenShot = -1;
 global.pause = false;
+global.cur_menu = menus.pause;
+global.back_frame = 0;

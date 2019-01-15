@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(global.pause && global.cur_menu == menus.pause) {
+
+if(global.pause && (global.cur_menu == menus.weapons)) {
 	if(sprite_exists(global.screenShot)) draw_sprite_ext(global.screenShot,0, 0,0,view_wport/camera_get_view_width(0),view_hport/camera_get_view_height(0),0,c_white,1);
-	
 	draw_set_colour(c_black);
 	draw_set_alpha(.4);
 	draw_rectangle(0, 0, view_wport, view_hport, false);
