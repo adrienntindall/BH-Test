@@ -20,7 +20,7 @@ menu[options.weapons] = "Change Weapons";
 menu[options.armour] = "Change Armoour";
 menu[options.level_edit] = "Level Editor";
 menu[options.quit] = "Quit";
-menu[options.focus] = 0; 
+menu[options.focus] = global.focus_names[global.focus]; 
 space = 64;
 
 mpos = 0;

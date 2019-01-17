@@ -9,8 +9,8 @@ enum options_w {
 }
 
 menu[options_w.back] = "Back";
-menu[options_w.weapon] = global.weapon;
-menu[options_w.weapon_alt] = global.weapon_alt;
+menu[options_w.weapon] = global.weapon_names[global.weapon];
+menu[options_w.weapon_alt] = global.weapon_names[global.weapon_alt];
 
 tot_weapons = array_length_1d(global.weapon_inv);
 

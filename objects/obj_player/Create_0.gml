@@ -31,6 +31,8 @@ global.weapon_alt = weapon_list.simple_alt;
 global.weapon_inv = array(weapon_list.simple, weapon_list.simple_alt, weapon_list.octo, weapon_list.knives,
 							weapon_list.pow_orb, weapon_list.split_orb);
 
+global.weapon_names = array("Simple", "Sine", "Octo Sine", "Knives", "Power Orb", "Split Cannon");
+
 enum focus_list {
 	basic,
 	time_slow,
@@ -38,6 +40,7 @@ enum focus_list {
 }
 global.focus = focus_list.basic;
 global.focus_inv = array(focus_list.basic, focus_list.time_slow, focus_list.shield);
+global.focus_names = array("None", "Time Slow", "Shield");
 tscd = 0;
 tslim = 90;
 shcd = 180;

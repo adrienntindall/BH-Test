@@ -17,14 +17,14 @@ if((global.cur_menu == menus.weapons) && global.pause) {
 			if(change != 0) {
 				wpos = (change == -1 && wpos == 0) ? tot_weapons-1 :(wpos+change)%tot_weapons;
 				global.weapon = global.weapon_inv[wpos];
-				menu[options_w.weapon] = global.weapon;
+				menu[options_w.weapon] = global.weapon_names[wpos];
 			}
 			break;
 		case options_w.weapon_alt:
 			if(change != 0) {
 				wapos = (change == -1 && wapos == 0) ? tot_weapons-1 : (wapos+change)%tot_weapons;
 				global.weapon_alt = global.weapon_inv[wapos];
-				menu[options_w.weapon_alt] = global.weapon_alt;
+				menu[options_w.weapon_alt] = global.weapon_names[wapos];
 			}
 			break;
 		default:

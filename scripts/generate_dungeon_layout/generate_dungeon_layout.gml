@@ -212,14 +212,15 @@ while(true) {
 			var cur = floor(random(rn));
 			if(findIndex(path, cur) != -1) continue;
 			var exist = false;
-			for(var h = 0; h < cnp; h++) if(findIndex_2d(branch, h, cur) != -1) exist = true;
+			var rrw = 0;
+			for(var h = 0; h < cnp; h++) if(findIndex_2d(branch, h, cur) != -1) { exist = true; rrw = h; }
 			if(exist) continue;
 			var dir = floor(random(4));
 			for(var q = 0; q < 4; q++) {
 				var r = findIndex_2d(graph, cur, ((dir+q)%4)+1);
 				if(r == -1) continue;
 				var st = false; var rw = 0;
-				for(var h = 0; h < cnp; h++) if(findIndex_2d(branch, h, r) != -1) { st = true; rw = h; }
+				for(var h = 0; h < cnp; h++) if(h != rrw && findIndex_2d(branch, h, r) != -1) { st = true; rw = h; }
 				if(findIndex(path, r) != -1) ||  st {
 					if(st) && (findIndex_2d(branch, rw, r) == array_length_2d(branch, rw)-1) branch[rw, array_length_2d(branch, rw)] = cur;
 					else if(!initset) { branch[0, 0] = cur; initset = true; cnct_room[0] = r; }

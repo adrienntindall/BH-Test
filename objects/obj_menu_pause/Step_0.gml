@@ -56,7 +56,7 @@ if(global.cur_menu == menus.pause) && (global.back_frame <= 0) {
 			if(change != 0) {
 				fpos = (change == -1 && fpos == 0) ? tot_focus-1 :(fpos+change)%tot_focus;
 				global.focus = global.focus_inv[fpos];
-				menu[options.focus] = global.focus;
+				menu[options.focus] = global.focus_names[global.focus];
 			}
 			break;
 		default:

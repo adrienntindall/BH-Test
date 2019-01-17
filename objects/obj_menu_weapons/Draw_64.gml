@@ -9,7 +9,7 @@ if(global.pause && (global.cur_menu == menus.weapons)) {
 	draw_set_alpha(1);
 
 	draw_set_halign(fa_left);
-	draw_set_valign(fa_middle);
+	draw_set_valign(fa_bottom);
 	draw_set_font(menu_font);
 	draw_set_colour(c_white);
 
