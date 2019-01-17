@@ -45,7 +45,7 @@ layers[2] = layer_tilemap_get_id(layer_get_id("Tiles_3"));
 layers[3] = layer_tilemap_get_id(layer_get_id("Tiles_4"));
 for(var a = 0; a < 6; a++) for(var b = 0; b < 4; b++) tilemap_set(map_id, 0, a, b);
 
-generate_dungeon_layout(16, 3);
+generate_dungeon_layout(32, 3);
 
 while(true) {
 	var sx = random(sroom_x2-sroom_x1)+sroom_x1;

@@ -6,9 +6,9 @@ curtm = layer_tilemap_get_id(lays_id);
 curmp = layer_tilemap_get_id(layg_id);
 if(mclick) {
 	if((mouse_x > x) && (mouse_x < bbox_right) && (mouse_y > y) && (mouse_y < bbox_bottom)) {
-		curx = floor(mouse_x/64)*64;
-		cury = floor(mouse_y/64)*64;
-		cur_tile = tilemap_get(curmp, curx/64, cury/64);
+		curx = floor(mouse_x/64);
+		cury = floor(mouse_y/64);
+		cur_tile = tilemap_get(curmp, curx/2, cury/2);
 	}
 }
 else if(mhold) {

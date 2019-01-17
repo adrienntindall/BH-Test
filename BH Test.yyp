@@ -359,6 +359,14 @@
             }
         },
         {
+            "Key": "6a064715-8972-457f-80cd-5bbd097021fa",
+            "Value": {
+                "id": "59aaaf36-3c88-4bd8-a122-dfbebad92366",
+                "resourcePath": "objects\\obj_menu_scaler\\obj_menu_scaler.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "73a89bda-6f84-4e2d-b6f5-9e29cdc02d6f",
             "Value": {
                 "id": "ab2b9e9f-ce38-4f08-ae8d-5a133f9469ce",

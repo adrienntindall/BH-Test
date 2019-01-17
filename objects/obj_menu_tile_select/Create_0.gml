@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited();
+
 layg_id = layer_get_id("Tiles_1")
 lays_id = layer_get_id("Tiles")
 curtm = ts_level_editor;

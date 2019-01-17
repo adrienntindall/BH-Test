@@ -30,9 +30,9 @@ while(true) {
 	//Placing Boss Room
 	var x3, x4, y3, y4;
 	x3 = random(rx2[broom_id]-rx1[broom_id]-11) + rx1[broom_id]+1;
-	x4 = x3+10;
+	x4 = x3+20;
 	y3 = random(ry2[broom_id]-ry1[broom_id]-11) + ry1[broom_id]+1;
-	y4 = y3+10;
+	y4 = y3+20;
 	for(var xx = x3; xx < x4+1; xx++) {
 		for(var yy = y3; yy < y4+1; yy++) {
 			tilemap_set(map_id, floor_tile, xx, yy);
@@ -50,9 +50,9 @@ while(true) {
 	
 	//Placing Starting Room
 	x3 = random(rx2[sroom_id]-rx1[sroom_id]-7) + rx1[sroom_id] + 1;
-	x4 = x3 + 5;
+	x4 = x3 + 15;
 	y3 = random(ry2[sroom_id]-ry1[sroom_id]-7) + ry1[sroom_id] + 1;
-	y4 = y3 + 5;
+	y4 = y3 + 15;
 	for(var xx = x3; xx < x4+1; xx++) {
 		for(var yy = y3; yy < y4+1; yy++) {
 			tilemap_set(map_id, floor_tile, xx, yy);
@@ -70,23 +70,24 @@ while(true) {
 		//New Room
 		var cx1 = rx1[c]; var cx2 = rx2[c]; var cy1 = ry1[c]; var cy2 = ry2[c];
 		var f = 0;
-		var chart = array(0,1,1,1,0,0,0,1,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,);
-		var nds = array(2,1,8,1); var sds = array(5,9); var eds = array(10,3,10,4); var wds = array(0,3,0,4);
+		var chart = array(0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,);
+		var nds = array(10,0); var sds = array(10,22); var eds = array(0,11); var wds = array(20,11);
 		var dx = cx2-cx1; var dy = cy2-cy1;
-		var sx = floor(random(dx-1-11))+1+cx1;
-		var sy = floor(random(dy-1-10))+1+cy1;
+		var sx = floor(random(dx-1-21))+1+cx1;
+		var sy = floor(random(dy-1-23))+1+cy1;
 		for(var q = 0; q < array_length_1d(nds)/2; q++) { ndx[c, q] = sx+nds[2*q]; ndy[c, q] = sy+nds[2*q+1]; }
 		for(var q = 0; q < array_length_1d(sds)/2; q++) { sdx[c, q] = sx+sds[2*q]; sdy[c, q] = sy+sds[2*q+1]; }
 		for(var q = 0; q < array_length_1d(eds)/2; q++) { edx[c, q] = sx+eds[2*q]; edy[c, q] = sy+eds[2*q+1]; }
 		for(var q = 0; q < array_length_1d(wds)/2; q++) { wdx[c, q] = sx+wds[2*q]; wdy[c, q] = sy+wds[2*q+1]; }
-		for(var q = 0; q < 10; q++) {
-			for(var l = 0; l < 11; l++) {
+		for(var q = 0; q < 23; q++) {
+			for(var l = 0; l < 21; l++) {
 				if(chart[f] == 1) {
 					tilemap_set(map_id, floor_tile, sx+l, sy+q);
 				}
 				f++;
 			}
 		}
+
 
 		//var m = round(.02*size);
 		var m = 1;

@@ -8,7 +8,8 @@
         "cab30c17-e27a-470e-b6b7-1e1acaaf3891",
         "cc00f76a-e5ed-4b8b-869a-1f11378ed0e3",
         "e915c807-6fc4-45a6-ae82-6aefb28aeb13",
-        "da0cd7de-a5fd-416e-a002-df6e718005f8"
+        "da0cd7de-a5fd-416e-a002-df6e718005f8",
+        "6a064715-8972-457f-80cd-5bbd097021fa"
     ],
     "filterType": "GMObject",
     "folderName": "Level Editor",

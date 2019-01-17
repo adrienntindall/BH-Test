@@ -1,11 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-image_xscale=32;
-image_yscale=32;
-
-rx1 = 0;
-rx2 = 0;
-ry1 = 0;
-ry2 = 0;
-
-fade = 15;
+image_xscale=2;
+image_yscale=2;

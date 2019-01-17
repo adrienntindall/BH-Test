@@ -3,9 +3,9 @@
 var minh = 0, minw = 0;
 var maxh = 0, maxw = 0;
 var fmh = false, fmw = false;
-for(var h = 0; h < 16; h++) {
-	for(var w = 0; w < 16; w++) {
-		if(tilemap_get(map_id, w+6, h) != 0) {
+for(var h = 0; h < 30; h++) {
+	for(var w = 0; w < 30; w++) {
+		if(tilemap_get(map_id, w+12, h) != 0) {
 			if(!fmw) { minw = w; fmw = true; }
 			if(!fmh) { minh = h; fmh = true; }
 			minw = min(minw, w);
@@ -21,11 +21,11 @@ var chart = "";
 var nd = "", sd = "", ed = "", wd = "";
 for(var h = 0; h < dh; h++) {
 	for(var w = 0; w < dw; w++) {
-		if(tilemap_get(map_id, w+minw+6, h+minh) != 0) {
+		if(tilemap_get(map_id, w+minw+12, h+minh) != 0) {
 			chart += "1";
 		}
 		else chart += "0";
-		switch(tilemap_get(map_id, w+minw+6, h+minw)) {
+		switch(tilemap_get(map_id, w+minw+12, h+minw)) {
 			case ndoor:
 				nd += ((nd == "") ? "" : ",") + string(w) + "," + string(h);
 				break;
