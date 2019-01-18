@@ -3,8 +3,8 @@
 var minh = 0, minw = 0;
 var maxh = 0, maxw = 0;
 var fmh = false, fmw = false;
-for(var h = 0; h < 30; h++) {
-	for(var w = 0; w < 30; w++) {
+for(var h = 0; h < size; h++) {
+	for(var w = 0; w < size; w++) {
 		if(tilemap_get(map_id, w+12, h) != 0) {
 			if(!fmw) { minw = w; fmw = true; }
 			if(!fmh) { minh = h; fmh = true; }

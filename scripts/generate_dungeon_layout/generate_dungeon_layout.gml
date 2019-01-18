@@ -1,6 +1,6 @@
 ///generate_dungeon_layout(splits, min_path_length)
 
-var splits = argument0;
+var size = argument0;
 var mpl = argument1;
 
 //Generate Room Borders
@@ -14,7 +14,7 @@ ndx[0, 0] = 0; ndy[0, 0] = 0;
 sdx[0, 0] = 0; sdy[0, 0] = 0;
 edx[0, 0] = 0; edy[0, 0] = 0;
 wdx[0, 0] = 0; wdy[0, 0] = 0;
-split_room(splits);
+split_room(size);
 
 //Put stuff in room borders
 var sroom_set = false;
@@ -29,10 +29,10 @@ while(true) {
 	}
 	//Placing Boss Room
 	var x3, x4, y3, y4;
-	x3 = random(rx2[broom_id]-rx1[broom_id]-11) + rx1[broom_id]+1;
-	x4 = x3+20;
-	y3 = random(ry2[broom_id]-ry1[broom_id]-11) + ry1[broom_id]+1;
-	y4 = y3+20;
+	x3 = random(rx2[broom_id]-rx1[broom_id]-(size/2)) + rx1[broom_id]+1;
+	x4 = x3+size/2;
+	y3 = random(ry2[broom_id]-ry1[broom_id]-(size/2)) + ry1[broom_id]+1;
+	y4 = y3+size/2;
 	for(var xx = x3; xx < x4+1; xx++) {
 		for(var yy = y3; yy < y4+1; yy++) {
 			tilemap_set(map_id, floor_tile, xx, yy);
@@ -49,10 +49,10 @@ while(true) {
 	wdx[broom_id, 0] = x3; wdy[broom_id, 0] = y3+round((y4-y3)/2);
 	
 	//Placing Starting Room
-	x3 = random(rx2[sroom_id]-rx1[sroom_id]-7) + rx1[sroom_id] + 1;
-	x4 = x3 + 15;
-	y3 = random(ry2[sroom_id]-ry1[sroom_id]-7) + ry1[sroom_id] + 1;
-	y4 = y3 + 15;
+	x3 = random(rx2[sroom_id]-rx1[sroom_id]-(3*size/8)) + rx1[sroom_id] + 1;
+	x4 = x3 + floor(3*size/8)-2;
+	y3 = random(ry2[sroom_id]-ry1[sroom_id]-(3*size/8)) + ry1[sroom_id] + 1;
+	y4 = y3 + floor(3*size/8)-2;
 	for(var xx = x3; xx < x4+1; xx++) {
 		for(var yy = y3; yy < y4+1; yy++) {
 			tilemap_set(map_id, floor_tile, xx, yy);
