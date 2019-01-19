@@ -13,7 +13,8 @@
         "2c1f8fbb-2ab0-488f-8f52-3a7ea677512a",
         "8c077b64-b2c0-42ef-8c06-8bd5133ce5ed",
         "8dbfe969-6c1f-4018-a27f-ec4c432b5d20",
-        "6c9b3e38-8aeb-4a3d-9d88-cac5491e2c05"
+        "6c9b3e38-8aeb-4a3d-9d88-cac5491e2c05",
+        "724f2eb5-a771-4e91-b3c0-4e7f6d14a51a"
     ],
     "filterType": "GMObject",
     "folderName": "Bullets",

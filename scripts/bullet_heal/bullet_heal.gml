@@ -5,7 +5,7 @@ var i = id;
 
 with(obj_bullet_enemy) {
 	if(parent == i) {
-		obj_player.hp += amnt;
+		if(global.weapon != weapon_list.life_channel) && (global.weapon_alt != weapon_list.life_channel) obj_player.hp += amnt;
 		instance_destroy();
 	}
 }

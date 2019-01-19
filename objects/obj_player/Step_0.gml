@@ -132,6 +132,14 @@ if(shoot && cd <= 0) {
 				cd = .1;
 			}
 			break;
+		case weapon_list.life_channel:
+			var th = point_direction(x, y, mouse_x, mouse_y)*pi/180;
+			instance_create_depth(x, y, 1, obj_life_channel);
+			with(obj_life_channel) { 
+				obj_life_channel.theta = th; 
+				image_angle = (th-pi/2)*180/pi; 
+				}
+			break;
 		default:
 			break;
 	}

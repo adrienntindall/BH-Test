@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "20fa8ec2-1300-45e7-b6f5-4c1d9251d995",
+            "Value": {
+                "id": "c5ca45e7-ec44-4765-ba74-33eed55102c9",
+                "resourcePath": "scripts\\move_beam\\move_beam.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "253e7248-50b7-4edf-a8f9-b153e2b5c8cc",
             "Value": {
                 "id": "07ed43d6-30dc-4cfa-a2df-4d00662946ae",
@@ -407,6 +415,14 @@
             }
         },
         {
+            "Key": "724f2eb5-a771-4e91-b3c0-4e7f6d14a51a",
+            "Value": {
+                "id": "249b5eb2-890a-4dd9-a61e-497dd22f2f71",
+                "resourcePath": "objects\\obj_life_channel\\obj_life_channel.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "73a89bda-6f84-4e2d-b6f5-9e29cdc02d6f",
             "Value": {
                 "id": "ab2b9e9f-ce38-4f08-ae8d-5a133f9469ce",
@@ -650,7 +666,7 @@
             "Key": "b4556ed8-4b97-44aa-b84a-29e0580f704b",
             "Value": {
                 "id": "560309ea-c56a-40b3-bf18-e3386b08b4f5",
-                "resourcePath": "sprites\\sprite20\\sprite20.yy",
+                "resourcePath": "sprites\\spr_lifesteal\\spr_lifesteal.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -959,6 +975,7 @@
         "c5ebbad6-9e51-41a7-98d3-b394ca53a234",
         "28b9d3ef-e601-41c7-8404-7e6875efcf71",
         "885b2bd4-83b8-4464-8191-bdb59a69aa81",
+        "20fa8ec2-1300-45e7-b6f5-4c1d9251d995",
         "916d1bcf-1ebb-446e-b6ca-fad471074ce3",
         "2679b7a3-0983-4be1-8ddb-8ccc5a29b411",
         "c13b7cfa-a9b2-4bb8-9cae-3bb9683b6636",
