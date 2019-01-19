@@ -25,7 +25,7 @@ for(var h = 0; h < dh; h++) {
 			chart += "1";
 		}
 		else chart += "0";
-		switch(tilemap_get(map_id, w+minw+12, h+minw)) {
+		switch(tilemap_get(map_id, w+minw+12, h+minh)) {
 			case ndoor:
 				nd += ((nd == "") ? "" : ",") + string(w) + "," + string(h);
 				break;

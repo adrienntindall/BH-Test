@@ -3,6 +3,8 @@
 
 event_inherited();
 
+y = (size-6)*64;
+
 image_xscale *= -1;
 
 enum le_menu {
