@@ -18,3 +18,4 @@ if(wall_collision(tilemap, id, spd*dt*cos(theta), -spd*dt*sin(theta))) {
 }
 x += spd*dt*cos(theta);
 y += -spd*dt*sin(theta);
+spd = max(spd+dt*a, minspd);

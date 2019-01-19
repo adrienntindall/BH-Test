@@ -10,3 +10,5 @@ y0 = y;
 tilemap = layer_tilemap_get_id("Borders");
 parent = noone;
 dmg = 1;
+a = 0;
+minspd = 0;

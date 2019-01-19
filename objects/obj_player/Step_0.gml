@@ -122,6 +122,16 @@ if(shoot && cd <= 0) {
 			ss.theta = theta;
 			cd = 1;
 			break;
+		case weapon_list.flamethrower:
+			repeat(floor(random(3) + 1)) {
+				var spread = random(pi/4)-pi/8;
+				var theta = point_direction(x, y, mouse_x, mouse_y)*pi/180; 
+				var fire = instance_create_depth(x, y, 1, obj_ft_fire);
+				fire.theta = theta+spread;
+				fire.image_angle = fire.theta *180/pi;
+				cd = .1;
+			}
+			break;
 		default:
 			break;
 	}

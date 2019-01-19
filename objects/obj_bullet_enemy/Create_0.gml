@@ -8,3 +8,5 @@ life = 6;
 tilemap = layer_tilemap_get_id("Borders");
 t0 = 0;
 feff = false;
+a = 0;
+minspd = 0;
