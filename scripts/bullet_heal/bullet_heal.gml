@@ -1,5 +1,5 @@
 ///bullet_heal(amnt)
-//@param {real} amnt  amount healed
+///@param amnt  amount healed
 var amnt = argument0;
 var i = id;
 

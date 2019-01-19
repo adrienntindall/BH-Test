@@ -8,6 +8,7 @@ if(hp <= 0) {
 	instance_destroy();
 }
 
+enemy_chase_player();
 enemy_move_circle();
 
 if(hp >3 ? (p1cd <= 0):(p2cd <= 0)) {
