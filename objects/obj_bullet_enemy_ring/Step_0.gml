@@ -6,7 +6,7 @@ var dt = global.dt;
 x0 = parent.x;
 y0 = parent.y;
 
-rotate_3d(r*sin(t), 0, r*cos(t), 0, 2*pi/3, thetaxz);
+rotate_3d(r*sin(t), r*cos(t), 0, 0, .7, 2.5*thetaxz);
 
 t+=dt;
 thetaxz+=dt;

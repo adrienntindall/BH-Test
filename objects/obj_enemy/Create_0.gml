@@ -37,3 +37,6 @@ rx2 = 0;
 ry1 = 0;
 ry2 = 0;
 fspd = 30;
+
+cd = 0;
+cur_bul = 0;
