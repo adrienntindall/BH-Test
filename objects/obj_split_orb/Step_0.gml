@@ -4,7 +4,7 @@
 var dt = global.dt;
 
 if(tts <= 0) {
-	spawn_circular(2, obj_split_bullet, noone, theta);
+	spawn_circular(2, obj_split_bullet, noone, theta, 10);
 	instance_destroy();
 }
 

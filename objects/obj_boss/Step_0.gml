@@ -13,7 +13,7 @@ x = x0 + 150*sin(t);
 if(hp < 125) image_angle = (image_angle + dt) % 360;
 
 if(p1cd <= 0 && hp > 124) {
-	spawn_circular(16, obj_bullet_enemy, id, 0);
+	spawn_circular(16, obj_bullet_enemy, id, 0, 10);
 	p1cd = .7;
 }
 else if (hp < 125 && p2cd <= 0) {

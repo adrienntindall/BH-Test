@@ -8,4 +8,4 @@ if(hp <= 0) {
 
 enemy_move_circle();
 
-spawn_circular_spray(pi/8,obj_bullet_enemy, id, pi/2, .15);
+spawn_circular_spray(pi/8,obj_bullet_enemy, id, pi/2, 10, .15);

@@ -94,7 +94,7 @@ if(shoot && cd <= 0) {
 			cd = .07;
 			break;
 		case weapon_list.octo:
-			spawn_circular(8, obj_bullet_sin, id, 0)
+			spawn_circular(8, obj_bullet_sin, id, 0, 10);
 			cd = 8/30;
 			t+=3;
 			break;
