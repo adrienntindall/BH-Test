@@ -48,6 +48,10 @@ while(true) {
 	edx[broom_id, 0] = x4; edy[broom_id, 0] = y3+round((y4-y3)/2);
 	wdx[broom_id, 0] = x3; wdy[broom_id, 0] = y3+round((y4-y3)/2);
 	
+	var fow = instance_create_depth(64*(x3-1), 64*(y3-1), 0, obj_fow);
+	fow.image_xscale = (x4-x3)+3;
+	fow.image_yscale = (y4-y3)+3;
+	
 	//Placing Starting Room
 	x3 = random(rx2[sroom_id]-rx1[sroom_id]-(3*size/8)) + rx1[sroom_id] + 1;
 	x4 = x3 + floor(3*size/8)-2;
@@ -87,8 +91,11 @@ while(true) {
 				f++;
 			}
 		}
-
-
+		
+		
+		var fow = instance_create_depth(64*(sx-1), 64*(sy-1), 0, obj_fow);
+		fow.image_xscale = 19+2;
+		fow.image_yscale = 17+2;
 
 		//var m = round(.02*size);
 		var m = 1;
@@ -107,7 +114,7 @@ while(true) {
 		}
 		
 		//Barriers
-		var B = 1;
+		var B = 0;
 		for(var r = 0; r < B; r++) {
 			var bb = instance_create_depth(rx1[c], rx2[c], 2, obj_bounce_barrier);
 			bb.xcorn1 = 64*(random(dx-6) + sx);

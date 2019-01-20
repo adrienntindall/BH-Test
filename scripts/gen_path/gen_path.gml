@@ -34,7 +34,9 @@ while(true) {
 		default:
 			break;
 	}
-										
+	
+	xtop = floor(xtop); ytop = floor(ytop); xbot = floor(xbot); ybot = floor(ybot);
+	
 	var dir = graph[w, z] > 2;	
 	var crux = dir ? floor(random(abs(xtop-xbot)-4) + min(xtop, xbot)+2)
 				: floor(random(abs(ytop-ybot)-4) + min(ytop, ybot)+2);
@@ -45,5 +47,11 @@ while(true) {
 	//go from (crux, ytop) or (xtop, crux) -> (crux, ybot) or (xbot, crux)
 	paint_line(crux, dir ? xbot : ybot, dir ? ybot : xbot, dir, map_id, floor_tile);
 	//go from (xbot, crux) or (crux, ybot) -> (xbot, ybot)
+	
+	
+	var fow = instance_create_depth(64*(min(xtop, xbot)-.5+(dir ? 2 : -1)), 64*(min(ytop, ybot)-.5+(dir ? -1 : 2)), 0, obj_fow);
+	fow.image_xscale = abs(xtop-xbot)+1+(dir ? -3 : 3);
+	fow.image_yscale = abs(ytop-ybot)+1+(dir ? 3 : -3);
+	
 	break;
 }
