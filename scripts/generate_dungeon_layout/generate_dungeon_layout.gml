@@ -105,6 +105,16 @@ while(true) {
 			e.ry1 = ry1[c]*64;
 			e.ry2 = ry2[c]*64;
 		}
+		
+		//Barriers
+		var B = 1;
+		for(var r = 0; r < B; r++) {
+			var bb = instance_create_depth(rx1[c], rx2[c], 2, obj_bounce_barrier);
+			bb.xcorn1 = 64*(random(dx-6) + sx);
+			bb.xcorn2 = bb.xcorn1 + 64*5;
+			bb.ycorn1 = 64*(random(dy-6) + sy);
+			bb.ycorn2 = bb.ycorn1 + 64*5;
+		}
 	}
 	
 	//H A L L W A Y S
