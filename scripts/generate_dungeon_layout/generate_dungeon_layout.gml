@@ -107,9 +107,9 @@ while(true) {
 			}
 		}
 		wavh.rx1 = sx*64;
-		wavh.rx2 = (sx+dx)*64;
+		wavh.rx2 = (sx+19)*64;
 		wavh.ry1 = sy*64;
-		wavh.ry2 = (sy+dy)*64;
+		wavh.ry2 = (sy+17)*64;
 		wavh.cur_room = c;
 		
 		//Barriers

@@ -551,6 +551,14 @@
             }
         },
         {
+            "Key": "86745de6-8c9b-4a95-a79d-1c3ef129dbba",
+            "Value": {
+                "id": "7cf9b0c9-6dbf-40ea-9551-fc68aa8a6747",
+                "resourcePath": "objects\\obj_door\\obj_door.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "86f577c2-6f61-40ba-bb61-947bac2de6eb",
             "Value": {
                 "id": "f100c48d-a887-475a-843c-75041471c198",

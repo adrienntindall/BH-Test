@@ -2,7 +2,11 @@
 // You can write your code in this editor
 
 var flag = false;
-
+if((obj_player.x >= rx1) && (obj_player.x <= rx2) && (obj_player.y >= ry1) && (obj_player.y <= ry2)) {
+	with(obj_door) {
+		if(rn == other.cur_room) lock = true;
+	}	
+}
 with(obj_enemy) {
 	if(rn == other.cur_room) flag = true;
 }
