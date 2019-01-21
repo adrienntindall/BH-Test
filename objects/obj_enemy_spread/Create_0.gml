@@ -5,3 +5,5 @@
 event_inherited();
 
 r = 50;
+
+enemy_place_circle(tilemap);

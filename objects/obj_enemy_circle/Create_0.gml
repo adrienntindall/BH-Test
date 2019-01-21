@@ -2,7 +2,7 @@
 // You can write your code in this editor
 t = 0;
 
-r = 0;
+r = random(100) + 50;
 
 hp = 5;
 
@@ -20,6 +20,7 @@ tilemap=layer_tilemap_get_id("Borders");
 tm = layer_tilemap_get_id("Tiles");
 
 stile = tilemap_get_at_pixel(tm, x, y);
+enemy_place_circle(tilemap);
 
 rx1 = 0;
 rx2 = 0;

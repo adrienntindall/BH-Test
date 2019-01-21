@@ -7,7 +7,7 @@ bmap_id = layer_tilemap_get_id(blay_id);
 border_tile = tilemap_get(bmap_id, 1, 1);
 tilemap_set(bmap_id, 0, 1 ,1);
 boss = obj_boss;
-enemies = array(obj_enemy, obj_enemy_ring, obj_enemy_cspray, obj_enemy_spread, obj_enemy_linespread);
+enemies = array(obj_enemy_circle, obj_enemy_ring, obj_enemy_cspray, obj_enemy_spread, obj_enemy_linespread);
 //enemies = array(obj_enemy_linespread); //for testing
 broom_x1 = 0;
 broom_x2 = room_width;

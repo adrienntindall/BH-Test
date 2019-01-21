@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "3e4478ac-815c-4609-9fa2-9f96797ecaf3",
+            "Value": {
+                "id": "58a85bd5-e132-4b6c-a826-695314c8e79d",
+                "resourcePath": "objects\\obj_enemy_circle\\obj_enemy_circle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "40546665-aff4-477d-a8b5-280c2895e723",
             "Value": {
                 "id": "0fe6e951-1440-4dbc-9258-ae7aa6b97f61",
@@ -455,11 +463,27 @@
             }
         },
         {
+            "Key": "76f2b9a7-c281-4d79-9db5-bce3f46953e5",
+            "Value": {
+                "id": "826d35e2-7b04-49f1-87ee-06b0db28f149",
+                "resourcePath": "scripts\\enemy_place_circle\\enemy_place_circle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "773f1e6a-1173-4e7d-804d-fde54aa01a8a",
             "Value": {
                 "id": "aee76e69-5642-4057-b7bc-e9c86291bb5a",
                 "resourcePath": "fonts\\menu_font\\menu_font.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "774c066c-7d6a-43ac-aa2d-d84e549d8042",
+            "Value": {
+                "id": "3c961132-b3bc-4601-881c-500a119d6ba0",
+                "resourcePath": "objects\\obj_wave_holder\\obj_wave_holder.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1036,6 +1060,7 @@
         "20fa8ec2-1300-45e7-b6f5-4c1d9251d995",
         "8d3015d4-738c-4049-99ba-7b0ef98e660e",
         "86f577c2-6f61-40ba-bb61-947bac2de6eb",
+        "76f2b9a7-c281-4d79-9db5-bce3f46953e5",
         "916d1bcf-1ebb-446e-b6ca-fad471074ce3",
         "2679b7a3-0983-4be1-8ddb-8ccc5a29b411",
         "c13b7cfa-a9b2-4bb8-9cae-3bb9683b6636",

@@ -98,20 +98,19 @@ while(true) {
 		fow.image_yscale = 17+2;
 
 		//var m = round(.02*size);
-		var m = 1;
-		for(var r = 0; r < m; r++) {
-			while(true) {
-				var ex = random(rx2[c]-rx1[c]) + rx1[c];
-				var ey = random(ry2[c]-ry1[c]) + ry1[c];
-				if(tilemap_get(map_id, ex, ey) != floor_tile) continue;
-				break;
+		var wavh = instance_create_depth(0, 0, 0, obj_wave_holder)
+		var wav = random(2) + 1;
+		for(var u = 0; u < wav; u++) {
+			var m = random(2) + 1;
+			for(var r = 0; r < m; r++) {
+				wavh.waves[u, r] = enemies[floor(random(array_length_1d(enemies)))]	
 			}
-			var e = instance_create_depth(ex*64, ey*64, 1, enemies[floor(random(array_length_1d(enemies)))]);
-			e.rx1 = rx1[c]*64;
-			e.rx2 = rx2[c]*64;
-			e.ry1 = ry1[c]*64;
-			e.ry2 = ry2[c]*64;
 		}
+		wavh.rx1 = sx*64;
+		wavh.rx2 = (sx+dx)*64;
+		wavh.ry1 = sy*64;
+		wavh.ry2 = (sy+dy)*64;
+		wavh.cur_room = c;
 		
 		//Barriers
 		var B = 0;
