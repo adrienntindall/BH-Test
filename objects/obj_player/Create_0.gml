@@ -26,12 +26,12 @@ enum weapon_list {
 	pow_orb,
 	split_orb,
 	flamethrower,
-	life_channel
+	life_channel,
+	length
 }
 global.weapon = weapon_list.simple;
 global.weapon_alt = weapon_list.simple_alt;
-global.weapon_inv = array(weapon_list.simple, weapon_list.simple_alt, weapon_list.octo, weapon_list.knives,
-							weapon_list.pow_orb, weapon_list.split_orb, weapon_list.flamethrower, weapon_list.life_channel);
+global.weapon_inv = array(weapon_list.simple, weapon_list.simple_alt);
 
 global.weapon_names = array("Simple", "Sine", "Octo Sine", "Knives", "Power Orb", "Split Cannon", "Flamethrower", "Life Channel");
 

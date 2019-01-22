@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "00d4cb63-3a54-4ff6-b375-d3895f53d917",
+            "Value": {
+                "id": "6cd230a3-17ca-4e0b-95f4-7889ac695364",
+                "resourcePath": "sprites\\spr_treasure\\spr_treasure.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "073e8c36-4e2d-45d7-b9dd-5383551e1ce7",
             "Value": {
                 "id": "df5260db-e125-4b17-a7c9-35c7c737ce94",
@@ -708,6 +716,14 @@
                 "id": "c80be921-4691-410f-8bed-62660997b3cc",
                 "resourcePath": "views\\aa391c9e-2cdd-4219-8e7a-f4e001e99723.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "aa4a1e47-05d7-4acc-abec-57d45cf5ae27",
+            "Value": {
+                "id": "f3b4df8d-bb59-45de-87a0-c3c93a922072",
+                "resourcePath": "objects\\obj_treasure_chest\\obj_treasure_chest.yy",
+                "resourceType": "GMObject"
             }
         },
         {
