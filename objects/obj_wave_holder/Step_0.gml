@@ -24,7 +24,10 @@ if(!flag) {
 			}
 		
 			var en = instance_create_depth(xx, yy, 1, waves[cur_wave, c]);
+			if(wall_collision(tm, en, 0, 0)) instance_destroy(en);
 			if(instance_exists(en)) break;
+			xx = random(rx2 - rx1)+rx1;
+			yy = random(ry2 - ry1)+ry1;
 		}
 		if(instance_exists(en)) {
 			en.rx1 = rx1;

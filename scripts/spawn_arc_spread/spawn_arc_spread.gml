@@ -11,6 +11,7 @@ var n = argument0;
 var theta = argument3;
 var dtheta = argument4;
 var r = argument5;
+var dt = global.dt;
 
 if(cd <= 0) {
 	for(var c = 0; c < n; c++) {
@@ -21,4 +22,6 @@ if(cd <= 0) {
 		bt.image_angle = bt.theta*180/pi;
 	}
 	cd = argument6;
+	cur_bul++;
 }
+else cd -= dt;
