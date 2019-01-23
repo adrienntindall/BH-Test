@@ -10,3 +10,6 @@ t0 = 0;
 feff = false;
 a = 0;
 minspd = 0;
+t=0;
+x0 = x;
+y0 = y;
