@@ -93,9 +93,9 @@ while(true) {
 		}
 		
 		
-		var fow = instance_create_depth(64*(sx-1), 64*(sy-1), 0, obj_fow);
-		fow.image_xscale = 19+2;
-		fow.image_yscale = 17+2;
+		var fow = instance_create_depth(64*(sx-1)+32, 64*(sy-1)+32, 0, obj_fow);
+		fow.image_xscale = 19+1;
+		fow.image_yscale = 17+1;
 
 		//var m = round(.02*size);
 		var wavh = instance_create_depth(0, 0, 0, obj_wave_holder)

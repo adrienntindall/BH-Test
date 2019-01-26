@@ -65,8 +65,8 @@ for(var q = 0; q < " + string(dh) + @"; q++) {
 		f++;
 	}
 }
-var fow = instance_create_depth(64*(sx-1), 64*(sy-1), 0, obj_fow);
-fow.image_xscale = "+string(dh)+@"+2;
-fow.image_yscale = "+string(dw)+@"+2;
+var fow = instance_create_depth(64*(sx-.5), 64*(sy-.5), 0, obj_fow);
+fow.image_xscale = "+string(dh)+@"+1;
+fow.image_yscale = "+string(dw)+@"+1;
 ");
 file_text_close(file);
