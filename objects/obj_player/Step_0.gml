@@ -216,14 +216,13 @@ if(end_focus) switch(global.focus) {
 //Bombs
 if(bomb && bombs > 0) {
 	bombs--;
-	var xx = x;
-	var yy = y;
-	var br = bomb_r;
-	with(obj_bullet_enemy) {
-		if((xx-x)*(xx-x) + (yy-y)+(yy-y) <= br*br) instance_destroy();
-	}
-	with(obj_enemy) {
-		if((xx-x)*(xx-x) + (yy-y)*(yy-y) <= br*br) hp-=other.bomb_damage;	
+	for(var c =0; c < 32; c++) {
+		var bmb = instance_create_depth(x, y, 0, obj_bomb);
+		bmb.theta = c*pi/16;
+		bmb.image_angle = bmb.theta*180/pi;
+		bmb.spd = 400;
+		bmb.life = 2;
+		bmb.dmg = bomb_damage;
 	}
 }
 
