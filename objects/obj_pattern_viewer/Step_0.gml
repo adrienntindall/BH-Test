@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+update = keyboard_check_pressed(vk_enter);
+
 if(update) {
 	if(instance_exists(obj_pattern_enemy)) with(obj_pattern_enemy) instance_destroy();
 	if(instance_exists(obj_pattern_bullet)) with(obj_pattern_bullet) instance_destroy();
@@ -17,4 +19,18 @@ if(update) {
 	e.spd = vars[po.en_spd];
 	e.a = vars[po.en_a];
 	e.r = vars[po.en_r];
+	update = false;
+}
+
+if(mouse_check_button_pressed(mb_left) && !c_flag) {
+	cur_box = -1;	
+}
+
+switch(cur_box) {
+	case -1:
+		break;
+	default:
+		vars[cur_box] = string_decimal(keyboard_string);
+		keyboard_string = "";
+		break;
 }
