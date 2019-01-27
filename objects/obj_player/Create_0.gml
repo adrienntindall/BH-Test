@@ -1,5 +1,6 @@
 /// @description Defining Variables
 // You can write your code in this editor
+depth = 2;
 cd = 0;
 kcd = .5;
 lock = noone;

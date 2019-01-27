@@ -1,4 +1,11 @@
-///move_loop_const(x_egg, y_egg)
+///move_loop_const(x_egg, x_disp, y_egg)
+///@param x_egg
+///@param x_dsiplacement
+///@param y_egg
 
-move_eq_para(t+argument0*sin(t), argument1 + argument1*cos(t));
+var z = argument1;
+var b = argument0;
+var c = argument2;
+
+move_eq_para(z*t+b*sin(t), c + c*cos(t));
 t++;

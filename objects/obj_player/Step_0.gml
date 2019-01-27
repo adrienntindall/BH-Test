@@ -216,9 +216,9 @@ if(end_focus) switch(global.focus) {
 //Bombs
 if(bomb && bombs > 0) {
 	bombs--;
-	for(var c =0; c < 32; c++) {
+	for(var c =0; c < 64; c++) {
 		var bmb = instance_create_depth(x, y, 0, obj_bomb);
-		bmb.theta = c*pi/16;
+		bmb.theta = c*pi/32;
 		bmb.image_angle = bmb.theta*180/pi;
 		bmb.spd = 400;
 		bmb.life = 2;
