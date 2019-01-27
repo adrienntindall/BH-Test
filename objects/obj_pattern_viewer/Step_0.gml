@@ -3,10 +3,19 @@
 
 update = keyboard_check_pressed(vk_enter);
 
+if(chng) {
+	if(instance_exists(obj_type_box)) with(obj_type_box) instance_destroy();
+	for(var c = 0; c < min(max_box, array_length_1d(var_ops)-cur_window*max_box); c++) {
+		var box = instance_create_depth(10, 128+c*ydis, 0, obj_type_box);
+		box.box_num = var_ops[cur_window*max_box + c];
+	}
+	chng = false;	
+}
+
 if(update) {
 	if(instance_exists(obj_pattern_enemy)) with(obj_pattern_enemy) instance_destroy();
 	if(instance_exists(obj_pattern_bullet)) with(obj_pattern_bullet) instance_destroy();
-	e = instance_create_depth(room_width/2, room_height/2, 1, obj_pattern_enemy);
+	var e = instance_create_depth(room_width/2, room_height/2, 1, obj_pattern_enemy);
 	e.cd = vars[po.cd];
 	e.n = vars[po.sp_n];
 	e.theta0 = vars[po.sp_theta];
@@ -23,14 +32,15 @@ if(update) {
 }
 
 if(mouse_check_button_pressed(mb_left) && !c_flag) {
-	cur_box = -1;	
+	cur_box = -1;
+	keyboard_string = "";
 }
 
 switch(cur_box) {
 	case -1:
 		break;
 	default:
-		vars[cur_box] = string_decimal(keyboard_string);
-		keyboard_string = "";
+		vars[cur_box] = string_digits(keyboard_string);
 		break;
 }
+

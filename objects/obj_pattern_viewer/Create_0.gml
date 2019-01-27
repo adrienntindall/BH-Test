@@ -5,6 +5,8 @@ cur_box = -1;
 cur_window = 0;
 max_box = 6;
 c_flag = false;
+chng = true;
+ydis = 256;
 
 enum em {
 	still,
@@ -14,7 +16,7 @@ enum em {
 }
 
 cur_mov = em.still;
-em_op[em.still] = array();
+em_op[em.still] = array(po.en_spd);
 em_op[em.circle] = array(po.en_w, po.en_wa);
 em_op[em.chase] = array(po.en_spd, po.en_a);
 mov_names = array("Still", "Circular", "Chasing");
@@ -83,6 +85,6 @@ var_names = array("Cooldown (sec): ", "Bullet Amount: ", "Offset (rads): ", "dTh
 				"Bullet Speed: ", "Bullet Acceleration: ", "Bullet tickspeed: ", "Bullet tickacceleration: ",
 				"Bullet life (sec): ");
 
-var_ops = array_add(em_op, array_add(sp_op, mp_op));
+var_ops = array_add(em_op[cur_mov], array_add(sp_op[bt_spawn], mp_op[bt_mov]));
 
 keyboard_string = "";

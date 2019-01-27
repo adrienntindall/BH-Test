@@ -48,6 +48,9 @@ if(global.cur_menu == menus.pause) && (global.back_frame <= 0) {
 		case options.level_edit:
 			room_goto(level_editor);
 			break;
+		case options.pat_edit:
+			room_goto(pattern_editor);
+			break;
 		default:
 			break;
 	}
