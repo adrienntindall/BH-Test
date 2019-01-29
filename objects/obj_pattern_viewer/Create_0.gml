@@ -16,7 +16,7 @@ enum em {
 }
 
 cur_mov = em.still;
-em_op[em.still] = array(po.en_spd);
+em_op[em.still] = array(po.stillness);
 em_op[em.circle] = array(po.en_w, po.en_wa);
 em_op[em.chase] = array(po.en_spd, po.en_a);
 mov_names = array("Still", "Circular", "Chasing");
@@ -50,6 +50,7 @@ sp_op[sp.line_spread] = array(po.cd, po.sp_n, po.sp_x1, po.sp_y1, po.sp_x2, po.s
 sp_names = array("Circular", "Circular (spray)", "Arc Spread", "Linear Spread");
 
 enum po {
+	stillness, //how still it is
 	cd, //cooldown
 	sp_n, //spawn n amnt
 	sp_theta, //spawn theta offset
@@ -81,8 +82,8 @@ vars = 0;
 for(var c = 0; c < po.length; c++) {
 	vars[c] = 0;
 }
-var_names = array("Cooldown (sec): ", "Bullet Amount: ", "Offset (rads): ", "dTheta (rads): ", "Spawn Radius: ",
-				"Draw x1: ", "Draw y1: ", "Draw x2: ", "Draw y2: ", "X Exaggeration: ", "Y Exaggeration: ",
+var_names = array("Stillness:", "Cooldown (sec): ", "Bullet Amount: ", "Offset (rads): ", "dTheta (rads): ", "Spawn Radius: ",
+				"Draw x1: ", "Draw y1: ", "Draw x2: ", "Draw y2: ", "X Exaggeration: ", "Y Exaggeration: ", "X displacement:", "Enemy Speed:",
 				"Enemy Acceleration: ", "Enemy Radius: ", "Enemy Rotational Speed: ", "Enemy Rotational Acceleration: ",
 				"Bullet Speed: ", "Bullet Acceleration: ", "Bullet Min. Speed: ", "Bullet Max. Speed: ", "Bullet tickspeed: ", "Bullet tickacceleration: ",
 				"Bullet life (sec): ");

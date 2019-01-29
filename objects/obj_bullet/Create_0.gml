@@ -12,4 +12,5 @@ parent = noone;
 dmg = 1;
 a = 0;
 minspd = 0;
+maxspd = 0;
 cd = 0;

@@ -43,4 +43,3 @@ switch(cur_box) {
 		vars[cur_box] = real(keyboard_string);
 		break;
 }
-
