@@ -8,6 +8,7 @@ mov_pat = 0;
 sp_pat = 0;
 bt_pat = 0;
 
+cdv = 0;
 theta0 = 0;
 theta = 0;
 sp_r = 0;

@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "27497f27-3509-48c4-9e94-7bb4e4e9f4be",
+            "Value": {
+                "id": "3aae2165-dcfa-4007-a334-29def1c3bef9",
+                "resourcePath": "scripts\\string_ndecimal\\string_ndecimal.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "28b9d3ef-e601-41c7-8404-7e6875efcf71",
             "Value": {
                 "id": "c4e0a057-04c2-49b8-941d-f7f026154e8a",
@@ -1288,6 +1296,7 @@
         "3afcaa9d-d5da-430d-a2ba-9cf2a817b26f",
         "378211c8-d986-4789-b034-baf1629eeb43",
         "6588199b-aca9-4851-bbb9-2174f5c216d3",
+        "27497f27-3509-48c4-9e94-7bb4e4e9f4be",
         "da02e70b-9d2f-4987-ad3d-0955889d7e91",
         "4e07a7ac-dd45-4eb0-b78c-ff0c3083a81a",
         "b918023e-745b-43ab-a376-435583e21970",

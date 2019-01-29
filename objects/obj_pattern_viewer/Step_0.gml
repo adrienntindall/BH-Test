@@ -16,7 +16,7 @@ if(update) {
 	if(instance_exists(obj_pattern_enemy)) with(obj_pattern_enemy) instance_destroy();
 	if(instance_exists(obj_pattern_bullet)) with(obj_pattern_bullet) instance_destroy();
 	var e = instance_create_depth(room_width/2, room_height/2, 1, obj_pattern_enemy);
-	e.cd = vars[po.cd];
+	e.cdv = vars[po.cd];
 	e.n = vars[po.sp_n];
 	e.theta0 = vars[po.sp_theta];
 	e.theta = vars[po.sp_dtheta];
@@ -40,7 +40,7 @@ switch(cur_box) {
 	case -1:
 		break;
 	default:
-		vars[cur_box] = string_digits(keyboard_string);
+		vars[cur_box] = real(keyboard_string);
 		break;
 }
 

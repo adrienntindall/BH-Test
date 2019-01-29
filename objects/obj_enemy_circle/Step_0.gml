@@ -12,7 +12,7 @@ enemy_chase_player();
 enemy_move_circle();
 
 if(hp >3 ? (p1cd <= 0):(p2cd <= 0)) {
-	spawn_circular(n, obj_bullet_enemy, id, 0, 10);
+	spawn_circular(n, obj_bullet_enemy, id, 0, 10, hp > 3 ? 1.2 : .7);
 	p1cd = 1.2;
 	p2cd = .7;
 }

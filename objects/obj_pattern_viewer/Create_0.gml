@@ -3,7 +3,7 @@
 update = true;
 cur_box = -1;
 cur_window = 0;
-max_box = 6;
+max_box = 4;
 c_flag = false;
 chng = true;
 ydis = 256;
@@ -29,7 +29,7 @@ enum mp {
 }
 
 bt_mov = mp.linear;
-mp_op[mp.linear] = array(po.bt_spd, po.bt_a);
+mp_op[mp.linear] = array(po.bt_spd, po.bt_a, po.bt_spd_min, po.bt_spd_max);
 mp_op[mp.loop_const] = array(po.x_ex, po.x_disp, po.y_ex, po.bt_tspd, po.bt_ta);
 mp_op[mp.loop_alt] = array(po.x_ex, po.x_disp, po.y_ex, po.bt_tspd, po.bt_ta);
 mp_names = array("Linear", "Loop (constant)", "Loop (alternating)");
@@ -69,6 +69,8 @@ enum po {
 	en_wa, //enemy rotational acceleration
 	bt_spd, //bullet speed
 	bt_a, //bullet acceleration
+	bt_spd_min, //bullet min speed
+	bt_spd_max, //bullet max speed
 	bt_tspd, //bullet tick speed (multiplier)
 	bt_ta, //bullet tick acceleration (multiplier)
 	bt_life, //bullet life
@@ -82,7 +84,7 @@ for(var c = 0; c < po.length; c++) {
 var_names = array("Cooldown (sec): ", "Bullet Amount: ", "Offset (rads): ", "dTheta (rads): ", "Spawn Radius: ",
 				"Draw x1: ", "Draw y1: ", "Draw x2: ", "Draw y2: ", "X Exaggeration: ", "Y Exaggeration: ",
 				"Enemy Acceleration: ", "Enemy Radius: ", "Enemy Rotational Speed: ", "Enemy Rotational Acceleration: ",
-				"Bullet Speed: ", "Bullet Acceleration: ", "Bullet tickspeed: ", "Bullet tickacceleration: ",
+				"Bullet Speed: ", "Bullet Acceleration: ", "Bullet Min. Speed: ", "Bullet Max. Speed: ", "Bullet tickspeed: ", "Bullet tickacceleration: ",
 				"Bullet life (sec): ");
 
 var_ops = array_add(em_op[cur_mov], array_add(sp_op[bt_spawn], mp_op[bt_mov]));
