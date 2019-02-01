@@ -17,7 +17,7 @@ enum em {
 
 cur_mov = em.still;
 em_op[em.still] = array(po.stillness);
-em_op[em.circle] = array(po.en_w, po.en_wa);
+em_op[em.circle] = array(po.en_w, po.en_wa, po.en_r);
 em_op[em.chase] = array(po.en_spd, po.en_a);
 mov_names = array("Still", "Circular", "Chasing");
 

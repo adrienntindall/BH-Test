@@ -4,6 +4,7 @@
 update = keyboard_check_pressed(vk_enter);
 
 if(chng) {
+	var_ops = array_add(em_op[cur_mov], array_add(sp_op[bt_spawn], mp_op[bt_mov]));
 	if(instance_exists(obj_type_box)) with(obj_type_box) instance_destroy();
 	for(var c = 0; c < min(max_box, array_length_1d(var_ops)-cur_window*max_box); c++) {
 		var box = instance_create_depth(10, 128+c*ydis, 0, obj_type_box);
@@ -28,6 +29,9 @@ if(update) {
 	e.spd = vars[po.en_spd];
 	e.a = vars[po.en_a];
 	e.r = vars[po.en_r];
+	e.mov_pat = cur_mov;
+	e.bt_pat = bt_mov;
+	e.sp_pat = bt_spawn;
 	update = false;
 }
 

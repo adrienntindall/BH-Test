@@ -9,7 +9,13 @@
         "eb6bc073-7171-4e8d-bf07-0931ce790737",
         "7c125526-9fb8-4845-8e12-2d07f72ce78e",
         "811a0749-da27-4e5b-98e6-06da81db9a93",
-        "3e1a681a-d514-4c91-bab1-438848375ec0"
+        "3e1a681a-d514-4c91-bab1-438848375ec0",
+        "540139fd-2000-48e4-bb56-b1292fcbb5d1",
+        "d298f66b-daa2-4268-9be3-5fb8db00c700",
+        "9f1f53e7-ff35-4a21-8a36-e705ec50d390",
+        "8759f8f9-a7f8-46b3-be7f-d2a07f52784a",
+        "f06e50d3-2a69-420b-b634-89bd02e2c1e2",
+        "2590b98a-a7cb-4eec-835b-fd1cc601b903"
     ],
     "filterType": "GMObject",
     "folderName": "Pattern Viewer",
