@@ -38,6 +38,7 @@ enum sp {
 	circular,
 	circular_spray,
 	arc_spread,
+	arc_spray,
 	line_spread,
 	length
 }
@@ -45,9 +46,10 @@ enum sp {
 bt_spawn = sp.circular;
 sp_op[sp.circular] = array(po.cd, po.sp_n, po.sp_theta, po.sp_r);
 sp_op[sp.circular_spray] = array(po.cd, po.sp_dtheta, po.sp_theta, po.sp_r);
-sp_op[sp.arc_spread] = array(po.sp_theta, po.cd, po.sp_n, po.sp_r);
+sp_op[sp.arc_spread] = array(po.cd, po.sp_dtheta, po.sp_theta, po.sp_n, po.sp_r);
+sp_op[sp.arc_spray] = array(po.cd, po.sp_dtheta, po.sp_dtheta2, po.sp_theta, po.sp_n, po.sp_r);
 sp_op[sp.line_spread] = array(po.cd, po.sp_n, po.sp_x1, po.sp_y1, po.sp_x2, po.sp_y2);
-sp_names = array("Circular", "Circular (spray)", "Arc Spread", "Linear Spread");
+sp_names = array("Circular", "Circular (spray)", "Arc Spread", "Arc Spray", "Linear Spread");
 
 enum po {
 	stillness, //how still it is
@@ -55,6 +57,7 @@ enum po {
 	sp_n, //spawn n amnt
 	sp_theta, //spawn theta offset
 	sp_dtheta, //spawn delta theta
+	sp_dtheta2, //spawn delta theta 2
 	sp_r, //spawn radius
 	sp_x1, //spawn x1 val
 	sp_y1, //spawn y2 val
@@ -82,7 +85,7 @@ vars = 0;
 for(var c = 0; c < po.length; c++) {
 	vars[c] = 0;
 }
-var_names = array("Stillness:", "Cooldown (sec): ", "Bullet Amount: ", "Offset (rads): ", "dTheta (rads): ", "Spawn Radius: ",
+var_names = array("Stillness:", "Cooldown (sec): ", "Bullet Amount: ", "Offset (rads): ", "dTheta (rads): ", "dTheta2 (rads):", "Spawn Radius: ",
 				"Draw x1: ", "Draw y1: ", "Draw x2: ", "Draw y2: ", "X Exaggeration: ", "Y Exaggeration: ", "X displacement:", "Enemy Speed:",
 				"Enemy Acceleration: ", "Enemy Radius: ", "Enemy Rotational Speed: ", "Enemy Rotational Acceleration: ",
 				"Bullet Speed: ", "Bullet Acceleration: ", "Bullet Min. Speed: ", "Bullet Max. Speed: ", "Bullet tickspeed: ", "Bullet tickacceleration: ",

@@ -879,6 +879,14 @@
             }
         },
         {
+            "Key": "a6173098-a9dd-4fab-9c02-3c1609e332ea",
+            "Value": {
+                "id": "928544c5-0efc-4bc4-8358-6251c9630778",
+                "resourcePath": "objects\\obj_button_export_pattern\\obj_button_export_pattern.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a7b60c3f-a9ce-4495-ad6f-8ddeb91d3f91",
             "Value": {
                 "id": "352eb1c2-42ae-4504-98b6-92b1a9c55382",
@@ -1175,6 +1183,14 @@
             }
         },
         {
+            "Key": "e3ba7171-6b47-4e41-9c17-10f02ec1e802",
+            "Value": {
+                "id": "a66414e0-71e5-4871-864b-646060ae112e",
+                "resourcePath": "scripts\\spawn_arc_spray\\spawn_arc_spray.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e3d27fde-691c-4fe7-8432-15ec4d9c6ddd",
             "Value": {
                 "id": "1afd01b1-4c6e-40fa-a118-5079fec6f916",
@@ -1323,6 +1339,7 @@
         "bfcf5f2d-6099-4381-8b17-cd34e268b215",
         "415352d1-15ba-4bd2-9d22-1842d37988d4",
         "a58ddb49-ffa6-4b58-9830-4554ce3263ae",
+        "e3ba7171-6b47-4e41-9c17-10f02ec1e802",
         "169aa058-7726-408f-9d18-5acd166547a5",
         "db14f107-c993-49d6-821f-9130fc595b30",
         "c64979cd-f633-48f9-96b9-fd01d8d3acac",

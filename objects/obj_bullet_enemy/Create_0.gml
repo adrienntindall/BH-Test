@@ -12,5 +12,7 @@ a = 0;
 minspd = 0;
 maxspd = 0;
 t=0;
+tspd = 1;
+ta = 0;
 x0 = x;
 y0 = y;

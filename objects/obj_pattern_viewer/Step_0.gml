@@ -21,6 +21,7 @@ if(update) {
 	e.n = vars[po.sp_n];
 	e.theta0 = vars[po.sp_theta];
 	e.theta = vars[po.sp_dtheta];
+	e.theta2 = vars[po.sp_dtheta2];
 	e.sp_r = vars[po.sp_r];
 	e.sp_x1 = vars[po.sp_x1];
 	e.sp_x2 = vars[po.sp_x2];

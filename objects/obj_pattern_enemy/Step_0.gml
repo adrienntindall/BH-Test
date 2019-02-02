@@ -17,6 +17,9 @@ switch(sp_pat) {
 	case sp.arc_spread:
 		spawn_arc_spread(n, obj_pattern_bullet, id, theta0, theta, sp_r, cdv);
 		break;
+	case sp.arc_spray:
+		spawn_arc_spray(n, obj_pattern_bullet, id, theta0, theta2, theta, sp_r, cdv);
+		break;
 	case sp.circular:
 		spawn_circular(n, obj_pattern_bullet, id, theta0, sp_r, cdv);
 		break;
