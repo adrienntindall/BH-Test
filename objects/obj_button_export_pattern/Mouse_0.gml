@@ -51,6 +51,9 @@ switch(obj_pattern_viewer.bt_mov) {
 file = file_text_open_write(working_directory+"exported_patterns.txt");
 file_text_write_string(file, @"///Enemy Create
 event_inherited();
+spd = " + string(vars[po.en_spd]) + @"
+a = " + string(vars[po.en_a]) + @"
+r = " + string(vars[po.en_r]) + @"
 
 ///Enemy Step
 "+en_mov+@"
@@ -60,6 +63,8 @@ event_inherited();
 event_inherited();
 spd = " + string(obj_pattern_viewer.vars[po.bt_spd]) +@";
 a = " + string(obj_pattern_viewer.vars[po.bt_a]) +@";
+tspd = " + string(vars[po.bt_tspd]) + @"
+ta = " + string(vars[po.bt_ta]) + @"
 minspd = " + string(obj_pattern_viewer.vars[po.bt_spd_min]) +@";
 maxspd = " + string(obj_pattern_viewer.vars[po.bt_spd_max]) +@";
 
