@@ -4,7 +4,7 @@
 update = keyboard_check_pressed(vk_enter);
 
 if(chng) {
-	var_ops = array_add(em_op[cur_mov], array_add(sp_op[bt_spawn], mp_op[bt_mov]));
+	var_ops = array_add(em_op[cur_mov], array_add(sp_op[bt_spawn[cur_lay]], mp_op[bt_mov[cur_lay]]));
 	if(instance_exists(obj_type_box)) with(obj_type_box) instance_destroy();
 	for(var c = 0; c < min(max_box, array_length_1d(var_ops)-cur_window*max_box); c++) {
 		var box = instance_create_depth(10, 128+c*ydis, 0, obj_type_box);
@@ -45,6 +45,6 @@ switch(cur_box) {
 	case -1:
 		break;
 	default:
-		vars[cur_box] = real(keyboard_string);
+		vars[cur_box, cur_lay] = real(keyboard_string);
 		break;
 }

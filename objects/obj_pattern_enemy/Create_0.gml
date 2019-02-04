@@ -14,3 +14,5 @@ theta = 0;
 theta2 = 0;
 sp_r = 0;
 sp_x1 = 0; sp_x2 = 0; sp_y1 = 0; sp_y2 = 0;
+
+clay = 0;

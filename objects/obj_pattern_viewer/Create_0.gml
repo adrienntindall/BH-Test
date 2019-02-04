@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+layers = 1;
+cur_lay = 0;
 update = true;
 cur_box = -1;
 cur_window = 0;
@@ -28,7 +30,7 @@ enum mp {
 	length	
 }
 
-bt_mov = mp.linear;
+bt_mov[0] = mp.linear;
 mp_op[mp.linear] = array(po.bt_spd, po.bt_a, po.bt_spd_min, po.bt_spd_max);
 mp_op[mp.loop_const] = array(po.x_ex, po.x_disp, po.y_ex, po.bt_tspd, po.bt_ta);
 mp_op[mp.loop_alt] = array(po.x_ex, po.x_disp, po.y_ex, po.bt_tspd, po.bt_ta);
@@ -43,7 +45,7 @@ enum sp {
 	length
 }
 
-bt_spawn = sp.circular;
+bt_spawn[0] = sp.circular;
 sp_op[sp.circular] = array(po.cd, po.sp_n, po.sp_theta, po.sp_r);
 sp_op[sp.circular_spray] = array(po.cd, po.sp_dtheta, po.sp_theta, po.sp_r);
 sp_op[sp.arc_spread] = array(po.cd, po.sp_dtheta, po.sp_theta, po.sp_n, po.sp_r);
@@ -54,7 +56,9 @@ sp_names = array("Circular", "Circular (spray)", "Arc Spread", "Arc Spray", "Lin
 enum po {
 	stillness, //how still it is
 	cd, //cooldown
+	rcd, //reset cooldown
 	sp_n, //spawn n amnt
+	sp_nmax, //max spawn amount (per pattern)
 	sp_theta, //spawn theta offset
 	sp_dtheta, //spawn delta theta
 	sp_dtheta2, //spawn delta theta 2
@@ -83,14 +87,14 @@ enum po {
 
 vars = 0;
 for(var c = 0; c < po.length; c++) {
-	vars[c] = 0;
+	vars[c, cur_lay] = 0;
 }
-var_names = array("Stillness:", "Cooldown (sec): ", "Bullet Amount: ", "Offset (rads): ", "dTheta (rads): ", "dTheta2 (rads):", "Spawn Radius: ",
+var_names = array("Stillness:", "Cooldown (sec): ", "Pattern reset time (sec):", "Bullet Amount: ", "Pattern Amount:", "Offset (rads): ", "dTheta (rads): ", "dTheta2 (rads):", "Spawn Radius: ",
 				"Draw x1: ", "Draw y1: ", "Draw x2: ", "Draw y2: ", "X Exaggeration: ", "Y Exaggeration: ", "X displacement:", "Enemy Speed:",
 				"Enemy Acceleration: ", "Enemy Radius: ", "Enemy Rotational Speed: ", "Enemy Rotational Acceleration: ",
 				"Bullet Speed: ", "Bullet Acceleration: ", "Bullet Min. Speed: ", "Bullet Max. Speed: ", "Bullet tickspeed: ", "Bullet tickacceleration: ",
 				"Bullet life (sec): ");
 
-var_ops = array_add(em_op[cur_mov], array_add(sp_op[bt_spawn], mp_op[bt_mov]));
+var_ops = array_add(em_op[cur_mov], array_add(sp_op[bt_spawn[0]], mp_op[bt_mov[0]]));
 
 keyboard_string = "";

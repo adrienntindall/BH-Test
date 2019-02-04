@@ -4,15 +4,17 @@
 // Inherit the parent event
 event_inherited();
 
-pattern = obj_pattern_viewer.bt_mov;
+l = obj_pattern_enemy.clay;
 
-x_egg = obj_pattern_viewer.vars[po.x_ex];
-y_egg = obj_pattern_viewer.vars[po.y_ex];
-x_disp = obj_pattern_viewer.vars[po.x_disp];
+pattern = obj_pattern_viewer.bt_mov[l];
 
-spd = obj_pattern_viewer.vars[po.bt_spd];
-a = obj_pattern_viewer.vars[po.bt_a];
-tspd = obj_pattern_viewer.vars[po.bt_tspd];
-ta = obj_pattern_viewer.vars[po.bt_ta];
-minspd = obj_pattern_viewer.vars[po.bt_spd_min];
-maxspd = obj_pattern_viewer.vars[po.bt_spd_max];
+x_egg = obj_pattern_viewer.vars[po.x_ex, l];
+y_egg = obj_pattern_viewer.vars[po.y_ex, l];
+x_disp = obj_pattern_viewer.vars[po.x_disp, l];
+
+spd = obj_pattern_viewer.vars[po.bt_spd, l];
+a = obj_pattern_viewer.vars[po.bt_a, l];
+tspd = obj_pattern_viewer.vars[po.bt_tspd, l];
+ta = obj_pattern_viewer.vars[po.bt_ta, l];
+minspd = obj_pattern_viewer.vars[po.bt_spd_min, l];
+maxspd = obj_pattern_viewer.vars[po.bt_spd_max, l];
