@@ -1,7 +1,7 @@
 /// @description Set variables
 // You can write your code in this editor
 t = 0;
-
+clay = 0;
 r = 0;
 
 hp = 5;
@@ -29,5 +29,5 @@ rn = 0;
 
 fspd = 30;
 
-cd = 0;
+cd[0] = 0;
 cur_bul = 0;

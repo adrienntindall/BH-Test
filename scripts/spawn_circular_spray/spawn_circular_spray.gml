@@ -13,13 +13,13 @@ var parent = argument2;
 var theta0 = argument3;
 var r = argument4;
 
-if(cd <= 0) {
+if(cd[clay] <= 0) {
 	var theta = theta0+dtheta*cur_bul;
 	var bt = instance_create_depth(x+r*cos(theta), y-r*sin(theta), 1, bullet);
 	bt.theta = theta;
 	bt.image_angle = bt.theta*180/pi;
-	cd += argument5;
+	cd[clay] += argument5;
 	cur_bul++;
 	
 }
-else cd -= dt;
+else cd[clay] -= dt;

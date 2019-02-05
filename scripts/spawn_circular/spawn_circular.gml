@@ -11,12 +11,12 @@ var bt = argument1;
 var theta = 2*pi/n; 
 var r = argument4;
 
-if(cd <= 0) for (c = 0; c < n; c++) {
+if(cd[clay] <= 0) for (c = 0; c < n; c++) {
 	b = instance_create_depth(x+r*cos(theta*c),y-r*sin(theta*c),0,bt);
 	b.theta = theta*c + argument3;
 	b.image_angle = b.theta*180/pi;
 	b.parent = argument2;
 	b.t0 = t;
-	cd = argument5;
+	cd[clay] = argument5;
 }
-else cd -= global.dt;
+else cd[clay] -= global.dt;

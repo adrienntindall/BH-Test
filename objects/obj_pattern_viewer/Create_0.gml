@@ -18,9 +18,9 @@ enum em {
 }
 
 cur_mov = em.still;
-em_op[em.still] = array(po.stillness);
-em_op[em.circle] = array(po.en_w, po.en_wa, po.en_r);
-em_op[em.chase] = array(po.en_spd, po.en_a);
+em_op[em.still] = array(po.stillness, po.max_lay);
+em_op[em.circle] = array(po.max_lay, po.en_w, po.en_wa, po.en_r);
+em_op[em.chase] = array(po.max_lay, po.en_spd, po.en_a);
 mov_names = array("Still", "Circular", "Chasing");
 
 enum mp {
@@ -55,6 +55,7 @@ sp_names = array("Circular", "Circular (spray)", "Arc Spread", "Arc Spray", "Lin
 
 enum po {
 	stillness, //how still it is
+	max_lay, //max amnt of layers
 	cd, //cooldown
 	rcd, //reset cooldown
 	sp_n, //spawn n amnt
@@ -89,7 +90,9 @@ vars = 0;
 for(var c = 0; c < po.length; c++) {
 	vars[c, cur_lay] = 0;
 }
-var_names = array("Stillness:", "Cooldown (sec): ", "Pattern reset time (sec):", "Bullet Amount: ", "Pattern Amount:", "Offset (rads): ", "dTheta (rads): ", "dTheta2 (rads):", "Spawn Radius: ",
+vars[po.max_lay, 0] = 1;
+
+var_names = array("Stillness:", "Layers: ", "Cooldown (sec): ", "Pattern reset time (sec):", "Bullet Amount: ", "Pattern Amount:", "Offset (rads): ", "dTheta (rads): ", "dTheta2 (rads):", "Spawn Radius: ",
 				"Draw x1: ", "Draw y1: ", "Draw x2: ", "Draw y2: ", "X Exaggeration: ", "Y Exaggeration: ", "X displacement:", "Enemy Speed:",
 				"Enemy Acceleration: ", "Enemy Radius: ", "Enemy Rotational Speed: ", "Enemy Rotational Acceleration: ",
 				"Bullet Speed: ", "Bullet Acceleration: ", "Bullet Min. Speed: ", "Bullet Max. Speed: ", "Bullet tickspeed: ", "Bullet tickacceleration: ",

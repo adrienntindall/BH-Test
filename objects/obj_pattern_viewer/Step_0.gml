@@ -3,6 +3,17 @@
 
 update = keyboard_check_pressed(vk_enter);
 
+if(array_length_2d(vars, 0) < layers) {
+	for(var b = array_length_2d(vars, 0); b < layers; b++) 
+		for(var c = 0; c < po.length; c++) {
+			if(c >= po.en_spd && c <= po.en_wa) vars[c, b] = vars[c, 0];
+			else if (c == po.max_lay) vars[c, b] = vars[c, 0];
+			else vars[c, b] = 0;
+		}
+	bt_mov[b] = 0;
+	bt_spawn[b] = 0;
+}
+
 if(chng) {
 	var_ops = array_add(em_op[cur_mov], array_add(sp_op[bt_spawn[cur_lay]], mp_op[bt_mov[cur_lay]]));
 	if(instance_exists(obj_type_box)) with(obj_type_box) instance_destroy();
@@ -17,22 +28,23 @@ if(update) {
 	if(instance_exists(obj_pattern_enemy)) with(obj_pattern_enemy) instance_destroy();
 	if(instance_exists(obj_pattern_bullet)) with(obj_pattern_bullet) instance_destroy();
 	var e = instance_create_depth(room_width/2, room_height/2, 1, obj_pattern_enemy);
-	e.cdv = vars[po.cd];
-	e.n = vars[po.sp_n];
-	e.theta0 = vars[po.sp_theta];
-	e.theta = vars[po.sp_dtheta];
-	e.theta2 = vars[po.sp_dtheta2];
-	e.sp_r = vars[po.sp_r];
-	e.sp_x1 = vars[po.sp_x1];
-	e.sp_x2 = vars[po.sp_x2];
-	e.sp_y1 = vars[po.sp_y1];
-	e.sp_y2 = vars[po.sp_y2];
-	e.spd = vars[po.en_spd];
-	e.a = vars[po.en_a];
-	e.r = vars[po.en_r];
+	e.cdv = array_get_col(vars, po.cd);
+	e.n = array_get_col(vars, po.sp_n);
+	e.theta0 = array_get_col(vars, po.sp_theta);
+	e.theta = array_get_col(vars, po.sp_dtheta);
+	e.theta2 = array_get_col(vars, po.sp_dtheta2);
+	e.sp_r = array_get_col(vars, po.sp_r);
+	e.sp_x1 = array_get_col(vars, po.sp_x1);
+	e.sp_x2 = array_get_col(vars, po.sp_x2);
+	e.sp_y1 = array_get_col(vars, po.sp_y1);
+	e.sp_y2 = array_get_col(vars, po.sp_y2);
+	e.spd = vars[po.en_spd, 0];
+	e.a = vars[po.en_a, 0];
+	e.r = vars[po.en_r, 0];
 	e.mov_pat = cur_mov;
 	e.bt_pat = bt_mov;
 	e.sp_pat = bt_spawn;
+	e.layers = layers;
 	update = false;
 }
 
@@ -42,9 +54,15 @@ if(mouse_check_button_pressed(mb_left) && !c_flag) {
 }
 
 switch(cur_box) {
-	case -1:
+	case -1:		
 		break;
 	default:
+		with(obj_type_box) {
+			if(other.cur_box == box_num) image_blend = c_ltgray;
+			else image_blend = c_white;
+		}
 		vars[cur_box, cur_lay] = real(keyboard_string);
+		layers = max(1, floor(vars[po.max_lay, 0]));
+		var temp = vars[po.max_lay, 0];
 		break;
 }

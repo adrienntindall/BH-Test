@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(array_length_1d(cd) < layers) {
+	for(var c = 0; c < layers; c++) cd[c] = 0;
+}
+
 switch(mov_pat) {
 	case em.still:
 		break;
@@ -12,7 +16,7 @@ switch(mov_pat) {
 		show_debug_message("Note: the currently selected enemy movement pattern has not been implemented in the enemy viewer");
 		break;
 }
-for(var c = 0; c < obj_pattern_viewer.layers; c++) {
+for(var c = 0; c < layers; c++) {
 	clay = c;
 	switch(sp_pat[c]) {
 		case sp.arc_spread:

@@ -1,0 +1,17 @@
+{
+    "id": "491fdc76-eb11-43be-bbc0-3ddf9c19ba19",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "491fdc76-eb11-43be-bbc0-3ddf9c19ba19",
+    "children": [
+        "c13b7cfa-a9b2-4bb8-9cae-3bb9683b6636",
+        "8e8efaf6-9687-4d78-99ca-8d79259f4ceb",
+        "2679b7a3-0983-4be1-8ddb-8ccc5a29b411",
+        "6588199b-aca9-4851-bbb9-2174f5c216d3",
+        "8f5656d3-228c-455f-9d9d-9449fdc99e24"
+    ],
+    "filterType": "GMScript",
+    "folderName": "arrays",
+    "isDefaultView": false,
+    "localisedFolderName": ""
+}

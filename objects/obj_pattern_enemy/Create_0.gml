@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
+layers = 0;
+
 mov_pat = 0;
 sp_pat = 0;
 bt_pat = 0;

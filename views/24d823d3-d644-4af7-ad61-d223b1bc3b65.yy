@@ -16,7 +16,9 @@
         "9f1f53e7-ff35-4a21-8a36-e705ec50d390",
         "8759f8f9-a7f8-46b3-be7f-d2a07f52784a",
         "f06e50d3-2a69-420b-b634-89bd02e2c1e2",
-        "2590b98a-a7cb-4eec-835b-fd1cc601b903"
+        "2590b98a-a7cb-4eec-835b-fd1cc601b903",
+        "19398d13-86c6-4cf5-be2a-9a44e4f486ff",
+        "97f953c5-652b-4e8c-909c-4bb6872cdb16"
     ],
     "filterType": "GMObject",
     "folderName": "Pattern Viewer",

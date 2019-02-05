@@ -15,7 +15,7 @@ var n = argument0;
 var xx = argument3;
 var yy = argument4;
 
-if(cd <= 0) {
+if(cd[clay] <= 0) {
 	var dx = (argument5-xx)/n;
 	var dy = (argument6-yy)/n;
 
@@ -27,6 +27,6 @@ if(cd <= 0) {
 		if(wall_collision(tilemap, bt, 0, 0)) instance_destroy(bt);
 	}
 	
-	cd = argument8;
+	cd[clay] = argument8;
 }
-else cd -= dt;
+else cd[clay] -= dt;

@@ -15,7 +15,7 @@ var dtheta2 = argument5;
 var r = argument6;
 var dt = global.dt;
 
-if(cd <= 0) {
+if(cd[clay] <= 0) {
 	for(var c = 0; c < n; c++) {
 		var theta_c = theta + c*dtheta2/n;
 		var bt = instance_create_depth(x+r*cos(theta_c), y-r*sin(theta_c), 0, argument1);
@@ -23,7 +23,7 @@ if(cd <= 0) {
 		bt.theta = cur_bul*dtheta + theta + c*dtheta2/n;
 		bt.image_angle = bt.theta*180/pi;
 	}
-	cd = argument7;
+	cd[clay] = argument7;
 	cur_bul++;
 }
-else cd -= dt;
+else cd[clay] -= dt;
