@@ -21,7 +21,8 @@ if(chng) {
 		var box = instance_create_depth(10, 128+c*ydis, 0, obj_type_box);
 		box.box_num = var_ops[cur_window*max_box + c];
 	}
-	chng = false;	
+	chng = false;
+	cur_box = -1;
 }
 
 if(update) {

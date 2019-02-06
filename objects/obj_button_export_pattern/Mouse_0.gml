@@ -13,11 +13,12 @@ switch(obj_pattern_viewer.cur_mov) {
 		break;
 }
 
+var cdv_arr = "";
 var spawn  = "";
 var mov = "";
 var bt_create = "";
 for(var c = 0; c < obj_pattern_viewer.layers; c++) {
-	spawn += "///Bullet Step " + string(c) + "\n";
+	spawn += "clay = " + string(c) + ";\n";
 	switch(obj_pattern_viewer.bt_spawn[c]) {
 		case sp.circular:
 			spawn += "spawn_circular("+string(vars[po.sp_n, c])+", <bullet object>, id," + string(vars[po.sp_theta, c])+","+ string(vars[po.sp_dtheta, c]) + "," + string(vars[po.cd, c])+");\n";
@@ -35,16 +36,17 @@ for(var c = 0; c < obj_pattern_viewer.layers; c++) {
 			show_debug_message("Note: Currently selected spawn doesn't have an export");
 			break;
 	}
-
+	
+	mov += "///Bullet Step " + string(c) + "\n";
 	switch(obj_pattern_viewer.bt_mov[c]) {
 		case mp.linear:
-			mov = "move_linear();";
+			mov += "move_linear();\n";
 			break;
 		case mp.loop_const:
-			mov = "move_loop_const("+string(vars[po.x_ex, c])+","+string(vars[po.x_disp, c])+","+string(vars[po.y_ex, c])+");";
+			mov += "move_loop_const("+string(vars[po.x_ex, c])+","+string(vars[po.x_disp, c])+","+string(vars[po.y_ex, c])+");\n";
 			break;
 		case mp.loop_alt:
-			mov = "move_loop_alt("+string(vars[po.x_ex, c])+","+string(vars[po.x_disp, c])+","+string(vars[po.y_ex, c])+");";	
+			mov += "move_loop_alt("+string(vars[po.x_ex, c])+","+string(vars[po.x_disp, c])+","+string(vars[po.y_ex, c])+");\n";	
 			break;
 		default:
 			show_debug_message("Note: Currently selected bullet movement doesn't have an export");
@@ -61,6 +63,9 @@ for(var c = 0; c < obj_pattern_viewer.layers; c++) {
 	maxspd = " + string(obj_pattern_viewer.vars[po.bt_spd_max, c]) +@";
 	
 	";
+
+	if(c == obj_pattern_viewer.layers-1) cdv_arr += "0";
+	else cdv_arr += "0,";
 }
 
 file = file_text_open_write(working_directory+"exported_patterns.txt");
@@ -69,10 +74,11 @@ event_inherited();
 spd = " + string(vars[po.en_spd, 0]) + @";
 a = " + string(vars[po.en_a, 0]) + @";
 r = " + string(vars[po.en_r, 0]) + @";
-cdv = " + string(vars[po.cd, 0]) + @";
+cdv = array(" + cdv_arr + @");
 
 ///Enemy Step
 "+en_mov+@"
+
 "+spawn+@"
 
 "+bt_create+@"

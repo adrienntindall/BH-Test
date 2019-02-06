@@ -727,14 +727,6 @@
             }
         },
         {
-            "Key": "840ecbf7-46d4-4983-a3b0-afa1fa1af76a",
-            "Value": {
-                "id": "e8cde707-aa80-47b2-8919-45eef00545d7",
-                "resourcePath": "objects\\obj_enemy_autumn_2\\obj_enemy_autumn_2.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "85ce0113-d8ab-41f6-98af-d11b88d00ecf",
             "Value": {
                 "id": "39e73d26-af64-4acd-914b-3273e930b9c1",
