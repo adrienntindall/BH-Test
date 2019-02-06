@@ -3,4 +3,4 @@
 draw_self();
 draw_set_font(menu_font);
 draw_set_colour(c_black);
-draw_text(x, y, obj_pattern_viewer.vars[box_num, obj_pattern_viewer.cur_lay]);
+draw_text(x, y+sprite_height/2, obj_pattern_viewer.vars[box_num, obj_pattern_viewer.cur_lay]);

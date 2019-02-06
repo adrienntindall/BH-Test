@@ -5,10 +5,10 @@ cur_lay = 0;
 update = true;
 cur_box = -1;
 cur_window = 0;
-max_box = 4;
+max_box = 5;
 c_flag = false;
 chng = true;
-ydis = 256;
+ydis = room_height/(max_box+1);
 
 enum em {
 	still,
@@ -83,6 +83,8 @@ enum po {
 	bt_tspd, //bullet tick speed (multiplier)
 	bt_ta, //bullet tick acceleration (multiplier)
 	bt_life, //bullet life
+	bt_tts, //bullet time to split
+	bt_dos, //bullet destroy on split (t or f)
 	bt_spr, //bullet sprite (not in the options menu)
 	length
 }
