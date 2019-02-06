@@ -15,19 +15,21 @@ switch(obj_pattern_viewer.cur_mov) {
 
 var spawn  = "";
 var mov = "";
+var bt_create = "";
 for(var c = 0; c < obj_pattern_viewer.layers; c++) {
+	spawn += "///Bullet Step " + string(c) + "\n";
 	switch(obj_pattern_viewer.bt_spawn[c]) {
 		case sp.circular:
-			spawn += "spawn_circular("+string(vars[po.sp_n, c])+", <bullet object>, id," + string(vars[po.sp_theta, c])+","+ string(vars[po.sp_dtheta, c]) + "," + string(vars[po.cd, c])+");";
+			spawn += "spawn_circular("+string(vars[po.sp_n, c])+", <bullet object>, id," + string(vars[po.sp_theta, c])+","+ string(vars[po.sp_dtheta, c]) + "," + string(vars[po.cd, c])+");\n";
 			break;
 		case sp.circular_spray:
-			spawn += "spawn_circular_spray("+string(vars[po.sp_dtheta, c])+", <bullet object>, id," + string(vars[po.sp_theta, c]) + "," + string(vars[po.sp_r, c]) + "," + string(vars[po.cd, c]) + ");";
+			spawn += "spawn_circular_spray("+string(vars[po.sp_dtheta, c])+", <bullet object>, id," + string(vars[po.sp_theta, c]) + "," + string(vars[po.sp_r, c]) + "," + string(vars[po.cd, c]) + ");\n";
 			break;
 		case sp.arc_spread:
-			spawn += "spawn_arc_spread(" + string(vars[po.sp_n, c]) + ", <bullet object>, id," + string(vars[po.sp_theta, c]) + "," + string(vars[po.sp_dtheta, c]) + "," + string(vars[po.sp_r, c]) + "," + string(vars[po.cd, c]) + ");";
+			spawn += "spawn_arc_spread(" + string(vars[po.sp_n, c]) + ", <bullet object>, id," + string(vars[po.sp_theta, c]) + "," + string(vars[po.sp_dtheta, c]) + "," + string(vars[po.sp_r, c]) + "," + string(vars[po.cd, c]) + ");\n";
 			break;
 		case sp.line_spread:
-			spawn += "spawn_line_spread(" + string(vars[po.sp_n, c]) + ", <bullet object>, id," + string(vars[po.sp_x1, c]) + "," + string(vars[po.sp_y1, c]) + "," + string(vars[po.sp_x2, c]) + "," + string(vars[po.sp_y2, c]) + "," + string(vars[po.sp_theta, c]) + "," + string(vars[po.cd, c]) +");";
+			spawn += "spawn_line_spread(" + string(vars[po.sp_n, c]) + ", <bullet object>, id," + string(vars[po.sp_x1, c]) + "," + string(vars[po.sp_y1, c]) + "," + string(vars[po.sp_x2, c]) + "," + string(vars[po.sp_y2, c]) + "," + string(vars[po.sp_theta, c]) + "," + string(vars[po.cd, c]) +");\n";
 			break;
 		default:
 			show_debug_message("Note: Currently selected spawn doesn't have an export");
@@ -48,6 +50,17 @@ for(var c = 0; c < obj_pattern_viewer.layers; c++) {
 			show_debug_message("Note: Currently selected bullet movement doesn't have an export");
 			break;
 	}
+	
+	bt_create += @"///Bullet Create " + string(c) + @"
+	event_inherited();
+	spd = " + string(obj_pattern_viewer.vars[po.bt_spd, c]) +@";
+	a = " + string(obj_pattern_viewer.vars[po.bt_a, c]) +@";
+	tspd = " + string(vars[po.bt_tspd, c]) + @";
+	ta = " + string(vars[po.bt_ta, c]) + @";
+	minspd = " + string(obj_pattern_viewer.vars[po.bt_spd_min, c]) +@";
+	maxspd = " + string(obj_pattern_viewer.vars[po.bt_spd_max, c]) +@";
+	
+	";
 }
 
 file = file_text_open_write(working_directory+"exported_patterns.txt");
@@ -62,18 +75,8 @@ cdv = " + string(vars[po.cd, 0]) + @";
 "+en_mov+@"
 "+spawn+@"
 
-///Bullet Create
-event_inherited();
+"+bt_create+@"
 
-///Bullet Step
 "+mov+@"
 ");
 file_text_close(file);
-
-/*spd = " + string(obj_pattern_viewer.vars[po.bt_spd]) +@";
-a = " + string(obj_pattern_viewer.vars[po.bt_a]) +@";
-tspd = " + string(vars[po.bt_tspd]) + @";
-ta = " + string(vars[po.bt_ta]) + @";
-minspd = " + string(obj_pattern_viewer.vars[po.bt_spd_min]) +@";
-maxspd = " + string(obj_pattern_viewer.vars[po.bt_spd_max]) +@";
-*/

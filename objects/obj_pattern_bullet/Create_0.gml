@@ -18,3 +18,5 @@ tspd = obj_pattern_viewer.vars[po.bt_tspd, l];
 ta = obj_pattern_viewer.vars[po.bt_ta, l];
 minspd = obj_pattern_viewer.vars[po.bt_spd_min, l];
 maxspd = obj_pattern_viewer.vars[po.bt_spd_max, l];
+
+sprite_index = obj_pattern_viewer.bt_sprs[obj_pattern_viewer.vars[po.bt_spr, l]];

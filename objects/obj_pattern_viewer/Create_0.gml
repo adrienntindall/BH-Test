@@ -83,6 +83,7 @@ enum po {
 	bt_tspd, //bullet tick speed (multiplier)
 	bt_ta, //bullet tick acceleration (multiplier)
 	bt_life, //bullet life
+	bt_spr, //bullet sprite (not in the options menu)
 	length
 }
 
@@ -96,8 +97,10 @@ var_names = array("Stillness:", "Layers: ", "Cooldown (sec): ", "Pattern reset t
 				"Draw x1: ", "Draw y1: ", "Draw x2: ", "Draw y2: ", "X Exaggeration: ", "Y Exaggeration: ", "X displacement:", "Enemy Speed:",
 				"Enemy Acceleration: ", "Enemy Radius: ", "Enemy Rotational Speed: ", "Enemy Rotational Acceleration: ",
 				"Bullet Speed: ", "Bullet Acceleration: ", "Bullet Min. Speed: ", "Bullet Max. Speed: ", "Bullet tickspeed: ", "Bullet tickacceleration: ",
-				"Bullet life (sec): ");
+				"Bullet life (sec): ", "Bullet Sprite: ");
 
 var_ops = array_add(em_op[cur_mov], array_add(sp_op[bt_spawn[0]], mp_op[bt_mov[0]]));
+
+bt_sprs = array(spr_bullet_enemy_ring, spr_bullet_enemy, spr_ft, spr_lifesteal);
 
 keyboard_string = "";
