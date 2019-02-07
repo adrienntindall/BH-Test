@@ -2,6 +2,8 @@
 // You can write your code in this editor
 layers = 1;
 cur_lay = 0;
+cur_depth = 0;
+depth_path = 0;
 update = true;
 cur_box = -1;
 cur_window = 0;
@@ -30,7 +32,6 @@ enum mp {
 	length	
 }
 
-bt_mov[0] = mp.linear;
 mp_op[mp.linear] = array(po.bt_spd, po.bt_a, po.bt_spd_min, po.bt_spd_max);
 mp_op[mp.loop_const] = array(po.x_ex, po.x_disp, po.y_ex, po.bt_tspd, po.bt_ta);
 mp_op[mp.loop_alt] = array(po.x_ex, po.x_disp, po.y_ex, po.bt_tspd, po.bt_ta);
@@ -45,7 +46,6 @@ enum sp {
 	length
 }
 
-bt_spawn[0] = sp.circular;
 sp_op[sp.circular] = array(po.cd, po.sp_n, po.sp_theta, po.sp_r);
 sp_op[sp.circular_spray] = array(po.cd, po.sp_dtheta, po.sp_theta, po.sp_r);
 sp_op[sp.arc_spread] = array(po.cd, po.sp_dtheta, po.sp_theta, po.sp_n, po.sp_r);
@@ -55,6 +55,8 @@ sp_names = array("Circular", "Circular (spray)", "Arc Spread", "Arc Spray", "Lin
 
 enum po {
 	stillness, //how still it is
+	bt_mov,
+	bt_spawn,
 	max_lay, //max amnt of layers
 	cd, //cooldown
 	rcd, //reset cooldown
@@ -83,9 +85,12 @@ enum po {
 	bt_tspd, //bullet tick speed (multiplier)
 	bt_ta, //bullet tick acceleration (multiplier)
 	bt_life, //bullet life
+	bt_split, //bullet split (t or f)
+	bt_split_amnt, //bullet split amount
 	bt_tts, //bullet time to split
 	bt_dos, //bullet destroy on split (t or f)
 	bt_spr, //bullet sprite (not in the options menu)
+	split_indx, //array of bullets that split from this bullet (not in options menu)
 	length
 }
 
@@ -95,14 +100,21 @@ for(var c = 0; c < po.length; c++) {
 }
 vars[po.max_lay, 0] = 1;
 
-var_names = array("Stillness:", "Layers: ", "Cooldown (sec): ", "Pattern reset time (sec):", "Bullet Amount: ", "Pattern Amount:", "Offset (rads): ", "dTheta (rads): ", "dTheta2 (rads):", "Spawn Radius: ",
+var_names = array("Stillness:", "Movement Patt:", "Spawn Patt:", "Layers: ", "Cooldown (sec): ", "Pattern reset time (sec):", "Bullet Amount: ", "Pattern Amount:", "Offset (rads): ", "dTheta (rads): ", "dTheta2 (rads):", "Spawn Radius: ",
 				"Draw x1: ", "Draw y1: ", "Draw x2: ", "Draw y2: ", "X Exaggeration: ", "Y Exaggeration: ", "X displacement:", "Enemy Speed:",
 				"Enemy Acceleration: ", "Enemy Radius: ", "Enemy Rotational Speed: ", "Enemy Rotational Acceleration: ",
 				"Bullet Speed: ", "Bullet Acceleration: ", "Bullet Min. Speed: ", "Bullet Max. Speed: ", "Bullet tickspeed: ", "Bullet tickacceleration: ",
-				"Bullet life (sec): ", "Bullet Sprite: ");
+				"Bullet life (sec): ", "Bullet Split? :", "Bullet Split Amount: ", "Bullet Time to Split:", 
+				"Destroy on Split? : ", "Bullet Sprite: ", "Split Index:");
 
-var_ops = array_add(em_op[cur_mov], array_add(sp_op[bt_spawn[0]], mp_op[bt_mov[0]]));
+var_ops = array_add(em_op[cur_mov], array_add(sp_op[vars[po.bt_spawn, 0]], mp_op[vars[po.bt_mov, 0]]));
 
 bt_sprs = array(spr_bullet_enemy_ring, spr_bullet_enemy, spr_ft, spr_lifesteal);
+
+splits = 0;
+for(var c = 0; c < po.length; c++) {
+	splits[c, 0] = 0;
+}
+splits[po.max_lay, 0] = 1;
 
 keyboard_string = "";

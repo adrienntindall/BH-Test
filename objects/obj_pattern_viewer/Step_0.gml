@@ -14,8 +14,22 @@ if(array_length_2d(vars, 0) < layers) {
 	bt_spawn[b] = 0;
 }
 
+if(cur_depth > 0 ? splits[po.bt_split_amnt, cur_lay] > array_length_1d(splits[po.split_indx, cur_lay]) : vars[po.bt_split_amnt, cur_lay] > array_length_1d(vars[po.split_indx, cur_lay])) {
+	for(var c = cur_depth > 0 ? array_length_1d(splits[po.split_indx, c]) : array_length_1d(vars[po.split_indx, c]);
+		c < (cur_depth > 0 ? splits[po.bt_split_amnt, cur_lay] : vars[po.bt_split_amnt, cur_lay]); c++) {
+		
+		if(cur_depth > 0) splits[po.bt_split_amnt, cur_lay] = array_add(splits[po.bt_split_amnt, cur_lay], array(array_length_2d(splits, 0)-1));
+		else vars[po.bt_split_amnt, cur_lay] = array_add(vars[po.bt_split_amnt, cur_lay], array(array_length_2d(splits, 0)-1));
+		
+		for(var a = 0; a < po.length; a++) splits[a, c] = 0;
+
+		splits[po.max_lay, c] = cur_depth > 0 ? splits[po.bt_split_amnt, cur_lay] : vars[po.bt_split_amnt, cur_lay];
+	
+	}
+}
+
 if(chng) {
-	var_ops = array_add(em_op[cur_mov], array_add(sp_op[bt_spawn[cur_lay]], mp_op[bt_mov[cur_lay]]));
+	var_ops = array_add(em_op[cur_mov], array_add(sp_op[vars[po.bt_spawn, 0]], mp_op[vars[po.bt_mov, 0]]));
 	if(instance_exists(obj_type_box)) with(obj_type_box) instance_destroy();
 	for(var c = 0; c < min(max_box, array_length_1d(var_ops)-cur_window*max_box); c++) {
 		var box = instance_create_depth(10, 128+c*ydis, 0, obj_type_box);
@@ -43,8 +57,8 @@ if(update) {
 	e.a = vars[po.en_a, 0];
 	e.r = vars[po.en_r, 0];
 	e.mov_pat = cur_mov;
-	e.bt_pat = bt_mov;
-	e.sp_pat = bt_spawn;
+	e.bt_pat = array_get_col(vars, po.bt_mov);
+	e.sp_pat = array_get_col(vars, po.bt_spawn);
 	e.layers = layers;
 	update = false;
 }
@@ -62,8 +76,13 @@ switch(cur_box) {
 			if(other.cur_box == box_num) image_blend = c_ltgray;
 			else image_blend = c_white;
 		}
-		vars[cur_box, cur_lay] = real(keyboard_string);
-		layers = max(1, floor(vars[po.max_lay, 0]));
-		var temp = vars[po.max_lay, 0];
+		if(cur_depth == 0) {
+			vars[cur_box, cur_lay] = real(keyboard_string);
+			layers = max(1, floor(vars[po.max_lay, 0]));
+		}
+		else {
+			splits[cur_box, depth_path[cur_depth]] = real(keyboard_string);
+			layers = max(1, floor(cur_depth == 1 ? vars[po.bt_split_amnt, depth_path[0]] : splits[po.bt_split_amnt, depth_path[cur_depth-1]]));	
+		}
 		break;
 }

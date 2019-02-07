@@ -19,7 +19,7 @@ var mov = "";
 var bt_create = "";
 for(var c = 0; c < obj_pattern_viewer.layers; c++) {
 	spawn += "clay = " + string(c) + ";\n";
-	switch(obj_pattern_viewer.bt_spawn[c]) {
+	switch(vars[po.bt_spawn, c]) {
 		case sp.circular:
 			spawn += "spawn_circular("+string(vars[po.sp_n, c])+", <bullet object>, id," + string(vars[po.sp_theta, c])+","+ string(vars[po.sp_dtheta, c]) + "," + string(vars[po.cd, c])+");\n";
 			break;
@@ -38,7 +38,7 @@ for(var c = 0; c < obj_pattern_viewer.layers; c++) {
 	}
 	
 	mov += "///Bullet Step " + string(c) + "\n";
-	switch(obj_pattern_viewer.bt_mov[c]) {
+	switch(vars[po.bt_mov, c]) {
 		case mp.linear:
 			mov += "move_linear();\n";
 			break;
@@ -55,12 +55,14 @@ for(var c = 0; c < obj_pattern_viewer.layers; c++) {
 	
 	bt_create += @"///Bullet Create " + string(c) + @"
 	event_inherited();
-	spd = " + string(obj_pattern_viewer.vars[po.bt_spd, c]) +@";
-	a = " + string(obj_pattern_viewer.vars[po.bt_a, c]) +@";
+	spd = " + string(vars[po.bt_spd, c]) +@";
+	a = " + string(vars[po.bt_a, c]) +@";
 	tspd = " + string(vars[po.bt_tspd, c]) + @";
 	ta = " + string(vars[po.bt_ta, c]) + @";
-	minspd = " + string(obj_pattern_viewer.vars[po.bt_spd_min, c]) +@";
-	maxspd = " + string(obj_pattern_viewer.vars[po.bt_spd_max, c]) +@";
+	minspd = " + string(vars[po.bt_spd_min, c]) +@";
+	maxspd = " + string(vars[po.bt_spd_max, c]) +@";
+	sprite_index = " +string(obj_pattern_viewer.bt_sprs[vars[po.bt_spr, c]]) + @";
+	mask_index = sprite_index;
 	
 	";
 

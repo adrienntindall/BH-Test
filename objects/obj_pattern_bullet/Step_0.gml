@@ -15,3 +15,9 @@ switch(pattern) {
 		show_debug_message("Note: the currently selected bullet pattern is not implemented in the bullet object");
 		break;
 }
+
+if(tts < 0) {
+		
+}
+
+tts -= global.dt;
