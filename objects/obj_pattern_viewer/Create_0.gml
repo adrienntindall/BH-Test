@@ -29,13 +29,15 @@ enum mp {
 	linear,
 	loop_const,
 	loop_alt,
+	pulse,
 	length	
 }
 
 mp_op[mp.linear] = array(po.bt_spd, po.bt_a, po.bt_spd_min, po.bt_spd_max);
 mp_op[mp.loop_const] = array(po.x_ex, po.x_disp, po.y_ex, po.bt_tspd, po.bt_ta);
 mp_op[mp.loop_alt] = array(po.x_ex, po.x_disp, po.y_ex, po.bt_tspd, po.bt_ta);
-mp_names = array("Linear", "Loop (constant)", "Loop (alternating)");
+mp_op[mp.pulse] = array(po.x_ex, po.x_disp, po.bt_wspd, po.bt_tspd, po.bt_ta);
+mp_names = array("Linear", "Loop (constant)", "Loop (alternating)", "Pulse");
 
 enum sp {
 	circular,
@@ -46,7 +48,7 @@ enum sp {
 	length
 }
 
-sp_op[sp.circular] = array(po.cd, po.sp_n, po.sp_theta, po.sp_r);
+sp_op[sp.circular] = array(po.cd, po.sp_n, po.sp_theta, po.sp_wspd, po.sp_wa, po.sp_r);
 sp_op[sp.circular_spray] = array(po.cd, po.sp_dtheta, po.sp_theta, po.sp_r);
 sp_op[sp.arc_spread] = array(po.cd, po.sp_dtheta, po.sp_theta, po.sp_n, po.sp_r);
 sp_op[sp.arc_spray] = array(po.cd, po.sp_dtheta, po.sp_dtheta2, po.sp_theta, po.sp_n, po.sp_r);
@@ -70,6 +72,8 @@ enum po {
 	sp_y1, //spawn y2 val
 	sp_x2, //spawn x2 val
 	sp_y2, //spawn y2 val
+	sp_wspd, //Spawn roatational velocity
+	sp_wa, //Spwan rotational acceleration
 	x_ex, //move x exageration
 	y_ex, //move y exageration
 	x_disp, //move x displavement
@@ -82,6 +86,7 @@ enum po {
 	bt_a, //bullet acceleration
 	bt_spd_min, //bullet min speed
 	bt_spd_max, //bullet max speed
+	bt_wspd, //bullet rotational speed (rads/s)
 	bt_tspd, //bullet tick speed (multiplier)
 	bt_ta, //bullet tick acceleration (multiplier)
 	bt_life, //bullet life
@@ -101,9 +106,9 @@ for(var c = 0; c < po.length; c++) {
 vars[po.max_lay, 0] = 1;
 
 var_names = array("Stillness:", "Movement Patt:", "Spawn Patt:", "Layers: ", "Cooldown (sec): ", "Pattern reset time (sec):", "Bullet Amount: ", "Pattern Amount:", "Offset (rads): ", "dTheta (rads): ", "dTheta2 (rads):", "Spawn Radius: ",
-				"Draw x1: ", "Draw y1: ", "Draw x2: ", "Draw y2: ", "X Exaggeration: ", "Y Exaggeration: ", "X displacement:", "Enemy Speed:",
+				"Draw x1: ", "Draw y1: ", "Draw x2: ", "Draw y2: ", "Spawn Angular Velocity:", "Spawn Angular Acceleration:", "X Exaggeration: ", "Y Exaggeration: ", "X displacement:", "Enemy Speed:",
 				"Enemy Acceleration: ", "Enemy Radius: ", "Enemy Rotational Speed: ", "Enemy Rotational Acceleration: ",
-				"Bullet Speed: ", "Bullet Acceleration: ", "Bullet Min. Speed: ", "Bullet Max. Speed: ", "Bullet tickspeed: ", "Bullet tickacceleration: ",
+				"Bullet Speed: ", "Bullet Acceleration: ", "Bullet Min. Speed: ", "Bullet Max. Speed: ", "Bullet Rotational Speed: ", "Bullet tickspeed: ", "Bullet tickacceleration: ",
 				"Bullet life (sec): ", "Bullet Split? :", "Bullet Split Amount: ", "Bullet Time to Split:", 
 				"Destroy on Split? : ", "Bullet Sprite: ", "Split Index:");
 

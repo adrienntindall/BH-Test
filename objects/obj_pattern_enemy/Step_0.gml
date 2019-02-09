@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+var dt = global.dt;
+
 if(array_length_1d(cd) < layers) {
 	for(var c = 0; c < layers; c++) cd[c] = 0;
 }
@@ -26,7 +29,7 @@ for(var c = 0; c < layers; c++) {
 			spawn_arc_spray(n[c], obj_pattern_bullet, id, theta0[c], theta2[c], theta[c], sp_r[c], cdv[c]);
 			break;
 		case sp.circular:
-			spawn_circular(n[c], obj_pattern_bullet, id, theta0[c], sp_r[c], cdv[c]);
+			spawn_circular(n[c], obj_pattern_bullet, id, theta0[c]+wspd[c]*t, sp_r[c], cdv[c]);
 			break;
 		case sp.circular_spray:
 			spawn_circular_spray(theta[c], obj_pattern_bullet, id, theta0[c], sp_r[c], cdv[c]);
@@ -38,4 +41,7 @@ for(var c = 0; c < layers; c++) {
 			show_debug_message("Note: the currently selected bullet spawing pattern has not been implemented in the enemy viewer");
 			break;
 	}
+	wspd[c] += wa[c];
 }
+
+t += dt;

@@ -17,6 +17,7 @@ y_egg = vars[po.y_ex, l];
 x_disp = vars[po.x_disp, l];
 
 spd = vars[po.bt_spd, l];
+wspd = vars[po.bt_wspd, l];
 a = vars[po.bt_a, l];
 tspd = vars[po.bt_tspd, l];
 ta = vars[po.bt_ta, l];

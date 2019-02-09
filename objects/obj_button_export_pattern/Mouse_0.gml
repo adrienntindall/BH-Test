@@ -40,18 +40,21 @@ for(var c = 0; c < obj_pattern_viewer.layers; c++) {
 	mov += "///Bullet Step " + string(c) + "\n";
 	switch(vars[po.bt_mov, c]) {
 		case mp.linear:
-			mov += "move_linear();\n";
+			mov += "move_linear();";
 			break;
 		case mp.loop_const:
-			mov += "move_loop_const("+string(vars[po.x_ex, c])+","+string(vars[po.x_disp, c])+","+string(vars[po.y_ex, c])+");\n";
+			mov += "move_loop_const("+string(vars[po.x_ex, c])+","+string(vars[po.x_disp, c])+","+string(vars[po.y_ex, c])+");";
 			break;
 		case mp.loop_alt:
-			mov += "move_loop_alt("+string(vars[po.x_ex, c])+","+string(vars[po.x_disp, c])+","+string(vars[po.y_ex, c])+");\n";	
+			mov += "move_loop_alt("+string(vars[po.x_ex, c])+","+string(vars[po.x_disp, c])+","+string(vars[po.y_ex, c])+");";	
 			break;
+		case mp.pulse:
+			mov += "move_pulse(" + string(vars[po.x_ex, c]) + "," + string(vars[po.x_disp, c])+");";
 		default:
 			show_debug_message("Note: Currently selected bullet movement doesn't have an export");
 			break;
 	}
+	mov += "\n\n";
 	
 	bt_create += @"///Bullet Create " + string(c) + @"
 	event_inherited();

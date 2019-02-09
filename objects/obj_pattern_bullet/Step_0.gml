@@ -11,6 +11,9 @@ switch(pattern) {
 	case mp.loop_const:
 		move_loop_const(x_egg, x_disp, y_egg);
 		break;
+	case mp.pulse:
+		move_pulse(x_egg, x_disp); 
+		break;
 	default:
 		show_debug_message("Note: the currently selected bullet pattern is not implemented in the bullet object");
 		break;

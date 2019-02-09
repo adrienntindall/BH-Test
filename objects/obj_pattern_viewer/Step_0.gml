@@ -56,6 +56,8 @@ if(update) {
 	e.spd = vars[po.en_spd, 0];
 	e.a = vars[po.en_a, 0];
 	e.r = vars[po.en_r, 0];
+	e.wspd = array_get_col(vars, po.sp_wspd);
+	e.wa = array_get_col(vars, po.sp_wa);
 	e.mov_pat = cur_mov;
 	e.bt_pat = array_get_col(vars, po.bt_mov);
 	e.sp_pat = array_get_col(vars, po.bt_spawn);

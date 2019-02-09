@@ -975,6 +975,14 @@
             }
         },
         {
+            "Key": "a991a5b9-bb27-424e-8a91-08b694017928",
+            "Value": {
+                "id": "d957b368-3fab-42c6-bf5a-2614ba7f8188",
+                "resourcePath": "scripts\\move_pulse\\move_pulse.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "aa391c9e-2cdd-4219-8e7a-f4e001e99723",
             "Value": {
                 "id": "c80be921-4691-410f-8bed-62660997b3cc",
@@ -1423,6 +1431,7 @@
         "10564117-a5ed-4c0e-a5c8-d1f39c518b48",
         "f7151759-d053-4217-b92a-139577312128",
         "3dea47c2-f55d-4b86-b834-85d35b7bfc60",
+        "a991a5b9-bb27-424e-8a91-08b694017928",
         "8d3015d4-738c-4049-99ba-7b0ef98e660e",
         "86f577c2-6f61-40ba-bb61-947bac2de6eb",
         "76f2b9a7-c281-4d79-9db5-bce3f46953e5",
