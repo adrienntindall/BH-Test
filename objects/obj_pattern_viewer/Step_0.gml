@@ -14,22 +14,23 @@ if(array_length_2d(vars, 0) < layers) {
 	bt_spawn[b] = 0;
 }
 
-if(cur_depth > 0 ? splits[po.bt_split_amnt, cur_lay] > array_length_1d(splits[po.split_indx, cur_lay]) : vars[po.bt_split_amnt, cur_lay] > array_length_1d(vars[po.split_indx, cur_lay])) {
-	for(var c = cur_depth > 0 ? array_length_1d(splits[po.split_indx, c]) : array_length_1d(vars[po.split_indx, c]);
-		c < (cur_depth > 0 ? splits[po.bt_split_amnt, cur_lay] : vars[po.bt_split_amnt, cur_lay]); c++) {
+if((cur_depth > 0) ? splits[po.bt_split_amnt, cur_lay] > array_length_1d(splits[po.split_indx, cur_lay])-1 : vars[po.bt_split_amnt, cur_lay] > array_length_1d(vars[po.split_indx, cur_lay])-1) {
+	for(var c = (cur_depth > 0) ? array_length_1d(splits[po.split_indx, cur_lay])-1 : array_length_1d(vars[po.split_indx, cur_lay])-1;
+		c < ((cur_depth > 0) ? splits[po.bt_split_amnt, cur_lay] : vars[po.bt_split_amnt, cur_lay]); c++) {
+		if(cur_depth > 0) splits[po.split_indx, cur_lay] = array_add(splits[po.split_indx, cur_lay], array(array_length_2d(splits, 0)-1));
+		else vars[po.split_indx, cur_lay] = array_add(vars[po.split_indx, cur_lay], array(array_length_2d(splits, 0)-1));
 		
-		if(cur_depth > 0) splits[po.bt_split_amnt, cur_lay] = array_add(splits[po.bt_split_amnt, cur_lay], array(array_length_2d(splits, 0)-1));
-		else vars[po.bt_split_amnt, cur_lay] = array_add(vars[po.bt_split_amnt, cur_lay], array(array_length_2d(splits, 0)-1));
-		
-		for(var a = 0; a < po.length; a++) splits[a, c] = 0;
-
+		for(var a = 0; a < po.length; a++) {
+			splits[a, c] = 0;
+			if(a == po.split_indx) splits[a, c] = array(0);
+		}
 		splits[po.max_lay, c] = cur_depth > 0 ? splits[po.bt_split_amnt, cur_lay] : vars[po.bt_split_amnt, cur_lay];
 	
 	}
 }
 
 if(chng) {
-	var_ops = array_add(em_op[cur_mov], array_add(sp_op[vars[po.bt_spawn, 0]], mp_op[vars[po.bt_mov, 0]]));
+	var_ops = array_add(array_add(em_op[cur_mov], default_ops), array_add(sp_op[vars[po.bt_spawn, 0]], mp_op[vars[po.bt_mov, 0]]));
 	if(instance_exists(obj_type_box)) with(obj_type_box) instance_destroy();
 	for(var c = 0; c < min(max_box, array_length_1d(var_ops)-cur_window*max_box); c++) {
 		var box = instance_create_depth(10, 128+c*ydis, 0, obj_type_box);

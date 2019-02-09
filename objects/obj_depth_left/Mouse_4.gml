@@ -6,3 +6,4 @@ else {
 	array_remove_index(obj_pattern_viewer.depth_path, array_length_1d(obj_pattern_viewer.depth_path)- 1);
 	obj_pattern_viewer.cur_layer = obj_pattern_viewer.depth_path[array_length_1d(obj_pattern_viewer.depth_path) - 1];
 }
+obj_pattern_viewer.chng = true;

@@ -4,6 +4,7 @@ layers = 1;
 cur_lay = 0;
 cur_depth = 0;
 depth_path = 0;
+depth_path[0] = 0;
 update = true;
 cur_box = -1;
 cur_window = 0;
@@ -102,6 +103,7 @@ enum po {
 vars = 0;
 for(var c = 0; c < po.length; c++) {
 	vars[c, cur_lay] = 0;
+	if(c == po.split_indx) vars[c, cur_lay] = array(0);
 }
 vars[po.max_lay, 0] = 1;
 
@@ -112,7 +114,9 @@ var_names = array("Stillness:", "Movement Patt:", "Spawn Patt:", "Layers: ", "Co
 				"Bullet life (sec): ", "Bullet Split? :", "Bullet Split Amount: ", "Bullet Time to Split:", 
 				"Destroy on Split? : ", "Bullet Sprite: ", "Split Index:");
 
-var_ops = array_add(em_op[cur_mov], array_add(sp_op[vars[po.bt_spawn, 0]], mp_op[vars[po.bt_mov, 0]]));
+default_ops = array(po.bt_split_amnt)
+
+var_ops = array_add(array_add(em_op[cur_mov], default_ops), array_add(sp_op[vars[po.bt_spawn, 0]], mp_op[vars[po.bt_mov, 0]]));
 
 bt_sprs = array(spr_bullet_enemy_ring, spr_bullet_enemy, spr_ft, spr_lifesteal);
 

@@ -4,26 +4,18 @@
 // Inherit the parent event
 event_inherited();
 
-cdepth = obj_pattern_enemy.cdepth + 1;
-	
-vars = (cdepth > 0) ? obj_pattern_viewer.splits : obj_pattern_viewer.vars;
 	
 l = obj_pattern_enemy.clay;
 
-pattern = vars[po.bt_mov, l];
+init = false;
 
-x_egg = vars[po.x_ex, l];
-y_egg = vars[po.y_ex, l];
-x_disp = vars[po.x_disp, l];
+splits = 0;
+sp_amt = 0;
 
-spd = vars[po.bt_spd, l];
-wspd = vars[po.bt_wspd, l];
-a = vars[po.bt_a, l];
-tspd = vars[po.bt_tspd, l];
-ta = vars[po.bt_ta, l];
-minspd = vars[po.bt_spd_min, l];
-maxspd = vars[po.bt_spd_max, l];
+set = false;
 
-tts = vars[po.bt_tts, l];
-	
-sprite_index = obj_pattern_viewer.bt_sprs[vars[po.bt_spr, l]];
+t = 0;
+
+clay = 0;
+
+cd[0] = 0;
