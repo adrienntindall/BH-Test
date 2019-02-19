@@ -14,18 +14,18 @@ if(array_length_2d(vars, 0) < layers) {
 	bt_spawn[b] = 0;
 }
 
-if((cur_depth > 0) ? splits[po.bt_split_amnt, cur_lay] > array_length_1d(splits[po.split_indx, cur_lay])-1 : vars[po.bt_split_amnt, cur_lay] > array_length_1d(vars[po.split_indx, cur_lay])-1) {
-	for(var c = (cur_depth > 0) ? array_length_1d(splits[po.split_indx, cur_lay])-1 : array_length_1d(vars[po.split_indx, cur_lay])-1;
+if((cur_depth > 0) ? splits[po.bt_split_amnt, cur_lay] > array_length_1d(splits[po.split_indx, cur_lay]) : vars[po.bt_split_amnt, cur_lay] > array_length_1d(vars[po.split_indx, cur_lay])) {
+	for(var c = (cur_depth > 0) ? array_length_1d(splits[po.split_indx, cur_lay]) : array_length_1d(vars[po.split_indx, cur_lay]);
 		c < ((cur_depth > 0) ? splits[po.bt_split_amnt, cur_lay] : vars[po.bt_split_amnt, cur_lay]); c++) {
+		
 		if(cur_depth > 0) splits[po.split_indx, cur_lay] = array_add(splits[po.split_indx, cur_lay], array(array_length_2d(splits, 0)-1));
 		else vars[po.split_indx, cur_lay] = array_add(vars[po.split_indx, cur_lay], array(array_length_2d(splits, 0)-1));
 		
 		for(var a = 0; a < po.length; a++) {
-			splits[a, c] = 0;
-			if(a == po.split_indx) splits[a, c] = array(0);
+			splits[a, array_length_2d(splits, po.length-1)] = 0;
+			if(a == po.split_indx) splits[a, array_length_2d(splits, po.length-1)] = array(0);
 		}
-		splits[po.max_lay, c] = cur_depth > 0 ? splits[po.bt_split_amnt, cur_lay] : vars[po.bt_split_amnt, cur_lay];
-	
+		splits[po.max_lay, array_length_2d(splits, po.length-1)-1] = cur_depth > 0 ? splits[po.bt_split_amnt, cur_lay] : vars[po.bt_split_amnt, cur_lay];
 	}
 }
 
@@ -84,8 +84,10 @@ switch(cur_box) {
 			layers = max(1, floor(vars[po.max_lay, 0]));
 		}
 		else {
-			splits[cur_box, depth_path[cur_depth]] = real(keyboard_string);
+			splits[cur_box, cur_lay] = real(keyboard_string);
 			layers = max(1, floor(cur_depth == 1 ? vars[po.bt_split_amnt, depth_path[0]] : splits[po.bt_split_amnt, depth_path[cur_depth-1]]));	
 		}
 		break;
 }
+
+global.vars = splits;

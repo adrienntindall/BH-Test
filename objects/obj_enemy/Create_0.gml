@@ -31,3 +31,4 @@ fspd = 30;
 
 cd[0] = 0;
 cur_bul = 0;
+cur_bul[0] = 0;

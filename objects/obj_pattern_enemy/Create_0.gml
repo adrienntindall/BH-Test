@@ -21,3 +21,5 @@ wa = 0;
 
 clay = 0;
 cdepth = -1;
+cur_bul = 0;
+cur_bul[clay] = 0;

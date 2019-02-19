@@ -20,10 +20,10 @@ if(cd[clay] <= 0) {
 		var theta_c = theta + c*dtheta2/n;
 		var bt = instance_create_depth(x+r*cos(theta_c), y-r*sin(theta_c), 0, argument1);
 		bt.parent = argument2;
-		bt.theta = cur_bul*dtheta + theta + c*dtheta2/n;
+		bt.theta = cur_bul[clay]*dtheta + theta + c*dtheta2/n;
 		bt.image_angle = bt.theta*180/pi;
 	}
 	cd[clay] = argument7;
-	cur_bul++;
+	cur_bul[clay]++;
 }
 else cd[clay] -= dt;

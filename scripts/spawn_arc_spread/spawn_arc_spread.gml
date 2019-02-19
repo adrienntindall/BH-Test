@@ -22,6 +22,6 @@ if(cd[clay] <= 0) {
 		bt.image_angle = bt.theta*180/pi;
 	}
 	cd[clay] = argument6;
-	cur_bul++;
+	cur_bul[clay] = cur_bul[clay] + 1;
 }
 else cd[clay] -= dt;

@@ -19,3 +19,11 @@ t = 0;
 clay = 0;
 
 cd[0] = 0;
+
+tts = 0;
+
+pattern = 0;
+cdepth = 0;
+
+cur_bul = 0;
+cur_bul[clay] = 0;

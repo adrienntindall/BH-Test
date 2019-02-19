@@ -14,12 +14,12 @@ var theta0 = argument3;
 var r = argument4;
 
 if(cd[clay] <= 0) {
-	var theta = theta0+dtheta*cur_bul;
+	var theta = theta0+dtheta*cur_bul[clay];
 	var bt = instance_create_depth(x+r*cos(theta), y-r*sin(theta), 1, bullet);
 	bt.theta = theta;
 	bt.image_angle = bt.theta*180/pi;
 	cd[clay] += argument5;
-	cur_bul++;
+	cur_bul[clay] += 1;
 	
 }
 else cd[clay] -= dt;

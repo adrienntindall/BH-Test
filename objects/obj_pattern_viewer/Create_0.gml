@@ -93,7 +93,6 @@ enum po {
 	bt_life, //bullet life
 	bt_split, //bullet split (t or f)
 	bt_split_amnt, //bullet split amount
-	bt_tts, //bullet time to split
 	bt_dos, //bullet destroy on split (t or f)
 	bt_spr, //bullet sprite (not in the options menu)
 	split_indx, //array of bullets that split from this bullet (not in options menu)
@@ -103,7 +102,6 @@ enum po {
 vars = 0;
 for(var c = 0; c < po.length; c++) {
 	vars[c, cur_lay] = 0;
-	if(c == po.split_indx) vars[c, cur_lay] = array(0);
 }
 vars[po.max_lay, 0] = 1;
 
@@ -111,7 +109,7 @@ var_names = array("Stillness:", "Movement Patt:", "Spawn Patt:", "Layers: ", "Co
 				"Draw x1: ", "Draw y1: ", "Draw x2: ", "Draw y2: ", "Spawn Angular Velocity:", "Spawn Angular Acceleration:", "X Exaggeration: ", "Y Exaggeration: ", "X displacement:", "Enemy Speed:",
 				"Enemy Acceleration: ", "Enemy Radius: ", "Enemy Rotational Speed: ", "Enemy Rotational Acceleration: ",
 				"Bullet Speed: ", "Bullet Acceleration: ", "Bullet Min. Speed: ", "Bullet Max. Speed: ", "Bullet Rotational Speed: ", "Bullet tickspeed: ", "Bullet tickacceleration: ",
-				"Bullet life (sec): ", "Bullet Split? :", "Bullet Split Amount: ", "Bullet Time to Split:", 
+				"Bullet life (sec): ", "Bullet Split? :", "Bullet Split Amount: ", 
 				"Destroy on Split? : ", "Bullet Sprite: ", "Split Index:");
 
 default_ops = array(po.bt_split_amnt)

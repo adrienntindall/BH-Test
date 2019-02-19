@@ -5,5 +5,5 @@
 event_inherited();
 
 theta = pi/8;
-cur_bul = floor(random(16));
+cur_bul[0] = floor(random(16));
 hp = 20;
