@@ -25,6 +25,8 @@ if(!global.pause) {
 if(global.cur_menu == menus.pause) && (global.back_frame <= 0) {
 	var move = keyboard_check_pressed(ord("S"))-keyboard_check_pressed(ord("W"));
 	mpos = (mpos + move)%tot;
+	if(mpos < 0) mpos = options.length - 1;
+
 
 	var change = keyboard_check_pressed(ord("D"))-keyboard_check_pressed(ord("A"));
 

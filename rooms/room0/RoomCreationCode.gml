@@ -1,5 +1,7 @@
 randomize();
 
+window_set_fullscreen(true);
+
 lay_id = layer_get_id("Tiles");
 map_id = layer_tilemap_get_id(lay_id);
 blay_id = layer_get_id("Borders");

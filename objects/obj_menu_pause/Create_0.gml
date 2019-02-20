@@ -8,7 +8,8 @@ enum options
 	focus,
 	level_edit,
 	pat_edit,
-	quit
+	quit,
+	length
 }
 
 enum menus {
