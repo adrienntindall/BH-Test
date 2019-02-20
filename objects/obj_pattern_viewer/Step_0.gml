@@ -30,7 +30,7 @@ if((cur_depth > 0) ? splits[po.bt_split_amnt, cur_lay] > array_length_1d(splits[
 }
 
 if(chng) {
-	var_ops = array_add(array_add(em_op[cur_mov], default_ops), array_add(sp_op[vars[po.bt_spawn, 0]], mp_op[vars[po.bt_mov, 0]]));
+	var_ops = array_add(array_add(em_op[cur_mov], default_ops), array_add(sp_op[cur_depth > 0 ? splits[po.bt_spawn, cur_lay] : vars[po.bt_spawn, cur_lay]], mp_op[cur_depth > 0 ? splits[po.bt_mov, cur_lay] : vars[po.bt_mov, cur_lay]]));
 	if(instance_exists(obj_type_box)) with(obj_type_box) instance_destroy();
 	for(var c = 0; c < min(max_box, array_length_1d(var_ops)-cur_window*max_box); c++) {
 		var box = instance_create_depth(10, 128+c*ydis, 0, obj_type_box);

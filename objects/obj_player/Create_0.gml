@@ -18,6 +18,8 @@ bomb_r = 200;
 bomb_damage = 20;
 boss_defeated = false;
 kix = 0;
+clay = 0;
+clay[0] = 0;
 
 enum weapon_list {
 	simple,

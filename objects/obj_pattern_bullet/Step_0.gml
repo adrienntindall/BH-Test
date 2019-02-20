@@ -55,10 +55,10 @@ for(var c = 0; c < sp_amt; c++;) {
 	clay = c;
 	switch(global.vars[po.bt_spawn, s]) {
 		case sp.arc_spread:
-		spawn_arc_spread(global.vars[po.sp_n, s], obj_pattern_bullet, id, global.vars[po.sp_theta, s], global.vars[po.sp_dtheta], global.vars[po.sp_r, s], global.vars[po.cd, s]);
+		spawn_arc_spread(global.vars[po.sp_n, s], obj_pattern_bullet, id, global.vars[po.sp_theta, s], global.vars[po.sp_dtheta, s], global.vars[po.sp_r, s], global.vars[po.cd, s]);
 		break;
 	case sp.arc_spray:
-		spawn_arc_spray(global.vars[po.sp_n, s], obj_pattern_bullet, id, global.vars[po.sp_theta, s], global.vars[po.sp_dtheta2, c], global.vars[po.sp_dtheta, s], global.vars[po.sp_r, s], global.vars[po.cd, s]);
+		spawn_arc_spray(global.vars[po.sp_n, s], obj_pattern_bullet, id, global.vars[po.sp_theta, s], global.vars[po.sp_dtheta2, s], global.vars[po.sp_dtheta, s], global.vars[po.sp_r, s], global.vars[po.cd, s]);
 		break;
 	case sp.circular:
 		spawn_circular(global.vars[po.sp_n, s], obj_pattern_bullet, id, global.vars[po.sp_theta, s]+global.vars[po.sp_wspd, s]*t, global.vars[po.sp_r, s], global.vars[po.cd, s]);
