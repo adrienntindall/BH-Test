@@ -3,7 +3,8 @@
 
 update = keyboard_check_pressed(vk_enter);
 
-if(array_length_2d(vars, 0) < layers) {
+//Initialize new values if the amount of layers exceeds the current length of the array
+if(array_length_2d(vars, 0) < layers && cur_depth == 0) {
 	for(var b = array_length_2d(vars, 0); b < layers; b++) 
 		for(var c = 0; c < po.length; c++) {
 			if(c >= po.en_spd && c <= po.en_wa) vars[c, b] = vars[c, 0];
@@ -29,6 +30,7 @@ if((cur_depth > 0) ? splits[po.bt_split_amnt, cur_lay] > array_length_1d(splits[
 	}
 }
 
+//Method for changing the boxes currently displayed
 if(chng) {
 	var_ops = array_add(array_add(em_op[cur_mov], default_ops), array_add(sp_op[cur_depth > 0 ? splits[po.bt_spawn, cur_lay] : vars[po.bt_spawn, cur_lay]], mp_op[cur_depth > 0 ? splits[po.bt_mov, cur_lay] : vars[po.bt_mov, cur_lay]]));
 	if(instance_exists(obj_type_box)) with(obj_type_box) instance_destroy();
@@ -40,6 +42,7 @@ if(chng) {
 	cur_box = -1;
 }
 
+//Recreates the enemy (if there) and passes the array values to it
 if(update) {
 	if(instance_exists(obj_pattern_enemy)) with(obj_pattern_enemy) instance_destroy();
 	if(instance_exists(obj_pattern_bullet)) with(obj_pattern_bullet) instance_destroy();
@@ -63,6 +66,7 @@ if(update) {
 	e.bt_pat = array_get_col(vars, po.bt_mov);
 	e.sp_pat = array_get_col(vars, po.bt_spawn);
 	e.layers = layers;
+	e.cur_bul = zeros_arr(layers);
 	update = false;
 }
 

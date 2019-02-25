@@ -9,7 +9,8 @@
         "2679b7a3-0983-4be1-8ddb-8ccc5a29b411",
         "6588199b-aca9-4851-bbb9-2174f5c216d3",
         "8f5656d3-228c-455f-9d9d-9449fdc99e24",
-        "5773c01c-b6fe-4e63-9b6a-1fe0ac2ae5c8"
+        "5773c01c-b6fe-4e63-9b6a-1fe0ac2ae5c8",
+        "fdca3357-c52a-4bb3-a766-80df94c3a1e7"
     ],
     "filterType": "GMScript",
     "folderName": "arrays",

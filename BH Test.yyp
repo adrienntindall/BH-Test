@@ -1421,6 +1421,14 @@
                 "resourcePath": "objects\\obj_spr_right\\obj_spr_right.yy",
                 "resourceType": "GMObject"
             }
+        },
+        {
+            "Key": "fdca3357-c52a-4bb3-a766-80df94c3a1e7",
+            "Value": {
+                "id": "95eb87e4-aa8f-4755-9a6a-f80884049632",
+                "resourcePath": "scripts\\zeros_arr\\zeros_arr.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
@@ -1453,6 +1461,7 @@
         "6588199b-aca9-4851-bbb9-2174f5c216d3",
         "8f5656d3-228c-455f-9d9d-9449fdc99e24",
         "5773c01c-b6fe-4e63-9b6a-1fe0ac2ae5c8",
+        "fdca3357-c52a-4bb3-a766-80df94c3a1e7",
         "da02e70b-9d2f-4987-ad3d-0955889d7e91",
         "4e07a7ac-dd45-4eb0-b78c-ff0c3083a81a",
         "b918023e-745b-43ab-a376-435583e21970",
