@@ -303,14 +303,6 @@
             }
         },
         {
-            "Key": "33d88853-11cc-4af1-8d81-9db810540c87",
-            "Value": {
-                "id": "a16bc1ab-7745-4528-9413-9df108ca11b7",
-                "resourcePath": "objects\\obj_bullet\\obj_bullet.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "36df55e5-0f96-417e-8f4a-e1cce984b2b8",
             "Value": {
                 "id": "93b87ea2-2cd0-43b1-981a-f30a570e5261",

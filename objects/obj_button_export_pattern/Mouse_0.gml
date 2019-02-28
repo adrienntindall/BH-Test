@@ -8,7 +8,7 @@ switch(obj_pattern_viewer.cur_mov) {
 	case em.circle:
 		en_mov = "enemy_move_circle();"
 		break;
-	case em.chase:
+	default:
 		show_debug_message("Note: Currently selected enemy move doesn't have an export");
 		break;
 }

@@ -3,7 +3,7 @@
 var spl = obj_pattern_viewer.cur_depth > 0;
 if(spl) obj_pattern_viewer.splits[po.bt_mov, obj_pattern_viewer.cur_lay] -= 1;
 else obj_pattern_viewer.vars[po.bt_mov, obj_pattern_viewer.cur_lay] -= 1;
-if((spl ? obj_pattern_viewer.splits[po.bt_mov, obj_pattern_viewer.cur_lay] < 0 : obj_pattern_viewer.vars[po.bt_mov, obj_pattern_viewer.cur_lay] ) < 0) { 
+if((spl ? obj_pattern_viewer.splits[po.bt_mov, obj_pattern_viewer.cur_lay] : obj_pattern_viewer.vars[po.bt_mov, obj_pattern_viewer.cur_lay]) < 0) { 
 	if(spl) obj_pattern_viewer.splits[po.bt_mov, obj_pattern_viewer.cur_lay] = mp.length-1;
 	else obj_pattern_viewer.vars[po.bt_mov, obj_pattern_viewer.cur_lay] = mp.length-1;
 }

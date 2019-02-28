@@ -8,4 +8,4 @@ var b = argument0;
 var c = argument2;
 
 move_eq_para(z*t+b*sin(t), c + c*cos(t));
-t++;
+t+=global.dt;
