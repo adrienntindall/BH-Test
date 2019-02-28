@@ -303,6 +303,14 @@
             }
         },
         {
+            "Key": "33d88853-11cc-4af1-8d81-9db810540c87",
+            "Value": {
+                "id": "6febca61-66b4-42ce-ad14-811024356869",
+                "resourcePath": "objects\\obj_bullet\\obj_bullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "36df55e5-0f96-417e-8f4a-e1cce984b2b8",
             "Value": {
                 "id": "93b87ea2-2cd0-43b1-981a-f30a570e5261",
@@ -340,6 +348,14 @@
                 "id": "f433f52f-8c46-4685-bd06-d393a4c2f8c0",
                 "resourcePath": "objects\\obj_depth_left\\obj_depth_left.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3c7d8de6-f6e5-409d-8305-1b78e42aaada",
+            "Value": {
+                "id": "583a94f4-7f7d-4140-b9b4-3ff1b51319bd",
+                "resourcePath": "scripts\\export_enemy\\export_enemy.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -587,6 +603,14 @@
             "Value": {
                 "id": "18e18512-3dc5-4441-8600-ec1f028f0896",
                 "resourcePath": "scripts\\array_add\\array_add.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "66da5d31-8d04-45cf-b049-34d71fff69cc",
+            "Value": {
+                "id": "5b1a35a8-b9c4-4e16-8c8b-88c796602d03",
+                "resourcePath": "scripts\\rand_string\\rand_string.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1055,6 +1079,14 @@
             }
         },
         {
+            "Key": "b7668dab-6bab-4148-b5b5-9a4d3d7d96a3",
+            "Value": {
+                "id": "41a5504d-e0b3-4088-8d05-fbe4eef4cf8f",
+                "resourcePath": "scripts\\export_bullet\\export_bullet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b7b7c742-d636-49a3-b603-3ce3b4ea2f23",
             "Value": {
                 "id": "5e0c1e51-09df-41f0-808e-259410573971",
@@ -1454,6 +1486,9 @@
         "8f5656d3-228c-455f-9d9d-9449fdc99e24",
         "5773c01c-b6fe-4e63-9b6a-1fe0ac2ae5c8",
         "fdca3357-c52a-4bb3-a766-80df94c3a1e7",
+        "3c7d8de6-f6e5-409d-8305-1b78e42aaada",
+        "66da5d31-8d04-45cf-b049-34d71fff69cc",
+        "b7668dab-6bab-4148-b5b5-9a4d3d7d96a3",
         "da02e70b-9d2f-4987-ad3d-0955889d7e91",
         "4e07a7ac-dd45-4eb0-b78c-ff0c3083a81a",
         "b918023e-745b-43ab-a376-435583e21970",
