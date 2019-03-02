@@ -1,7 +1,7 @@
 /// @description Defining Variables
 // You can write your code in this editor
 depth = 2;
-cd = 0;
+cd = array(0, 0);
 kcd = .5;
 lock = noone;
 hp = 3;
@@ -19,7 +19,6 @@ bomb_damage = 20;
 boss_defeated = false;
 kix = 0;
 clay = 0;
-clay[0] = 0;
 
 enum weapon_list {
 	simple,

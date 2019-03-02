@@ -75,14 +75,14 @@ if((global.weapon == weapon_list.knives) || (global.weapon_alt == weapon_list.kn
 }
 
 //Fireing bullets
-if(shoot && cd <= 0) {
+if(shoot && cd[focus] <= 0) {
 	switch(focus ? global.weapon_alt : global.weapon) {
 		case weapon_list.simple:
 			var theta = point_direction(x, y, mouse_x, mouse_y);
 			b =  instance_create_depth(x, y, 0, obj_bullet);
 			b.image_angle = theta;
 			b.theta = pi * (theta/180);
-			cd = .07;
+			cd[focus] = .07;
 			break;
 		case weapon_list.simple_alt:
 			var theta = point_direction(x, y, mouse_x, mouse_y);
@@ -91,9 +91,10 @@ if(shoot && cd <= 0) {
 			b.theta = pi * (theta/180);
 			b.t0 = t;
 			t+=2;
-			cd = .07;
+			cd[focus] = .07;
 			break;
 		case weapon_list.octo:
+			clay = focus;
 			spawn_circular(8, obj_bullet_sin, id, 0, 10, 8/30);
 			t+=3;
 			break;
@@ -119,7 +120,7 @@ if(shoot && cd <= 0) {
 			var ss = instance_create_depth(x, y, 1, obj_split_spawner);
 			var theta = point_direction(x, y, mouse_x, mouse_y)*pi/180;
 			ss.theta = theta;
-			cd = 1;
+			cd[focus] = 1;
 			break;
 		case weapon_list.flamethrower:
 			repeat(floor(random(3) + 1)) {
@@ -128,7 +129,7 @@ if(shoot && cd <= 0) {
 				var fire = instance_create_depth(x, y, 1, obj_ft_fire);
 				fire.theta = theta+spread;
 				fire.image_angle = fire.theta *180/pi;
-				cd = .1;
+				cd[focus] = .1;
 			}
 			break;
 		case weapon_list.life_channel:
@@ -153,7 +154,7 @@ if(end_fire) {
 		default:
 			break;
 	}
-	cd = .25;
+	//cd[focus] = .25;
 }
 
 //Focus Mode
@@ -226,7 +227,7 @@ if(bomb && bombs > 0) {
 }
 
 //Cooldown Updates
-cd-=dt;
+cd[focus]-=dt;
 kcd-=dt;
 tscd-=dt;
 shcd-=dt;
