@@ -3,23 +3,14 @@
 var name = "obj_enemy_" + rand_string(6);
 var folder = "./" + name + "/";
 
-var create = file_text_open_write(working_directory + folder + "Create_0.gml");
-
-file_text_write_string(create, @"///Enemy " + name + @" Create
-event_inherited();
-spd = " + string(vars[po.en_spd, 0]) + @";
-a = " + string(vars[po.en_a, 0]) + @";
-r = " + string(vars[po.en_r, 0]) + @";
-cdv = array(" + cdv_arr + @");
-");
-
-file_text_close(create);
-
 var step = file_text_open_write(working_directory + folder + "Step_0.gml");
 
 file_text_write_string(step, "///Enemy " + name + " Step Function\n\n");
 
-for(var c = 0; c < obj_pattern_viewer.layers; c++) {
+var layers = max(1, floor(obj_pattern_viewer.vars[po.max_lay, 0]));
+
+var cdv_arr = "";
+for(var c = 0; c < layers; c++) {
 	var bt_name = "obj_bullet_"+rand_string(6);
 	export_bullet(0, c, bt_name);
 	switch(vars[po.bt_spawn, c]) {
@@ -40,6 +31,20 @@ for(var c = 0; c < obj_pattern_viewer.layers; c++) {
 			break;
 		file_text_write_string(step, "\n");
 	}
+	if(c == obj_pattern_viewer.layers-1) cdv_arr += "0";
+	else cdv_arr += "0,";
 }
 
 file_text_close(step);
+
+var create = file_text_open_write(working_directory + folder + "Create_0.gml");
+
+file_text_write_string(create, @"///Enemy " + name + @" Create
+event_inherited();
+spd = " + string(vars[po.en_spd, 0]) + @";
+a = " + string(vars[po.en_a, 0]) + @";
+r = " + string(vars[po.en_r, 0]) + @";
+cdv = array(" + cdv_arr + @");
+");
+
+file_text_close(create);

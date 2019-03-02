@@ -27,7 +27,24 @@ file_text_close(create);
 
 var step = file_text_open_write(working_directory + "./"+name+"/Step_0.gml");
 
-file_text_write_string(step, "///Bullet " + name + " Step Function\n\n");
+file_text_write_string(step, "///Bullet " + name + " Step Function\n \n");
+
+switch(vrs[po.bt_mov, lay]) {
+	case mp.linear:
+		file_text_write_string(step, "move_linear();\n");
+		break;
+	case mp.loop_const:
+		file_text_write_string(step, "move_loop_const("+string(vrs[po.x_ex, lay])+","+string(vrs[po.x_disp, lay])+","+string(vrs[po.y_ex, lay])+");\n");
+		break;
+	case mp.loop_alt:
+		file_text_write_string(step, "move_loop_alt("+string(vrs[po.x_ex, lay])+","+string(vrs[po.x_disp, lay])+","+string(vrs[po.y_ex, lay])+");\n");	
+		break;
+	case mp.pulse:
+		file_text_write_string(step, "move_pulse(" + string(vrs[po.x_ex, lay]) + "," + string(vrs[po.x_disp, lay])+");\n");
+	default:
+		show_debug_message("Note: Currently selected bullet movement doesn't have an export");
+		break;
+}
 
 for(var c = 0; c < array_length_1d(vrs[po.split_indx, lay]); c++) {
 	var bt_name = "obj_bullet_"+rand_string(6);
@@ -53,4 +70,70 @@ for(var c = 0; c < array_length_1d(vrs[po.split_indx, lay]); c++) {
 		file_text_write_string(step, "\n");
 	}
 }
+
 file_text_close(step);
+
+var object = file_text_open_write(working_directory + "./"+name+"/"+name+".yy");
+
+var oid = rand_id();
+
+file_text_write_string(object, "{ \n" + 
+	"\"id\": \"" + oid + "\",\n" +
+    "\"modelName\": \"GMObject\", \n" +
+    "\"mvc\": \"1.0\", \n" + 
+    "\"name\": \"" + name + "\", \n" +
+    "\"eventList\": [ \n" + 
+        "{\n" +
+            "\"id\": \"" + rand_id() + "\", \n" + 
+            "\"modelName\": \"GMEvent\", \n" +
+            "\"mvc\": \"1.0\", \n" + 
+            "\"IsDnD\": false, \n" +
+            "\"collisionObjectId\": \"00000000-0000-0000-0000-000000000000\", \n" +
+            "\"enumb\": 0, \n" +
+            "\"eventtype\": 3, \n" +
+            "\"m_owner\": \"" + oid + "\" \n" +
+        @"},
+        {" +
+            "\"id\": \"" + rand_id() + "\", \n" +
+            "\"modelName\": \"GMEvent\", \n" +
+            "\"mvc\": \"1.0\",\n" +
+            "\"IsDnD\": false,\n" +
+            "\"collisionObjectId\": \"00000000-0000-0000-0000-000000000000\",\n" +
+            "\"enumb\": 0,\n" +
+            "\"eventtype\": 0,\n" +
+            "\"m_owner\": \"" + oid + "\"\n" +
+        @"},
+        {" + 
+            "\"id\": \"" + rand_id() + "\",\n" +
+            "\"modelName\": \"GMEvent\",\n" +
+            "\"mvc\": \"1.0\",\n" +
+            "\"IsDnD\": false,\n" +
+            "\"collisionObjectId\": \"85ce0113-d8ab-41f6-98af-d11b88d00ecf\",\n" +
+            "\"enumb\": 0,\n" +
+            "\"eventtype\": 4,\n" +
+            "\"m_owner\": \"" + oid + "\"\n" +
+        @"}
+    ]," + 
+    "\"maskSpriteId\": \"00000000-0000-0000-0000-000000000000\",\n" +
+    "\"overriddenProperties\": null,\n" +
+    "\"parentObjectId\": \"0f1223b0-2681-42c3-b82a-96ee43a21135\",\n" +
+    "\"persistent\": false,\n" +
+    "\"physicsAngularDamping\": 0.1,\n" +
+    "\"physicsDensity\": 0.5,\n" +
+    "\"physicsFriction\": 0.2,\n" +
+    "\"physicsGroup\": 0,\n" +
+    "\"physicsKinematic\": false,\n" +
+    "\"physicsLinearDamping\": 0.1,\n" +
+    "\"physicsObject\": false,\n" +
+    "\"physicsRestitution\": 0.1,\n" +
+    "\"physicsSensor\": false,\n" +
+    "\"physicsShape\": 1,\n" +
+    "\"physicsShapePoints\": null,\n" +
+    "\"physicsStartAwake\": true,\n" +
+    "\"properties\": null,\n" +
+    "\"solid\": false,\n" +
+    "\"spriteId\": \""+ string(obj_pattern_viewer.bt_sprs[vrs[po.bt_spr, lay]]) + "\",\n" +
+    "\"visible\": true\n" +
+"}");
+
+file_text_close(object);

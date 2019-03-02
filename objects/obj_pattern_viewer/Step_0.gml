@@ -65,7 +65,7 @@ if(update) {
 	e.mov_pat = cur_mov;
 	e.bt_pat = array_get_col(vars, po.bt_mov);
 	e.sp_pat = array_get_col(vars, po.bt_spawn);
-	e.layers = layers;
+	e.layers = max(1, floor(vars[po.max_lay, 0]));
 	e.cur_bul = zeros_arr(layers);
 	update = false;
 }
