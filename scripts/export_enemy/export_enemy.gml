@@ -48,3 +48,60 @@ cdv = array(" + cdv_arr + @");
 ");
 
 file_text_close(create);
+
+var object = file_text_open_write(working_directory + folder + name + ".yy");
+
+var oid = rand_id();
+
+file_text_write_string(object, "{" +
+    "\"id\": \"" + oid + "\", \n" +
+    "\"modelName\": \"GMObject\",\n" +
+    "\"mvc\": \"1.0\",\n" +
+    "\"name\": \"obj_enemy_circle\",\n" +
+    "\"eventList\": [\n" +
+        "{\n" +
+            "\"id\": \"" + rand_id() + "\",\n" +
+            "\"modelName\": \"GMEvent\",\n" +
+            "\"mvc\": \"1.0\",\n" +
+            "\"IsDnD\": false,\n" +
+            "\"collisionObjectId\": \"00000000-0000-0000-0000-000000000000\",\n" +
+            "\"enumb\": 0,\n" +
+            "\"eventtype\": 3,\n" +
+            "\"m_owner\": \"" + oid + "\"\n" +
+        @"},
+        {
+		" + 
+            "\"id\": \"" + rand_id() + "\",\n" +
+            "\"modelName\": \"GMEvent\",\n" +
+            "\"mvc\": \"1.0\",\n" +
+            "\"IsDnD\": false,\n" +
+            "\"collisionObjectId\": \"00000000-0000-0000-0000-000000000000\",\n" +
+            "\"enumb\": 0,\n" +
+            "\"eventtype\": 0,\n" +
+            "\"m_owner\": \"" + oid + "\"\n" +
+        @"}
+    ],
+	" +
+    "\"maskSpriteId\": \"00000000-0000-0000-0000-000000000000\",\n" +
+    "\"overriddenProperties\": null,\n" +
+    "\"parentObjectId\": \"dfce6f12-5bf6-412b-9c01-e1530b8c725d\",\n" +
+    "\"persistent\": false,\n" +
+    "\"physicsAngularDamping\": 0.1,\n" +
+    "\"physicsDensity\": 0.5,\n" +
+    "\"physicsFriction\": 0.2,\n" +
+    "\"physicsGroup\": 0,\n" +
+    "\"physicsKinematic\": false,\n" +
+    "\"physicsLinearDamping\": 0.1,\n" +
+    "\"physicsObject\": false,\n" +
+    "\"physicsRestitution\": 0.1,\n" +
+    "\"physicsSensor\": false,\n" +
+    "\"physicsShape\": 1,\n" +
+    "\"physicsShapePoints\": null,\n" +
+    "\"physicsStartAwake\": true,\n" +
+    "\"properties\": null,\n" +
+    "\"solid\": false,\n" +
+    "\"spriteId\": \"f28982fd-226e-4702-aa06-ce746cd68987\",\n" +
+    "\"visible\": true\n" +
+"}");
+
+file_text_close(object);
