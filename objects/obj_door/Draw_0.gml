@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Draw the door, if it's closed
+
 if(lock) {
 	draw_set_colour(c_aqua);
 	draw_rectangle(x, y, x+64, y+64, false);
