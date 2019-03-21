@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Initializing Variables
+
 waves[0, 0] = 0;
 cur_wave = 0;
 cur_room = 0;

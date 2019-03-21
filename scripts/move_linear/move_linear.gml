@@ -16,6 +16,19 @@ if(wall_collision(tilemap, id, spd*dt*cos(theta), -spd*dt*sin(theta))) {
 			break;
 	}
 }
+var dx = spd*dt*cos(theta);
+var dy = -spd*dt*sin(theta);
+
+with(obj_barrier) {
+	if(lines_cross(xcorn1, ycorn1, xcorn1, ycorn2, other.x, other.y, other.x+dx, other.y+dy) || lines_cross(xcorn2, ycorn2, xcorn2, ycorn1, other.x, other.y, other.x+dx, other.y+dy)) {
+		other.theta = pi-other.theta;
+		other.image_angle = 180-other.image_angle;	
+	}
+	else if(lines_cross(xcorn1, ycorn1, xcorn2, ycorn1, other.x, other.y, other.x+dx, other.y+dy) || lines_cross(xcorn2, ycorn2, xcorn1, ycorn2, other.x, other.y, other.x+dx, other.y+dy)) {
+		other.theta *= -1;
+		other.image_angle *= -1;	
+	}
+}
 x += spd*dt*cos(theta);
 y += -spd*dt*sin(theta);
 spd = a < 0 ? max(spd+dt*a, minspd) : (a == 0 ? spd : min(spd+dt*a, maxspd));

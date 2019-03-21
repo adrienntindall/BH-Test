@@ -6,7 +6,7 @@ var Y = argument1;
 var dt = global.dt;
 
 var dx = (X*cos(theta) - Y*sin(theta));
-var dy = -(Y*cos(theta) + X*sin(theta))
+var dy = -(Y*cos(theta) + X*sin(theta));
 
 
 //if(wall_collision(tilemap, id, dx, dy)) instance_destroy();

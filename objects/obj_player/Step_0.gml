@@ -1,13 +1,10 @@
-/// @description Movement + Shooting
+/// @description Handles all actions of the player that needs to be checked
 var dt = global.dt;
 
 //Death
 if(hp <= 0) game_restart();
-if(keyboard_check(ord("K"))) game_restart();
-if(keyboard_check_pressed(vk_escape)) {
-	
-	//room_goto(room_menu_pause);
-}
+if(keyboard_check(ord("K"))) game_restart(); //a quick restart for debugging purposes only
+
 //Movement Variables
 left = keyboard_check(ord("A"));
 right = keyboard_check(ord("D"));
@@ -16,12 +13,12 @@ up = keyboard_check(ord("W"));
 shoot = mouse_check_button(mb_left);
 focus = keyboard_check(vk_shift);
 dodge = mouse_check_button_pressed(mb_right)
-var s = dt*(focus ? fspd:spd);
-if(focus) draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
+var s = dt*(focus ? fspd:spd); //placeholder variable for determining how many total spaces to move this frame
+if(focus) draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true); //draws the hitbox
 bomb = keyboard_check_pressed(vk_space);
 
 //X & Y Direction Setting
-dx = (right - left);
+dx = (right - left); 
 dy = (down - up);
 
 //Movement
@@ -33,6 +30,7 @@ dy = s*sin(theta)*abs(dy);
 //Collisions
 var bbox_side;
 
+//X-Direction collisions
 if(dx > 0) bbox_side = bbox_right; else bbox_side = bbox_left;
 
 if(tilemap_get_at_pixel(tilemap, bbox_side + dx, bbox_top) != 0 
@@ -42,6 +40,7 @@ if(tilemap_get_at_pixel(tilemap, bbox_side + dx, bbox_top) != 0
 	dx = 0;
 }
 
+//Y-Direction Collisions
 if(dy > 0) bbox_side = bbox_bottom; else bbox_side = bbox_top;
 
 if(tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + dy) != 0 
@@ -54,7 +53,7 @@ if(tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + dy) != 0
 x += dx;
 y += dy;
 
-//Misc.
+//Special case for spawning ring of knives
 if((global.weapon == weapon_list.knives) || (global.weapon_alt == weapon_list.knives)) {
 	if(!instance_exists(obj_knife)) for(var z = 0; z < 5; z++) {
 		var k = instance_create_depth(x, y, 1, obj_knife);
@@ -154,7 +153,6 @@ if(end_fire) {
 		default:
 			break;
 	}
-	//cd[focus] = .25;
 }
 
 //Focus Mode
@@ -193,6 +191,8 @@ if(focus) switch(global.focus) {
 	default:
 		break;
 }
+
+//Exiting focus mode
 var end_focus = keyboard_check_released(vk_shift);
 if(end_focus) switch(global.focus) {	
 	case focus_list.basic:

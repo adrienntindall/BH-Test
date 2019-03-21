@@ -113,7 +113,7 @@ while(true) {
 		wavh.cur_room = c;
 		
 		//Barriers
-		var B = 0;
+		var B = 2;
 		for(var r = 0; r < B; r++) {
 			var bb = instance_create_depth(rx1[c], rx2[c], 2, obj_bounce_barrier);
 			bb.xcorn1 = 64*(random(dx-6) + sx);
@@ -138,7 +138,6 @@ while(true) {
 				var bordy = (yw1 == yz2) || (yw2 == yz1);
 				var samex = (xw1 == xz1) || (xw2 == xz2);
 				var samey = (yw1 == yz1) || (yw2 == yz2);
-				//if(((w == broom_id) && (z == sroom_id)) || ((w == sroom_id) && (z == broom_id))) cnxs[w] = -1;
 				if(w == z) graph[z, z] = -1;
 				else if((bordx && samey) || (bordy && samex)) {
 					//1 - Borders n, 2 - s, 3 - e, 4 - w

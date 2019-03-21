@@ -1,7 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Initializing Vars
 
-
+//Weapon Options list
 enum options_w {
 	back,
 	weapon,
@@ -16,11 +15,11 @@ tot_weapons = array_length_1d(global.weapon_inv);
 
 space = 64;
 
+//Setting menu cursor position
 mpos = 0;
 wpos = findIndex(global.weapon_inv, global.weapon);
 wapos = findIndex(global.weapon_inv, global.weapon_alt);
 
 tot = array_length_1d(menu);
-
 
 prev_room = 0;

@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Handling input to navigate the menu
+
 if((global.cur_menu == menus.weapons) && global.pause) {
 	tot_weapons = array_length_1d(global.weapon_inv);
 	var move = keyboard_check_pressed(ord("S"))-keyboard_check_pressed(ord("W"));

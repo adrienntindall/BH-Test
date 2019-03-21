@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Handling input
+
 global.back_frame--;
 
 var pbutt = keyboard_check_pressed(vk_escape);
