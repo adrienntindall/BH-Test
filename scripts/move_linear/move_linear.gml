@@ -21,14 +21,13 @@ var dy = -spd*dt*sin(theta);
 
 with(obj_barrier) {
 	if(lines_cross(xcorn1, ycorn1, xcorn1, ycorn2, other.x, other.y, other.x+dx, other.y+dy) || lines_cross(xcorn2, ycorn2, xcorn2, ycorn1, other.x, other.y, other.x+dx, other.y+dy)) {
-		other.theta = pi-other.theta;
-		other.image_angle = 180-other.image_angle;	
+		bar_vert_eff(other.id);
 	}
 	else if(lines_cross(xcorn1, ycorn1, xcorn2, ycorn1, other.x, other.y, other.x+dx, other.y+dy) || lines_cross(xcorn2, ycorn2, xcorn1, ycorn2, other.x, other.y, other.x+dx, other.y+dy)) {
-		other.theta *= -1;
-		other.image_angle *= -1;	
+		bar_hor_eff(other.id);	
 	}
 }
 x += spd*dt*cos(theta);
 y += -spd*dt*sin(theta);
-spd = a < 0 ? max(spd+dt*a, minspd) : (a == 0 ? spd : min(spd+dt*a, maxspd));
+defspd = a < 0 ? max(defspd+dt*a, minspd) : (a == 0 ? defspd : min(defspd+dt*a, maxspd));
+spd = defspd;

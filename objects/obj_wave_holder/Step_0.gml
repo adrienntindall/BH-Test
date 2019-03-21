@@ -39,5 +39,14 @@ if(!flag) {
 			en.rn = cur_room;
 		}
 	}
+	if(cur_wave == 0) {
+		for(var c = 0; c < array_length_1d(bars); c++) {
+			var bb = instance_create_depth(0, 0, 2, bars[c]);
+			bb.xcorn1 = random(rx2 - rx1)+rx1;
+			bb.xcorn2 = bb.xcorn1 + 64*5;
+			bb.ycorn1 = random(ry2 - ry1)+ry1;
+			bb.ycorn2 = bb.ycorn1 + 64*5;	
+		}
+	}
 	cur_wave++;
 }

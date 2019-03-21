@@ -2,6 +2,7 @@
 // You can write your code in this editor
 life = 1.5;
 spd = 450;
+defspd = spd;
 theta = 0;
 t = 0;
 t0 = 0;

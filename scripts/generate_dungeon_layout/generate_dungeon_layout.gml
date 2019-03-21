@@ -97,7 +97,6 @@ while(true) {
 		fow.image_xscale = 19+1;
 		fow.image_yscale = 17+1;
 
-		//var m = round(.02*size);
 		var wavh = instance_create_depth(0, 0, 0, obj_wave_holder)
 		var wav = random(2) + 1;
 		for(var u = 0; u < wav; u++) {
@@ -106,23 +105,19 @@ while(true) {
 				wavh.waves[u, r] = enemies[floor(random(array_length_1d(enemies)))]	
 			}
 		}
+		
+		var B = random(2);
+		for(var r = 0; r < B; r++) {
+			wavh.bars[r] = obj_speed_barrier;
+		}
+		
 		wavh.rx1 = sx*64;
 		wavh.rx2 = (sx+19)*64;
 		wavh.ry1 = sy*64;
 		wavh.ry2 = (sy+17)*64;
 		wavh.cur_room = c;
-		
-		//Barriers
-		var B = 2;
-		for(var r = 0; r < B; r++) {
-			var bb = instance_create_depth(rx1[c], rx2[c], 2, obj_bounce_barrier);
-			bb.xcorn1 = 64*(random(dx-6) + sx);
-			bb.xcorn2 = bb.xcorn1 + 64*5;
-			bb.ycorn1 = 64*(random(dy-6) + sy);
-			bb.ycorn2 = bb.ycorn1 + 64*5;
-		}
 	}
-	
+		
 	//H A L L W A Y S
 	while(true) {
 		var redo = false;

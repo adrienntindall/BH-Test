@@ -1,9 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-colour = c_fuchsia;
+// Inherit the parent event
+event_inherited();
 
-xcorn1 = 0; xcorn2 = 0;
-ycorn1 = 0; ycorn2 = 0;
-
-rn = 0;
+colour = c_green;
+spd = 1.2;
