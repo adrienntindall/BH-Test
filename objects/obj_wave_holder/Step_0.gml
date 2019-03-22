@@ -43,9 +43,13 @@ if(!flag) {
 		for(var c = 0; c < array_length_1d(bars); c++) {
 			var bb = instance_create_depth(0, 0, 2, bars[c]);
 			bb.xcorn1 = random(rx2 - rx1)+rx1;
-			bb.xcorn2 = bb.xcorn1 + 64*5;
+			bb.xcorn2 = bb.xcorn1 + 64;
 			bb.ycorn1 = random(ry2 - ry1)+ry1;
-			bb.ycorn2 = bb.ycorn1 + 64*5;	
+			bb.ycorn2 = bb.ycorn1 + 64;
+			if(!check_legal(bb, tm)) {
+				instance_destroy(bb);
+				c--;
+			}
 		}
 	}
 	cur_wave++;

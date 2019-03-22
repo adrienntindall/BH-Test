@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "obj_bounce_barrier",
     "eventList": [
-        {
-            "id": "3f8ef633-6e70-4f87-8377-95b10baa730a",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "fb73ab8a-39a6-4ea5-8db1-2c122646e0bb"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

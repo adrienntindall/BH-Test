@@ -102,13 +102,13 @@ while(true) {
 		for(var u = 0; u < wav; u++) {
 			var m = random(2) + 1;
 			for(var r = 0; r < m; r++) {
-				wavh.waves[u, r] = enemies[floor(random(array_length_1d(enemies)))]	
+				wavh.waves[u, r] = enemies[floor(random(array_length_1d(enemies)))];	
 			}
 		}
 		
 		var B = random(2);
 		for(var r = 0; r < B; r++) {
-			wavh.bars[r] = obj_speed_barrier;
+			wavh.bars[r] = barriers[floor(random(array_length_1d(barriers)))];
 		}
 		
 		wavh.rx1 = sx*64;

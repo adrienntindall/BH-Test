@@ -20,10 +20,10 @@ var dx = spd*dt*cos(theta);
 var dy = -spd*dt*sin(theta);
 
 with(obj_barrier) {
-	if(lines_cross(xcorn1, ycorn1, xcorn1, ycorn2, other.x, other.y, other.x+dx, other.y+dy) || lines_cross(xcorn2, ycorn2, xcorn2, ycorn1, other.x, other.y, other.x+dx, other.y+dy)) {
+	if(lines_cross(xcorn1+dt*xspd, ycorn1+dt*yspd, xcorn1+dt*xspd, ycorn2+dt*yspd, other.x, other.y, other.x+dx, other.y+dy) || lines_cross(xcorn2+dt*xspd, ycorn2+dt*yspd, xcorn2+dt*xspd, ycorn1+dt*yspd, other.x, other.y, other.x+dx, other.y+dy)) {
 		bar_vert_eff(other.id);
 	}
-	else if(lines_cross(xcorn1, ycorn1, xcorn2, ycorn1, other.x, other.y, other.x+dx, other.y+dy) || lines_cross(xcorn2, ycorn2, xcorn1, ycorn2, other.x, other.y, other.x+dx, other.y+dy)) {
+	else if(lines_cross(xcorn1+dt*xspd, ycorn1+dt*yspd, xcorn2+dt*xspd, ycorn1+dt*yspd, other.x, other.y, other.x+dx, other.y+dy) || lines_cross(xcorn2+dt*xspd, ycorn2+dt*yspd, xcorn1+dt*xspd, ycorn2+dt*yspd, other.x, other.y, other.x+dx, other.y+dy)) {
 		bar_hor_eff(other.id);	
 	}
 }
