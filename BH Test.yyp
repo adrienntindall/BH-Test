@@ -415,11 +415,27 @@
             }
         },
         {
+            "Key": "3e3da7fd-77f0-4585-9a74-a127207b1869",
+            "Value": {
+                "id": "5b6f5e7d-797b-4a03-8de2-aa8ab158af10",
+                "resourcePath": "sprites\\spr_dungeon_start\\spr_dungeon_start.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3e4478ac-815c-4609-9fa2-9f96797ecaf3",
             "Value": {
                 "id": "58a85bd5-e132-4b6c-a826-695314c8e79d",
                 "resourcePath": "objects\\obj_enemy_circle\\obj_enemy_circle.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3fb713b8-3f9f-4f44-8563-05c8a8ce304a",
+            "Value": {
+                "id": "d449db0f-4c90-45b8-b038-7b1e704c6b38",
+                "resourcePath": "views\\3fb713b8-3f9f-4f44-8563-05c8a8ce304a.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -443,6 +459,14 @@
             "Value": {
                 "id": "5a0c71c0-eba1-4fe1-9217-023872f5b1d8",
                 "resourcePath": "views\\44464ea7-4f29-4984-8a50-47d3ed035c3e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "44ad71cc-3a5b-44e9-9545-79e269d29d19",
+            "Value": {
+                "id": "ffd00d8d-febc-401c-9317-473a5c1ec85b",
+                "resourcePath": "views\\44ad71cc-3a5b-44e9-9545-79e269d29d19.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -1047,6 +1071,14 @@
             }
         },
         {
+            "Key": "a979e056-f4d8-46b5-8fb9-788094b7e49f",
+            "Value": {
+                "id": "74930c4a-8a5b-4023-a541-b246b0c732a6",
+                "resourcePath": "rooms\\start_room\\start_room.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "a97ffce0-3771-4ac4-bc83-cc5aedcf7084",
             "Value": {
                 "id": "18c678ff-ae67-4baf-b3a5-6c3a449225f0",
@@ -1139,6 +1171,14 @@
             "Value": {
                 "id": "d75482d2-940e-4031-a610-c5adf4bd6585",
                 "resourcePath": "objects\\obj_bullet_pow_orb\\obj_bullet_pow_orb.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b71aa4ab-55d9-4032-b836-b71d319d5474",
+            "Value": {
+                "id": "22bd2b74-bc0b-4ca0-9492-1c0159b7ea48",
+                "resourcePath": "objects\\obj_dungeon_start\\obj_dungeon_start.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1435,6 +1475,14 @@
             "Value": {
                 "id": "def34867-0e1b-49eb-92e2-e506be5a6f81",
                 "resourcePath": "objects\\obj_pattern_bullet\\obj_pattern_bullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ebb43472-c7ce-49e5-bfac-e0210fc94fe5",
+            "Value": {
+                "id": "3ce9e474-8d0a-4034-99a9-63cbf2c03e0a",
+                "resourcePath": "objects\\obj_interactive\\obj_interactive.yy",
                 "resourceType": "GMObject"
             }
         },

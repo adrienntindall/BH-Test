@@ -72,31 +72,34 @@ while(true) {
 	//Placing Every Other Room
 	for(var c = 0; c < rn; c++) if((c != sroom_id) && (c != broom_id)) {
 		//New Room
-		var cx1 = rx1[c]; var cx2 = rx2[c]; var cy1 = ry1[c]; var cy2 = ry2[c];
-		var f = 0;
-		var chart = array(0,0,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,);
-		var nds = array(3,0,4,0,5,0,13,0,14,0,15,0); var sds = array(9,16); var eds = array(18,3,18,4,18,5,18,6); var wds = array(0,3,0,4,0,5,0,6);
-		var dx = cx2-cx1; var dy = cy2-cy1;
-		var sx = floor(random(dx-1-19))+1+cx1;
-		var sy = floor(random(dy-1-17))+1+cy1;
-		for(var q = 0; q < array_length_1d(nds)/2; q++) { ndx[c, q] = sx+nds[2*q]; ndy[c, q] = sy+nds[2*q+1]; }
-		for(var q = 0; q < array_length_1d(sds)/2; q++) { sdx[c, q] = sx+sds[2*q]; sdy[c, q] = sy+sds[2*q+1]; }
-		for(var q = 0; q < array_length_1d(eds)/2; q++) { edx[c, q] = sx+eds[2*q]; edy[c, q] = sy+eds[2*q+1]; }
-		for(var q = 0; q < array_length_1d(wds)/2; q++) { wdx[c, q] = sx+wds[2*q]; wdy[c, q] = sy+wds[2*q+1]; }
-		for(var q = 0; q < 17; q++) {
-			for(var l = 0; l < 19; l++) {
-				if(chart[f] == 1) {
-					tilemap_set(map_id, floor_tile, sx+l, sy+q);
+		switch(floor(random(1))) {
+			case 0: 
+				var cx1 = rx1[c]; var cx2 = rx2[c]; var cy1 = ry1[c]; var cy2 = ry2[c];
+				var f = 0;
+				var chart = array(0,0,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,);
+				var nds = array(3,0,4,0,5,0,13,0,14,0,15,0); var sds = array(9,16); var eds = array(18,3,18,4,18,5,18,6); var wds = array(0,3,0,4,0,5,0,6);
+				var dx = cx2-cx1; var dy = cy2-cy1;
+				var sx = floor(random(dx-1-19))+1+cx1;
+				var sy = floor(random(dy-1-17))+1+cy1;
+				for(var q = 0; q < array_length_1d(nds)/2; q++) { ndx[c, q] = sx+nds[2*q]; ndy[c, q] = sy+nds[2*q+1]; }
+				for(var q = 0; q < array_length_1d(sds)/2; q++) { sdx[c, q] = sx+sds[2*q]; sdy[c, q] = sy+sds[2*q+1]; }
+				for(var q = 0; q < array_length_1d(eds)/2; q++) { edx[c, q] = sx+eds[2*q]; edy[c, q] = sy+eds[2*q+1]; }
+				for(var q = 0; q < array_length_1d(wds)/2; q++) { wdx[c, q] = sx+wds[2*q]; wdy[c, q] = sy+wds[2*q+1]; }
+				for(var q = 0; q < 17; q++) {
+					for(var l = 0; l < 19; l++) {
+						if(chart[f] == 1) {
+							tilemap_set(map_id, floor_tile, sx+l, sy+q);
+						}
+						f++;
+					}
 				}
-				f++;
-			}
+		
+		
+				var fow = instance_create_depth(64*(sx-1)+32, 64*(sy-1)+32, 0, obj_fow);
+				fow.image_xscale = 19+1;
+				fow.image_yscale = 17+1;
+				break;
 		}
-		
-		
-		var fow = instance_create_depth(64*(sx-1)+32, 64*(sy-1)+32, 0, obj_fow);
-		fow.image_xscale = 19+1;
-		fow.image_yscale = 17+1;
-
 		var wavh = instance_create_depth(0, 0, 0, obj_wave_holder)
 		var wav = random(2) + 1;
 		for(var u = 0; u < wav; u++) {

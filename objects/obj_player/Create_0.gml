@@ -1,5 +1,4 @@
 /// @description Defining Variables
-
 depth = 2;
 cd = array(0, 0);
 kcd = .5;
@@ -49,3 +48,8 @@ tscd = 0;
 tslim = 90;
 shcd = 180;
 fshbr = false;
+
+global.broom_x1 = 0;
+global.broom_x2 = 0;
+global.broom_y1 = 0;
+global.broom_y2 = 0;
