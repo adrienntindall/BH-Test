@@ -11,7 +11,8 @@ tilemap_set(bmap_id, 0, 1 ,1);
 boss = obj_boss;
 enemies = array(obj_enemy_ring, obj_enemy_cspray, obj_enemy_autumn1);
 //enemies = array(obj_enemy_autumn_2); //for testing
-barriers = array(obj_speed_barrier, obj_bounce_barrier);
+//barriers = array(obj_speed_barrier, obj_bounce_barrier);
+barriers = array(obj_bounce_barrier); //for testing
 broom_x1 = 0;
 broom_x2 = room_width;
 broom_y1 = 0;
