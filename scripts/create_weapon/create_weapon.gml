@@ -55,6 +55,25 @@ switch(argument0) {
 		dmg *= .65;
 		break;
 	case wp_sp.orbital_5:
+		dmg = 5;
+		if(!knife_flg) for(var z = 0; z < 5; z++) {
+			b[z] = instance_create_depth(x, y, 1, obj_bullet);
+			b[z].index = z;
+			b[z].t = z*b[z].w/5;
+			b[z].is_knife = true;
+			knife_flg = true;
+		}
+		with(obj_bullet) {
+			if(is_knife && (index == other.kix) && (obj_player.kcd <= 0) && (mode == 0)) {
+				obj_bullet.theta = point_direction(x, y, mouse_x, mouse_y)*pi/180;
+				mode = 1;
+				obj_player.kcd = .5;
+				obj_player.kix = (other.kix + 1) % 5;
+				maxd = min(max(sqrt((x-mouse_x)*(x-mouse_x) + (y-mouse_y)*(y-mouse_y)), 100), defmaxd);
+				image_angle = obj_bullet.theta*180/pi;
+				break;
+			}
+		}
 		break;
 	case wp_sp.scatter:
 		var c = 0;

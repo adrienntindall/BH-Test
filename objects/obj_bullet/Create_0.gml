@@ -17,3 +17,13 @@ maxspd = 0;
 cd = 0;
 mov_pat = wp_mv.linear;
 bt_aff = -1;
+
+//Vars relating to knifeness + circular movement
+is_knife = false;
+index = 0;
+r = 60;
+maxd = 300;
+defmaxd = maxd;
+w = 8; //angular velocity
+mode = 0; //0 = idle; 1 = active; 2 = return
+icd = .5;

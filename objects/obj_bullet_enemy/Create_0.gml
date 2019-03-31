@@ -16,3 +16,4 @@ tspd = 1;
 ta = 0;
 x0 = x;
 y0 = y;
+is_knife = false;

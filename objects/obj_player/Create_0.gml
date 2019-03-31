@@ -53,6 +53,8 @@ tslim = 90;
 shcd = 180;
 fshbr = false;
 
+knife_flg = false;
+
 global.broom_x1 = 0;
 global.broom_x2 = 0;
 global.broom_y1 = 0;

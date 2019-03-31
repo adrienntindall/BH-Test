@@ -4,4 +4,5 @@ with(other) {
 	hp-=other.dmg;
 }
 
-instance_destroy();
+if(!is_knife) instance_destroy();
+else mode = 2;

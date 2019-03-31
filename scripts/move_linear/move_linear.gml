@@ -3,6 +3,8 @@
 var dt = global.dt;
 
 if(wall_collision(tilemap, id, spd*dt*cos(theta), -spd*dt*sin(theta))) {
+	if(is_knife) mode = 2;
+	else instance_destroy();
 	switch(object_index) {
 		case obj_knife:
 			mode = 2;
@@ -12,7 +14,6 @@ if(wall_collision(tilemap, id, spd*dt*cos(theta), -spd*dt*sin(theta))) {
 			theta = (wall_collision(tilemap, id, 0, -spd*dt*sin(theta))) ? -theta : theta;
 			break;
 		default:
-			instance_destroy();
 			break;
 	}
 }
