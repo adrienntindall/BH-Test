@@ -15,4 +15,5 @@ a = 0;
 minspd = 0;
 maxspd = 0;
 cd = 0;
-mov_pat = mp.linear;
+mov_pat = wp_mv.linear;
+bt_aff = -1;

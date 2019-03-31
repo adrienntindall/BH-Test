@@ -14,18 +14,36 @@ if((global.cur_menu == menus.weapons) && global.pause) {
 			if(select) global.cur_menu = menus.pause;
 			global.back_frame = 2;
 			break;
-		case options_w.weapon:
+		case options_w.wp_case:
+		case options_w.wpa_case:
 			if(change != 0) {
-				wpos = (change == -1 && wpos == 0) ? tot_weapons-1 :(wpos+change)%tot_weapons;
-				global.weapon = global.weapon_inv[wpos];
-				menu[options_w.weapon] = global.weapon_names[global.weapon];
+				wpos = (change == -1 && wpos == 0) ? wp_sp.length-1 :(wpos+change)%wp_sp.length;
+				global.weapon[mpos-1] = wpos;
+				menu[mpos] = "Casing: " + global.case_names[wpos];
 			}
 			break;
-		case options_w.weapon_alt:
+		case options_w.wp_disp:
+		case options_w.wpa_disp:
 			if(change != 0) {
-				wapos = (change == -1 && wapos == 0) ? tot_weapons-1 : (wapos+change)%tot_weapons;
-				global.weapon_alt = global.weapon_inv[wapos];
-				menu[options_w.weapon_alt] = global.weapon_names[global.weapon_alt];
+				wpos = (change == -1 && wpos == 0) ? wp_mv.length-1 :(wpos+change)%wp_mv.length;
+				global.weapon[mpos-1] = wpos;
+				menu[mpos] = "Dispensor: " + global.mv_names[wpos];
+			}
+			break;
+		case options_w.wp_bt:
+		case options_w.wpa_bt:
+			if(change != 0) {
+				wpos = (change == -1 && wpos == 0) ? wp_bt.length-1 :(wpos+change)%wp_bt.length;
+				global.weapon[mpos-1] = wpos;
+				menu[mpos] = "Bullet: " + global.bt_names[wpos];
+			}
+			break;
+		case options_w.wp_ex:
+		case options_w.wpa_ex:
+			if(change != 0) {
+				wpos = (change == -1 && wpos == 0) ? wp_ex.length-1 :(wpos+change)%wp_ex.length;
+				global.weapon[mpos-1] = wpos;
+				menu[mpos] = "Extra: " + global.ex_names[wpos];
 			}
 			break;
 		default:

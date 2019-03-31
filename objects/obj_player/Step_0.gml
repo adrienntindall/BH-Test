@@ -54,7 +54,7 @@ x += dx;
 y += dy;
 
 //Special case for spawning ring of knives
-if((global.weapon == weapon_list.knives) || (global.weapon_alt == weapon_list.knives)) {
+/*if((global.weapon == weapon_list.knives) || (global.weapon_alt == weapon_list.knives)) {
 	if(!instance_exists(obj_knife)) for(var z = 0; z < 5; z++) {
 		var k = instance_create_depth(x, y, 1, obj_knife);
 		k.index = z;
@@ -213,6 +213,12 @@ if(end_focus) switch(global.focus) {
 		break;
 }
 
+*/
+if(shoot) {
+	clay = focus;
+	if(focus) create_weapon(global.weapon[4], global.weapon[5], global.weapon[6], global.weapon[7]);
+	else create_weapon(global.weapon[0], global.weapon[1], global.weapon[2], global.weapon[3]);
+}
 //Bombs
 if(bomb && bombs > 0) {
 	bombs--;

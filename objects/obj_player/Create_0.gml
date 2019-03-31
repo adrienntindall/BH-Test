@@ -30,11 +30,15 @@ enum weapon_list {
 	life_channel,
 	length
 }
-global.weapon = weapon_list.simple;
+global.weapon = zeros_arr(8);
 global.weapon_alt = weapon_list.simple_alt;
 global.weapon_inv = array(weapon_list.simple, weapon_list.simple_alt);
 
 global.weapon_names = array("Simple", "Sine", "Octo Sine", "Knives", "Power Orb", "Split Cannon", "Flamethrower", "Life Channel");
+global.case_names = array("Front", "Front-Back", "Left-Right", "Circular-4", "Circular-6", "Circular-8", "Orbital-5", "Scatter");
+global.mv_names = array("Linear", "Split");
+global.bt_names = array("Basic");
+global.ex_names = array("Flame");
 
 enum focus_list {
 	basic,
