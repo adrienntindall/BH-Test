@@ -17,3 +17,6 @@ ta = 0;
 x0 = x;
 y0 = y;
 is_knife = false;
+is_split_cannon = false;
+tx = 1;
+ty = 1;

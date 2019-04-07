@@ -17,6 +17,7 @@ enum wp_sp {
 	circular_8,
 	orbital_5,
 	scatter,
+	split,
 	length
 }
 
@@ -24,10 +25,12 @@ enum wp_sp {
 var theta = point_direction(x, y, mouse_x, mouse_y);
 switch(argument0) {
 	case wp_sp.front:
-		b[0] =  instance_create_depth(x, y, 0, obj_bullet);
-		b[0].image_angle = theta;
-		b[0].theta = pi * (theta/180);
-		codo = .14;
+		if(cd[clay] <= 0) {
+			b[0] =  instance_create_depth(x, y, 0, obj_bullet);
+			b[0].image_angle = theta;
+			b[0].theta = pi * (theta/180);
+			codo = .14;
+		}
 		break;
 	case wp_sp.front_back:
 		b = spawn_circular(2, obj_bullet, noone, pi*(theta/180), 0, 0, true);
@@ -84,6 +87,7 @@ switch(argument0) {
 			b[c].image_angle = b[c].theta *180/pi;
 			b[c].spd = 500;
 			b[c].life = 1.2;
+			b[c].deflife = 1.2;
 			b[c].nlife = true;
 			b[c].a = -1*(random(350)+500);
 			b[c].ta = -.22;
@@ -92,6 +96,15 @@ switch(argument0) {
 		}
 		codo = .15;
 		break;
+	case wp_sp.split:
+		if(cd[clay] <= 0) {
+			b[0] =  instance_create_depth(x, y, 0, obj_bullet);
+			b[0].image_angle = theta;
+			b[0].theta = pi * (theta/180);
+			b[0].is_split_cannon = true;
+			codo = .9;
+		}
+		break;
 	default:
 		show_debug_message("Note, casing " + string(argument0) + " is not implemented");
 		break;
@@ -99,18 +112,21 @@ switch(argument0) {
 
 enum wp_mv {
 	linear,
-	split,
+	loop_alt,
 	length	
 }
 
 enum wp_bt {
 	basic,
+	flame,
 	length
 }
 
 
 enum wp_ex {
+	none,
 	flame,
+	lifesteal,
 	length	
 }
 
@@ -127,12 +143,24 @@ for(var c = 0; c < array_length_1d(b); c++) {
 			b[c].bt_aff = -1;
 			if(c == 0) codo *= .85;
 			break;
+		case wp_bt.flame:
+			b[c].sprite_index = spr_ft;
+			b[c].dmg = 1.2;
+			b[c].bt_aff = wp_ex.flame;
+			if(c == 0) codo *= 1.1;
+			break;
 		default:
 			break;
 	}
 	
 	//Special slot - extra affects
 	switch(argument3) {
+		case wp_ex.flame:
+			b[c].ex_aff = wp_ex.flame;
+			break;
+		case wp_ex.lifesteal:
+			b[c].do_lifesteal = true;
+			break;
 		default:
 			break;
 	}
@@ -141,5 +169,4 @@ for(var c = 0; c < array_length_1d(b); c++) {
 }
 
 if(b != 0) cd[clay] = codo;
-
 var temp = 0;

@@ -43,9 +43,47 @@ if(is_knife) {
 		}
 	}
 }
+else if(is_split_cannon) {
+	if(scd <= 0) {
+		var so = instance_copy(false);
+		
+		so.theta = theta + rot*cur_s + pi/2;
+		cur_s++;
+		scd += .3;
+		
+		so.is_split_cannon = false;
+		so.is_split_orb = true;
+		so.prev_sprite = sprite_index;
+		so.life = deflife;
+		so.sprite_index = spr_bullet_enemy_ring;
+	}
+
+	scd -= dt;
+	
+	move_linear();
+}
+else if(is_split_orb) {
+	if(tts <= 0) {
+		var b = spawn_circular(2, noone, noone, theta, 10, 0, true, true);
+		for(var c = 0; c < 2; c++) {
+			b[c].sprite_index = b[c].prev_sprite;
+			b[c].is_split_orb = false;
+			b[c].life = deflife;
+			b[c].t = 0;
+			b[c].t0 = 0;
+			b[c].x0 = x;
+			b[c].y0 = y;
+		}
+		instance_destroy();
+	}
+
+	tts -= dt;
+
+}
 else {
 	do_move(mov_pat);
 }
+
 t+=dt;
 t0+=dt;
 life -= dt;

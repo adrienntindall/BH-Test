@@ -4,18 +4,12 @@ var dt = global.dt;
 
 if(wall_collision(tilemap, id, spd*dt*cos(theta), -spd*dt*sin(theta))) {
 	if(is_knife) mode = 2;
-	else instance_destroy();
-	switch(object_index) {
-		case obj_knife:
-			mode = 2;
-			break;
-		case obj_split_spawner:
-			theta = (wall_collision(tilemap, id, spd*dt*cos(theta), 0)) ? pi-theta : theta;
-			theta = (wall_collision(tilemap, id, 0, -spd*dt*sin(theta))) ? -theta : theta;
-			break;
-		default:
-			break;
+	else if(is_split_cannon) {
+		theta = (wall_collision(tilemap, id, spd*dt*cos(theta), 0)) ? pi-theta : theta;
+		theta = (wall_collision(tilemap, id, 0, -spd*dt*sin(theta))) ? -theta : theta;
+		image_angle = theta*180/pi;
 	}
+	else instance_destroy();
 }
 var dx = spd*dt*cos(theta);
 var dy = -spd*dt*sin(theta);

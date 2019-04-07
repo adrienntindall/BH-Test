@@ -35,10 +35,10 @@ global.weapon_alt = weapon_list.simple_alt;
 global.weapon_inv = array(weapon_list.simple, weapon_list.simple_alt);
 
 global.weapon_names = array("Simple", "Sine", "Octo Sine", "Knives", "Power Orb", "Split Cannon", "Flamethrower", "Life Channel");
-global.case_names = array("Front", "Front-Back", "Left-Right", "Circular-4", "Circular-6", "Circular-8", "Orbital-5", "Scatter");
-global.mv_names = array("Linear", "Split");
-global.bt_names = array("Basic");
-global.ex_names = array("Flame");
+global.case_names = array("Front", "Front-Back", "Left-Right", "Circular-4", "Circular-6", "Circular-8", "Orbital-5", "Scatter", "Split");
+global.mv_names = array("Linear", "Loop Alt");
+global.bt_names = array("Basic", "Flame");
+global.ex_names = array("None", "Flame", "Lifesteal");
 
 enum focus_list {
 	basic,
