@@ -3,6 +3,8 @@
 if(!is_split_orb) {
 	with(other) {
 		hp-=other.dmg;
+		hit_aff(other.ex_aff);
+		hit_aff(other.bt_aff);
 	}
 
 	if(do_lifesteal) obj_player.hp += dmg/abs(1 + sqrt((x - obj_player.x)*(x - obj_player.x) + (y - obj_player.y)*(y - obj_player.y)));

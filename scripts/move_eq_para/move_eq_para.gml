@@ -1,8 +1,8 @@
 ///move_eq(x_eq, y_eq)
 ///@param x_eq
 ///@param y_eq
-var X = argument0;
-var Y = argument1;
+var X = tx*argument0 + 2*xacc_dis;
+var Y = ty*argument1 + 2*yacc_dis;
 var dt = global.dt;
 
 var dx = (X*cos(theta) - Y*sin(theta)) - (x-x0);

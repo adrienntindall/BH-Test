@@ -109,7 +109,7 @@ while(true) {
 			}
 		}
 		
-		var B = random(2);
+		var B = 0;
 		for(var r = 0; r < B; r++) {
 			wavh.bars[r] = barriers[floor(random(array_length_1d(barriers)))];
 		}

@@ -52,5 +52,7 @@ tx = 1;
 ty = 1;
 tx0 = 0;
 ty0 = 0;
+xacc_dis = 0;
+yacc_dis = 0;
 
 do_lifesteal = false;

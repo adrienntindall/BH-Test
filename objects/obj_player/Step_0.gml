@@ -213,12 +213,13 @@ if(end_focus) switch(global.focus) {
 		break;
 }
 
-*/
+
 if(shoot) {
 	clay = focus;
 	if(focus) create_weapon(global.weapon[4], global.weapon[5], global.weapon[6], global.weapon[7]);
 	else create_weapon(global.weapon[0], global.weapon[1], global.weapon[2], global.weapon[3]);
 }
+*/
 //Bombs
 if(bomb && bombs > 0) {
 	bombs--;
