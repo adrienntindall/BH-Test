@@ -36,3 +36,6 @@ cur_bul[0] = 0;
 on_fire = false;
 flame_dmg = 1;
 flame_time = 0;
+
+slow = false;
+slowtime = 0;

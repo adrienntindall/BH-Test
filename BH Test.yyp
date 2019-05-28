@@ -807,11 +807,27 @@
             }
         },
         {
+            "Key": "7a4b3337-d606-435e-809b-ab9365be7e6a",
+            "Value": {
+                "id": "8d88c5e5-89a1-42f4-b526-1953f4c2c80e",
+                "resourcePath": "views\\7a4b3337-d606-435e-809b-ab9365be7e6a.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7a63b1d6-e1c6-4d87-aad6-75f2f3582cdc",
             "Value": {
                 "id": "a0db0f75-2c41-4b3a-871a-65a51d81285c",
                 "resourcePath": "scripts\\rand_id\\rand_id.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7a90c368-fdc0-459a-b172-11c830d51ea6",
+            "Value": {
+                "id": "49c7e9ec-88fa-44fc-bf94-eea978c65d8e",
+                "resourcePath": "sprites\\spr_graze_fire\\spr_graze_fire.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -983,11 +999,27 @@
             }
         },
         {
+            "Key": "90fd4b83-47fd-4738-8515-9611ea5ccd3a",
+            "Value": {
+                "id": "d5287ade-7096-490a-8864-ac610cb3383b",
+                "resourcePath": "objects\\obj_bullet_enemy_linear\\obj_bullet_enemy_linear.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "916d1bcf-1ebb-446e-b6ca-fad471074ce3",
             "Value": {
                 "id": "7041edb7-075e-49c8-be95-1e6a429d8daa",
                 "resourcePath": "scripts\\bullet_heal\\bullet_heal.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "925b7e3e-4d0e-4cd3-a976-725346f28752",
+            "Value": {
+                "id": "3e179997-32ce-43c6-8283-399c19d834ed",
+                "resourcePath": "sprites\\spr_graze_ice\\spr_graze_ice.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1159,6 +1191,14 @@
             }
         },
         {
+            "Key": "b187be4a-ef89-48d7-b058-2db0bf8ed23e",
+            "Value": {
+                "id": "25c1d1ce-f1f7-464e-8dd2-bacf366f4f79",
+                "resourcePath": "objects\\obj_graze_ball_fire\\obj_graze_ball_fire.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b3b19119-40b5-4bc3-93de-9ef145def097",
             "Value": {
                 "id": "87bbf56e-c2cf-420b-908d-d658b509b894",
@@ -1260,6 +1300,14 @@
                 "id": "4b71d381-2c54-43ba-a100-500b3f5f2ec8",
                 "resourcePath": "views\\ba915b3b-5ae5-4fb2-a4aa-526df9cabaf2.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "bb164473-d231-4a32-a07d-1f8befbd2c47",
+            "Value": {
+                "id": "1b688010-d444-4b47-84d8-39ac09e45fe4",
+                "resourcePath": "objects\\obj_graze_ball_ice\\obj_graze_ball_ice.yy",
+                "resourceType": "GMObject"
             }
         },
         {

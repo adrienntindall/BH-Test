@@ -10,7 +10,7 @@ if(hp <= 0) {
 
 enemy_move_circle();
 
-spawn_arc_spread(3, obj_bullet_enemy, id, n, 3*pi/4, 10, .3);
+spawn_arc_spread(3, obj_bullet_enemy_linear, id, n, 3*pi/4, 10, .3);
 
 n+=dt;
 cd-=dt;

@@ -6,15 +6,16 @@ if(hp <= 0) game_restart();
 if(keyboard_check(ord("K"))) game_restart(); //a quick restart for debugging purposes only
 
 //Movement Variables
-left = keyboard_check(ord("A"));
-right = keyboard_check(ord("D"));
-down = keyboard_check(ord("S"));
-up = keyboard_check(ord("W"));
+left = keyboard_check(ord("A")) || keyboard_check(vk_left);
+right = keyboard_check(ord("D")) || keyboard_check(vk_right);
+down = keyboard_check(ord("S")) || keyboard_check(vk_down);
+up = keyboard_check(ord("W")) || keyboard_check(vk_up);
 shoot = mouse_check_button(mb_left);
 focus = keyboard_check(vk_shift);
+fast = keyboard_check(ord("Z"));
 dodge = mouse_check_button_pressed(mb_right)
-var s = dt*(focus ? fspd:spd); //placeholder variable for determining how many total spaces to move this frame
-if(focus) draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true); //draws the hitbox
+var s = dt*(focus ? fspd:(fast ? qspd:spd)); //placeholder variable for determining how many total spaces to move this frame
+if(focus || fast) draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true); //draws the hitbox
 bomb = keyboard_check_pressed(vk_space);
 
 //X & Y Direction Setting

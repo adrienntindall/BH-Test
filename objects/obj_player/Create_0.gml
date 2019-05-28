@@ -7,6 +7,7 @@ hp = 3;
 maxhp = 3;
 spd = 250;
 fspd = 155;
+qspd = 420;
 t = 0;
 dt = delta_time;
 tilemap = layer_tilemap_get_id("Borders");
@@ -40,6 +41,7 @@ global.case_names = array("Front", "Front-Back", "Left-Right", "Circular-4", "Ci
 global.mv_names = array("Linear", "Loop Alt");
 global.bt_names = array("Basic", "Flame");
 global.ex_names = array("None", "Flame", "Lifesteal");
+global.graze_bts = array(obj_graze_ball, obj_graze_ball_fire, obj_graze_ball_ice);
 
 enum focus_list {
 	basic,

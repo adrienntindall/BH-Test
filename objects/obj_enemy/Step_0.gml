@@ -5,5 +5,14 @@ var dt = global.dt;
 if(on_fire) {
 	hp -= dt*flame_dmg;
 	flame_time -= dt;
-	if(flame_time <= 0) on_fire = false;
+	if(flame_time <= 0) {
+		on_fire = false;
+		flame_dmg = 0;
+	}
+}
+
+if(slow) {
+	spd = defspd*.75;
+	slowtime -= dt;
+	if(slowtime<=0) slow=false;
 }

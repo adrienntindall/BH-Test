@@ -7,16 +7,8 @@ var dt = global.dt;
 if(grtime == "nah") graze(true);
 else if(grtime < 0) {
 	graze(true);
-	var gb = instance_create_depth(obj_player.x, obj_player.y, 1, obj_graze_ball);
+	var gb = instance_create_depth(obj_player.x, obj_player.y, 1, global.graze_bts[floor(random(array_length_1d(global.graze_bts)))]);
 	gb.theta = random(2*pi);
 	show_debug_message("graze");
 }
 grtime = min(grtime-dt, graze(false));
-
-move_linear();
-
-life -= dt;
-if (life <= 0) {
-	instance_destroy();
-}
-
