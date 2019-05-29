@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var dt = global.dt;
-
 if(hp <= 0) {
 	bullet_heal(.02);
 	instance_destroy();

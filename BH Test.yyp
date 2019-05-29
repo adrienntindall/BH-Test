@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "12c5cff9-b64b-43fe-880b-9c25f796af08",
+            "Value": {
+                "id": "5cf2d5ca-702c-4a61-901f-7fbdc846bd67",
+                "resourcePath": "objects\\obj_graze_ball_nature\\obj_graze_ball_nature.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "169aa058-7726-408f-9d18-5acd166547a5",
             "Value": {
                 "id": "88fcc0b9-4237-42cc-9133-2c363ddf39fb",
@@ -751,11 +759,27 @@
             }
         },
         {
+            "Key": "75eebba2-a9fa-4195-aaca-244bab832c6b",
+            "Value": {
+                "id": "5fd982fd-dc14-4e2b-bb37-0b0c9d403093",
+                "resourcePath": "sprites\\spr_graze_electric\\spr_graze_electric.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "76f2b9a7-c281-4d79-9db5-bce3f46953e5",
             "Value": {
                 "id": "826d35e2-7b04-49f1-87ee-06b0db28f149",
                 "resourcePath": "scripts\\enemy_place_circle\\enemy_place_circle.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "77336676-8819-448d-b125-071d740f7bf3",
+            "Value": {
+                "id": "a2e3db96-3819-4f16-9a64-ce52e9f5d22c",
+                "resourcePath": "sprites\\spr_graze_nature\\spr_graze_nature.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -935,6 +959,14 @@
             }
         },
         {
+            "Key": "891cb097-2306-4ac6-bfef-dbc9e69115f4",
+            "Value": {
+                "id": "04fd4142-487c-47f4-a46b-6b48d0fbe143",
+                "resourcePath": "sprites\\spr_graze_light\\spr_graze_light.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8b221646-f8ca-4d21-a74f-51eeda616fe7",
             "Value": {
                 "id": "28e0ac3e-8224-47dd-97d0-de010c51d994",
@@ -1039,10 +1071,26 @@
             }
         },
         {
+            "Key": "9782bc9c-95ef-458e-8a03-c9996fdb577b",
+            "Value": {
+                "id": "cf492f1a-5e1b-4880-9128-cd61bfafdf9b",
+                "resourcePath": "objects\\obj_graze_ball_light\\obj_graze_ball_light.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "97f953c5-652b-4e8c-909c-4bb6872cdb16",
             "Value": {
                 "id": "f3b013d9-a420-403c-ab87-840df43ee5b4",
                 "resourcePath": "objects\\obj_lay_right\\obj_lay_right.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9cb323a1-051a-4e2e-9b00-39b1bb75621e",
+            "Value": {
+                "id": "6747112a-1f2e-4e1b-a090-6f5fb14f5e1b",
+                "resourcePath": "objects\\obj_graze_ball_electric\\obj_graze_ball_electric.yy",
                 "resourceType": "GMObject"
             }
         },

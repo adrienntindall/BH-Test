@@ -20,5 +20,5 @@ move_eq_para(X, Y);
 
 //image_angle = arctan(m)*180/pi;
 
-t+=tspd*global.dt;
-tspd += ta*global.dt;
+t+=tspd*dt;
+tspd += ta*dt;

@@ -3,7 +3,6 @@
 ///@param y_eq
 var X = tx*argument0 + 2*xacc_dis;
 var Y = ty*argument1 + 2*yacc_dis;
-var dt = global.dt;
 
 var dx = (X*cos(theta) - Y*sin(theta)) - (x-x0);
 var dy = -(Y*cos(theta) + X*sin(theta)) - (y-y0);

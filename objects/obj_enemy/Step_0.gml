@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-var dt = global.dt;
+dt = global.dt;
 
 if(on_fire) {
 	hp -= dt*flame_dmg;
@@ -13,6 +13,18 @@ if(on_fire) {
 
 if(slow) {
 	spd = defspd*.75;
+	dt *= .75;
 	slowtime -= dt;
 	if(slowtime<=0) slow=false;
+}
+
+if(charged) charged_time -= dt;
+
+if(stuned == true) {
+	stun_time -= dt;
+	if(stun_time <= 0) {
+		stuned = false;
+		stun_time = 0;
+	}
+	exit;
 }

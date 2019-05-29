@@ -2,8 +2,6 @@
 // You can write your code in this editor
 event_inherited();
 
-var dt = global.dt;
-
 if(life <= 0) instance_destroy();
 
 move_loop_alt(75, 25, 50);

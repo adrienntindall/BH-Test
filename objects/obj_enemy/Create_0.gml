@@ -1,6 +1,7 @@
 /// @description Set variables
 // You can write your code in this editor
 t = 0;
+dt = 0;
 clay = 0;
 r = 0;
 
@@ -39,3 +40,9 @@ flame_time = 0;
 
 slow = false;
 slowtime = 0;
+
+stuned = false;
+stun_time = 0;
+
+charged = false;
+charged_time = 0;

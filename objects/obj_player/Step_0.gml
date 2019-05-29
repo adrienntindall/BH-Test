@@ -1,5 +1,5 @@
 /// @description Handles all actions of the player that needs to be checked
-var dt = global.dt;
+dt = global.dt;
 
 //Death
 if(hp <= 0) game_restart();

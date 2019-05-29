@@ -3,8 +3,6 @@
 
 event_inherited();
 
-var dt = global.dt;
-
 x0 = parent.x;
 y0 = parent.y;
 

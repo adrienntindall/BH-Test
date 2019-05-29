@@ -11,5 +11,5 @@ var dy = coff + dis*abs(sin(t));
 x = x0 + cos(theta)*dx;
 y = y0 - sin(theta)*dy;
 
-t+=tspd*global.dt;
-tspd += ta*global.dt;
+t+=tspd*dt;
+tspd += ta*dt;

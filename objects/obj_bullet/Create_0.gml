@@ -24,7 +24,7 @@ x_disp = 90;
 y_egg = 50;
 tspd = 1;
 ta = 0;
-
+dt = 0;
 
 //Vars relating to knifeness + circular movement
 is_knife = false;

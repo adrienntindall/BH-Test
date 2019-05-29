@@ -1,8 +1,6 @@
 ///move_eq(eq)
 ///@param eq
 var eq = argument0;
-var dt = global.dt;
-
 
 if(tilemap_get_at_pixel(tilemap, x+dt*spd*cos(theta), y-dt*spd*sin(theta)) != 0) instance_destroy();
 

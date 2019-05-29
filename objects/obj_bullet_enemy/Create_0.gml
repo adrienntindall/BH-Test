@@ -21,3 +21,4 @@ is_split_cannon = false;
 tx = 1;
 ty = 1;
 grtime = "nah";
+dt = 0;

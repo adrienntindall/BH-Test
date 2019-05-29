@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-var dt = global.dt;
+dt = global.dt;
 
 if(is_knife) {
 	if(mode == 0) {

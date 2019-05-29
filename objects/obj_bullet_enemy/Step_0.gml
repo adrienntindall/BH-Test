@@ -2,7 +2,8 @@
 // You can write your code in this editor
 image_blend = c_white;
 
-var dt = global.dt;
+dt = global.dt;
+if(instance_exists(parent) && parent.slow) dt*=.75;
 
 if(grtime == "nah") graze(true);
 else if(grtime < 0) {

@@ -1,7 +1,5 @@
 ///move_linear()
 
-var dt = global.dt;
-
 if(wall_collision(tilemap, id, spd*dt*cos(theta), -spd*dt*sin(theta))) {
 	if(is_knife) mode = 2;
 	else if(is_split_cannon) {
