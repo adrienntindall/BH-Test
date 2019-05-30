@@ -1,6 +1,8 @@
 /// @description Handles all actions of the player that needs to be checked
 dt = global.dt;
 
+if(!instance_exists(obj_incenerator)) instance_create_depth(x, y, 1, obj_incenerator);
+
 //Death
 if(hp <= 0) game_restart();
 if(keyboard_check(ord("K"))) game_restart(); //a quick restart for debugging purposes only

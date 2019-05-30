@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-var dt = global.dt;
+dt = global.dt;
 
 if(mode == 0) {
 	x0 = obj_player.x;

@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-with(other) {
-	hp-=other.dmg;	
-}
-instance_destroy();
+
+// Inherit the parent event
+event_inherited();
+
+dmg = 1.5;

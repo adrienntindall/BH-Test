@@ -11,3 +11,4 @@ tilemap = layer_tilemap_get_id("Borders");
 defspd = 200;
 is_knife = false;
 is_split_cannon = false;
+dmg = 0;

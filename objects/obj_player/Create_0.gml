@@ -42,7 +42,7 @@ global.case_names = array("Front", "Front-Back", "Left-Right", "Circular-4", "Ci
 global.mv_names = array("Linear", "Loop Alt");
 global.bt_names = array("Basic", "Flame");
 global.ex_names = array("None", "Flame", "Lifesteal");
-global.graze_bts = array(obj_graze_ball, obj_graze_ball_fire, obj_graze_ball_ice, obj_graze_ball_electric, obj_graze_ball_light, obj_graze_ball_nature);
+global.graze_bts = array(obj_graze_ball_neutral, obj_graze_ball_fire, obj_graze_ball_ice, obj_graze_ball_electric, obj_graze_ball_light, obj_graze_ball_nature);
 
 enum focus_list {
 	basic,
