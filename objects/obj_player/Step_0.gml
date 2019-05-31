@@ -1,7 +1,7 @@
 /// @description Handles all actions of the player that needs to be checked
 dt = global.dt;
 
-if(!instance_exists(obj_incenerator)) instance_create_depth(x, y, 1, obj_incenerator);
+if(!instance_exists(obj_lanturn)) instance_create_depth(x, y, 1, obj_lanturn);
 
 //Death
 if(hp <= 0) game_restart();

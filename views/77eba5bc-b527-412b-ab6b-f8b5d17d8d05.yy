@@ -13,7 +13,9 @@
         "b4556ed8-4b97-44aa-b84a-29e0580f704b",
         "ae9d6e15-1183-4196-8e01-dcdfdf9a675a",
         "c438064e-2433-4d8f-a3fd-c329848062c2",
-        "7a4b3337-d606-435e-809b-ab9365be7e6a"
+        "7a4b3337-d606-435e-809b-ab9365be7e6a",
+        "9331577a-b22c-4575-abb1-88fbaf3aebaf",
+        "aec42572-3450-48df-95c0-bf93fb0aac31"
     ],
     "filterType": "GMSprite",
     "folderName": "Bullets",

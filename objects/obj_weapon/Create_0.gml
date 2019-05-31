@@ -12,3 +12,5 @@ x0 = 0;
 y0 = 0;
 
 t = 0;
+
+release_btn = ord("C");

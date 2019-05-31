@@ -759,6 +759,14 @@
             }
         },
         {
+            "Key": "6b4d952d-05fe-4c28-98aa-aa5703c7eac4",
+            "Value": {
+                "id": "7e9bb13a-999d-4ceb-82c8-6c24859a2f1c",
+                "resourcePath": "objects\\obj_lanturn\\obj_lanturn.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6ba29ce1-b502-413e-86ea-765dc2a7d03c",
             "Value": {
                 "id": "e48e1920-2b96-4f58-9c3d-2357cebf94f4",
@@ -915,6 +923,14 @@
             "Value": {
                 "id": "beb9b85f-fd09-46fb-9542-99adec4755d0",
                 "resourcePath": "objects\\obj_fow\\obj_fow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "80255cec-b123-492b-9f6e-8b819ef53d20",
+            "Value": {
+                "id": "6ee7126f-d07b-47e6-9da9-7eee2606e08e",
+                "resourcePath": "objects\\obj_fireball\\obj_fireball.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1111,6 +1127,14 @@
             }
         },
         {
+            "Key": "9331577a-b22c-4575-abb1-88fbaf3aebaf",
+            "Value": {
+                "id": "a2adc0df-7531-4673-9a44-ca75ec401f93",
+                "resourcePath": "sprites\\spr_fireball\\spr_fireball.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "936b562a-6901-45a2-b7de-f323428a3ece",
             "Value": {
                 "id": "298f49de-c8c9-466a-8e9f-0c54aec3d8f8",
@@ -1283,6 +1307,14 @@
             "Value": {
                 "id": "1b2c6cbb-b8f3-4bba-947e-773e45130a23",
                 "resourcePath": "sprites\\spr_bomb_blast\\spr_bomb_blast.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "aec42572-3450-48df-95c0-bf93fb0aac31",
+            "Value": {
+                "id": "7af1626f-dfa8-4c58-ad8b-2194b103f5c4",
+                "resourcePath": "sprites\\spr_lanturn\\spr_lanturn.yy",
                 "resourceType": "GMSprite"
             }
         },
