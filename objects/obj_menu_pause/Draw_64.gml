@@ -15,7 +15,7 @@ if(global.pause && global.cur_menu == menus.pause) {
 
 	for(c = 0; c < tot; c++) {
 		if(c == mpos) draw_set_colour(c_blue);
-		draw_text(1024+space, 750+space*c, string(menu[c]));	
+		draw_text(view_wport/3, view_hport/3+space*c, string(menu[c]));	
 		if(c == mpos) draw_set_colour(c_white);
 	}
 }

@@ -1,7 +1,8 @@
 /// @description Handles all actions of the player that needs to be checked
 dt = global.dt;
 
-if(!instance_exists(obj_lanturn)) instance_create_depth(x, y, 1, obj_lanturn);
+do_passive();
+do_active();
 
 //Death
 if(hp <= 0) game_restart();
@@ -12,13 +13,10 @@ left = keyboard_check(ord("A")) || keyboard_check(vk_left);
 right = keyboard_check(ord("D")) || keyboard_check(vk_right);
 down = keyboard_check(ord("S")) || keyboard_check(vk_down);
 up = keyboard_check(ord("W")) || keyboard_check(vk_up);
-shoot = mouse_check_button(mb_left);
 focus = keyboard_check(vk_shift);
 fast = keyboard_check(ord("Z"));
-dodge = mouse_check_button_pressed(mb_right)
 var s = dt*(focus ? fspd:(fast ? qspd:spd)); //placeholder variable for determining how many total spaces to move this frame
 if(focus || fast) draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true); //draws the hitbox
-bomb = keyboard_check_pressed(vk_space);
 
 //X & Y Direction Setting
 dx = (right - left); 
@@ -55,186 +53,6 @@ if(tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + dy) != 0
 
 x += dx;
 y += dy;
-
-//Special case for spawning ring of knives
-/*if((global.weapon == weapon_list.knives) || (global.weapon_alt == weapon_list.knives)) {
-	if(!instance_exists(obj_knife)) for(var z = 0; z < 5; z++) {
-		var k = instance_create_depth(x, y, 1, obj_knife);
-		k.index = z;
-		k.t = z*k.w/5;
-	}
-	else {
-		for(var z = 0; z < 5; z++) {
-			var flag = false;
-			with(obj_knife) if(index == z) flag = true;
-			if(!flag) {
-				var k = instance_create_depth(x, y, 1, obj_knife);
-				k.index = z;
-				k.t = z*k.w/5;
-			}
-		}
-	}
-}
-
-//Fireing bullets
-if(shoot && cd[focus] <= 0) {
-	switch(focus ? global.weapon_alt : global.weapon) {
-		case weapon_list.simple:
-			var theta = point_direction(x, y, mouse_x, mouse_y);
-			b =  instance_create_depth(x, y, 0, obj_bullet);
-			b.image_angle = theta;
-			b.theta = pi * (theta/180);
-			cd[focus] = .07;
-			break;
-		case weapon_list.simple_alt:
-			var theta = point_direction(x, y, mouse_x, mouse_y);
-			b =  instance_create_depth(x, y, 0, obj_bullet_sin);
-			b.image_angle = theta;
-			b.theta = pi * (theta/180);
-			b.t0 = t;
-			t+=2;
-			cd[focus] = .07;
-			break;
-		case weapon_list.octo:
-			clay = focus;
-			spawn_circular(8, obj_bullet_sin, id, 0, 10, 8/30);
-			t+=3;
-			break;
-		case weapon_list.knives:
-			with(obj_knife) {
-				if((index == other.kix) && (obj_player.kcd <= 0) && (mode == 0)) {
-					obj_knife.theta = point_direction(x, y, mouse_x, mouse_y)*pi/180;
-					mode = 1;
-					obj_player.kcd = .5;
-					obj_player.kix = (other.kix + 1) % 5;
-					maxd = min(max(sqrt((x-mouse_x)*(x-mouse_x) + (y-mouse_y)*(y-mouse_y)), 100), defmaxd);
-					image_angle = obj_knife.theta*180/pi;
-					break;
-				}
-			}
-			break;
-		case weapon_list.pow_orb:
-			if!(instance_exists(obj_bullet_pow_orb)) {
-				instance_create_depth(x, y, 1, obj_bullet_pow_orb);	
-			}
-			break;
-		case weapon_list.split_orb:
-			var ss = instance_create_depth(x, y, 1, obj_split_spawner);
-			var theta = point_direction(x, y, mouse_x, mouse_y)*pi/180;
-			ss.theta = theta;
-			cd[focus] = 1;
-			break;
-		case weapon_list.flamethrower:
-			repeat(floor(random(3) + 1)) {
-				var spread = random(pi/4)-pi/8;
-				var theta = point_direction(x, y, mouse_x, mouse_y)*pi/180; 
-				var fire = instance_create_depth(x, y, 1, obj_ft_fire);
-				fire.theta = theta+spread;
-				fire.image_angle = fire.theta *180/pi;
-				cd[focus] = .1;
-			}
-			break;
-		case weapon_list.life_channel:
-			var th = point_direction(x, y, mouse_x, mouse_y)*pi/180;
-			instance_create_depth(x, y, 1, obj_life_channel);
-			with(obj_life_channel) { 
-				obj_life_channel.theta = th; 
-				image_angle = (th-pi/2)*180/pi; 
-				}
-			break;
-		default:
-			break;
-	}
-}
-
-var end_fire = mouse_check_button_released(mb_left);
-if(end_fire) {
-	switch(focus ? global.weapon_alt : global.weapon) {
-		case weapon_list.pow_orb:
-			instance_destroy(obj_bullet_pow_orb);
-			break;
-		default:
-			break;
-	}
-}
-
-//Focus Mode
-if(tscd <= 0) tslim = 3;
-if(shcd <= 0) { fshbr = false; shcd = 5; }
-if(focus) switch(global.focus) {
-	case focus_list.basic:
-		break;
-	case focus_list.time_slow:
-		if(tslim > 0) {
-			with(obj_bullet_enemy) {
-				if(!feff) {
-					image_blend = c_silver;
-					spd	/= 2;
-					feff = true;
-				}
-			}
-		tslim-=dt;
-		}
-		else {
-			with(obj_bullet_enemy) {
-				if(feff) {
-					image_blend = -1;
-					spd = defspd;
-					feff = false;
-				}
-			}
-		}
-		tscd = 3;
-		break;
-	case focus_list.shield:
-		if(!instance_exists(obj_focus_shield) && !fshbr) {
-			instance_create_depth(x, y, 0, obj_focus_shield);
-		}
-		break;
-	default:
-		break;
-}
-
-//Exiting focus mode
-var end_focus = keyboard_check_released(vk_shift);
-if(end_focus) switch(global.focus) {	
-	case focus_list.basic:
-		break;
-	case focus_list.time_slow:
-		with(obj_bullet_enemy) {
-			if(feff) {
-				image_blend = -1;
-				spd = defspd;
-				feff = false;
-			}
-		}
-		break;
-	case focus_list.shield:
-		if(instance_exists(obj_focus_shield)) with(obj_focus_shield) instance_destroy();
-		break;
-	default:
-		break;
-}
-
-
-if(shoot) {
-	clay = focus;
-	if(focus) create_weapon(global.weapon[4], global.weapon[5], global.weapon[6], global.weapon[7]);
-	else create_weapon(global.weapon[0], global.weapon[1], global.weapon[2], global.weapon[3]);
-}
-*/
-//Bombs
-if(bomb && bombs > 0) {
-	bombs--;
-	for(var c =0; c < 64; c++) {
-		var bmb = instance_create_depth(x, y, 0, obj_bomb);
-		bmb.theta = c*pi/32;
-		bmb.image_angle = bmb.theta*180/pi;
-		bmb.spd = 400;
-		bmb.life = 2;
-		bmb.dmg = bomb_damage;
-	}
-}
 
 //Cooldown Updates
 cd[focus]-=dt;

@@ -12,7 +12,6 @@ if(pbutt && global.pause) {
     }	
 	//global.cur_menu = instance_id;
 	instance_deactivate_all(true);
-	instance_activate_object(obj_menu_weapons);
 }
 
 if(!global.pause) { 
@@ -37,12 +36,6 @@ if(global.cur_menu == menus.pause) && (global.back_frame <= 0) {
 			global.pause = false;
 			instance_activate_all(); 
 			if(sprite_exists(global.screenShot)) sprite_delete(global.screenShot);
-			break;
-		case options.weapons:
-			global.cur_menu = menus.weapons;
-			break;
-		case options.armour:
-			//room_goto(room_menu_armour);
 			break;
 		case options.quit:
 			game_end();

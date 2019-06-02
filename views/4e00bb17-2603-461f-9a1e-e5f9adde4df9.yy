@@ -15,7 +15,9 @@
         "491fdc76-eb11-43be-bbc0-3ddf9c19ba19",
         "f0d1ac98-1c06-4eb8-8d28-63dab790bab4",
         "8d4adb12-fe87-44ce-87d3-37cf91c9c195",
-        "e2f19027-3a40-43c3-9804-478e8d75fbca"
+        "e2f19027-3a40-43c3-9804-478e8d75fbca",
+        "c29731d1-dec4-43a7-bf51-9c9a1acd0969",
+        "2dd4236c-2e0d-4e17-85ed-7f7ef64eec98"
     ],
     "filterType": "GMScript",
     "folderName": "Misc",

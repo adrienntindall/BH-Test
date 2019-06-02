@@ -1,13 +1,13 @@
 ///move_linear()
 
 if(wall_collision(tilemap, id, spd*dt*cos(theta), -spd*dt*sin(theta))) {
-	if(is_knife) mode = 2;
+	/*if(is_knife) mode = 2;
 	else if(is_split_cannon) {
 		theta = (wall_collision(tilemap, id, spd*dt*cos(theta), 0)) ? pi-theta : theta;
 		theta = (wall_collision(tilemap, id, 0, -spd*dt*sin(theta))) ? -theta : theta;
 		image_angle = theta*180/pi;
-	}
-	else instance_destroy();
+	}*/
+	if(object_index != obj_weapon && object_get_parent(object_index) != obj_weapon) instance_destroy();
 }
 var dx = spd*dt*cos(theta);
 var dy = -spd*dt*sin(theta);

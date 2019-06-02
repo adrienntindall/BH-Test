@@ -14,8 +14,6 @@ tilemap = layer_tilemap_get_id("Borders");
 dodging = false;
 mask_index = spr_player_female;
 bombs = 2;
-bomb_r = 200;
-bomb_damage = 20;
 boss_defeated = false;
 kix = 0;
 clay = 0;
@@ -33,11 +31,26 @@ enum weapon_list {
 	life_channel,
 	length
 }
+
+enum passive {
+	heat_smoke,
+	length
+}
+
+global.pass_eq = array(-1, -1, -1);
+global.pass_own = array(-1);
+
+enum active {
+	clear,
+	length
+}
+
+global.active_eq = array(active.clear, -1, -1, -1)
+global.active_own = array(active.clear);
+
 global.weapon = zeros_arr(8);
-global.weapon_alt = weapon_list.simple_alt;
 global.weapon_inv = array(weapon_list.simple, weapon_list.simple_alt);
 
-global.weapon_names = array("Simple", "Sine", "Octo Sine", "Knives", "Power Orb", "Split Cannon", "Flamethrower", "Life Channel");
 global.case_names = array("Front", "Front-Back", "Left-Right", "Circular-4", "Circular-6", "Circular-8", "Orbital-5", "Scatter", "Split");
 global.mv_names = array("Linear", "Loop Alt");
 global.bt_names = array("Basic", "Flame");
@@ -53,7 +66,6 @@ global.focus = focus_list.basic;
 global.focus_inv = array(focus_list.basic, focus_list.time_slow, focus_list.shield);
 global.focus_names = array("None", "Time Slow", "Shield");
 tscd = 0;
-tslim = 90;
 shcd = 180;
 fshbr = false;
 

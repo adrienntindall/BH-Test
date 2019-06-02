@@ -2,7 +2,7 @@
 // You can write your code in this editor
 theta = 0;
 v0 = 100;
-target = 0;
+target = -1;
 a = 0;
 a0 = -70;
 v = 200;

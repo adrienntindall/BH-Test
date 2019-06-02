@@ -11,6 +11,16 @@ w_spd = 0; //angular velocity
 x0 = 0;
 y0 = 0;
 
+follow = false;
+a = 0;
+defspd = 0;
+spd = 0;
+theta = 0;
+f_rad = 0;
+
 t = 0;
+dt = 0;
+
+tilemap = layer_tilemap_get_id("Borders");
 
 release_btn = ord("C");

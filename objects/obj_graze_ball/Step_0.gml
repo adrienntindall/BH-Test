@@ -10,10 +10,14 @@ if(v0 > 0) {
 	}
 }
 else {
-	if(!instance_exists(target)) {
-		target = instance_nearest(x, y, obj_enemy);	
+	if(!instance_exists(target) && !target == -2) {
+		target = instance_nearest(x, y, obj_enemy);
+		if(!instance_exists(target)) {
+			random(2*pi); //dispersal mode
+			a = 20;	
+		}
 	}
-	theta = point_direction(x, y, target.x, target.y)*pi/180;	
+	theta = (!instance_exists(target)) ? theta : point_direction(x, y, target.x, target.y)*pi/180;	
 	spd = v;
 	move_linear();
 }
