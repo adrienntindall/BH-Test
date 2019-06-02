@@ -14,7 +14,7 @@ if(on_fire) {
 if(slow) {
 	spd = defspd*.75;
 	dt *= .75;
-	slowtime -= dt;
+	if(!stuned) slowtime -= dt;
 	if(slowtime<=0) slow=false;
 }
 

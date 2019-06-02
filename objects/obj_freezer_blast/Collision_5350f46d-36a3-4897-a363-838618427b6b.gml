@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(refresh <= 0) with(other) {
+with(other) {
 	hp-=other.dmg;
-	refresh = .15;
+	stuned = true;
+	stun_time = 1;
+	slow = true;
+	slowtime = 1;
 }
+instance_destroy();

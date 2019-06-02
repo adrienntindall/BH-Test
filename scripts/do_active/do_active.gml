@@ -4,6 +4,12 @@ for(var c = 0; c < array_length_1d(global.active_eq); c++) {
 		case active.clear:
 			if(!instance_exists(obj_clear)) instance_create_depth(x, y, 1, obj_clear);
 			break;
+		case active.lanturn:
+			if(!instance_exists(obj_lanturn)) instance_create_depth(x, y, 1, obj_lanturn);
+			break;
+		case active.freezer:
+			if(!instance_exists(obj_freezer_blast)) instance_create_depth(x, y, 1, obj_freezer_blast);
+			break;
 		case -1:
 			break;
 		default:

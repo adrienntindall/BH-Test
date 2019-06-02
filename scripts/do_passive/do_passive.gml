@@ -6,6 +6,9 @@ for(var c = 0; c < array_length_1d(global.pass_eq); c++) {
 				if(on_fire && charged)
 					charge_mult = 1.1;	
 			break;
+		case passive.incenerator:
+			if(!instance_exists(obj_incenerator)) instance_create_depth(x, y, 1, obj_incenerator);
+			break;
 		case -1:
 			break;
 		default:

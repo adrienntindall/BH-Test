@@ -4,10 +4,11 @@
 // Inherit the parent event
 event_inherited();
 
-spd = 300;
+c_rad = 100;
+c_types = array(obj_graze_ball_light, obj_graze_ball_ice);
+c_max = array(30, 30);
 
-rot = pi/4;
-scd = .3;
-cur_s = 0;
+rotate = true;
+r_rad = 200;
+w_spd = 4;
 
-dmg = 5;

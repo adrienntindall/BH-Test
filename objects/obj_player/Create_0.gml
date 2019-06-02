@@ -34,14 +34,16 @@ enum weapon_list {
 
 enum passive {
 	heat_smoke,
+	incenerator,
 	length
 }
-
 global.pass_eq = array(-1, -1, -1);
 global.pass_own = array(-1);
 
 enum active {
 	clear,
+	lanturn,
+	freezer,
 	length
 }
 
@@ -51,10 +53,6 @@ global.active_own = array(active.clear);
 global.weapon = zeros_arr(8);
 global.weapon_inv = array(weapon_list.simple, weapon_list.simple_alt);
 
-global.case_names = array("Front", "Front-Back", "Left-Right", "Circular-4", "Circular-6", "Circular-8", "Orbital-5", "Scatter", "Split");
-global.mv_names = array("Linear", "Loop Alt");
-global.bt_names = array("Basic", "Flame");
-global.ex_names = array("None", "Flame", "Lifesteal");
 global.graze_bts = array(obj_graze_ball_neutral, obj_graze_ball_fire, obj_graze_ball_ice, obj_graze_ball_electric, obj_graze_ball_light, obj_graze_ball_nature);
 
 enum focus_list {

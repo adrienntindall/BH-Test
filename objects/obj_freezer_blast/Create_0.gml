@@ -4,8 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-spd = 500;
-life = 5;
-nlife = true;
-a = -1*(random(350)+500);
-dmg = .4;
+dmg = 10;
+v = 100;
