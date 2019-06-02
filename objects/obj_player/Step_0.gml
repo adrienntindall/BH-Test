@@ -9,10 +9,10 @@ if(hp <= 0) game_restart();
 if(keyboard_check(ord("K"))) game_restart(); //a quick restart for debugging purposes only
 
 //Movement Variables
-left = keyboard_check(ord("A")) || keyboard_check(vk_left);
-right = keyboard_check(ord("D")) || keyboard_check(vk_right);
-down = keyboard_check(ord("S")) || keyboard_check(vk_down);
-up = keyboard_check(ord("W")) || keyboard_check(vk_up);
+left = keyboard_check(vk_left);
+right = keyboard_check(vk_right);
+down = keyboard_check(vk_down);
+up = keyboard_check(vk_up);
 focus = keyboard_check(vk_shift);
 fast = keyboard_check(ord("Z"));
 var s = dt*(focus ? fspd:(fast ? qspd:spd)); //placeholder variable for determining how many total spaces to move this frame

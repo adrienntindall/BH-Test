@@ -13,7 +13,6 @@ dt = delta_time;
 tilemap = layer_tilemap_get_id("Borders");
 dodging = false;
 mask_index = spr_player_female;
-bombs = 2;
 boss_defeated = false;
 kix = 0;
 clay = 0;
@@ -51,7 +50,6 @@ global.active_eq = array(active.clear, -1, -1, -1)
 global.active_own = array(active.clear);
 
 global.weapon = zeros_arr(8);
-global.weapon_inv = array(weapon_list.simple, weapon_list.simple_alt);
 
 global.graze_bts = array(obj_graze_ball_neutral, obj_graze_ball_fire, obj_graze_ball_ice, obj_graze_ball_electric, obj_graze_ball_light, obj_graze_ball_nature);
 

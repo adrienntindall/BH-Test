@@ -7,3 +7,5 @@ while(true) {
 		break;	
 	}
 }
+
+ir = 120;

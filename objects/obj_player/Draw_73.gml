@@ -19,4 +19,3 @@ if(!boss_defeated && (x >= global.broom_x1-64) && (x <= global.broom_x2+65) && (
 	draw_healthbar(vx, vy+vh-30, vx+vw, vy+vh, global.boss.hp/global.boss.maxhp * 100, 
 					c_purple, c_red, c_green, 0, true, true);
 }
-for(var b = 0; b < bombs; b++) draw_sprite(spr_bomb_indicator,-1, vx+64*b,vy)
