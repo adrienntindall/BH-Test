@@ -38,9 +38,9 @@ while(true) {
 			tilemap_set(map_id, floor_tile, xx, yy);
 		}
 	}
-	var b = instance_create_depth(64*(x3+5), 64*(y3+5), 1, boss);
-	b.image_xscale = 5;
-	b.image_yscale = 5;
+	//var b = instance_create_depth(64*(x3+5), 64*(y3+5), 1, boss);
+	//b.image_xscale = 5;
+	//b.image_yscale = 5;
 	broom_x1 = 64*x3; broom_x2 = 64*x4; 
 	broom_y1 = 64*y3; broom_y2 = 64*y4;
 	ndx[broom_id, 0] = x3+round((x4-x3)/2); ndy[broom_id, 0] = y3;
@@ -51,6 +51,15 @@ while(true) {
 	var fow = instance_create_depth(64*(x3-1), 64*(y3-1), 0, obj_fow);
 	fow.image_xscale = (x4-x3)+3;
 	fow.image_yscale = (y4-y3)+3;
+	
+	var wvh = instance_create_depth(0, 0, 0, obj_wave_holder)
+	wvh.waves[0, 0] = global.boss;	
+	wvh.rx1 = x3*64;
+	wvh.rx2 = x4*64;
+	wvh.ry1 = y3*64;
+	wvh.ry2 = y4*64;
+	wvh.cur_room = 15;
+	
 	
 	//Placing Starting Room
 	x3 = random(rx2[sroom_id]-rx1[sroom_id]-(3*size/8)) + rx1[sroom_id] + 1;

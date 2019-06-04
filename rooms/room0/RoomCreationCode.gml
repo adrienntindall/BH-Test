@@ -8,7 +8,7 @@ blay_id = layer_get_id("Borders");
 bmap_id = layer_tilemap_get_id(blay_id);
 border_tile = tilemap_get(bmap_id, 1, 1);
 tilemap_set(bmap_id, 0, 1 ,1);
-boss = obj_boss;
+global.boss = obj_boss;
 enemies = array(obj_enemy_ring, obj_enemy_cspray, obj_enemy_autumn1);
 //enemies = array(obj_enemy_autumn_2); //for testing
 //barriers = array(obj_speed_barrier, obj_bounce_barrier);
@@ -71,5 +71,4 @@ global.broom_x1 = broom_x1;
 global.broom_x2 = broom_x2;
 global.broom_y1 = broom_y1;
 global.broom_y2 = broom_y2;
-global.boss = boss;
 obj_player.boss_defeated=false;

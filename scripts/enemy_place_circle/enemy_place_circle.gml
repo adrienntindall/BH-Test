@@ -9,5 +9,6 @@ while(true) {
 		t++;
 		continue;
 	}
+	t/=30;
 	break;
 }

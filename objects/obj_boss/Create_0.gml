@@ -14,3 +14,6 @@ p1cd = .7;
 p2cd = .3;
 
 rn = -1;
+
+image_xscale = 5;
+image_yscale = 5;
