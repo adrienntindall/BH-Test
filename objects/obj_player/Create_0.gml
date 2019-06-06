@@ -1,4 +1,8 @@
 /// @description Defining Variables
+event_inherited();
+cshape = shape.circle;
+crad = 5;
+
 depth = 2;
 cd = array(0, 0);
 kcd = .5;

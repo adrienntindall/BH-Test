@@ -56,3 +56,4 @@ xacc_dis = 0;
 yacc_dis = 0;
 
 do_lifesteal = false;
+

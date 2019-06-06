@@ -1,5 +1,11 @@
 randomize();
 
+enum shape { //collision shapes
+	circle,
+	rectangle,
+	length
+}
+
 window_set_fullscreen(true);
 
 lay_id = layer_get_id("Tiles");
@@ -10,7 +16,7 @@ border_tile = tilemap_get(bmap_id, 1, 1);
 tilemap_set(bmap_id, 0, 1 ,1);
 global.boss = obj_boss;
 enemies = array(obj_enemy_ring, obj_enemy_cspray, obj_enemy_autumn1);
-//enemies = array(obj_enemy_autumn_2); //for testing
+//enemies = array(obj_enemy_laser); //for testing
 //barriers = array(obj_speed_barrier, obj_bounce_barrier);
 barriers = array(obj_bounce_barrier); //for testing
 broom_x1 = 0;
@@ -21,8 +27,6 @@ sroom_x1 = 0;
 sroom_x2 = 0;
 sroom_y1 = 0;
 sroom_y2 = 0;
-broom_set = false;
-broom_min_size = 5*5;
 
 //Setting tiles (ho boi)
 floor_tile = tilemap_get(map_id, 1, 1);

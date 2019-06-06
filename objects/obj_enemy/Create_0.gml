@@ -47,3 +47,5 @@ stun_time = 0;
 charged = false;
 charged_time = 0;
 charge_mult = 1;
+
+w_spd = 0;

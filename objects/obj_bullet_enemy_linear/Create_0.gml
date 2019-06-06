@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited();
 theta = 0;
 parent = noone;
 spd = 90;
@@ -21,3 +22,8 @@ is_split_cannon = false;
 tx = 1;
 ty = 1;
 grtime = "nah";
+
+hrad = (bbox_right-bbox_left)/2;
+vrad = (bbox_bottom-bbox_top)/2;
+cshape = shape.rectangle;
+in_theta = arctan2(vrad, hrad);

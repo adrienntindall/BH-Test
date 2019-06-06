@@ -4,17 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-spd = 1.5;
-defspd = spd;
-wspd = 150;
-r = 150;
+path_length = -1; //-1 = infinite path
 
-t=0;
-
-thetaxz = 0;
-
-x0 = 0;
-y0 = 0;
-
-cshape = shape.circle;
-crad = 8;
+destroy = false;

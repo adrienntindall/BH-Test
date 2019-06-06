@@ -6,7 +6,8 @@
     "children": [
         "8d3015d4-738c-4049-99ba-7b0ef98e660e",
         "86f577c2-6f61-40ba-bb61-947bac2de6eb",
-        "76f2b9a7-c281-4d79-9db5-bce3f46953e5"
+        "76f2b9a7-c281-4d79-9db5-bce3f46953e5",
+        "25370665-5788-4c2e-8bf3-071574871ea2"
     ],
     "filterType": "GMScript",
     "folderName": "Enemy Movement Patterns",

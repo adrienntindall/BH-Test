@@ -54,6 +54,13 @@ if(tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + dy) != 0
 x += dx;
 y += dy;
 
+with(obj_bullet_enemy) {
+	if(objects_collide(id, other)) {
+		other.hp--;
+		if(destroy) instance_destroy();
+	}
+}
+
 //Cooldown Updates
 cd[focus]-=dt;
 kcd-=dt;
