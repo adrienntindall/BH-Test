@@ -4,12 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
-interval = -1; //-1 = infinite path
+interval = 5;
 
-destroy = false;
+spd = 1;
+defspd = 1;
 
-tb = 0;
-tf = 0;
-tspd = 0;
-
-lrad = 0; //laser radius
+lrad = 10;

@@ -55,9 +55,11 @@ x += dx;
 y += dy;
 
 with(obj_bullet_enemy) {
-	if(objects_collide(id, other)) {
-		other.hp--;
-		if(destroy) instance_destroy();
+	if(object_index != obj_laser_enemy && object_get_parent(object_index) != obj_laser_enemy) {	
+		if(objects_collide(id, other)) {
+			other.hp--;
+			if(destroy) instance_destroy();
+		}
 	}
 }
 

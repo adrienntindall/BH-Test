@@ -407,6 +407,14 @@
             }
         },
         {
+            "Key": "33c241db-e75a-4bfd-9959-2c1cc12daf0c",
+            "Value": {
+                "id": "ab801846-2345-4b64-9f32-5f93a6cd626c",
+                "resourcePath": "scripts\\y_las_lin\\y_las_lin.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "33d88853-11cc-4af1-8d81-9db810540c87",
             "Value": {
                 "id": "6febca61-66b4-42ce-ad14-811024356869",
@@ -1231,6 +1239,14 @@
             }
         },
         {
+            "Key": "9fb1ee11-44f8-4844-b844-eead30b2fd3b",
+            "Value": {
+                "id": "cf7f136c-e42f-4f6e-86db-57cea34f14ec",
+                "resourcePath": "scripts\\get_min_dist_linear\\get_min_dist_linear.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a3b3ae85-24d6-4192-807d-49e83ae8bb8c",
             "Value": {
                 "id": "89a22021-a2c3-4bcd-b838-4de967c8f003",
@@ -1340,6 +1356,14 @@
                 "id": "e5fe121f-1586-40f1-825b-c1aab1543c11",
                 "resourcePath": "objects\\obj_homing_bullet\\obj_homing_bullet.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "add4384f-0ea8-4c0a-91db-ade3e3662d37",
+            "Value": {
+                "id": "7bfed4c2-66de-497c-8c1a-e0130a4b1714",
+                "resourcePath": "scripts\\x_las_lin\\x_las_lin.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2009,6 +2033,9 @@
         "c29731d1-dec4-43a7-bf51-9c9a1acd0969",
         "2dd4236c-2e0d-4e17-85ed-7f7ef64eec98",
         "1565470a-f827-4f81-9785-90caf5bb0edf",
+        "9fb1ee11-44f8-4844-b844-eead30b2fd3b",
+        "add4384f-0ea8-4c0a-91db-ade3e3662d37",
+        "33c241db-e75a-4bfd-9959-2c1cc12daf0c",
         "3d750a22-c308-416e-8c89-1c00b2b06443",
         "35c1d7c2-1323-474d-b3ed-fde3380cb93f",
         "f9ca3a78-9fa6-444e-8dc4-7b609c623df6",

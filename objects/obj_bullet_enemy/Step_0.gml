@@ -12,4 +12,3 @@ else if(grtime < 0) {
 	gb.theta = random(2*pi);
 }
 grtime = min(grtime-dt, graze(false));
-destroy = true;

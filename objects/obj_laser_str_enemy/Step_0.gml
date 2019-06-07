@@ -4,13 +4,12 @@
 // Inherit the parent event
 event_inherited();
 
-if(path_length != -1) {
-	if(sprite_height*image_yscale <= path_length) {
-		image_yscale += spd/sprite_height*dt;
-		if(sprite_height*image_yscale > path_length) image_yscale = path_length/sprite_height;
+//theta = image_angle*pi/180;
+
+with(obj_player) {
+	var dis = get_min_dist_linear(other);
+	if(dis < crad + other.lrad) {
+		obj_player.hp--;
+		show_debug_message(string(dis));
 	}
-	else move_linear();
-}
-else {
-	image_yscale += spd/sprite_height*dt;
 }
