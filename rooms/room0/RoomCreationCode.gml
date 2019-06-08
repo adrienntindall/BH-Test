@@ -15,8 +15,9 @@ bmap_id = layer_tilemap_get_id(blay_id);
 border_tile = tilemap_get(bmap_id, 1, 1);
 tilemap_set(bmap_id, 0, 1 ,1);
 global.boss = obj_boss;
-enemies = array(obj_enemy_ring, obj_enemy_cspray, obj_enemy_autumn1);
+//enemies = array(obj_enemy_ring, obj_enemy_cspray, obj_enemy_autumn1);
 //enemies = array(obj_enemy_laser); //for testing
+enemies = array(obj_enemy_autumn1);
 //barriers = array(obj_speed_barrier, obj_bounce_barrier);
 barriers = array(obj_bounce_barrier); //for testing
 broom_x1 = 0;

@@ -7,3 +7,6 @@ event_inherited();
 r = 50;
 
 enemy_place_circle(tilemap);
+
+image_xscale = .1;
+image_yscale = .1;
