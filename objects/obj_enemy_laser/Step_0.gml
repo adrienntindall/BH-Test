@@ -7,10 +7,4 @@ event_inherited();
 enemy_rotate();
 enemy_move_circle();
 
-for(var c = 0; c < array_length_1d(lasers); c++) {
-	if(instance_exists(lasers[c])) {
-		//lasers[c].image_angle += w_spd*dt;
-		//lasers[c].x = x + 10*cos(lasers[c].image_angle*pi/180);
-		//lasers[c].y = y - 10*sin(lasers[c].image_angle*pi/180);
-	}
-}
+lasers = spawn_circular(2, obj_laser_str_enemy, id, random(pi), 10, 3);

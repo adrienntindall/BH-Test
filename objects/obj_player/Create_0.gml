@@ -15,7 +15,6 @@ qspd = 420;
 t = 0;
 dt = delta_time;
 tilemap = layer_tilemap_get_id("Borders");
-dodging = false;
 mask_index = spr_player_female;
 boss_defeated = false;
 kix = 0;

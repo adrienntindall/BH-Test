@@ -6,9 +6,12 @@ event_inherited();
 
 r = 40;
 w_spd = 10;
+defspd = 0;
 
 layer = 0;
-lasers = spawn_circular(2, obj_laser_str_enemy, id, 1, 10, 0, true);
+clay = 0;
+cd[0] = 0;
+lasers = spawn_circular(2, obj_laser_str_enemy, id, random(pi), 10, 3, true);
 
 for(var c = 0; c < array_length_1d(lasers); c++) {
 	lasers[c].spd = 10;

@@ -10,6 +10,8 @@ with(obj_player) {
 	var dis = get_min_dist_linear(other);
 	if(dis < crad + other.lrad) {
 		obj_player.hp--;
-		show_debug_message(string(dis));
 	}
 }
+
+life -= dt;
+if(life <  0) instance_destroy();

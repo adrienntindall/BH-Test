@@ -6,7 +6,9 @@ event_inherited();
 
 interval = 5;
 
-spd = 1;
-defspd = 1;
+spd = 10;
+defspd = 10;
 
 lrad = 10;
+
+life = 4;
