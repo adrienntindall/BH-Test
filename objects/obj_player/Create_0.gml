@@ -46,10 +46,12 @@ enum active {
 	clear,
 	lanturn,
 	freezer,
+	psn_cld,
 	length
 }
 
-global.active_eq = array(active.clear, -1, -1, -1)
+//global.active_eq = array(active.clear, -1, -1, -1)
+global.active_eq = array(active.freezer); //for testing
 global.active_own = array(active.clear);
 
 global.weapon = zeros_arr(8);

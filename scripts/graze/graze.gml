@@ -23,7 +23,5 @@ if(instance_exists(parent) && parent.charged) {
 	charge_mult = 1;
 }
 
-show_debug_message(string(dist));
-
 if(argument0) grtime = dist/obj_player.grps;
 else return dist/obj_player.grps;

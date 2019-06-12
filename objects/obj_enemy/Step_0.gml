@@ -20,11 +20,11 @@ if(slow) {
 
 if(charged) charged_time -= dt;
 
-if(stuned == true) {
+if(stuned) {
 	stun_time -= dt;
 	if(stun_time <= 0) {
 		stuned = false;
 		stun_time = 0;
 	}
-	exit;
+	dt = 0;
 }

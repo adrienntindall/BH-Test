@@ -4,5 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-dmg = 10;
+dmg = 1;
 v = 100;

@@ -10,3 +10,4 @@ spd = 0;
 tilemap = layer_tilemap_get_id("Borders");
 defspd = 0;
 dmg = 0;
+emer = false;

@@ -6,6 +6,7 @@ event_inherited();
 
 c_rad = 100;
 c_types = array(obj_graze_ball_light, obj_graze_ball_ice);
+c_amnts = array(15, 15);
 c_max = array(30, 30);
 
 rotate = true;
