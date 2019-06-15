@@ -8,8 +8,8 @@ c_max = array(0); //maximum collection ammounts
 rotate = false; //determines if it rotates around the player or not
 r_rad = 0; //rotation radius
 w_spd = 0; //angular velocity
-x0 = 0;
-y0 = 0;
+x0 = obj_player.x;
+y0 = obj_player.y;
 
 follow = false;
 a = 0;
