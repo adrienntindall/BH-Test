@@ -29,7 +29,7 @@ fspd0 = 40;
 fspd = fspd0;
 fspda = 10;
 fspdmax = 170;
-
+defspd = 40;
 for(var c = 0; c < 12; c++) {
 	var ring = instance_create_depth(x, y, 0, obj_bullet_enemy_ring);
 	ring.x0 = x;

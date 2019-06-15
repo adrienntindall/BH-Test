@@ -6,7 +6,6 @@
 ///@param radius
 ///@param cooldown_reset_value
 
-var dt = global.dt;
 var dtheta = argument0;
 var bullet = argument1;
 var parent = argument2;

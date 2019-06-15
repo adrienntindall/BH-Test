@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-dt = global.dt;
+event_inherited();
 
 if(hp <= 0) {
 	bullet_heal(.02);

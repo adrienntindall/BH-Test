@@ -9,8 +9,6 @@
 ///@param mov_theta
 ///@param cd
 
-var dt = global.dt;
-
 var n = argument0;
 var xx = argument3;
 var yy = argument4;

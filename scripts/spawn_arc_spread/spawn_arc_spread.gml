@@ -11,7 +11,6 @@ var n = argument0;
 var theta = argument3;
 var dtheta = argument4;
 var r = argument5;
-var dt = global.dt;
 
 if(cd[clay] <= 0) {
 	for(var c = 0; c < n; c++) {

@@ -22,18 +22,6 @@ clay = 0;
 grps = 900;
 dt = 0;
 
-enum weapon_list {
-	simple,
-	simple_alt,
-	octo,
-	knives,
-	pow_orb,
-	split_orb,
-	flamethrower,
-	life_channel,
-	length
-}
-
 enum passive {
 	heat_smoke,
 	incenerator,
@@ -58,14 +46,6 @@ global.weapon = zeros_arr(8);
 
 global.graze_bts = array(obj_graze_ball_neutral, obj_graze_ball_fire, obj_graze_ball_ice, obj_graze_ball_electric, obj_graze_ball_light, obj_graze_ball_nature);
 
-enum focus_list {
-	basic,
-	time_slow,
-	shield
-}
-global.focus = focus_list.basic;
-global.focus_inv = array(focus_list.basic, focus_list.time_slow, focus_list.shield);
-global.focus_names = array("None", "Time Slow", "Shield");
 tscd = 0;
 shcd = 180;
 fshbr = false;

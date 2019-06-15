@@ -49,3 +49,5 @@ charged_time = 0;
 charge_mult = 1;
 
 w_spd = 0;
+
+defspd = 0;

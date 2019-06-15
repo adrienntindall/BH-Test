@@ -27,6 +27,6 @@ if(cd[clay] <= 0) for (c = 0; c < n; c++) {
 	cd[clay] = argument[5];
 	if(store) arr[c] = b;
 }
-else if(!store) cd[clay] -= global.dt;
+else if(!store) cd[clay] -= dt;
 
 if(store && arr != -1) return arr;
