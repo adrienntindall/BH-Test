@@ -8,6 +8,8 @@ r = 40;
 w_spd = 10;
 defspd = 0;
 
+hp = 10;
+
 layer = 0;
 clay = 0;
 cd[0] = 0;

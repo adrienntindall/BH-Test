@@ -3,6 +3,8 @@
 
 event_inherited();
 
+dt = parent.dt;
+
 x0 = parent.x;
 y0 = parent.y;
 

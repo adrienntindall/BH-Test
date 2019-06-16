@@ -21,6 +21,9 @@ kix = 0;
 clay = 0;
 grps = 900;
 dt = 0;
+inv_time = 1;
+invcd = 0;
+invincible=false;
 
 enum passive {
 	heat_smoke,

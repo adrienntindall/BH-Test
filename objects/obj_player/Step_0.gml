@@ -54,11 +54,21 @@ if(tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + dy) != 0
 x += dx;
 y += dy;
 
-with(obj_bullet_enemy) {
-	if(object_index != obj_laser_enemy && object_get_parent(object_index) != obj_laser_enemy) {	
+if(invcd <=0) {
+	invincible = false;
+	image_blend = c_white;
+}
+else {
+	image_blend = make_colour_hsv(0, 255*invcd/inv_time, 255)
+}
+
+if(!invincible) with(obj_bullet_enemy) {
+	if(!other.invincible) if(object_index != obj_laser_enemy && object_get_parent(object_index) != obj_laser_enemy) {	
 		if(objects_collide(id, other)) {
 			other.hp--;
 			if(destroy) instance_destroy();
+			other.invincible=true;
+			other.invcd = other.inv_time;
 		}
 	}
 }
@@ -68,3 +78,4 @@ cd[focus]-=dt;
 kcd-=dt;
 tscd-=dt;
 shcd-=dt;
+invcd-=dt;
