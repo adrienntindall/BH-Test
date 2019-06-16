@@ -74,8 +74,4 @@ if(!invincible) with(obj_bullet_enemy) {
 }
 
 //Cooldown Updates
-cd[focus]-=dt;
-kcd-=dt;
-tscd-=dt;
-shcd-=dt;
 invcd-=dt;

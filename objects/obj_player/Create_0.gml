@@ -49,8 +49,6 @@ global.weapon = zeros_arr(8);
 
 global.graze_bts = array(obj_graze_ball_neutral, obj_graze_ball_fire, obj_graze_ball_ice, obj_graze_ball_electric, obj_graze_ball_light, obj_graze_ball_nature);
 
-tscd = 0;
-shcd = 180;
 fshbr = false;
 
 knife_flg = false;

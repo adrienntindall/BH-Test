@@ -10,11 +10,9 @@ hp = 5;
 x0 = x;
 y0 = y;
 
-n = random(5) + 3;
+n = 0;
 
 sdt = floor(random(2)) ? -1 : 1;
-p1cd = 1.2;
-p2cd = .7;
 
 tilemap=layer_tilemap_get_id("Borders");
 
