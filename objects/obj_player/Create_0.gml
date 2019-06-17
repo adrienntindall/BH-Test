@@ -41,11 +41,9 @@ enum active {
 	length
 }
 
-//global.active_eq = array(active.clear, -1, -1, -1)
-global.active_eq = array(active.freezer); //for testing
+global.active_eq = array(active.clear, -1, -1, -1)
+//global.active_eq = array(active.freezer); //for testing
 global.active_own = array(active.clear);
-
-global.weapon = zeros_arr(8);
 
 global.graze_bts = array(obj_graze_ball_neutral, obj_graze_ball_fire, obj_graze_ball_ice, obj_graze_ball_electric, obj_graze_ball_light, obj_graze_ball_nature);
 

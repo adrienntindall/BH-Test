@@ -4,7 +4,6 @@
 enum options
 {
 	resume,
-	focus,
 	level_edit,
 	pat_edit,
 	quit,

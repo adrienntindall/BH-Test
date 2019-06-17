@@ -10,7 +10,6 @@ if(pbutt && global.pause) {
 	if(!sprite_exists(global.screenShot)){
         global.screenShot = sprite_create_from_surface(application_surface,0,0,view_wport,view_hport,0,0,0,0);    
     }	
-	//global.cur_menu = instance_id;
 	instance_deactivate_all(true);
 }
 
@@ -50,9 +49,6 @@ if(global.cur_menu == menus.pause) && (global.back_frame <= 0) {
 			break;
 	}
 	if(change != 0) switch(mpos) {	
-		case options.focus:
-			
-			break;
 		default:
 			break;
 	}
