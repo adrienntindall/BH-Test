@@ -479,6 +479,14 @@
             }
         },
         {
+            "Key": "3ac0621d-ef58-4e7f-922a-74bb9682d55c",
+            "Value": {
+                "id": "eb89df38-3586-4626-8d49-eae769b9eeb1",
+                "resourcePath": "objects\\obj_lightning_orb\\obj_lightning_orb.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3afcaa9d-d5da-430d-a2ba-9cf2a817b26f",
             "Value": {
                 "id": "bf7ec4bf-91d2-4323-9340-105066dfa663",
@@ -1551,6 +1559,14 @@
             }
         },
         {
+            "Key": "bab2c2cf-2ba6-4727-b93a-a24ef2e8e355",
+            "Value": {
+                "id": "ab6f5437-6b6e-4cee-bbec-5eb134a22388",
+                "resourcePath": "scripts\\instance_nth_nearest\\instance_nth_nearest.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bb164473-d231-4a32-a07d-1f8befbd2c47",
             "Value": {
                 "id": "1b688010-d444-4b47-84d8-39ac09e45fe4",
@@ -2088,6 +2104,7 @@
         "2dd4236c-2e0d-4e17-85ed-7f7ef64eec98",
         "add4384f-0ea8-4c0a-91db-ade3e3662d37",
         "33c241db-e75a-4bfd-9959-2c1cc12daf0c",
+        "bab2c2cf-2ba6-4727-b93a-a24ef2e8e355",
         "3d750a22-c308-416e-8c89-1c00b2b06443",
         "35c1d7c2-1323-474d-b3ed-fde3380cb93f",
         "f9ca3a78-9fa6-444e-8dc4-7b609c623df6",
