@@ -8,7 +8,8 @@ if(hp <= 0) {
 }
 
 if(!following) {
-	if((obj_player.x >= rx1) && (obj_player.x <= rx2) && (obj_player.y >= ry1) && (obj_player.y <= ry2)) following = true;
+	//if((obj_player.x >= rx1) && (obj_player.x <= rx2) && (obj_player.y >= ry1) && (obj_player.y <= ry2)) following = true;
+	if(dist_between(obj_player, self) > frad) following = true;
 }
 else {
 	var theta = point_direction(x, y, obj_player.x, obj_player.y)*pi/180;

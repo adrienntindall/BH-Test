@@ -1,7 +1,6 @@
 /// @description Handles all actions of the player that needs to be checked
 dt = global.dt;
 
-do_passive();
 do_active();
 
 //Death

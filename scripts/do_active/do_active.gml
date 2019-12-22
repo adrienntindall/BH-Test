@@ -20,18 +20,6 @@ for(var c = 0; c < array_length_1d(global.active_eq); c++) {
 		case active.clear:
 			if(!instance_exists(obj_clear)) obj = instance_create_depth(x, y, 1, obj_clear);
 			break;
-		case active.lanturn:
-			if(!instance_exists(obj_lanturn)) obj = instance_create_depth(x, y, 1, obj_lanturn);
-			break;
-		case active.freezer:
-			if(!instance_exists(obj_freezer_blaster)) obj = instance_create_depth(x, y, 1, obj_freezer_blaster);
-			break;
-		case active.psn_cld:
-			if(!instance_exists(obj_poison_cloud)) obj = instance_create_depth(x, y, 1, obj_poison_cloud);
-			break;
-		case active.lightning:
-			if(!instance_exists(obj_lightning_orb)) obj = instance_create_depth(x, y, 1, obj_lightning_orb);
-			break;
 		case -1:
 			break;
 		default:

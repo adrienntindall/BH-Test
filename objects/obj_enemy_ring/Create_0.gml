@@ -21,10 +21,7 @@ tilemap=layer_tilemap_get_id("Borders");
 
 tm = layer_tilemap_get_id("Tiles");
 
-rx1 = 0;
-rx2 = 0;
-ry1 = 0;
-ry2 = 0;
+frad = 300;
 fspd0 = 40;
 fspd = fspd0;
 fspda = 10;

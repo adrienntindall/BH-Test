@@ -1,3 +1,4 @@
+room_goto(room_tutorial1_sprint);
 randomize();
 
 enum shape { //collision shapes
@@ -16,10 +17,6 @@ border_tile = tilemap_get(bmap_id, 1, 1);
 tilemap_set(bmap_id, 0, 1 ,1);
 global.boss = obj_boss;
 enemies = array(obj_enemy_ring, obj_enemy_cspray, obj_enemy_autumn1, obj_enemy_laser);
-//enemies = array(obj_enemy_laser); //for testing
-//enemies = array(obj_enemy_autumn1);
-//barriers = array(obj_speed_barrier, obj_bounce_barrier);
-barriers = array(obj_bounce_barrier); //for testing
 broom_x1 = 0;
 broom_x2 = room_width;
 broom_y1 = 0;
@@ -30,24 +27,24 @@ sroom_y1 = 0;
 sroom_y2 = 0;
 
 //Setting tiles (ho boi)
-floor_tile = tilemap_get(map_id, 1, 1);
-corn_ne = tilemap_get(map_id,0, 2);
-corn_nw = tilemap_get(map_id,2, 2);
-corn_se = tilemap_get(map_id,0, 0);
-corn_sw = tilemap_get(map_id,2, 0);
-wall_n = tilemap_get(map_id,1, 2);
-wall_s = tilemap_get(map_id,1, 0);
-wall_e = tilemap_get(map_id,0, 1);
-wall_w = tilemap_get(map_id,2, 1);
-wall_corn_ne = tilemap_get(map_id,4, 1);
-wall_corn_nw = tilemap_get(map_id,3, 1);
-wall_corn_se = tilemap_get(map_id,4, 2);
-wall_corn_sw = tilemap_get(map_id,3, 2);
-wall_corn_nse = tilemap_get(map_id,5, 2);
-wall_corn_nsw = tilemap_get(map_id,5, 1);
-wall_corn_ewn = tilemap_get(map_id,4, 0);
-wall_corn_ews = tilemap_get(map_id,3, 0);
-wall_nsew = tilemap_get(map_id,0, 3);
+floor_tile = 7;
+corn_ne = 12;
+corn_nw = 14;
+corn_se = 5;
+corn_sw = 2;
+wall_n = 13;
+wall_s = 1;
+wall_e = 6;
+wall_w = 8;
+wall_corn_ne = 10;
+wall_corn_nw = 9;
+wall_corn_se = 16;
+wall_corn_sw = 15;
+wall_corn_nse = 17;
+wall_corn_nsw = 11;
+wall_corn_ewn = 4;
+wall_corn_ews = 3;
+wall_nsew = 18;
 layers[0] = map_id;
 layers[1] = layer_tilemap_get_id(layer_get_id("Tiles_2"));
 layers[2] = layer_tilemap_get_id(layer_get_id("Tiles_3"));
