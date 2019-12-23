@@ -1,4 +1,9 @@
-room_goto(room_tutorial1_sprint);
+var c =  min(display_get_height()/720, display_get_width()/1280);
+c*=7/8;
+window_set_size(c*1280, c*720);
+
+window_set_position((display_get_width()-c*1280)/2, (display_get_height()-c*720)/2); 
+room_goto(room_tutorial2_focus);
 randomize();
 
 enum shape { //collision shapes
@@ -7,16 +12,12 @@ enum shape { //collision shapes
 	length
 }
 
-window_set_fullscreen(true);
-
 lay_id = layer_get_id("Tiles");
 map_id = layer_tilemap_get_id(lay_id);
 blay_id = layer_get_id("Borders");
 bmap_id = layer_tilemap_get_id(blay_id);
 border_tile = tilemap_get(bmap_id, 1, 1);
 tilemap_set(bmap_id, 0, 1 ,1);
-global.boss = obj_boss;
-enemies = array(obj_enemy_ring, obj_enemy_cspray, obj_enemy_autumn1, obj_enemy_laser);
 broom_x1 = 0;
 broom_x2 = room_width;
 broom_y1 = 0;

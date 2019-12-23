@@ -53,7 +53,7 @@ while(true) {
 	fow.image_yscale = (y4-y3)+3;
 	
 	var wvh = instance_create_depth(0, 0, 0, obj_wave_holder)
-	wvh.waves[0, 0] = global.boss;	
+//	wvh.waves[0, 0] = global.boss;	
 	wvh.rx1 = x3*64;
 	wvh.rx2 = x4*64;
 	wvh.ry1 = y3*64;
@@ -114,13 +114,13 @@ while(true) {
 		for(var u = 0; u < wav; u++) {
 			var m = random(2) + 1;
 			for(var r = 0; r < m; r++) {
-				wavh.waves[u, r] = enemies[floor(random(array_length_1d(enemies)))];	
+		//		wavh.waves[u, r] = enemies[floor(random(array_length_1d(enemies)))];	
 			}
 		}
 		
 		var B = 0;
 		for(var r = 0; r < B; r++) {
-			wavh.bars[r] = barriers[floor(random(array_length_1d(barriers)))];
+		//	wavh.bars[r] = barriers[floor(random(array_length_1d(barriers)))];
 		}
 		
 		wavh.rx1 = sx*64;

@@ -3,7 +3,7 @@
 event_inherited();
 theta = 0;
 parent = noone;
-spd = 90;
+spd = 150;
 defspd = spd;
 life = 6;
 tilemap = layer_tilemap_get_id("Borders");
