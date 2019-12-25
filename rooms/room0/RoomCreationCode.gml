@@ -3,7 +3,7 @@ c*=7/8;
 window_set_size(c*1280, c*720);
 
 window_set_position((display_get_width()-c*1280)/2, (display_get_height()-c*720)/2); 
-room_goto(room_tutorial2_focus);
+room_goto(room_tutorial1_sprint);
 randomize();
 
 enum shape { //collision shapes
@@ -22,11 +22,6 @@ broom_x1 = 0;
 broom_x2 = room_width;
 broom_y1 = 0;
 broom_y2 = room_height;
-sroom_x1 = 0;
-sroom_x2 = 0;
-sroom_y1 = 0;
-sroom_y2 = 0;
-
 //Setting tiles (ho boi)
 floor_tile = 7;
 corn_ne = 12;
@@ -55,23 +50,3 @@ for(var a = 0; a < 6; a++) for(var b = 0; b < 4; b++) tilemap_set(map_id, 0, a, 
 var size = 25;
 room_height = size*64*4;
 room_width = size*64*4;
-
-generate_dungeon_layout(size, 3);
-
-while(true) {
-	var sx = random(sroom_x2-sroom_x1)+sroom_x1;
-	var sy = random(sroom_y2-sroom_y1)+sroom_y1;
-	if(tilemap_get_at_pixel(map_id, sx, sy) != floor_tile) continue;
-	else if ((sx > broom_x1) && (sx < broom_x2) && (sy > broom_y1) && (sy < broom_y2)) continue;
-	else {
-		obj_player.x = sx;
-		obj_player.y = sy;
-		break;
-	}
-}
-
-global.broom_x1 = broom_x1;
-global.broom_x2 = broom_x2;
-global.broom_y1 = broom_y1;
-global.broom_y2 = broom_y2;
-obj_player.boss_defeated=false;

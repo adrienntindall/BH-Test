@@ -62,7 +62,7 @@ else {
 }
 
 if(!invincible) with(obj_bullet_enemy) {
-	if(!other.invincible) if(object_index != obj_laser_enemy && object_get_parent(object_index) != obj_laser_enemy) {	
+	if(!other.invincible)  {	
 		if(objects_collide(id, other)) {
 			other.hp--;
 			if(destroy) instance_destroy();

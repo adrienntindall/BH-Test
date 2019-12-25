@@ -4,5 +4,5 @@
 // Inherit the parent event
 event_inherited();
 with(obj_player) {
-	hp += .01;
+	//hp += .01;
 }

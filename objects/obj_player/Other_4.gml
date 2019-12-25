@@ -1,3 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-//bullet_heal(0);
+tilemap = layer_tilemap_get_id("Borders");
+//show_message(hp);

@@ -4,7 +4,7 @@ event_inherited();
 
 t = 0;
 
-r = random(50) + 25;
+r = 75;
 
 hp = 10;
 

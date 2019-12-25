@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "304c76ae-62a6-48ac-920f-1de85bfbf819",
+            "Value": {
+                "id": "e57b11da-c8bc-482c-b379-37f19d1eeae3",
+                "resourcePath": "objects\\obj_get_graze_neutral\\obj_get_graze_neutral.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "311ba04e-8e62-4010-bee2-5478a1cc003d",
             "Value": {
                 "id": "1fcb4110-92aa-425f-9cf1-b8613ef33546",
@@ -387,14 +395,6 @@
             "Value": {
                 "id": "bf7ec4bf-91d2-4323-9340-105066dfa663",
                 "resourcePath": "scripts\\wall_collision\\wall_collision.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "3c7d8de6-f6e5-409d-8305-1b78e42aaada",
-            "Value": {
-                "id": "583a94f4-7f7d-4140-b9b4-3ff1b51319bd",
-                "resourcePath": "scripts\\export_enemy\\export_enemy.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -583,22 +583,6 @@
             }
         },
         {
-            "Key": "54f63363-72e6-44e3-9a8b-63b329a9d4c4",
-            "Value": {
-                "id": "8e7b0c56-ab3b-438b-9db7-6a15ff16832d",
-                "resourcePath": "views\\54f63363-72e6-44e3-9a8b-63b329a9d4c4.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "5579e935-3588-4d55-93e3-4db5fb69c630",
-            "Value": {
-                "id": "db289f86-12d7-4f5d-94e1-af3fb2fadde6",
-                "resourcePath": "views\\5579e935-3588-4d55-93e3-4db5fb69c630.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "55be8ae4-88ad-4f75-9342-3bafec4e9ae1",
             "Value": {
                 "id": "e6e4bf51-1849-475a-94e8-847b747eaeea",
@@ -767,14 +751,6 @@
             }
         },
         {
-            "Key": "8077385f-4bc0-4761-8d49-bc31cad734d8",
-            "Value": {
-                "id": "683dfd75-b108-4ea8-aafc-b3552476493b",
-                "resourcePath": "views\\8077385f-4bc0-4761-8d49-bc31cad734d8.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "8240eda8-0a26-485a-a06b-86ed5bb537b3",
             "Value": {
                 "id": "479a5c82-8a58-4600-b4ed-402f5657961e",
@@ -844,6 +820,14 @@
                 "id": "04fd4142-487c-47f4-a46b-6b48d0fbe143",
                 "resourcePath": "sprites\\spr_graze_light\\spr_graze_light.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8ab83212-7c5c-4cf6-b4e4-d297921f27dd",
+            "Value": {
+                "id": "bcb63df0-b64e-4c9c-aa9c-9b160dfac049",
+                "resourcePath": "objects\\obj_stairs\\obj_stairs.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -991,10 +975,26 @@
             }
         },
         {
+            "Key": "99f40a76-91e6-4874-b5eb-ca3de664d325",
+            "Value": {
+                "id": "253da04a-0008-46c0-9044-f9bbc8dfb2c5",
+                "resourcePath": "views\\9c51e72f-482d-419f-ad55-4a2ed545bcf0-room.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9a6882b7-5c25-45ba-8d8c-ecb0a487784b",
             "Value": {
                 "id": "dc4426eb-f4d6-4d9c-9d96-093471792268",
                 "resourcePath": "rooms\\room_tutorial1_sprint\\room_tutorial1_sprint.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "9c51e72f-482d-419f-ad55-4a2ed545bcf0",
+            "Value": {
+                "id": "a0c1d0c9-3375-42a5-90a4-711314453aa2",
+                "resourcePath": "rooms\\room_base_dungeon\\room_base_dungeon.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -1188,14 +1188,6 @@
                 "id": "ba379bbe-b27b-408b-8bf1-100ca85c9bb1",
                 "resourcePath": "views\\b4c83e37-d5f2-4728-a33a-965f584b50e6.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "b7668dab-6bab-4148-b5b5-9a4d3d7d96a3",
-            "Value": {
-                "id": "41a5504d-e0b3-4088-8d05-fbe4eef4cf8f",
-                "resourcePath": "scripts\\export_bullet\\export_bullet.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -1407,14 +1399,6 @@
             }
         },
         {
-            "Key": "da02e70b-9d2f-4987-ad3d-0955889d7e91",
-            "Value": {
-                "id": "be656edc-223b-421b-81eb-db9a1d65ea5c",
-                "resourcePath": "scripts\\generate_dungeon_layout\\generate_dungeon_layout.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "db14f107-c993-49d6-821f-9130fc595b30",
             "Value": {
                 "id": "8d651f9e-42a8-4976-83c8-2d775cac98c8",
@@ -1484,6 +1468,14 @@
                 "id": "8f2a908e-9639-40e7-8d85-355b500bfa94",
                 "resourcePath": "scripts\\on_segment\\on_segment.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e74471da-6c3e-4ab3-9ecb-f387bf2e45d3",
+            "Value": {
+                "id": "fe6a5274-2223-47eb-86cf-3f664226c33d",
+                "resourcePath": "rooms\\room_tutorial3_graze_reward\\room_tutorial3_graze_reward.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -1668,8 +1660,6 @@
         "86f577c2-6f61-40ba-bb61-947bac2de6eb",
         "76f2b9a7-c281-4d79-9db5-bce3f46953e5",
         "25370665-5788-4c2e-8bf3-071574871ea2",
-        "b7668dab-6bab-4148-b5b5-9a4d3d7d96a3",
-        "3c7d8de6-f6e5-409d-8305-1b78e42aaada",
         "66da5d31-8d04-45cf-b049-34d71fff69cc",
         "7a63b1d6-e1c6-4d87-aad6-75f2f3582cdc",
         "916d1bcf-1ebb-446e-b6ca-fad471074ce3",
@@ -1692,7 +1682,6 @@
         "35c1d7c2-1323-474d-b3ed-fde3380cb93f",
         "f9ca3a78-9fa6-444e-8dc4-7b609c623df6",
         "c1325b86-86b3-4b5d-b643-401350d75a85",
-        "da02e70b-9d2f-4987-ad3d-0955889d7e91",
         "4e07a7ac-dd45-4eb0-b78c-ff0c3083a81a",
         "b918023e-745b-43ab-a376-435583e21970",
         "1b6cfdfe-46d4-458c-adbc-9dd7f7205dae",
