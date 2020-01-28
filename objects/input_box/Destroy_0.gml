@@ -1,3 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(keyboard_check_pressed(vk_escape)) room_goto(room0);
+editor_set_attribute(column, variable, obj_property_editor.curObj, value);

@@ -8,7 +8,7 @@ if(pbutt) global.pause = !global.pause;
 
 if(pbutt && global.pause) {
 	if(!sprite_exists(global.screenShot)){
-        global.screenShot = sprite_create_from_surface(application_surface,0,0,view_wport,view_hport,0,0,0,0);    
+        global.screenShot = sprite_create_from_surface(application_surface,0,0,view_xport[0],view_yport[0],0,0,0,0);    
     }	
 	instance_deactivate_all(true);
 }
@@ -40,10 +40,13 @@ if(global.cur_menu == menus.pause) && (global.back_frame <= 0) {
 			game_end();
 			break;
 		case options.level_edit:
-			room_goto(level_editor);
+			//room_goto(level_editor);
 			break;
 		case options.pat_edit:
-			room_goto(pattern_editor);
+			room_goto(room_pattern_editor);
+			global.pause = false;
+			instance_activate_all(); 
+			if(sprite_exists(global.screenShot)) sprite_delete(global.screenShot);
 			break;
 		default:
 			break;

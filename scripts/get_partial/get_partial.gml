@@ -18,5 +18,4 @@ switch(obj.cshape) {
 		else c=abs(obj.vrad*sec(pi/2-theta));
 		break;
 }
-show_debug_message(c);
 return c;
