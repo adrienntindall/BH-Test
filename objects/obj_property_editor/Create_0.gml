@@ -32,15 +32,19 @@ pattern_op_name[pattern_op.linear] = "Linear";
 enum pattern_vars {
 	spd,
 	acceleration,
+	maxspeed,
+	minspeed,
 	length	
 }
 
 pattern_vars_name = -1;
 pattern_vars_name[pattern_vars.spd] = "Speed";
 pattern_vars_name[pattern_vars.acceleration] = "Acceleration";
+pattern_vars_name[pattern_vars.maxspeed] = "Max Speed";
+pattern_vars_name[pattern_vars.minspeed] = "Min Speed";
 
 pattern_settings = -1;
-pattern_settings[pattern_op.linear] = array(pattern_vars.spd, pattern_vars.acceleration);
+pattern_settings[pattern_op.linear] = array(pattern_vars.spd, pattern_vars.acceleration, pattern_vars.maxspeed, pattern_vars.minspeed);
 
 
 

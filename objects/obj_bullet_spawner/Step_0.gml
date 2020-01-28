@@ -5,7 +5,7 @@ dt = global.dt;
 
 switch(pattern) {
 	case pat.circular:
-		//spawn_circular(n, obj_pattern_bullet, obj_enemy_anchor, theta, rad, def_cd, false, true, bullet);
+		spawn_circular(n, bullet, obj_enemy_anchor, theta, rad, def_cd, false, true);
 		break;
 }
 

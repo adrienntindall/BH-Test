@@ -25,5 +25,6 @@ cd[0] = def_cd;
 clay = 0;
 t = 0;
 
-bullet = instance_create_depth(x, y, 999, obj_pattern_bullet);
+bullet = instance_create_depth(x, y, 1, obj_pattern_bullet);
+bullet.tag = true;
 instance_deactivate_object(bullet);

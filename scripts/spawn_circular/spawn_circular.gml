@@ -8,7 +8,6 @@
 ///@param cd
 ///@param storage*
 ///@param copy*
-///@param inst_copy*
 var n = argument[0];
 var bt = argument[1];
 var theta = 2*pi/n; 
@@ -16,14 +15,19 @@ var r = argument[4];
 var arr = -1;
 var store = false;
 var copy = false;
-var inst = noone;
 if(argument_count > 6 && argument[6] == true) store = true;
-if(argument_count > 8 && argument[7] == true) copy = true;
-if(argument_count > 8) inst = argument[8];
+if(argument_count > 7 && argument[7] == true) copy = true;
 
 if(cd[clay] <= 0) for (c = 0; c < n; c++) {
-	var b = instance_create_depth(x+r*cos(theta*c),y-r*sin(theta*c),0, bt);
-	if(copy) pat_var_copy(bt, b);
+	var b = noone;
+	if(copy){
+		with(bt) {
+			b = instance_copy(false);
+			instance_activate_object(b);
+			b.tag = false;
+		}
+	}
+	else b = instance_create_depth(x+r*cos(theta*c),y-r*sin(theta*c),0,bt);
 	b.theta = theta*c + argument[3];
 	b.image_angle = b.theta*180/pi;
 	b.parent = argument[2];

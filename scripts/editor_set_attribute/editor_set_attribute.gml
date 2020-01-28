@@ -20,6 +20,12 @@ switch(argument0) {
 			case pattern_vars.acceleration:
 				bullet.a = c;
 				break;
+			case pattern_vars.maxspeed:
+				bullet.maxspd = c;
+				break;
+			case pattern_vars.minspeed:
+				bullet.minspd = c;
+				break;
 		}
 		break;
 	case editor_column_type.path:

@@ -17,3 +17,8 @@ a = 0;
 theta = 0;
 
 dt = 0;
+
+maxspd = 0;
+minspd = 0;
+
+tag = false;

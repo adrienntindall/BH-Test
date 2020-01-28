@@ -17,6 +17,12 @@ switch(argument0) {
 			case pattern_vars.acceleration:
 				return bullet.a;
 				break;
+			case pattern_vars.maxspeed:
+				return bullet.maxspd;
+				break;
+			case pattern_vars.minspeed:
+				return bullet.minspd;
+				break;
 		}
 		break;
 	case editor_column_type.path:
