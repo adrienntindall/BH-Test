@@ -14,6 +14,13 @@ if(keyboard_check_pressed(vk_escape)) {
 	editingMode = false;
 	sprite_delete(screenshot);
 	instance_activate_all();
-	instance_deactivate_object(obj_pattern_bullet);
+	with(obj_pattern_bullet) {
+		if(!tag) instance_destroy();
+	}
 	instance_destroy(input_box);
+	instance_destroy(obj_arrow);
+	curObj.pattern = cur_spawn;
+	curObj.path = cur_path;
+	curObj.cur_bul[0] = 0;
+	obj_bullet_spawner.t = 0;
 }

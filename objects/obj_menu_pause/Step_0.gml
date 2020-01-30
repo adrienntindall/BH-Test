@@ -14,7 +14,7 @@ if(pbutt && global.pause) {
 }
 
 if(!global.pause) { 
-	instance_activate_all(); 
+	if(pbutt) instance_activate_all(); 
 	if(sprite_exists(global.screenShot)) sprite_delete(global.screenShot);
 	if(pbutt) global.cur_menu = menus.pause;
 	exit;

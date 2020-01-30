@@ -695,6 +695,14 @@
             }
         },
         {
+            "Key": "6600489f-a221-4b7f-bf73-882360e11be9",
+            "Value": {
+                "id": "4f7a1a9b-85e5-4f7d-a32b-c9a075234f4d",
+                "resourcePath": "objects\\obj_arrow\\obj_arrow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "66da5d31-8d04-45cf-b049-34d71fff69cc",
             "Value": {
                 "id": "5b1a35a8-b9c4-4e16-8c8b-88c796602d03",
@@ -1580,6 +1588,14 @@
                 "id": "c5608337-f8d1-44af-af5d-3da0e8d9fa50",
                 "resourcePath": "sprites\\spr_electric_orb\\spr_electric_orb.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e9462de4-88d7-4c49-bc63-13a13b8943f1",
+            "Value": {
+                "id": "acdb74c7-3bb3-4ad0-809f-c1400bb0d53b",
+                "resourcePath": "objects\\obj_freeze_button\\obj_freeze_button.yy",
+                "resourceType": "GMObject"
             }
         },
         {

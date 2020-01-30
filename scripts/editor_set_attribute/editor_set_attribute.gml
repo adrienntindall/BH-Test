@@ -10,6 +10,26 @@ var c = argument3;
 
 switch(argument0) {
 	case editor_column_type.spawn:
+		switch(argument1) {
+			case spawn_vars.n:
+				obj.n = c;
+				break;
+			case spawn_vars.radius:
+				obj.rad = c;
+				break;
+			case spawn_vars.theta:
+				obj.theta = c;
+				break;
+			case spawn_vars.cooldown:
+				obj.def_cd = c;
+				break;
+			case spawn_vars.angle:
+				obj.angle = c;
+				break;
+			case spawn_vars.delta_theta:
+				obj.dtheta = c;
+				break;
+		}
 		break;
 	case editor_column_type.pattern:
 		switch(argument1) {
@@ -29,5 +49,10 @@ switch(argument0) {
 		}
 		break;
 	case editor_column_type.path:
+		switch(argument1) {
+			case path_vars.radius:
+				obj.r = c;
+				break;
+		}
 		break;
 }
