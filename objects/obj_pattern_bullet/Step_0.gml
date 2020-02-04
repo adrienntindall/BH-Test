@@ -6,4 +6,7 @@ switch(pattern) {
 	case move_pat.linear:
 		move_linear();
 		break;
+	case move_pat.linear_lazer:
+		move_lazer_linear();
+		break;
 }

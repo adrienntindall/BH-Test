@@ -12,26 +12,32 @@ var n = argument0;
 var theta = argument3;
 var dtheta = argument4;
 var r = argument5;
+var bt = argument1;
 var copy = argument7;
+var store = (bt.isLazer && laz_arr == -1);
+var arr = -1;
 
 if(cd[clay] <= 0) {
 	for(var c = 0; c < n; c++) {
 		var theta_c = theta + c*dtheta/n;
-		var bt;
-		if(copy){
-			with(argument1) {
-				bt = instance_copy(false);
-				instance_activate_object(bt);
-				bt.tag = false;
-				bt.x = other.x+r*cos(theta_c);
-				bt.y = other.y-r*sin(theta_c)
-			}
+		var b;
+		var xx = x+r*cos(theta_c);
+		var yy = y-r*sin(theta_c);
+		if(bt.isLazer && laz_arr != -1) {
+			b = laz_arr[c];
+			b.x = xx;
+			b.y = yy;
 		}
-		else bt = instance_create_depth(x+r*cos(theta_c), y-r*sin(theta_c), 0, argument1);
-		bt.parent = argument2;
-		bt.theta = theta + c*dtheta/n;
-		bt.image_angle = bt.theta*180/pi;
+		else if(copy) b = bullet_copy(bt, xx, yy);
+		else b = instance_create_depth(xx,yy,0,bt);
+		b.parent = argument2;
+		b.theta = theta + c*dtheta/n;
+		b.image_angle = b.theta*180/pi;
+		cur_bul[clay]++;
+		if(store) arr[c] = b;
 	}
 	cd[clay] = argument6;
 }
 else cd[clay] -= dt;
+
+if(store) laz_arr = arr;

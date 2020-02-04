@@ -21,6 +21,13 @@ if(keyboard_check_pressed(vk_escape)) {
 	instance_destroy(obj_arrow);
 	curObj.pattern = cur_spawn;
 	curObj.path = cur_path;
-	curObj.cur_bul[0] = 0;
+	curObj.bullet.pattern = cur_pattern;
+	if(cur_pattern == pattern_op.linear_lazer) {
+		curObj.bullet.isLazer = true;
+	}
+	else curObj.bullet.isLazer = false;
 	obj_bullet_spawner.t = 0;
+	obj_bullet_spawner.cur_bul[0] = 0;
+	obj_bullet_spawner.cd[0] = curObj.def_cd;
+	obj_bullet_spawner.laz_arr = -1;
 }

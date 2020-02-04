@@ -15,6 +15,7 @@ angle = 0;
 dtheta = 0;
 cur_bul = -1;
 cur_bul[0] = 0;
+laz_arr = -1;
 
 bullet = instance_create_depth(x, y, 1, obj_pattern_bullet);
 bullet.tag = true;
@@ -28,3 +29,9 @@ sdt = 1;
 x0 = x;
 y0 = y;
 tilemap = layer_tilemap_get_id("Borders");
+
+
+
+//Handling flags
+lag_time = .4;
+cur_lag_time = -1;

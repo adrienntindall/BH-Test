@@ -1,8 +1,8 @@
 {
-    "id": "415352d1-15ba-4bd2-9d22-1842d37988d4",
+    "id": "17c48352-35ed-4536-aae0-8628ea571213",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "spawn_circular_spray",
+    "name": "bullet_copy",
     "IsCompatibility": false,
     "IsDnD": false
 }

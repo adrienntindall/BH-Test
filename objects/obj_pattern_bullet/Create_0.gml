@@ -3,6 +3,7 @@
 
 enum move_pat {
 	linear,
+	linear_lazer,
 	length	
 };
 
@@ -20,5 +21,7 @@ dt = 0;
 
 maxspd = 0;
 minspd = 0;
+
+isLazer = false;
 
 tag = false;

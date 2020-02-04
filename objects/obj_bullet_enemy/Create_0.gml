@@ -23,3 +23,4 @@ ty = 1;
 grtime = "nah";
 dt = 0;
 destroy = true;
+isLazer = false;
