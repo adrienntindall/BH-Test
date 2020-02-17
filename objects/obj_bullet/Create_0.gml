@@ -27,25 +27,11 @@ ta = 0;
 dt = 0;
 
 //Vars relating to knifeness + circular movement
-is_knife = false;
-index = 0;
 r = 60;
 maxd = 300;
 defmaxd = maxd;
 w = 8; //angular velocity
 mode = 0; //0 = idle; 1 = active; 2 = return
-icd = .5;
-
-is_split_cannon = false;
-is_split_orb = false;
-
-prev_sprite = 0;
-
-scd = .3;
-cur_s = 0;
-tts = 1;
-rot = pi/4;
-
 clay = 0;
 
 tx = 1;
@@ -57,3 +43,4 @@ yacc_dis = 0;
 
 do_lifesteal = false;
 
+isLazer = false;

@@ -63,8 +63,8 @@ else {
 
 if(!invincible) with(obj_bullet_enemy) {
 	if(!other.invincible)  {	
-		if(objects_collide(id, other)) {
-			other.hp--;
+		if(objects_collide(other, id)) {
+			//other.hp--;
 			if(destroy) instance_destroy();
 			other.invincible=true;
 			other.invcd = other.inv_time;

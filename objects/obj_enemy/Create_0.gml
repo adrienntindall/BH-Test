@@ -31,6 +31,8 @@ fspd = 30;
 cd[0] = 0;
 cur_bul = 0;
 cur_bul[0] = 0;
+laz_arr = -1;
+laz_arr[0] = -1;
 
 on_fire = false;
 flame_dmg = 1;

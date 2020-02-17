@@ -1,12 +1,21 @@
 ///graze(set_time)
 ///@param set_time
 var dist = 0;
-var hr = (cshape == shape.circle) ? crad : hrad;
-var vr = (cshape == shape.circle) ? crad : vrad;
-var cx = min(abs(obj_player.x-obj_player.crad-(x+hr)),abs(obj_player.x+obj_player.crad-(x-hr)))-1;
-var cy = min(abs(obj_player.y-obj_player.crad-(y+vr)),abs(obj_player.y+obj_player.crad-(y-vr)))-1; 
-dist = cx*cx + cy*cy;
-
+if(cshape == shape.circle) {
+	var hr = crad;
+	var vr = crad;
+	var cx = min(abs(obj_player.x-obj_player.crad-(center_x(id)+hr)),abs(obj_player.x+obj_player.crad-(center_x(id)-hr)))-1;
+	var cy = min(abs(obj_player.y-obj_player.crad-(center_y(id)+vr)),abs(obj_player.y+obj_player.crad-(center_y(id)-vr)))-1; 
+	dist = cx*cx + cy*cy;
+}
+else if(cshape == shape.rectangle) {
+	var th = pi-theta;
+	var t0 = (obj_player.x - center_x(id) + tan(th)*(obj_player.y-center_y(id)))/(cos(th) + tan(th)*sin(th));var xx = t0*cos(th) + center_x(id);
+	var yy = t0*sin(th) + center_y(id);
+	var cx = abs(obj_player.x-obj_player.crad-xx)-1;
+	var cy = abs(obj_player.y-obj_player.crad-yy)-1;
+	dist = cx*cx + cy*cy-vrad;
+}
 if(instance_exists(parent) && parent.charged) {
 	dist /= 1.2;
 	dist /= parent.charge_mult;

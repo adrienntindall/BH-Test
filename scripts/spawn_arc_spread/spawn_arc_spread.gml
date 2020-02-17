@@ -14,7 +14,7 @@ var dtheta = argument4;
 var r = argument5;
 var bt = argument1;
 var copy = argument7;
-var store = (bt.isLazer && laz_arr == -1);
+var store = (instance_exists(bt) && bt.isLazer && laz_arr == -1);
 var arr = -1;
 
 if(cd[clay] <= 0) {

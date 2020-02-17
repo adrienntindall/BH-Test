@@ -15,7 +15,7 @@ var r = argument[4];
 var arr = -1;
 var store = false;
 var copy = false;
-if((argument_count > 6 && argument[6] == true) || (bt.isLazer && laz_arr == -1)) store = true;
+if((argument_count > 6 && argument[6] == true) || (laz_arr == -1)) store = true;
 if(argument_count > 7 && argument[7] == true) copy = true;
 
 if(cd[clay] <= 0) for (var c = 0; c < n; c++) {
@@ -23,10 +23,12 @@ if(cd[clay] <= 0) for (var c = 0; c < n; c++) {
 	var th = theta*c + argument[3];
 	var xx = x+r*cos(th);
 	var yy = y-r*sin(th);
-	if(bt.isLazer && laz_arr != -1) {
-		b = laz_arr[c];
+	if(store && laz_arr[clay] != -1) {
+		var bar = laz_arr[clay]
+		b = bar[c];
 		b.x = xx;
 		b.y = yy;
+		b.in_theta = th;
 	}
 	else if(copy) b = bullet_copy(bt, xx, yy);
 	else b = instance_create_depth(xx,yy,0,bt);
@@ -40,5 +42,7 @@ if(cd[clay] <= 0) for (var c = 0; c < n; c++) {
 }
 else cd[clay] -= dt;
 
-if(store && arr != -1 && !bt.isLazer) return arr;
-else if(store) laz_arr = arr;
+if(store) {
+	laz_arr[clay] = arr;
+	return arr;
+}
