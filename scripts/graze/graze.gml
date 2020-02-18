@@ -8,13 +8,17 @@ if(cshape == shape.circle) {
 	var cy = min(abs(obj_player.y-obj_player.crad-(center_y(id)+vr)),abs(obj_player.y+obj_player.crad-(center_y(id)-vr)))-1; 
 	dist = cx*cx + cy*cy;
 }
-else if(cshape == shape.rectangle) {
+else if(cshape == shape.rectangle) { 
 	var th = pi-theta;
-	var t0 = (obj_player.x - center_x(id) + tan(th)*(obj_player.y-center_y(id)))/(cos(th) + tan(th)*sin(th));var xx = t0*cos(th) + center_x(id);
+	var t0 = (obj_player.x - center_x(id) + tan(th)*(obj_player.y-center_y(id)))/(cos(th) + tan(th)*sin(th));
+	if(abs(t0) > hrad*image_xscale) {
+		t0 = sign(t0)*hrad*image_xscale;
+	}
+	var xx = t0*cos(th) + center_x(id);
 	var yy = t0*sin(th) + center_y(id);
-	var cx = abs(obj_player.x-obj_player.crad-xx)-1;
-	var cy = abs(obj_player.y-obj_player.crad-yy)-1;
-	dist = cx*cx + cy*cy-vrad;
+	var cx = abs(obj_player.x-xx)-1;
+	var cy = abs(obj_player.y-yy)-1;
+	dist = cx*cx + cy*cy-vrad-obj_player.crad;
 }
 if(instance_exists(parent) && parent.charged) {
 	dist /= 1.2;

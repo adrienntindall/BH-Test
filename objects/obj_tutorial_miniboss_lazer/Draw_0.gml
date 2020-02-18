@@ -17,6 +17,9 @@ draw_set_colour(c_orange);
 var th = pi-theta;
 
 var t0 = (obj_player.x - center_x(id) + tan(th)*(obj_player.y-center_y(id)))/(cos(th) + tan(th)*sin(th));
+if(abs(t0) > hrad*image_xscale) {
+	t0 = sign(t0)*hrad*image_xscale;
+}
 var xx = t0*cos(th) + center_x(id);
 var yy = t0*sin(th) + center_y(id);
 

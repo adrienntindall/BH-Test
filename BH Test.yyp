@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "26f6cfc6-7b60-4fb3-890d-3fb2b74351f7",
+            "Value": {
+                "id": "d726113e-276a-452e-8fbb-8eaad06d8dc3",
+                "resourcePath": "sprites\\sprite48\\sprite48.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "27497f27-3509-48c4-9e94-7bb4e4e9f4be",
             "Value": {
                 "id": "3aae2165-dcfa-4007-a334-29def1c3bef9",
@@ -1191,6 +1199,14 @@
             }
         },
         {
+            "Key": "a35f3f8e-f514-41f5-bbbe-6fdc2c7213d7",
+            "Value": {
+                "id": "fb6d1e9b-bd97-40f4-9ed1-6c44b84762f7",
+                "resourcePath": "objects\\obj_tutorial_static_bt\\obj_tutorial_static_bt.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a3b3ae85-24d6-4192-807d-49e83ae8bb8c",
             "Value": {
                 "id": "89a22021-a2c3-4bcd-b838-4de967c8f003",
@@ -1815,6 +1831,14 @@
             }
         },
         {
+            "Key": "fb5cc167-f8cb-430b-bc6e-8fedf320621b",
+            "Value": {
+                "id": "38cc4240-91fa-4d39-b579-f5ac9fbdb819",
+                "resourcePath": "scripts\\define_circle\\define_circle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fbb7a736-e8c6-493d-a94a-ff662ab8e002",
             "Value": {
                 "id": "ad62757a-7ecc-49b8-9dbd-85a47f00d2cf",
@@ -1880,6 +1904,7 @@
         "ff017ffc-6136-4eca-aced-6287bfc0c0b8",
         "1fc19355-c542-42bd-9dd6-8f0f5e6a70ea",
         "17c48352-35ed-4536-aae0-8628ea571213",
+        "fb5cc167-f8cb-430b-bc6e-8fedf320621b",
         "3d750a22-c308-416e-8c89-1c00b2b06443",
         "35c1d7c2-1323-474d-b3ed-fde3380cb93f",
         "f9ca3a78-9fa6-444e-8dc4-7b609c623df6",
