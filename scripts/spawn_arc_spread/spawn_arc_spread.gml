@@ -14,7 +14,7 @@ var dtheta = argument4;
 var r = argument5;
 var bt = argument1;
 var copy = argument7;
-var store = (instance_exists(bt) && bt.isLazer && laz_arr == -1);
+var store = (laz_arr[clay] == -1);
 var arr = -1;
 
 if(cd[clay] <= 0) {
@@ -23,13 +23,7 @@ if(cd[clay] <= 0) {
 		var b;
 		var xx = x+r*cos(theta_c);
 		var yy = y-r*sin(theta_c);
-		if(bt.isLazer && laz_arr != -1) {
-			b = laz_arr[c];
-			b.x = xx;
-			b.y = yy;
-		}
-		else if(copy) b = bullet_copy(bt, xx, yy);
-		else b = instance_create_depth(xx,yy,0,bt);
+		b = instance_create_depth(xx,yy,0,bt);
 		b.parent = argument2;
 		b.theta = theta + c*dtheta/n;
 		b.image_angle = b.theta*180/pi;
@@ -39,5 +33,3 @@ if(cd[clay] <= 0) {
 	cd[clay] = argument6;
 }
 else cd[clay] -= dt;
-
-if(store) laz_arr = arr;

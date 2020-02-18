@@ -8,6 +8,7 @@ clay = 0;
 
 switch(phase) {
 	case 1:
+		clay = 0;
 		spawn_circular(6, obj_tutorial_miniboss_lazer, id, .001*cur_bul[clay], 70, 0, true, false);
 		clay++;
 		spawn_circular(1, obj_tutorial_miniboss_fastone, id, pi/180*point_direction(x, y, obj_player.x, obj_player.y), 30, 1, false, false);
@@ -21,6 +22,9 @@ switch(phase) {
 				btarr[c].theta = point_direction(x, y, obj_player.x, obj_player.y)*pi/180;
 			}
 		}
+		clay++;
+		spawn_arc_spread(16, obj_tutorial_miniboss_phase2_backbt, id, point_direction(x, y, obj_player.x, obj_player.y)*pi/180 + pi/3, 4*pi/3, 100, .2, false);
+		break;
 }
 
 if(hp <= 0) {

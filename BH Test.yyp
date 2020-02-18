@@ -719,6 +719,14 @@
             }
         },
         {
+            "Key": "5ddb5027-dab3-4877-a0b9-251053b440ce",
+            "Value": {
+                "id": "8504f4b0-3471-42e0-8531-b363c0f9081e",
+                "resourcePath": "objects\\obj_tutorial_miniboss_phase2_backbt\\obj_tutorial_miniboss_phase2_backbt.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "60877add-ad7e-4977-b78f-a55ca217e8c7",
             "Value": {
                 "id": "d00fd618-9fe3-4d12-bc3d-b070c68a8d91",
@@ -1671,6 +1679,14 @@
             }
         },
         {
+            "Key": "e4f02b2d-a3e7-4423-a988-395628d30805",
+            "Value": {
+                "id": "1d6b8b7d-4f1a-486d-a3a4-bfc1ead1a976",
+                "resourcePath": "scripts\\define_rectangle\\define_rectangle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e74471da-6c3e-4ab3-9ecb-f387bf2e45d3",
             "Value": {
                 "id": "fe6a5274-2223-47eb-86cf-3f664226c33d",
@@ -1905,6 +1921,7 @@
         "1fc19355-c542-42bd-9dd6-8f0f5e6a70ea",
         "17c48352-35ed-4536-aae0-8628ea571213",
         "fb5cc167-f8cb-430b-bc6e-8fedf320621b",
+        "e4f02b2d-a3e7-4423-a988-395628d30805",
         "3d750a22-c308-416e-8c89-1c00b2b06443",
         "35c1d7c2-1323-474d-b3ed-fde3380cb93f",
         "f9ca3a78-9fa6-444e-8dc4-7b609c623df6",
