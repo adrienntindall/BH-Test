@@ -4,9 +4,14 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 12;
 phase = 1;
-num_attacks = 5;
+clay = 0;
+
+hp = 20;
+
+num_attacks = 110;
 cd = zeros_arr(num_attacks);
 cur_bul = zeros_arr(num_attacks);
-laz_arr = array(-1, -1, -1, -1, -1);
+laz_arr = n1_arr(num_attacks);
+cd[1] = .5;
+cd[4] = .25;

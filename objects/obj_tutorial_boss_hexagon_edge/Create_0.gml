@@ -4,6 +4,11 @@
 // Inherit the parent event
 event_inherited();
 
-image_blend = c_blue;
+define_circle();
 
-move_linear();
+spd = 300*sqrt(3);
+defspd = spd
+a = -225*sqrt(3);
+hang_time = .1;
+minspd = 0; 
+

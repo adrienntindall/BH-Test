@@ -4,7 +4,13 @@
 // Inherit the parent event
 event_inherited();
 
-if(keyboard_check_pressed(release_btn) && c_amnts[0] >= 100) {
+if(keyboard_check_pressed(release_btn) && c_amnts[0] >= 100 && !pulse) {
 	c_amnts[0] -= 100;
-	spawn_circular(32, obj_bomb, noone, 0, 10, 1);
+	pulse = true;
+}
+
+if(pulse) with(obj_bullet_enemy) {
+	if(dist_between(id, other) < other.cur_rad) {
+		instance_destroy();
+	}
 }

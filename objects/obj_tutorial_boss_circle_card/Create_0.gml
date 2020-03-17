@@ -1,9 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Inherit the parent event
 event_inherited();
 
-image_blend = c_blue;
+define_rectangle();
 
-move_linear();
+spd = 300;
+defspd = 300;
+a = 20;
+maxspd = 600;

@@ -16,3 +16,8 @@ c_amnts = array(100);
 
 cd = zeros_arr(1);
 clay = 0;
+
+pulse = false;
+maxrad = 400;
+cur_rad = 0;
+rspd = 300;

@@ -4,6 +4,12 @@
 // Inherit the parent event
 event_inherited();
 
-image_blend = c_blue;
+define_rectangle();
 
-move_linear();
+phase = 1;
+phase_time = .75;
+
+spd = 300;
+defspd = 300;
+a = -60;
+minspd = 0;

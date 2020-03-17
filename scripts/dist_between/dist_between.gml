@@ -3,4 +3,4 @@
 ///@param obj2
 var a = argument0;
 var b = argument1;
-return sqrt((a.x-b.x)*(a.x-b.x) + (a.y-b.y)*(a.y-b.y));
+return sqrt((center_x(a)-center_x(b))*(center_x(a)-center_x(b)) + (center_y(a)-center_y(b))*(center_y(a)-center_y(b)));

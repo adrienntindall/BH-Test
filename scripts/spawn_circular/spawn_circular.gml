@@ -1,6 +1,8 @@
-///spawn_circular(n, bullet_type, parent, offset, r, cd, arr*, copy*, inst_copy*)
+///spawn_circular(n, x, y, bullet_type, parent, offset, r, cd, copy*, inst_copy*, isLazer*)
 //@desc Circular bullet pattern with n spokes
 ///@param n
+///@param x
+///@param y
 ///@param {real} bullet_type  (object) bullet type
 ///@param {real} parent  id of parent of bullet
 ///@param theta
@@ -8,41 +10,49 @@
 ///@param cd
 ///@param storage*
 ///@param copy*
+///@param isLazer*
 var n = argument[0];
-var bt = argument[1];
+var xx = argument[1];
+var yy = argument[2];
+var bt = argument[3];
 var theta = 2*pi/n; 
-var r = argument[4];
+var r = argument[6];
 var arr = -1;
 var store = false;
 var copy = false;
-if((argument_count > 6 && argument[6] == true) || (laz_arr == -1)) store = true;
-if(argument_count > 7 && argument[7] == true) copy = true;
-
+var isLazer = false;
+if((argument_count > 8 && argument[8] == true)) store = true;
+if(argument_count > 9 && argument[9] == true) copy = true;
+if(argument_count > 10 && argument[10] == true) isLazer = true;
 if(cd[clay] <= 0) for (var c = 0; c < n; c++) {
 	var b = noone;
-	var th = theta*c + argument[3];
-	var xx = x+r*cos(th);
-	var yy = y-r*sin(th);
-	if(store && laz_arr[clay] != -1) {
+	var th = theta*c + argument[5];
+	var xxx = xx+r*cos(th);
+	var yyy = yy-r*sin(th);
+	if(isLazer && laz_arr[clay] != -1) {
 		var bar = laz_arr[clay]
 		b = bar[c];
-		b.x = xx;
-		b.y = yy;
+		b.x = xxx;
+		b.y = yyy;
 		b.in_theta = th;
 	}
-	else if(copy) b = bullet_copy(bt, xx, yy);
-	else b = instance_create_depth(xx,yy,0,bt);
+	else if(copy) b = bullet_copy(bt, xxx, yyy);
+	else b = instance_create_depth(xxx,yyy,0,bt);
 	b.theta = th;
 	b.image_angle = b.theta*180/pi;
-	b.parent = argument[2];
+	b.parent = argument[4];
 	b.t0 = t;
-	cd[clay] = argument[5];
+	cd[clay] = argument[7];
+	//if(variable_instance_exists(id, "cur_bul")) 
 	cur_bul[clay]++;
 	if(store) arr[c] = b;
 }
 else cd[clay] -= dt;
 
-if(store) {
+if(isLazer) {
 	laz_arr[clay] = arr;
+}
+
+if(store) {
 	return arr;
 }

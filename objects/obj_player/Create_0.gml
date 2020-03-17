@@ -28,7 +28,7 @@ enum active {
 }
 
 //global.active_eq = array(active.clear, -1, -1, -1)
-global.active_eq = array(active.clear);
-global.active_own = array(active.clear);
+global.active_eq = array(-1);
+global.active_own = array(-1);
 
 global.graze_bts = array(-1);

@@ -6,8 +6,8 @@ event_inherited();
 
 defspd = 50;
 spd = 50;
-a = 2;
-maxspd = 100;
+a = 100;
+maxspd = 500;
 
 destroy = false;
 
