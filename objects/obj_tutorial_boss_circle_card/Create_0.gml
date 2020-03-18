@@ -5,7 +5,7 @@ event_inherited();
 
 define_rectangle();
 
-spd = 300;
-defspd = 300;
+spd = 250;
+defspd = spd;
 a = 20;
 maxspd = 600;

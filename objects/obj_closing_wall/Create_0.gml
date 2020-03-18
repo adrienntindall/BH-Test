@@ -3,10 +3,9 @@
 
 // Inherit the parent event
 event_inherited();
+bmap_id = layer_tilemap_get_id("Borders");
+closing = false;
+cspd = 230;
+define_rectangle();
 
-hp = 12;
-phase = 1;
-num_attacks = 5;
-cd = zeros_arr(num_attacks);
-cur_bul = zeros_arr(num_attacks);
-laz_arr = n1_arr(num_attacks);
+scale_init = abs(bbox_left-bbox_right);

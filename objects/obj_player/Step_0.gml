@@ -64,7 +64,7 @@ else {
 if(!invincible) with(obj_bullet_enemy) {
 	if(!other.invincible)  {	
 		if(objects_collide(other, id)) {
-			//other.hp--;
+			other.hp--; //disable to turn off damage to player
 			if(destroy) instance_destroy();
 			other.invincible=true;
 			other.invcd = other.inv_time;

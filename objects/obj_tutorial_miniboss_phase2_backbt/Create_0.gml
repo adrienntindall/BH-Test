@@ -8,5 +8,5 @@ define_rectangle();
 
 defspd = 300;
 spd = 300;
-a = -75;
-minspd = 80;
+a = 100;
+maxspd = 600;

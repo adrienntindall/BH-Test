@@ -10,22 +10,23 @@ switch(phase) {
 	case 1:
 		var ptheta = pi/180*point_direction(x, y, obj_player.x, obj_player.y);
 		clay = 0;
-		spawn_circular(6, obj_tutorial_miniboss_lazer, id, .001*cur_bul[clay], 70, 0, true, false, true);
+		spawn_circular(6, x, y, obj_tutorial_boss_homing_card, id, pi/5*cur_bul[clay], 70, .8);
 		clay++;
-		spawn_circular(1, obj_tutorial_miniboss_fastone, id, ptheta, 30, 2.5);
+		spawn_circular(1, x, y, obj_tutorial_miniboss_fastone, id, ptheta, 30, 2.5);
 		clay++;
-		spawn_circular(20, obj_tutorial_miniboss_phase2_backbt, id, ptheta, 80, 1.2);
+		spawn_circular(20, x, y, obj_tutorial_miniboss_phase2_backbt, id, ptheta, 80, 1.2);
 		break;
 	case 2:
+	var ptheta = point_direction(x, y, obj_player.x, obj_player.y)*pi/180;
 		clay = 3;
-		var btarr = spawn_circular(6, obj_tutorial_miniboss_phase2_cluster, id, 0, 50, .8, true);
+		var btarr = spawn_circular(6, x, y, obj_tutorial_miniboss_phase2_cluster, id, 0, 50, .8, true);
 		if(btarr != -1) {
 			for(var c = 0; c < array_length_1d(btarr); c++) {
-				btarr[c].theta = point_direction(x, y, obj_player.x, obj_player.y)*pi/180;
+				btarr[c].theta = ptheta;
 			}
 		}
 		clay++;
-		spawn_arc_spread(16, obj_tutorial_miniboss_phase2_backbt, id, point_direction(x, y, obj_player.x, obj_player.y)*pi/180 + pi/3, 4*pi/3, 100, .2, false);
+		spawn_arc_spread(16, obj_tutorial_miniboss_phase2_backbt, id, ptheta + pi/3, 4*pi/3, 100, .2, false);
 		break;
 }
 

@@ -4,9 +4,15 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 12;
+var scale = 2.5;
+
+image_xscale *= scale;
+image_yscale *= scale;
+
+define_circle();
+
+spd = 150;
+defspd = 150;
+
 phase = 1;
-num_attacks = 5;
-cd = zeros_arr(num_attacks);
-cur_bul = zeros_arr(num_attacks);
-laz_arr = n1_arr(num_attacks);
+phase_time = .4;
