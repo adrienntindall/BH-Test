@@ -1759,6 +1759,14 @@
             }
         },
         {
+            "Key": "d6ed325a-c934-457f-b9c1-3135d718d5e5",
+            "Value": {
+                "id": "41fe61af-c39f-45aa-a7f9-20ea47f297bc",
+                "resourcePath": "objects\\obj_tutorial_focus_handler\\obj_tutorial_focus_handler.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d8710ed9-1d9b-4018-9be5-36584185ea2f",
             "Value": {
                 "id": "dc777bef-a570-46c4-8b99-2e0b4734cee1",

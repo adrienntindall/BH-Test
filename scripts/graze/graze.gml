@@ -16,9 +16,9 @@ else if(cshape == shape.rectangle) {
 	}
 	var xx = t0*cos(th) + center_x(id);
 	var yy = t0*sin(th) + center_y(id);
-	var cx = abs(obj_player.x-xx)-1;
-	var cy = abs(obj_player.y-yy)-1;
-	dist = cx*cx + cy*cy-vrad-obj_player.crad;
+	var cx = abs(obj_player.x-xx)-2;
+	var cy = abs(obj_player.y-yy)-2;
+	dist = cx*cx + cy*cy-vrad*vrad-obj_player.crad*obj_player.crad;
 }
 if(instance_exists(parent) && parent.charged) {
 	dist /= 1.2;
