@@ -7,6 +7,7 @@ window_set_position((display_get_width()-c*1280)/2, (display_get_height()-c*720)
 
 room_goto(room_tutorial1_sprint);
 //room_goto(room_testing);
+//room_goto(room_electric_test)
 
 enum shape { //collision shapes
 	circle,

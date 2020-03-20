@@ -1,1 +1,0 @@
-destination = room_tutorial2_focus;

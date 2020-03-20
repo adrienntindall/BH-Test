@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(dist_to_player() < 130) {
-	draw_self();
-}
+
+// Inherit the parent event
+event_inherited();
+
+define_circle();

@@ -1,1 +1,0 @@
-destination = room_tutorial3_graze_reward;
