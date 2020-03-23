@@ -1,28 +1,28 @@
 {
-    "id": "1a6d3d16-b3d5-4d4a-ae60-d75020d6375b",
+    "id": "e0267a74-3d8f-4de3-9ac8-2b2c06b6a512",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_tutorial_boss_homing_card",
+    "name": "obj_tutorial_enemy_split_card",
     "eventList": [
         {
-            "id": "e3bfb3e8-3357-42e9-b942-ae66d503add4",
+            "id": "0a87b61a-b277-42bf-8a3b-787abe60e3fc",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "1a6d3d16-b3d5-4d4a-ae60-d75020d6375b"
+            "m_owner": "e0267a74-3d8f-4de3-9ac8-2b2c06b6a512"
         },
         {
-            "id": "8a97a183-20ad-4fc8-b04b-769dd1d6a820",
+            "id": "897bd323-1d80-4c6e-b98c-ad7d2e8e27e6",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "1a6d3d16-b3d5-4d4a-ae60-d75020d6375b"
+            "m_owner": "e0267a74-3d8f-4de3-9ac8-2b2c06b6a512"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",

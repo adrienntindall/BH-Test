@@ -1,28 +1,28 @@
 {
-    "id": "1a6d3d16-b3d5-4d4a-ae60-d75020d6375b",
+    "id": "cd211276-9307-4fc8-a856-479fd6a4a02a",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_tutorial_boss_homing_card",
+    "name": "obj_tutorial_enemy_card",
     "eventList": [
         {
-            "id": "e3bfb3e8-3357-42e9-b942-ae66d503add4",
+            "id": "f2340847-a09d-4130-be67-6cbea13e417d",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "1a6d3d16-b3d5-4d4a-ae60-d75020d6375b"
+            "m_owner": "cd211276-9307-4fc8-a856-479fd6a4a02a"
         },
         {
-            "id": "8a97a183-20ad-4fc8-b04b-769dd1d6a820",
+            "id": "ae1d2f87-6ce8-4cd8-ad75-1ab3463b150f",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "1a6d3d16-b3d5-4d4a-ae60-d75020d6375b"
+            "m_owner": "cd211276-9307-4fc8-a856-479fd6a4a02a"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",

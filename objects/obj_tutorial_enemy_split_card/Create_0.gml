@@ -9,10 +9,9 @@ image_yscale = .15;
 
 define_rectangle();
 
-phase = 1;
-phase_time = .75;
+image_blend = c_orange;
 
-spd = 300;
-defspd = 300;
-a = -60;
-minspd = 0;
+spd = 250;
+defspd = spd;
+a = 10;
+maxspd = 400;
