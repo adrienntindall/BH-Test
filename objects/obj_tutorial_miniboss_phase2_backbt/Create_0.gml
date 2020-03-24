@@ -4,6 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
+image_xscale = .075;
+image_yscale = .075;
+
 define_rectangle();
 
 defspd = 300;

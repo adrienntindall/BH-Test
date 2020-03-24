@@ -10,3 +10,4 @@ num_attacks = 5;
 cd = zeros_arr(num_attacks);
 cur_bul = zeros_arr(num_attacks);
 laz_arr = n1_arr(num_attacks);
+

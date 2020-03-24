@@ -13,3 +13,5 @@ clay = 0;
 spawn_line(5, x + r*cos(ptheta+pi/2), y - r*sin(ptheta+pi/2), obj_tutorial_enemy_split_card, id, ptheta, 140, 0, 1, xx, yy);
 clay++;
 spawn_line(5, x + r*cos(ptheta-pi/2), y - r*sin(ptheta-pi/2), obj_tutorial_enemy_split_card, id, ptheta, 140, 0, 1, xx, yy);
+
+if(hp <= 0) instance_destroy();

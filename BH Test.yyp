@@ -1095,6 +1095,14 @@
             }
         },
         {
+            "Key": "8132698f-dff1-4f1e-9688-85d263965d5b",
+            "Value": {
+                "id": "7e01ac96-4139-4047-ae4c-e0eaa0d4069c",
+                "resourcePath": "scripts\\define_transition\\define_transition.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8240eda8-0a26-485a-a06b-86ed5bb537b3",
             "Value": {
                 "id": "479a5c82-8a58-4600-b4ed-402f5657961e",
@@ -1591,6 +1599,14 @@
             }
         },
         {
+            "Key": "b34e932a-d8d9-4fe0-87f3-b6149b58c231",
+            "Value": {
+                "id": "54b2a949-e5e2-4e8c-b846-43f5665650cd",
+                "resourcePath": "rooms\\room_tutorial4a_enemy\\room_tutorial4a_enemy.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "b3eefcaa-b3ac-4c11-b118-1ac8059e1d1f",
             "Value": {
                 "id": "3f8ba12f-367d-4b2b-b2f9-d9db7c9279e3",
@@ -1839,6 +1855,14 @@
             }
         },
         {
+            "Key": "d16e644e-b2f7-4076-b106-44a30b656ef7",
+            "Value": {
+                "id": "d8afbb0e-4522-431f-b9cd-7496876f9b86",
+                "resourcePath": "rooms\\room_tutorial3a_enemy\\room_tutorial3a_enemy.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "d24aac2f-5fda-4050-9d67-85e0ed71a984",
             "Value": {
                 "id": "ed4bc703-7a28-48a6-8465-54bf1ef3f05d",
@@ -1860,14 +1884,6 @@
                 "id": "41fe61af-c39f-45aa-a7f9-20ea47f297bc",
                 "resourcePath": "objects\\obj_tutorial_focus_handler\\obj_tutorial_focus_handler.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "d8710ed9-1d9b-4018-9be5-36584185ea2f",
-            "Value": {
-                "id": "dc777bef-a570-46c4-8b99-2e0b4734cee1",
-                "resourcePath": "rooms\\room_tutorial5_bomb_reward\\room_tutorial5_bomb_reward.yy",
-                "resourceType": "GMRoom"
             }
         },
         {
@@ -1988,6 +2004,14 @@
                 "id": "3d17c3a3-8352-4f1e-a07a-2b0f9a2ae2e5",
                 "resourcePath": "objects\\obj_weapon\\obj_weapon.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e7ca1b7e-24bb-4eef-932b-b120b2f0ae2c",
+            "Value": {
+                "id": "224f1bda-67dc-466a-bd1e-dbb556a16409",
+                "resourcePath": "rooms\\room_tutorial5_bomb_reward\\room_tutorial5_bomb_reward.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -2237,6 +2261,7 @@
         "fb5cc167-f8cb-430b-bc6e-8fedf320621b",
         "e4f02b2d-a3e7-4423-a988-395628d30805",
         "a9175fa1-f21b-433d-8d4b-49c283acc4c9",
+        "8132698f-dff1-4f1e-9688-85d263965d5b",
         "3d750a22-c308-416e-8c89-1c00b2b06443",
         "35c1d7c2-1323-474d-b3ed-fde3380cb93f",
         "f9ca3a78-9fa6-444e-8dc4-7b609c623df6",

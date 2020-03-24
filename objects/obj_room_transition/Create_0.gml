@@ -7,6 +7,8 @@ xoff = 0;
 pan_surface = -1;
 panning = false;
 
+act = true;
+
 enum trans_dir {
 	north,
 	south,

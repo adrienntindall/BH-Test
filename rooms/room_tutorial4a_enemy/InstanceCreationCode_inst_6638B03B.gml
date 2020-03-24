@@ -1,0 +1,1 @@
+define_transition(trans_dir.north, room_tutorial4_miniboss, "mini4aen");

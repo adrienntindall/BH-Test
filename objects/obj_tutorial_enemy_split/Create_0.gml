@@ -7,3 +7,5 @@ event_inherited();
 define_enemy(2);
 
 r = 150;
+
+hp = 4;

@@ -3,8 +3,8 @@
 
 event_inherited();
 
-image_xscale = .15;
-image_yscale = .15;
+image_xscale = .11;
+image_yscale = .11;
 
 define_rectangle();
 

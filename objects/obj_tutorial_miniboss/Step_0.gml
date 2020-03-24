@@ -40,8 +40,10 @@ if(hp <= 0) {
 			}
 			break;
 		case 2:
-			room_goto(room_tutorial5_bomb_reward);
+			//room_goto(room_tutorial5_bomb_reward);
+			obj_room_transition.act = true;
 			instance_destroy();
 			break;
 	}
+	with(obj_graze_ball) instance_destroy();
 }

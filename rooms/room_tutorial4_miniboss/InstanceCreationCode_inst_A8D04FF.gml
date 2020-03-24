@@ -1,0 +1,1 @@
+define_transition(trans_dir.north, -1, "3aenmini");
