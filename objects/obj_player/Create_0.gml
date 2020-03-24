@@ -3,9 +3,11 @@ event_inherited();
 cshape = shape.circle;
 crad = 5;
 
+theta = 0;
 depth = 2;
 cd = array(0, 0);
 kcd = .5;
+runcd = .05;
 hp = 25;
 maxhp = 12;
 spd = 250*image_xscale;

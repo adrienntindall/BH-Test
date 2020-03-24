@@ -15,14 +15,13 @@ up = keyboard_check(vk_up);
 focus = keyboard_check(vk_shift);
 fast = keyboard_check(ord("Z"));
 var s = dt*(focus ? fspd:(fast ? qspd:spd)); //placeholder variable for determining how many total spaces to move this frame
-if(focus || fast) draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, true); //draws the hitbox
 
 //X & Y Direction Setting
 dx = (right - left); 
 dy = (down - up);
 
 //Movement
-var theta = arctan2(dy, dx);
+theta = arctan2(dy, dx);
 
 dx = s*cos(theta)*abs(dx);
 dy = s*sin(theta)*abs(dy);
