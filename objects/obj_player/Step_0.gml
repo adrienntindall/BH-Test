@@ -67,6 +67,8 @@ if(!invincible) with(obj_bullet_enemy) {
 			if(destroy) instance_destroy();
 			other.invincible=true;
 			other.invcd = other.inv_time;
+			obj_camera.hit = true;
+			obj_camera.t = 0;
 		}
 	}
 }
