@@ -15,8 +15,13 @@ if(panning) {
 			}
 			obj_camera.x = obj_player.x;
 			obj_camera.y = obj_player.y;
+			obj_camera.pan_x = obj_player.x-obj_camera.def_width/2;
+			obj_camera.pan_y = obj_player.y-obj_camera.def_height/2;
+			obj_camera.pan_dir = dir;
 		}
 	}	
 	panning = false;
+	obj_camera.pan = true;
+	
 	instance_destroy();
 }

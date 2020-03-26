@@ -1,16 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-
+dt = global.dt;
 
 if(hit) {
 	if(t == 0) {
 		if(min(obj_player.x, room_width-obj_player.x) <= def_width/2) x = (obj_player.x < room_width/2 ? def_width/2 : room_width - def_width/2);
 		x0 = x;
+		k = choose(1,-1)*(random(7) + 8);
 	}
 	camera_set_view_target(playerCamera, noone);
-	dt = global.dt;
-	var cycle = sspd_max*(-(t-cycle_time)*(t-cycle_time)/(cycle_time*cycle_time) + 1)*sin(choose(1,-1)*(random(7) + 8)*t);
+	var cycle = sspd_max*(-(t-cycle_time)*(t-cycle_time)/(cycle_time*cycle_time) + 1)*sin(k*t);
 	x = x0 + cycle
 	y = lerp(y, obj_player.y, .1);
 	if(min(obj_player.y, room_height-obj_player.y) <= def_height/2) {
@@ -22,6 +21,12 @@ if(hit) {
 		hit = false;
 		camera_set_view_target(playerCamera, self);
 	}
+}
+else if(pan) {
+	x = lerp(x, obj_player.x, .1);
+	y = lerp(y, obj_player.y, .1);
+	camera_set_view_pos(view_camera[0], x - def_width/2, y - def_height/2);
+	t+=dt;
 }
 else if(object_exists(obj_player)) {
 	x = lerp(x, obj_player.x, .1);

@@ -15,6 +15,17 @@ cycle_time = .2;
 x0 = 0;
 y0 = 0;
 sspd_max = 15;
+k = 0;
+
+pan = false;
+pan_surf = -1;
+pan_image = -1;
+pan_x = 0;
+pan_y = 0;
+pan_xv = def_width/.5;
+pan_yv = def_height/.5;
+pan_dir = -1;
+
 
 playerCamera = camera_create_view(x, y, def_width, def_height, 0, self, -1, -1, def_width/2, def_height/2);
 //playerCamera = camera_create_view(x, y, def_width, def_height, 0, -1, -1, -1, width/2, height/2);
