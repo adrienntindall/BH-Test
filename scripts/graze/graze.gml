@@ -1,5 +1,11 @@
 ///graze(set_time)
 ///@param set_time
+
+if(obj_camera.hit) {
+	if(argument0) grtime = 999;
+	else return 999;
+}
+
 var dist = 0;
 if(cshape == shape.circle) {
 	var hr = crad;
