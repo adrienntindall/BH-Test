@@ -3,4 +3,6 @@
 global.active_eq = array(active.clear);
 global.active_own = array(active.clear);
 //room_goto(room_tutorial6_boss);
+obj_room_transition.act = true;
 instance_destroy();
+
