@@ -1,5 +1,9 @@
 /// @description Defining Variables
 event_inherited();
+
+image_xscale = .2;
+image_yscale = .2;
+
 cshape = shape.circle;
 crad = 5;
 
@@ -8,11 +12,11 @@ depth = 2;
 cd = array(0, 0);
 kcd = .5;
 runcd = .05;
-hp = 25;
-maxhp = 12;
-spd = 250*image_xscale;
-fspd = 155*image_xscale;
-qspd = 420*image_xscale;
+hp = 8;
+maxhp = 8;
+spd = 250;
+fspd = 155;
+qspd = 420;
 t = 0;
 dt = delta_time;
 tilemap = layer_tilemap_get_id("Borders");

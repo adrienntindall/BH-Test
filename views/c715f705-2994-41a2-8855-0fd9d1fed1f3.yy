@@ -6,7 +6,9 @@
     "children": [
         "f28982fd-226e-4702-aa06-ce746cd68987",
         "0e89d0b2-a967-42ab-87f9-f49e6b2c89f4",
-        "18e371c7-0796-4599-bdbf-5147f4f35f4e"
+        "18e371c7-0796-4599-bdbf-5147f4f35f4e",
+        "01d3b5bf-5e32-466b-84b2-e6de39c0ca13",
+        "e57d50ce-8f0c-447a-a556-9904b92f808c"
     ],
     "filterType": "GMSprite",
     "folderName": "Enemies",
