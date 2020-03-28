@@ -15,3 +15,7 @@ cur_bul = zeros_arr(num_attacks);
 laz_arr = n1_arr(num_attacks);
 cd[1] = .5;
 cd[4] = .25;
+
+spell_surf = surface_create(room_width-64*2, room_height-64*2);
+coff = 0;
+cspd = 20;

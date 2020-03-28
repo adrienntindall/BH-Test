@@ -9,7 +9,7 @@ if(act && r_dest != -1) {
 	obj_camera.pan_surf = surface_create(obj_camera.def_width, obj_camera.def_height);
 	obj_camera.pan_image = sprite_create_from_surface(application_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),0,0,0,0);
 	camera_set_view_target(obj_camera.playerCamera, noone);
-
+	
 	room_goto(r_dest);
 
 	x = -100;

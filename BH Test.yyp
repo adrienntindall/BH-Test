@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "0a23782c-e57b-4f57-a4c8-14ff9688a524",
+            "Value": {
+                "id": "462ae3fc-9c2c-4c62-85d8-bf840af0525f",
+                "resourcePath": "views\\0a23782c-e57b-4f57-a4c8-14ff9688a524.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "0a27ed39-e8bf-4b69-a344-177220e5ef12",
             "Value": {
                 "id": "8b5d46dd-e94b-49a1-9c5e-f10abe0a5fd5",
@@ -775,6 +783,14 @@
             }
         },
         {
+            "Key": "4979d73e-1f5f-4951-a626-1b81f77e511f",
+            "Value": {
+                "id": "a791e28b-d6a9-43fb-8560-7c27a46c2240",
+                "resourcePath": "sprites\\spr_card_suits\\spr_card_suits.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "49f3e9f0-a760-4057-a07e-24293e0fe123",
             "Value": {
                 "id": "772d4523-84ac-4b4d-96ed-8f10f43ac128",
@@ -1243,6 +1259,14 @@
             "Value": {
                 "id": "0129073b-2018-4298-a354-fe3cc3a339d2",
                 "resourcePath": "sprites\\spr_ts_Mystic\\spr_ts_Mystic.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8d19d5ff-bf83-45fb-ab72-0467db2b1cd2",
+            "Value": {
+                "id": "31ac2747-4803-4adb-85aa-287c3ed34ca3",
+                "resourcePath": "sprites\\spr_galaxy_back\\spr_galaxy_back.yy",
                 "resourceType": "GMSprite"
             }
         },

@@ -49,8 +49,11 @@ if(tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + dy) != 0
 	dy = 0;
 }
 
-x += dx;
-y += dy;
+
+if(!obj_camera.pan) {
+	x += dx;
+	y += dy;
+}
 
 if(invcd <=0) {
 	invincible = false;

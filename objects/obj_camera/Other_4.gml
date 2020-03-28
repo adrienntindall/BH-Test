@@ -7,3 +7,5 @@ if(room == room_pattern_editor) {
 	y = room_height/2;
 }
 else view_camera[0] = playerCamera;
+
+cur_frame = 0;

@@ -22,10 +22,13 @@ pan_surf = -1;
 pan_image = -1;
 pan_x = 0;
 pan_y = 0;
-pan_xv = def_width/.5;
-pan_yv = def_height/.5;
+pan_time = .6;
+pan_xv = def_width/(2*pan_time);
+pan_yv = def_height/(2*pan_time);
 pan_dir = -1;
 
+cur_frame = 0;
+frame0_image = -1;
 
 playerCamera = camera_create_view(x, y, def_width, def_height, 0, self, -1, -1, def_width/2, def_height/2);
 //playerCamera = camera_create_view(x, y, def_width, def_height, 0, -1, -1, -1, width/2, height/2);
