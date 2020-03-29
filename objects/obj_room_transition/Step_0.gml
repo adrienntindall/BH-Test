@@ -17,6 +17,10 @@ if(panning) {
 			obj_camera.x = obj_player.x;
 			obj_camera.y = obj_player.y;
 			obj_camera.pan_x = obj_player.x-obj_camera.def_width/2;
+			with(obj_camera) {
+				if(pan_x > room_width - def_width) pan_x = room_width - def_width;
+				if(pan_x < 0) pan_x = 0;
+			}
 			obj_camera.pan_y = obj_player.y-obj_camera.def_height/2;
 			obj_camera.pan_dir = dir;
 		}
@@ -24,5 +28,6 @@ if(panning) {
 	panning = false;
 	obj_camera.pan = true;
 	
-	instance_destroy();
+	dest_next_frame = true;
 }
+else if(dest_next_frame) instance_destroy();

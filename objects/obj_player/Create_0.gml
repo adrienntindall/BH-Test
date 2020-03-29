@@ -1,8 +1,8 @@
 /// @description Defining Variables
 event_inherited();
 
-image_xscale = .2;
-image_yscale = .2;
+image_xscale = 1.2;
+image_yscale = 1.2;
 
 cshape = shape.circle;
 crad = 5;
@@ -24,7 +24,7 @@ mask_index = spr_player_female;
 clay = 0;
 grps = 900;
 dt = 0;
-inv_time = 1;
+inv_time = .5;
 invcd = 0;
 invincible=false;
 

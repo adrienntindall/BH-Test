@@ -3,7 +3,7 @@
 if(!obj_camera.pan) {
 	//Drawing Hitbox
 	if(focus || fast) {
-		draw_set_color(focus ? c_purple : c_blue);
+		draw_set_color(focus ? c_purple : c_orange);
 		draw_circle(x, y, crad, false);
 	}
 

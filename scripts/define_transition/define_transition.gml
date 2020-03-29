@@ -6,3 +6,5 @@
 dir = argument0;
 r_dest = argument1;
 trans_id = argument2;
+
+define_rectangle();

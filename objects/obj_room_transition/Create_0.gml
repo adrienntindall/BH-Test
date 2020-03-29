@@ -6,10 +6,14 @@ dir = -1; //pan direction when the player is coming to the location
 xoff = 0;
 cxoff = 0;
 cyoff = 0;
+draw_frame0 = false;
 pan_surface = -1;
 panning = false;
+dest_next_frame = false;
 
 act = true;
+
+define_rectangle();
 
 enum trans_dir {
 	north,
