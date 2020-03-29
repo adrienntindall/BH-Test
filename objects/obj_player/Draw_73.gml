@@ -3,8 +3,13 @@
 if(!obj_camera.pan) {
 	//Drawing Hitbox
 	if(focus || fast) {
+		draw_set_colour(c_silver);
+		draw_set_alpha(.9);
+		draw_circle(x, y, crad+2, false);
+		draw_set_alpha(1);
 		draw_set_color(focus ? c_purple : c_orange);
 		draw_circle(x, y, crad, false);
+		draw_set_colour(c_white);
 	}
 
 	if(fast && (dx != 0 || dy != 0)) {

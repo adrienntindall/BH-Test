@@ -5,17 +5,17 @@ if(global.pause && global.cur_menu == menus.pause) {
 	
 	draw_set_colour(c_black);
 	draw_set_alpha(.4);
-	draw_rectangle(0, 0, view_wport, view_hport, false);
+	draw_rectangle(0, 0, surface_get_width(application_surface), surface_get_height(application_surface), false);
 	draw_set_alpha(1);
 
-	draw_set_halign(fa_left);
+	draw_set_halign(fa_middle);
 	draw_set_valign(fa_middle);
 	draw_set_font(menu_font);
 	draw_set_colour(c_white);
 
 	for(c = 0; c < tot; c++) {
 		if(c == mpos) draw_set_colour(c_blue);
-		draw_text(view_wport/3, view_hport/3+space*c, string(menu[c]));	
+		draw_text(surface_get_width(application_surface)/2, surface_get_height(application_surface)/3+space*c, string(menu[c]));	
 		if(c == mpos) draw_set_colour(c_white);
 	}
 }

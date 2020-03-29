@@ -5,15 +5,15 @@ image_xscale = 1.2;
 image_yscale = 1.2;
 
 cshape = shape.circle;
-crad = 5;
+crad = 4;
 
 theta = 0;
 depth = 2;
 cd = array(0, 0);
 kcd = .5;
 runcd = .05;
-hp = 8;
-maxhp = 8;
+hp = 5;
+maxhp = 5;
 spd = 250;
 fspd = 155;
 qspd = 420;

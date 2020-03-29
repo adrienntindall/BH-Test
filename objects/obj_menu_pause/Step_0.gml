@@ -21,14 +21,14 @@ if(!global.pause) {
 }
 
 if(global.cur_menu == menus.pause) && (global.back_frame <= 0) {
-	var move = keyboard_check_pressed(ord("S"))-keyboard_check_pressed(ord("W"));
+	var move = keyboard_check_pressed(vk_down)-keyboard_check_pressed(vk_up);
 	mpos = (mpos + move)%tot;
 	if(mpos < 0) mpos = options.length - 1;
 
 
-	var change = keyboard_check_pressed(ord("D"))-keyboard_check_pressed(ord("A"));
+	var change = keyboard_check_pressed(vk_right)-keyboard_check_pressed(vk_left);
 
-	var select = keyboard_check_pressed(ord("E"));
+	var select = keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(vk_enter);
 
 	if(select) switch(mpos) {
 		case options.resume:
@@ -39,7 +39,7 @@ if(global.cur_menu == menus.pause) && (global.back_frame <= 0) {
 		case options.quit:
 			game_end();
 			break;
-		case options.level_edit:
+		/*case options.level_edit:
 			//room_goto(level_editor);
 			break;
 		case options.pat_edit:
@@ -47,7 +47,7 @@ if(global.cur_menu == menus.pause) && (global.back_frame <= 0) {
 			global.pause = false;
 			instance_activate_all(); 
 			if(sprite_exists(global.screenShot)) sprite_delete(global.screenShot);
-			break;
+			break;*/
 		default:
 			break;
 	}

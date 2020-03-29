@@ -4,8 +4,6 @@
 enum options
 {
 	resume,
-	level_edit,
-	pat_edit,
 	quit,
 	length
 }
@@ -16,9 +14,7 @@ enum menus {
 }
 
 menu[options.resume] = "Resume";
-menu[options.level_edit] = "Level Editor";
 menu[options.quit] = "Quit";
-menu[options.pat_edit] = "Pattern Editor";
 space = 64;
 
 mpos = 0;

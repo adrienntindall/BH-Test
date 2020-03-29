@@ -4,7 +4,11 @@ dt = global.dt;
 do_active();
 
 //Death
-if(hp <= 0) game_restart();
+if(hp <= 0) {
+	global.cont = true;
+	with(obj_continue_menu) instance_deactivate_all(true);
+	exit;
+}
 if(keyboard_check(ord("K"))) game_restart(); //a quick restart for debugging purposes only
 
 //Movement Variables
