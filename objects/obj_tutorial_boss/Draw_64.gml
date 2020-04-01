@@ -1,6 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-audio = sound_music;
-loop_point = 25.5;
-init = false;
-playMusic = true;
+draw_boss_gui();

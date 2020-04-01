@@ -34,6 +34,7 @@ if(hp <= 0) {
 	switch(phase) {
 		case 1:
 			hp = 40;
+			max_hp = hp;
 			phase++;
 			with(obj_bullet_enemy) {
 				instance_destroy();
@@ -44,5 +45,11 @@ if(hp <= 0) {
 			instance_destroy();
 			break;
 	}
+	phase_time = def_phase_time;
 	with(obj_graze_ball) instance_destroy();
+}
+
+phase_time -= dt;
+if(phase_time <= 0) {
+	hp = 0;
 }

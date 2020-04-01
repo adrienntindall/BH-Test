@@ -16,3 +16,11 @@ if(phase mod 2 == 0) {
 }
 
 draw_self();
+
+draw_set_font(font_menu);
+draw_set_halign(fa_center);
+draw_set_valign(fa_center);
+draw_set_colour(c_white);
+draw_text_transformed(x, y, string_format(phase_time, 2, 2), .8, .8, 0);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);

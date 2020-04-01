@@ -5,6 +5,7 @@
 event_inherited();
 
 hp = 12;
+max_hp = hp;
 phase = 1;
 num_attacks = 5;
 cd = zeros_arr(num_attacks);
@@ -14,3 +15,6 @@ laz_arr = n1_arr(num_attacks);
 spell_surf = surface_create(room_width-64*2, room_height-64*2);
 coff = 0;
 cspd = 20;
+
+phase_time = 20;
+def_phase_time = phase_time;

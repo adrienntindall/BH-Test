@@ -28,6 +28,7 @@ if(hp <= 0) {
 	switch(phase) {
 		case 1:
 			hp = 40;
+			max_hp = hp;
 			phase++;
 			with(obj_bullet_enemy) {
 				instance_destroy();

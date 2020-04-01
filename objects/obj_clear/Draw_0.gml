@@ -14,8 +14,10 @@ if(pulse) {
 	surface_reset_target();
 	gpu_set_blendmode(bm_normal);
 	draw_surface(surf, x-cur_rad, y-cur_rad);
+	surface_free(surf);
 	if(cur_rad >= maxrad) {
 		cur_rad = 0;
 		pulse = false;
 	}
+	
 }

@@ -8,17 +8,20 @@ if(global.cont) {
 	draw_set_colour(c_white);
 	draw_set_alpha(1);
 	draw_set_halign(fa_center);
-	draw_text_transformed(surface_get_width(application_surface)/2, surface_get_height(application_surface)/2 - 550, "Continue?", 20, 20, 0);
+
+	draw_set_font(font_menu);
+	
+	draw_text_transformed(surface_get_width(application_surface)/2, (720/2 - 225)*global.c, "Continue?", 2.2*global.c, 2.2*global.c, 0);
 	if(credit <= 0) draw_set_colour(c_ltgray);
 	else if(cur_select == 0) draw_set_colour(c_yellow); 
-	draw_text_transformed(surface_get_width(application_surface)/2, surface_get_height(application_surface)/2 - 200, "Yes", 15, 15, 0);
+	draw_text_transformed(surface_get_width(application_surface)/2, (720/2 - 100)*global.c, "Yes", global.c, global.c, 0);
 	
 	if(cur_select == 1) draw_set_colour(c_yellow);
 	else draw_set_colour(c_white);
-	draw_text_transformed(surface_get_width(application_surface)/2, surface_get_height(application_surface)/2 + 100, "No", 15, 15, 0);
+	draw_text_transformed(surface_get_width(application_surface)/2, (720/2 - 25)*global.c, "No", global.c, global.c, 0);
 	
 	draw_set_colour(c_white);
-	draw_text_transformed(surface_get_width(application_surface)/2, surface_get_height(application_surface)/2 + 400, "Credits: " + string(credit), 10, 10, 0);
+	draw_text_transformed(surface_get_width(application_surface)/2, (720/2 + 50)*global.c, "Credits: " + string(credit), .5*global.c, .5*global.c, 0);
 	draw_set_halign(fa_left);
 	draw_set_colour(c_white);
 }

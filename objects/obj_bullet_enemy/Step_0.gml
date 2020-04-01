@@ -10,5 +10,8 @@ else if(grtime < 0 && global.graze_bts[0] != -1) {
 	graze(true);
 	var gb = instance_create_depth(obj_player.x, obj_player.y, 1, global.graze_bts[floor(random(array_length_1d(global.graze_bts)))]);
 	gb.theta = random(2*pi);
+	var gr_snd = audio_play_sound(sound_graze, 2, false);
+	audio_sound_pitch(gr_snd, random(.4) + .8);
+	audio_sound_gain(gr_snd, .2, 0);
 }
 grtime = min(grtime-dt, graze(false));

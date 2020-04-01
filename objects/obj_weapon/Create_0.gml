@@ -24,3 +24,5 @@ dt = 0;
 tilemap = layer_tilemap_get_id("Borders");
 
 release_btn = ord("C");
+
+ui_sprite = noone;

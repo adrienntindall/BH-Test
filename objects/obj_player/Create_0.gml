@@ -28,12 +28,6 @@ inv_time = .5;
 invcd = 0;
 invincible=false;
 
-enum active {
-	clear,
-	length
-}
-
-//global.active_eq = array(active.clear, -1, -1, -1)
 global.active_eq = array(-1);
 global.active_own = array(-1);
 

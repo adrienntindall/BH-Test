@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "10316e21-fa71-487b-a956-8c9a063809db",
+            "Value": {
+                "id": "d9f156f8-6a8c-4f0f-8399-171a8061018e",
+                "resourcePath": "scripts\\draw_boss_gui\\draw_boss_gui.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "10564117-a5ed-4c0e-a5c8-d1f39c518b48",
             "Value": {
                 "id": "6772097e-12a2-44a1-be85-c5ae29919132",
@@ -831,6 +839,14 @@
             }
         },
         {
+            "Key": "4b49729d-f93a-4f73-9687-25d361f8322c",
+            "Value": {
+                "id": "306dbf8f-1034-4e7a-90ba-dbd390760fa2",
+                "resourcePath": "sounds\\sound_graze\\sound_graze.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "4cb9d234-a014-4fa0-aa22-8e67ac5e1c29",
             "Value": {
                 "id": "8f686f7a-216e-4998-9602-631fd1d35d65",
@@ -1098,7 +1114,7 @@
             "Key": "773f1e6a-1173-4e7d-804d-fde54aa01a8a",
             "Value": {
                 "id": "aee76e69-5642-4057-b7bc-e9c86291bb5a",
-                "resourcePath": "fonts\\menu_font\\menu_font.yy",
+                "resourcePath": "fonts\\font_menu\\font_menu.yy",
                 "resourceType": "GMFont"
             }
         },
@@ -1332,6 +1348,14 @@
                 "id": "0dbfbcd0-e7a5-4889-8ba4-59a3c02d763e",
                 "resourcePath": "scripts\\findIndex_2d\\findIndex_2d.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8eafd2bc-d68c-4fee-927c-42cf18b2b140",
+            "Value": {
+                "id": "13c02881-9855-4db1-92cd-0a22b8a7d871",
+                "resourcePath": "sounds\\sound_music\\sound_music.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -2352,6 +2376,7 @@
         "8132698f-dff1-4f1e-9688-85d263965d5b",
         "55d1692e-7a07-4fe4-9383-d956966bc0ad",
         "428778e9-b965-4191-bf5a-c8cc887932ba",
+        "10316e21-fa71-487b-a956-8c9a063809db",
         "3d750a22-c308-416e-8c89-1c00b2b06443",
         "35c1d7c2-1323-474d-b3ed-fde3380cb93f",
         "f9ca3a78-9fa6-444e-8dc4-7b609c623df6",

@@ -16,15 +16,6 @@ for(var c = 0; c < array_length_1d(global.active_eq); c++) {
 			break;
 	}
 	var obj = -1;
-	switch(global.active_eq[c]) {
-		case active.clear:
-			if(!instance_exists(obj_clear)) obj = instance_create_depth(x, y, 1, obj_clear);
-			break;
-		case -1:
-			break;
-		default:
-			show_debug_message("Note: active in slot " + string(c) + " is not defined");
-			break;
-	}
+	if(!instance_exists(global.active_eq[c])) obj = instance_create_depth(x, y, 1, global.active_eq[c]);
 	if(obj != -1) obj.release_btn = key;
 }

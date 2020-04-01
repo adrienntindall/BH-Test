@@ -10,7 +10,7 @@ if(global.pause && global.cur_menu == menus.pause) {
 
 	draw_set_halign(fa_middle);
 	draw_set_valign(fa_middle);
-	draw_set_font(menu_font);
+	draw_set_font(font_menu);
 	draw_set_colour(c_white);
 
 	for(c = 0; c < tot; c++) {

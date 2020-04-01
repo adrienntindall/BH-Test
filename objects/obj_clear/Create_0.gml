@@ -21,3 +21,5 @@ pulse = false;
 maxrad = 400;
 cur_rad = 0;
 rspd = 300;
+
+ui_sprite = spr_neutral_orb;

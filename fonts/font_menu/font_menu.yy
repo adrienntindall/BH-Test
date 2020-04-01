@@ -2,9 +2,9 @@
     "id": "773f1e6a-1173-4e7d-804d-fde54aa01a8a",
     "modelName": "GMFont",
     "mvc": "1.1",
-    "name": "menu_font",
+    "name": "font_menu",
     "AntiAlias": 1,
-    "TTFName": "",
+    "TTFName": "fonts\\font_menu\\Hattori_Hanzo.otf",
     "ascenderOffset": 3,
     "bold": false,
     "charset": 0,
@@ -1439,7 +1439,7 @@
         }
     ],
     "hinting": 0,
-    "includeTTF": false,
+    "includeTTF": true,
     "interpreter": 0,
     "italic": false,
     "kerningPairs": [
