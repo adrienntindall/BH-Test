@@ -4,3 +4,5 @@ audio = sound_music;
 loop_point = 25.5;
 init = false;
 playMusic = true;
+
+frame_sound = ds_map_create();

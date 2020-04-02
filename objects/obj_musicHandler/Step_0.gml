@@ -11,3 +11,6 @@ if(playMusic) {
 		audio_sound_set_track_position(snd, loop_point);	
 	}
 }
+
+ds_map_destroy(frame_sound);
+frame_sound = ds_map_create();

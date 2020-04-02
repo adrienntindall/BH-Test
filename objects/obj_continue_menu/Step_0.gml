@@ -17,6 +17,7 @@ if(global.cont) {
 				obj_player.hp = obj_player.maxhp;
 				credit--;
 				global.cont = false;
+				audio_resume_all();
 				break;
 			case 1:
 				game_end();

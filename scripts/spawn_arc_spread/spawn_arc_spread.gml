@@ -31,5 +31,9 @@ if(cd[clay] <= 0) {
 		if(store) arr[c] = b;
 	}
 	cd[clay] = argument6;
+	audio_play_sound_at(attack_sound[clay], x, y, 0, 100, 300, 1, false, 2);
+	var snd_amt = is_undefined(ds_map_find_value(obj_musicHandler.frame_sound, audio_get_name(attack_sound[clay]))) ?  1 : ds_map_find_value(obj_musicHandler.frame_sound, audio_get_name(attack_sound[clay])) + 1;
+	ds_map_replace(obj_musicHandler.frame_sound, audio_get_name(attack_sound[clay]), snd_amt);
+	audio_sound_gain(attack_sound[clay], def_volume[clay]/snd_amt, 0);
 }
 else cd[clay] -= dt;

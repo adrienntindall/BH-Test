@@ -52,5 +52,8 @@ w_spd = 0;
 
 defspd = 0;
 
+attack_sound = array(snd_attack_def);
+def_volume = array(.1);
+
 map_id = create_map_id(self);
 if(ds_map_find_value(global.save_data, map_id) == false) instance_destroy();

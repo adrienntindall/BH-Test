@@ -11,12 +11,14 @@ if(pbutt && global.pause) {
         global.screenShot = sprite_create_from_surface(application_surface,0,0,view_xport[0],view_yport[0],0,0,0,0);    
     }	
 	instance_deactivate_all(true);
+	audio_pause_all();
 }
 
 if(!global.pause) { 
 	if(pbutt) instance_activate_all(); 
 	if(sprite_exists(global.screenShot)) sprite_delete(global.screenShot);
 	if(pbutt) global.cur_menu = menus.pause;
+	audio_resume_all();
 	exit;
 }
 

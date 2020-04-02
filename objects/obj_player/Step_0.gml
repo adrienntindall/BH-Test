@@ -3,9 +3,12 @@ dt = global.dt;
 
 do_active();
 
+audio_listener_position(x, y, 0);
+
 //Death
 if(hp <= 0) {
 	global.cont = true;
+	audio_pause_all();
 	with(obj_continue_menu) instance_deactivate_all(true);
 	exit;
 }
@@ -76,6 +79,7 @@ if(!invincible) with(obj_bullet_enemy) {
 			other.invcd = other.inv_time;
 			obj_camera.hit = true;
 			obj_camera.t = 0;
+			audio_play_sound(snd_take_damage, 1, false);
 		}
 	}
 }

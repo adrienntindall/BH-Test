@@ -5,3 +5,7 @@
 map_id = create_map_id(self);
 
 if(ds_map_find_value(global.save_data, map_id) == false) instance_destroy();
+
+disp_time = 2;
+disp = false;
+yoff = 0;

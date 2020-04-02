@@ -1,3 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-obj_room_transition.act = true;
+audio_sound_set_track_position(close_snd, audio_sound_length(close_snd));

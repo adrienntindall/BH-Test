@@ -9,3 +9,8 @@ cspd = 230;
 define_rectangle();
 
 scale_init = abs(bbox_left-bbox_right);
+
+audio_sound_gain(snd_moving_doors, 0, 0);
+close_snd = audio_play_sound(snd_moving_doors, 3, false);
+audio_pause_sound(close_snd);
+audio_sound_gain(snd_moving_doors, .1, 0);

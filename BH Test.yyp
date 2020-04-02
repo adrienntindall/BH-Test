@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "0bfab262-d451-4e4c-9697-e01ce88ba9d2",
+            "Value": {
+                "id": "0a1e53a6-83b6-44ec-848b-3abffc904e3c",
+                "resourcePath": "scripts\\homo_arr\\homo_arr.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0c33d127-8cee-4a54-a1a2-b137948779e0",
             "Value": {
                 "id": "4f3f3768-595d-4c6d-851d-41d89c9281af",
@@ -511,6 +519,14 @@
             }
         },
         {
+            "Key": "2f65ec8d-1645-4410-9374-d24be450b9fb",
+            "Value": {
+                "id": "3761a4f0-a74d-455d-a27f-917740991a06",
+                "resourcePath": "sounds\\snd_moving_doors\\snd_moving_doors.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "2fbb0be2-20d1-4f6a-abb0-4a6ccfe9d001",
             "Value": {
                 "id": "1ba2eadd-c3ba-4ab8-a494-6059f9fd2cd6",
@@ -548,6 +564,14 @@
                 "id": "eccd8752-6f83-4a37-a530-9ed6ffc961ac",
                 "resourcePath": "sprites\\spr_light_orb\\spr_light_orb.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "31d227ee-f9c4-40bb-8afc-06787dfbd767",
+            "Value": {
+                "id": "73fedaf1-c047-4dda-8af6-c18cd388001e",
+                "resourcePath": "sounds\\snd_reward\\snd_reward.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -636,6 +660,14 @@
                 "id": "bf7ec4bf-91d2-4323-9340-105066dfa663",
                 "resourcePath": "scripts\\wall_collision\\wall_collision.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3b83b888-1f7f-47c6-ae07-aef7a130957a",
+            "Value": {
+                "id": "b90ba1e1-6d7a-4435-b1d0-0ddff4c6b59c",
+                "resourcePath": "sounds\\snd_heavy\\snd_heavy.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -756,6 +788,14 @@
                 "id": "020866d7-56e6-4f74-97b6-0c787763aa64",
                 "resourcePath": "objects\\obj_tutorial_boss_circle_card\\obj_tutorial_boss_circle_card.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "44962789-2d5c-4c81-99e4-578bed2eb159",
+            "Value": {
+                "id": "1bf844da-f7d5-4857-9cd7-4b4e0df97f25",
+                "resourcePath": "sounds\\snd_magic_attack\\snd_magic_attack.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1503,11 +1543,27 @@
             }
         },
         {
+            "Key": "9f069717-d128-47c1-a675-2613a9e0a7da",
+            "Value": {
+                "id": "4a8f9147-b768-4f63-b690-b85df09852cc",
+                "resourcePath": "sounds\\snd_attack_def\\snd_attack_def.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "9fb1ee11-44f8-4844-b844-eead30b2fd3b",
             "Value": {
                 "id": "cf7f136c-e42f-4f6e-86db-57cea34f14ec",
                 "resourcePath": "scripts\\get_min_dist_linear\\get_min_dist_linear.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a00c75e9-d0d6-409e-8170-7587723999c2",
+            "Value": {
+                "id": "c30757df-43e5-4c53-8ce6-0d0ea6e1ef4d",
+                "resourcePath": "sounds\\snd_phase_shift\\snd_phase_shift.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1620,6 +1676,14 @@
                 "id": "a7b14c9c-407e-420d-979a-1de0eac6757d",
                 "resourcePath": "objects\\obj_nature_boss\\obj_nature_boss.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "abd45adb-9997-4627-8521-1e8741224f65",
+            "Value": {
+                "id": "e2f4b849-3b5c-44fd-a759-7ec2909ff36d",
+                "resourcePath": "sounds\\snd_take_damage\\snd_take_damage.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -2362,6 +2426,7 @@
         "fdca3357-c52a-4bb3-a766-80df94c3a1e7",
         "2572d0b9-2645-4872-9ce4-b3021c65c5e4",
         "c13b7cfa-a9b2-4bb8-9cae-3bb9683b6636",
+        "0bfab262-d451-4e4c-9697-e01ce88ba9d2",
         "f0d1ac98-1c06-4eb8-8d28-63dab790bab4",
         "2dd4236c-2e0d-4e17-85ed-7f7ef64eec98",
         "add4384f-0ea8-4c0a-91db-ade3e3662d37",
