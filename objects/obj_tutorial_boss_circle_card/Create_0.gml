@@ -3,10 +3,10 @@
 
 event_inherited();
 
+define_rectangle();
+
 image_xscale = .11;
 image_yscale = .11;
-
-define_rectangle();
 
 image_blend = c_orange;
 

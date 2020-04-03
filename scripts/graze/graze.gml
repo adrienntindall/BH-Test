@@ -20,11 +20,8 @@ else if(cshape == shape.rectangle) {
 	if(abs(t0) > hrad*image_xscale) {
 		t0 = sign(t0)*hrad*image_xscale;
 	}
-	var xx = t0*cos(th) + center_x(id);
-	var yy = t0*sin(th) + center_y(id);
-	var cx = abs(obj_player.x-xx)-2;
-	var cy = abs(obj_player.y-yy)-2;
-	dist = cx*cx + cy*cy-vrad*vrad-obj_player.crad*obj_player.crad;
+	var ptheta = point_direction(obj_player.x, obj_player.y, center_x(id), center_y(id));
+	dist = power(dist_between(obj_player, id) - get_partial(id, ptheta) - get_partial(obj_player, ptheta) + 10, 2);
 }
 if(instance_exists(parent) && parent.charged) {
 	dist /= 1.2;

@@ -139,7 +139,7 @@
             "vspeed": 0,
             "vtiled": false,
             "x": 736,
-            "y": 1024
+            "y": 1088
         },
         {
             "__type": "GMRTileLayer_Model:#YoYoStudio.MVCFormat",

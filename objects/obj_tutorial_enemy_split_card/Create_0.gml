@@ -4,10 +4,10 @@
 // Inherit the parent event
 event_inherited();
 
+define_rectangle();
+
 image_xscale = .15;
 image_yscale = .15;
-
-define_rectangle();
 
 image_blend = c_orange;
 

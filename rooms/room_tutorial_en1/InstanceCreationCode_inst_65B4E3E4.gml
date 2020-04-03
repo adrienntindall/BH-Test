@@ -1,0 +1,1 @@
+define_transition(trans_dir.west, room_tutorial_en2, "en12");

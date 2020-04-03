@@ -12,21 +12,30 @@ switch(phase) {
 		clay = 0;
 		spawn_circular(6, x, y, obj_tutorial_boss_homing_card, id, pi/5*cur_bul[clay], 70, .8);
 		clay++;
-		spawn_circular(1, x, y, obj_tutorial_miniboss_fastone, id, ptheta, 30, 2.5);
-		clay++;
 		spawn_circular(20, x, y, obj_tutorial_miniboss_phase2_backbt, id, ptheta, 80, 1.2);
 		break;
 	case 2:
-	var ptheta = point_direction(x, y, obj_player.x, obj_player.y)*pi/180;
-		clay = 3;
-		var btarr = spawn_circular(6, x, y, obj_tutorial_miniboss_phase2_cluster, id, 0, 50, .8, true);
-		if(btarr != -1) {
-			for(var c = 0; c < array_length_1d(btarr); c++) {
-				btarr[c].theta = ptheta;
-			}
+		var ptheta = point_direction(x, y, obj_player.x, obj_player.y)*pi/180;
+		clay = 2;
+		for(var c = 0; c < 5; c++) {
+			spawn_arc_spread(2, obj_tutorial_miniboss_bigcard, id, ptheta-pi/16, pi/8, 30, 1.2, false);
+			clay++;
 		}
+	
+		spawn_circular(16, x, y, obj_tutorial_miniboss_phase2_backbt, id, ptheta + pi/32, 100, .2);
+		break;
+	case 3:
+		var ptheta = pi/180*point_direction(x, y, obj_player.x, obj_player.y);
+		clay = 8;
+		spawn_circular(6, x, y, obj_tutorial_boss_homing_card, id, pi/5*cur_bul[clay], 70, .6);
 		clay++;
-		spawn_arc_spread(16, obj_tutorial_miniboss_phase2_backbt, id, ptheta + pi/3, 4*pi/3, 100, .2, false);
+		spawn_circular(20, x, y, obj_tutorial_miniboss_phase2_backbt, id, ptheta, 80, 1);
+		break;
+	case 4:
+		clay = 10;
+		spawn_circular(6, x, y, obj_tutorial_boss_homing_card, id, pi/5*cur_bul[clay], 70, .8);
+		clay++;
+		spawn_circular(8, x, y, obj_tutorial_boss_hexagon_edge, id, pi/6 + pi/11*cur_bul[clay], 0, .75, false, false, false);
 		break;
 }
 
@@ -36,17 +45,27 @@ if(hp <= 0) {
 			hp = 40;
 			max_hp = hp;
 			phase++;
-			with(obj_bullet_enemy) {
-				instance_destroy();
-			}
+			
 			break;
 		case 2:
-			//room_goto(room_tutorial5_bomb_reward);
+			hp = 40;
+			max_hp = hp;
+			phase++;
+			break;
+		case 3:
+			hp = 40;
+			max_hp = hp;
+			phase++;
+			break;
+		case 4:
 			instance_destroy();
 			break;
 	}
 	phase_time = def_phase_time;
+	audio_play_sound(snd_phase_shift, 1, false);
+	audio_sound_gain(snd_phase_shift, .4, 0);
 	with(obj_graze_ball) instance_destroy();
+	with(obj_bullet_enemy) instance_destroy();
 }
 
 phase_time -= dt;

@@ -1,1 +1,1 @@
-define_transition(trans_dir.south, room_tutorial4_miniboss, "3aenmini");
+define_transition(trans_dir.south, room_tutorial_en3, "3aen3");

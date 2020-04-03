@@ -14,7 +14,7 @@ else if(pan) {
 	surface_reset_target();
 	draw_surface(pan_surf, pan_x, pan_y);
 	draw_sprite_ext(frame0_image, 0, 
-						pan_x, 
+						pan_x + (pan_dir == trans_dir.west ? -def_width : (pan_dir == trans_dir.east ? def_width : 0)), 
 						pan_y + (pan_dir == trans_dir.north ? -def_height : (pan_dir == trans_dir.south ? def_height : 0)), 
 						wratio, hratio, 0, c_white, 1);
 	switch(pan_dir) {
@@ -23,6 +23,12 @@ else if(pan) {
 			break;
 		case trans_dir.south:
 			pan_y -= pan_yv*dt;
+			break;
+		case trans_dir.east:
+			pan_x -= pan_xv*dt;
+			break;
+		case trans_dir.west:
+			pan_x += pan_xv*dt;
 			break;
 	}
 	if(t >= pan_time) {

@@ -1,3 +1,1 @@
-dir = trans_dir.south;
-r_dest = room_tutorial3_graze_reward;
-trans_id = "fogr";
+define_transition(trans_dir.south, room_tutorial_en1, "foen1");

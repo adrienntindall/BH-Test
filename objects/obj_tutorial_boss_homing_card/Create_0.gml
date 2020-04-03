@@ -4,10 +4,10 @@
 // Inherit the parent event
 event_inherited();
 
+define_rectangle();
+
 image_xscale = .15;
 image_yscale = .15;
-
-define_rectangle();
 
 phase = 1;
 phase_time = .75;

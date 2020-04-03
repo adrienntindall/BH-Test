@@ -26,7 +26,11 @@ ry1 = 0;
 ry2 = 0;
 rn = 0;
 
-fspd = 30;
+spd = 30;
+defspd = spd;
+a = 0;
+minspd = 0;
+maxspd = 0;
 
 cd[0] = 0;
 cur_bul = 0;

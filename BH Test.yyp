@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "08bfd833-045f-4bde-8e47-4d56370c9318",
+            "Value": {
+                "id": "6c03a373-a06a-4119-83bd-1223801a8fac",
+                "resourcePath": "rooms\\room_tutorial_en2\\room_tutorial_en2.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "0a23782c-e57b-4f57-a4c8-14ff9688a524",
             "Value": {
                 "id": "462ae3fc-9c2c-4c62-85d8-bf840af0525f",
@@ -503,6 +511,14 @@
             }
         },
         {
+            "Key": "2d60d0ef-ce93-4f65-ae89-6db3af257a7e",
+            "Value": {
+                "id": "a8b71180-762c-4448-9006-54ddb0c4988d",
+                "resourcePath": "sprites\\spr_enemy_wall_stalker\\spr_enemy_wall_stalker.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2dd4236c-2e0d-4e17-85ed-7f7ef64eec98",
             "Value": {
                 "id": "52d20722-8b45-479a-b283-447163087763",
@@ -580,6 +596,14 @@
                 "id": "ab801846-2345-4b64-9f32-5f93a6cd626c",
                 "resourcePath": "scripts\\y_las_lin\\y_las_lin.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "33c95d10-442e-4dbd-af3e-10a21469c5fb",
+            "Value": {
+                "id": "f0ed08ac-a6b7-4444-96b5-ce5ced0f8512",
+                "resourcePath": "sprites\\spr_spade_bt\\spr_spade_bt.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -755,6 +779,14 @@
             "Value": {
                 "id": "d94c12d5-0acd-45eb-85d8-9e6b181ae785",
                 "resourcePath": "objects\\obj_title_screen\\obj_title_screen.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "426b0ec3-73fe-4fcd-b9c8-debec01cc841",
+            "Value": {
+                "id": "76d9e1f9-003e-426c-945b-c04c5e96cf9f",
+                "resourcePath": "objects\\obj_tutorial_bt_spade\\obj_tutorial_bt_spade.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1095,11 +1127,27 @@
             }
         },
         {
+            "Key": "6e13a8a0-8150-4ed4-9c32-1d8d008b08e5",
+            "Value": {
+                "id": "f0af4ad0-4d66-4095-91ad-d1aa78df20f3",
+                "resourcePath": "objects\\obj_tutorial_pent_chaser\\obj_tutorial_pent_chaser.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6e2740e3-2674-4156-94be-444331c23559",
             "Value": {
                 "id": "0d9303a3-f6e9-4335-b0c9-52ea41091a1b",
                 "resourcePath": "views\\6e2740e3-2674-4156-94be-444331c23559.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6fd36ac0-972d-4240-be8a-8682d62bbdf6",
+            "Value": {
+                "id": "97b91902-1acb-473f-8c5d-7166c76ddf9b",
+                "resourcePath": "objects\\obj_tutorial_miniboss_bigcard\\obj_tutorial_miniboss_bigcard.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1695,6 +1743,14 @@
             }
         },
         {
+            "Key": "ad6eb141-9f33-49e6-af1c-7f4fc797c2c5",
+            "Value": {
+                "id": "3396dd33-d0be-42cb-b4e1-86a4c5d19be9",
+                "resourcePath": "scripts\\enemy_move_linear\\enemy_move_linear.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ad8c6398-0dc0-488d-b061-4a6357ddbf39",
             "Value": {
                 "id": "e5fe121f-1586-40f1-825b-c1aab1543c11",
@@ -1740,6 +1796,14 @@
                 "id": "818a91be-d682-427d-86ff-ff219fab6864",
                 "resourcePath": "views\\af64576f-a38c-454d-bac3-a6e08d2f4288.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "af8dcbac-37c2-4bfe-8c09-1360dc96f240",
+            "Value": {
+                "id": "ee0dad70-bcdf-4f55-a8fa-ecb161540679",
+                "resourcePath": "rooms\\room_tutorial_en3\\room_tutorial_en3.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -1919,6 +1983,14 @@
             }
         },
         {
+            "Key": "c3554184-a12e-439d-b710-fdfe9fa56151",
+            "Value": {
+                "id": "6e352f9e-65f8-4add-a335-c41017d48acd",
+                "resourcePath": "objects\\obj_tutorial_spade_stalker\\obj_tutorial_spade_stalker.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c3e65ab8-b970-4fad-bd53-6dcece947339",
             "Value": {
                 "id": "cb90e5d7-5fe9-4251-8606-3f53350a3831",
@@ -2092,6 +2164,14 @@
                 "id": "e66c9da9-03aa-4de9-ba55-cb5265fb99fc",
                 "resourcePath": "objects\\obj_room_transition\\obj_room_transition.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "dfcdad20-4364-4a7e-ada0-ab750edf077c",
+            "Value": {
+                "id": "60fb1792-47f7-4268-b235-224725d13b06",
+                "resourcePath": "rooms\\room_tutorial_en1\\room_tutorial_en1.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -2412,6 +2492,7 @@
         "86f577c2-6f61-40ba-bb61-947bac2de6eb",
         "76f2b9a7-c281-4d79-9db5-bce3f46953e5",
         "25370665-5788-4c2e-8bf3-071574871ea2",
+        "ad6eb141-9f33-49e6-af1c-7f4fc797c2c5",
         "66da5d31-8d04-45cf-b049-34d71fff69cc",
         "7a63b1d6-e1c6-4d87-aad6-75f2f3582cdc",
         "916d1bcf-1ebb-446e-b6ca-fad471074ce3",

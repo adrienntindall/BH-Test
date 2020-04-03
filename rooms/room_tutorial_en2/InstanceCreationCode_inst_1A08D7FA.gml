@@ -1,0 +1,1 @@
+define_transition(trans_dir.west, room_tutorial3_graze_reward, "en2gr");
