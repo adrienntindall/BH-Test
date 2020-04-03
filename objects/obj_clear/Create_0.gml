@@ -11,8 +11,9 @@ f_rad = 70;
 
 c_rad = 20;
 c_types = array(obj_graze_ball_neutral);
-c_max = array(300);
-c_amnts = array(100);
+c_max = array(30);
+c_amnts = array(10);
+c_max_charge = 3;
 
 cd = zeros_arr(1);
 clay = 0;

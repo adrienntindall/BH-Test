@@ -4,6 +4,7 @@ c_rad = 0; //collection radius
 c_types = array(0); //graze collection types
 c_amnts = array(0); //current collection ammounts
 c_max = array(0); //maximum collection ammounts
+c_max_charge = 0;
 
 rotate = false; //determines if it rotates around the player or not
 r_rad = 0; //rotation radius

@@ -5,7 +5,7 @@
 event_inherited();
 
 spd = 30;
-frad = 300;
+frad = 10;
 a = 15;
 maxspd = 50;
 minspd = 0;

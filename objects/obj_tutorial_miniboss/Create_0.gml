@@ -29,4 +29,4 @@ cspd = 20;
 phase_time = 20;
 def_phase_time = phase_time;
 
-
+surf_alpha = 0;

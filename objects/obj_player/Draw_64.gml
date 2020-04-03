@@ -19,9 +19,20 @@ for(var c = 0; c < array_length_1d(global.active_eq); c++) {
 			cmd = "Space";
 			break;
 	}
-	draw_set_font(font_menu);
 	var obj = global.active_eq[c];
+	if(!(obj != -1 && instance_exists(obj))) continue;
+	var ch = 999;
+	for(var z = 0; z < array_length_1d(obj.c_max); z++) {
+		ch = min(ch, floor(obj.c_max_charge*obj.c_amnts[z]/obj.c_max[z]));
+	}
+	draw_set_font(font_menu);
+	draw_set_valign(fa_bottom);
+	draw_text_transformed(global.c*16, global.c*(120 + c*16), cmd, global.c*.5, global.c*.5, 0);
 	draw_set_valign(fa_top);
-	if(obj != -1) draw_text_transformed(50, global.c*(80 + c*16), cmd, global.c*.7, global.c*.7, 0)
-	if(obj != -1 && instance_exists(obj)) draw_sprite_ext(obj.ui_sprite, 0, 150 + obj.x - obj.bbox_left, 200 + c*32 + obj.y - obj.bbox_top, 150/sprite_get_width(obj), 150/sprite_get_width(obj), 0, c_white, 1);  
+	for(var z = 0; z < ch; z++) {
+		draw_sprite_ext(obj.ui_sprite, 0, global.c*(75 + 35*z - sprite_get_xoffset(obj.ui_sprite)*50/sprite_get_width(obj)), 
+											global.c*(120 + c*16 - sprite_get_yoffset(obj.ui_sprite)*50/sprite_get_height(obj)), 
+											global.c*50/sprite_get_width(obj), 
+											global.c*50/sprite_get_width(obj), 0, c_white, 1); 
+	}
 }

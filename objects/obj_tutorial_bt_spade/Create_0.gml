@@ -9,4 +9,5 @@ image_yscale = .05;
 
 define_circle();
 
-spd = 1500;
+spd = 400;
+defspd = spd;

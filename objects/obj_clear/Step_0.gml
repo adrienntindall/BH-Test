@@ -4,8 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
-if(keyboard_check_pressed(release_btn) && c_amnts[0] >= 100 && !pulse) {
-	c_amnts[0] -= 100;
+if(keyboard_check_pressed(release_btn) && c_amnts[0] >= 10 && !pulse) {
+	c_amnts[0] -= 10;
 	pulse = true;
 }
 
