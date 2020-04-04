@@ -415,6 +415,14 @@
             }
         },
         {
+            "Key": "2146d904-8744-4a67-80a9-b2ae6e3d2343",
+            "Value": {
+                "id": "544ce2ec-2986-4868-bbd8-807c1edb3fd0",
+                "resourcePath": "rooms\\room_pan_test\\room_pan_test.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "229911ac-978a-4911-a273-3d57719af52b",
             "Value": {
                 "id": "dc3ad160-6b37-403d-95a0-d3901976fb73",

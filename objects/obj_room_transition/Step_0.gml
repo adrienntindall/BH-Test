@@ -16,10 +16,12 @@ if(panning) {
 				case trans_dir.east:
 					obj_player.x = bbox_right + 32;
 					obj_player.y = bbox_top + other.yoff;
+					obj_camera.pan_xv = (obj_camera.def_width - other.xsoff + bbox_right)/obj_camera.pan_time;
 					break;
 				case trans_dir.west:
 					obj_player.x = bbox_left - 32;
 					obj_player.y = bbox_top + other.yoff;
+					obj_camera.pan_xv = (obj_camera.def_width + other.xsoff - (room_width - bbox_left))/obj_camera.pan_time;
 					break;
 			}
 			obj_camera.x = obj_player.x;

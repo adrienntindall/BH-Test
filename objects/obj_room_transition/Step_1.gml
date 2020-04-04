@@ -10,6 +10,15 @@ if(objects_collide(self, obj_player)) {
 		xoff = obj_player.x-bbox_left;
 		yoff = obj_player.y - bbox_top;
 		
+		switch(dir) {
+			case trans_dir.east:
+				xsoff = bbox_right;
+				break;
+			case trans_dir.west:
+				xsoff = room_width-bbox_left;
+				break;
+		}
+		
 		obj_camera.pan_surf = surface_create(obj_camera.def_width, obj_camera.def_height);
 		obj_camera.pan_image = sprite_create_from_surface(application_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),0,0,0,0);
 		camera_set_view_target(obj_camera.playerCamera, noone);

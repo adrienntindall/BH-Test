@@ -1,0 +1,1 @@
+define_transition(trans_dir.west, room_pan_test, "pan");

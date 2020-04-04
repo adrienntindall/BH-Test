@@ -24,7 +24,7 @@ pan_x = 0;
 pan_y = 0;
 pan_time = .4;
 //pan_time = 2;
-pan_xv = def_width/(2*pan_time);
+pan_xv = def_width/(pan_time);
 pan_yv = def_height/(2*pan_time);
 pan_dir = -1;
 
