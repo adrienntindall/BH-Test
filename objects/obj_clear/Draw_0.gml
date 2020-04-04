@@ -13,7 +13,7 @@ if(pulse) {
 	draw_circle_colour(cur_rad, cur_rad, cur_rad-4, c_white, c_white, false);
 	surface_reset_target();
 	gpu_set_blendmode(bm_normal);
-	draw_surface(surf, x-cur_rad, y-cur_rad);
+	draw_surface(surf, x0-cur_rad, y0-cur_rad);
 	surface_free(surf);
 	if(cur_rad >= maxrad) {
 		cur_rad = 0;

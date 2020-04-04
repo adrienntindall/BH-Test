@@ -1,0 +1,1 @@
+define_transition(trans_dir.north, room_tutorial4a_enemy, "boen4");

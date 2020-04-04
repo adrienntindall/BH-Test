@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 if(phase mod 2 == 0) {
+	if(!surface_exists(spell_surf)) spell_surf = surface_create(room_width-64*2, room_height-64*2);
 	surface_set_target(spell_surf);
 	draw_sprite_ext(spr_galaxy_back, 0, 0, 0, surface_get_width(spell_surf)/sprite_get_width(spr_galaxy_back),
 					surface_get_height(spell_surf)/sprite_get_height(spr_galaxy_back),

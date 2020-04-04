@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "04a7f007-c613-4ec2-be72-db80bc37a45e",
+            "Value": {
+                "id": "09c8571f-e424-4760-85ae-2568bd084423",
+                "resourcePath": "scripts\\end_audio\\end_audio.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "04db56ae-34f9-4a42-8b0f-c1ff059f68d2",
             "Value": {
                 "id": "aa81eb9e-2e7d-4623-ab6c-dee019dd99f2",
@@ -268,6 +276,14 @@
                 "id": "1b0e6294-bbc5-4acd-9fe2-8a8e999419c3",
                 "resourcePath": "sprites\\spr_nature_boss\\spr_nature_boss.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "19048151-8828-4548-90ba-075b6d474dee",
+            "Value": {
+                "id": "93861fe3-f577-481f-bf84-8b2ec5f72b4e",
+                "resourcePath": "sounds\\snd_midboss_theme\\snd_midboss_theme.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1127,6 +1143,14 @@
             }
         },
         {
+            "Key": "6d2e9526-c586-446d-909e-453a70b5df57",
+            "Value": {
+                "id": "0d807ce0-7d46-4545-9904-97621de1c6d7",
+                "resourcePath": "sounds\\snd_bomb\\snd_bomb.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "6e13a8a0-8150-4ed4-9c32-1d8d008b08e5",
             "Value": {
                 "id": "f0af4ad0-4d66-4095-91ad-d1aa78df20f3",
@@ -1156,6 +1180,14 @@
                 "id": "ab2b9e9f-ce38-4f08-ae8d-5a133f9469ce",
                 "resourcePath": "sprites\\spr_bullet\\spr_bullet.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7493ffa2-bd98-4408-8cc8-39ba80e578ba",
+            "Value": {
+                "id": "cb672978-58cc-4f28-a8b6-689ed379ec06",
+                "resourcePath": "rooms\\room_tutorial_en4\\room_tutorial_en4.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -2247,6 +2279,14 @@
             }
         },
         {
+            "Key": "e6dec53d-a37f-4a77-938c-2f51caa8b5c5",
+            "Value": {
+                "id": "67e2a912-e23e-4aff-80c7-fa849b0129a3",
+                "resourcePath": "scripts\\rectangle_debug\\rectangle_debug.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e74471da-6c3e-4ab3-9ecb-f387bf2e45d3",
             "Value": {
                 "id": "fe6a5274-2223-47eb-86cf-3f664226c33d",
@@ -2523,6 +2563,8 @@
         "55d1692e-7a07-4fe4-9383-d956966bc0ad",
         "428778e9-b965-4191-bf5a-c8cc887932ba",
         "10316e21-fa71-487b-a956-8c9a063809db",
+        "e6dec53d-a37f-4a77-938c-2f51caa8b5c5",
+        "04a7f007-c613-4ec2-be72-db80bc37a45e",
         "3d750a22-c308-416e-8c89-1c00b2b06443",
         "35c1d7c2-1323-474d-b3ed-fde3380cb93f",
         "f9ca3a78-9fa6-444e-8dc4-7b609c623df6",

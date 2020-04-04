@@ -13,6 +13,3 @@ defspd = 300;
 spd = 300;
 a = 100;
 maxspd = 600;
-
-centerx = 0;
-centery = 0;

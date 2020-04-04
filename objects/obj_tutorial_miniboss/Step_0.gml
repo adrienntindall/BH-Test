@@ -40,12 +40,13 @@ switch(phase) {
 }
 
 if(hp <= 0) {
+	phase_time = def_phase_time;
 	switch(phase) {
 		case 1:
 			hp = 40;
 			max_hp = hp;
+			phase_time = 60;
 			phase++;
-			
 			break;
 		case 2:
 			hp = 40;
@@ -55,13 +56,13 @@ if(hp <= 0) {
 		case 3:
 			hp = 40;
 			max_hp = hp;
+			phase_time = 40;
 			phase++;
 			break;
 		case 4:
 			instance_destroy();
 			break;
 	}
-	phase_time = def_phase_time;
 	audio_play_sound(snd_phase_shift, 1, false);
 	audio_sound_gain(snd_phase_shift, .4, 0);
 	with(obj_graze_ball) instance_destroy();

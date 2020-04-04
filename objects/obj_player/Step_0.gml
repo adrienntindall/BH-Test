@@ -75,6 +75,9 @@ if(!invincible) with(obj_bullet_enemy) {
 		if(objects_collide(other, id)) {
 			other.hp--; //disable to turn off damage to player
 			if(destroy) instance_destroy();
+			with(obj_bullet_enemy) {
+				if(dist_to_player() < 150 && destroy) instance_destroy();
+			}
 			other.invincible=true;
 			other.invcd = other.inv_time;
 			obj_camera.hit = true;

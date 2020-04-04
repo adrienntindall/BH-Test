@@ -7,7 +7,7 @@ if(closing) {
 	image_xscale += global.dt*cspd/scale_init;
 	tilemap_set(bmap_id, 1, bbox_right/64, y/64);
 	audio_resume_sound(close_snd);
-	if(abs(image_xscale) > 4.5) {
+	if(abs(image_xscale) > max_tiles) {
 		image_xscale = sign(image_xscale)*4.5;
 		audio_pause_sound(close_snd);
 	}

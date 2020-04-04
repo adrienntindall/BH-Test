@@ -8,6 +8,8 @@ closing = false;
 cspd = 230;
 define_rectangle();
 
+max_tiles = 4.5;
+
 scale_init = abs(bbox_left-bbox_right);
 
 audio_sound_gain(snd_moving_doors, 0, 0);
