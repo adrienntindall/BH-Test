@@ -18,7 +18,6 @@ charge = max(0, charge-dt);
 for(var c = 1; c < layers+1; c++) {
 	var temp = bullets[c];
 	for(var q = 0; q < array_length_1d(temp); q++) {
-		if(!instance_exists(temp[q])) continue;	
 		switch(c mod 2) {
 			case 0:
 				temp[q].theta += tan_v/(c*drad)*dt; 

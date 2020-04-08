@@ -66,7 +66,7 @@ if(hp <= 0) {
 	audio_play_sound(snd_phase_shift, 1, false);
 	audio_sound_gain(snd_phase_shift, .4, 0);
 	with(obj_graze_ball) instance_destroy();
-	with(obj_bullet_enemy) instance_destroy();
+	with(obj_bullet_enemy) if(destroy) instance_destroy();
 	surf_alpha = 0;
 }
 
