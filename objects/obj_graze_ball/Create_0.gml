@@ -12,3 +12,4 @@ defspd = 200;
 is_knife = false;
 is_split_cannon = false;
 dmg = 0;
+define_circle();

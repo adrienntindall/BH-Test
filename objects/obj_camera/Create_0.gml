@@ -22,11 +22,15 @@ pan_surf = -1;
 pan_image = -1;
 pan_x = 0;
 pan_y = 0;
-pan_time = .4;
+pan_px = 0;
+pan_py = 0;
+pan_time = .35;
 //pan_time = 2;
 pan_xv = def_width/(pan_time);
 pan_yv = def_height/(2*pan_time);
 pan_dir = -1;
+pan_pxv = 0;
+pan_pyv = 0;
 
 cur_frame = 0;
 frame0_image = -1;

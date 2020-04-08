@@ -26,25 +26,25 @@ else if(pan) {
 	switch(pan_dir) {
 		case trans_dir.north:
 			x = lerp(x, obj_player.x, .1);
-			y = min(pan_y, room_height - def_height/2);
+			y = room_height-def_height/2;
 			if(x > room_width - def_width/2) x = room_width - def_width/2;
 			if(x < def_width/2) x = def_width/2;
 			break;
 		case trans_dir.south:
 			x = lerp(x, obj_player.x, .1);
-			y = max(pan_y, def_height/2);
+			y = def_height/2;
 			if(x > room_width - def_width/2) x = room_width - def_width/2;
 			if(x < def_width/2) x = def_width/2;
 			break;
 		case trans_dir.west:
 			y = lerp(y, obj_player.y, .1);
-			x = max(pan_x, def_width/2);
+			x = room_width-def_width/2;
 			if(y > room_height - def_height/2) y = room_height - def_height/2;
 			if(y < def_height/2) y = def_height/2;
 			break;
 		case trans_dir.east:
 			y = lerp(y, obj_player.y, .1);
-			x = max(pan_x, room_width-def_width/2);
+			x = def_width/2;
 			if(y > room_height - def_height/2) y = room_height - def_height/2;
 			if(y < def_height/2) y = def_height/2;
 			break;

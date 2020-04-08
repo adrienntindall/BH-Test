@@ -33,6 +33,25 @@ theta = arctan2(dy, dx);
 dx = s*cos(theta)*abs(dx);
 dy = s*sin(theta)*abs(dy);
 
+//Animation
+if(cur_f_time <= 0) {
+	if(dx > 0) {
+		image_index = ((image_index + 1) mod 8) + (fast ? 16 : 0);
+	}
+	else if(dx < 0) {
+		image_index = ((image_index + 1) mod 8) + (fast ? 24 : 8);
+	}
+	else if(dy > 0) {
+		image_index = ((image_index + 1) mod 7) + 32;
+	}
+	else if(dy < 0) {
+		image_index = ((image_index + 1) mod 7) + 39;
+	}
+	if(focus || fast) cur_f_time = ff_time;
+	else cur_f_time = f_time;
+}
+cur_f_time -= dt;
+
 //Collisions
 var bbox_side;
 

@@ -1,8 +1,9 @@
 /// @description Defining Variables
 event_inherited();
 
-image_xscale = 1.2;
-image_yscale = 1.2;
+image_xscale = 3.6;
+image_yscale = 3.6;
+image_speed = 0;
 
 cshape = shape.circle;
 crad = 4;
@@ -27,6 +28,10 @@ dt = 0;
 inv_time = .5;
 invcd = 0;
 invincible=false;
+
+f_time = 1/15;
+ff_time = 1/10;
+cur_f_time = 0;
 
 global.active_eq = array(-1);
 global.active_own = array(-1);

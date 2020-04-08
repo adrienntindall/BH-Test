@@ -9,4 +9,5 @@ if(cur_frame < 2) {
 		surface_reset_target();
 		draw_surface(pan_surf, pan_x, pan_y);
 	}
+	draw_sprite_ext(obj_player.sprite_index, obj_player.image_index, pan_px, pan_py, obj_player.image_xscale, obj_player.image_yscale, 0, c_white, 1);
 }

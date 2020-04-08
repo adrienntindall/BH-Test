@@ -2231,6 +2231,14 @@
             }
         },
         {
+            "Key": "e1ccc031-1e18-4f0f-ae61-6eea5f338977",
+            "Value": {
+                "id": "28b2e60c-6a6f-496d-8408-073531257d62",
+                "resourcePath": "scripts\\angle_between\\angle_between.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e1d4818c-64e0-4912-8540-334e3db8ae4b",
             "Value": {
                 "id": "11484d32-81f8-498f-b683-502cd2b443ee",
@@ -2602,7 +2610,8 @@
         "8d4adb12-fe87-44ce-87d3-37cf91c9c195",
         "9fb1ee11-44f8-4844-b844-eead30b2fd3b",
         "3df65b16-290a-4ea4-8f16-e3748061dd6d",
-        "36b8f64e-3dc5-4988-94f6-d732635cdfa6"
+        "36b8f64e-3dc5-4988-94f6-d732635cdfa6",
+        "e1ccc031-1e18-4f0f-ae61-6eea5f338977"
     ],
     "tutorial": ""
 }

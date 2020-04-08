@@ -20,17 +20,22 @@ else if(pan) {
 	switch(pan_dir) {
 		case trans_dir.north:
 			pan_y += pan_yv*dt;
+			pan_py += pan_pyv*dt;
 			break;
 		case trans_dir.south:
 			pan_y -= pan_yv*dt;
+			pan_py -= pan_pyv*dt;
 			break;
 		case trans_dir.east:
 			pan_x -= pan_xv*dt;
+			pan_px -= pan_pxv*dt;
 			break;
 		case trans_dir.west:
 			pan_x += pan_xv*dt;
+			pan_px += pan_pxv*dt;
 			break;
 	}
+	draw_sprite_ext(obj_player.sprite_index, obj_player.image_index, pan_px, pan_py, obj_player.image_xscale, obj_player.image_yscale, 0, c_white, 1);
 	if(t >= pan_time) {
 		surface_free(pan_surf);
 		sprite_delete(pan_image);

@@ -1,4 +1,6 @@
 ///objects_collide(obj1, obj2)
+///@param obj1
+///@param obj2
 var obj1 = argument0;
 var obj2 = argument1;
 

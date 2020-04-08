@@ -11,15 +11,24 @@ if(objects_collide(self, obj_player)) {
 		yoff = obj_player.y - bbox_top;
 		
 		switch(dir) {
+			case trans_dir.north:
+				ysoff = room_height - bbox_top;
+				break;
+			case trans_dir.south:
+				yoff = obj_player.y - bbox_bottom;
+				ysoff = bbox_bottom;
+				break;
 			case trans_dir.east:
 				xsoff = bbox_right;
+				xoff = obj_player.x-bbox_right;
 				break;
 			case trans_dir.west:
 				xsoff = room_width-bbox_left;
 				break;
 		}
-		
 		obj_camera.pan_surf = surface_create(obj_camera.def_width, obj_camera.def_height);
+		var tm = layer_tilemap_get_id("Tiles_1");
+		draw_tilemap(tm, 0, 0);
 		obj_camera.pan_image = sprite_create_from_surface(application_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),0,0,0,0);
 		camera_set_view_target(obj_camera.playerCamera, noone);
 		

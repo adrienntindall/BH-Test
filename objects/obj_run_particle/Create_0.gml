@@ -5,6 +5,8 @@ dt = 0;
 
 image_alpha = .3 + random(.5);
 
+define_rectangle();
+
 image_xscale *= 5;
 image_yscale *= 5;
 

@@ -5,6 +5,7 @@ trans_id = -1; //The destination obj of the same time must have the same id as t
 dir = -1; //pan direction when the player is coming to the location
 xoff = 0;
 yoff = 0;
+ysoff = 0;
 xsoff = 0;
 draw_frame0 = false;
 panning = false;
