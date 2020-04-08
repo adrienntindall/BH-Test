@@ -90,7 +90,7 @@ else {
 }
 
 if(!invincible) with(obj_bullet_enemy) {
-	if(other.tdash_own && charged) {
+	if(other.tdash_own && !other.focus && other.fast && other.tdash_charge > 0 && charged) {
 		if(objects_collide(other, id)) {
 			if(destroy) instance_destroy();
 		}
@@ -109,6 +109,10 @@ if(!invincible) with(obj_bullet_enemy) {
 			audio_play_sound(snd_take_damage, 1, false);
 		}
 	}
+}
+
+if(tdash_own && fast && !focus) {
+	tdash_charge = max(0, tdash_charge-dt);
 }
 
 //Cooldown Updates

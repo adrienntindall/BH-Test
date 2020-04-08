@@ -34,6 +34,9 @@ ff_time = 1/10;
 cur_f_time = 0;
 
 tdash_own = false;
+tdash_charge = 0;
+tdash_charge_max = .5;
+
 
 global.active_eq = array(-1);
 global.active_own = array(-1);

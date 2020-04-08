@@ -36,3 +36,8 @@ for(var c = 0; c < array_length_1d(global.active_eq); c++) {
 											global.c*50/sprite_get_width(obj), 0, c_white, 1); 
 	}
 }
+
+if(tdash_own) {
+	draw_sprite_ext(spr_dash_effect, 0, 5, surface_get_height(application_surface) - global.c*30, global.c*(25/sprite_get_width(spr_dash_effect)), global.c*(25/sprite_get_height(spr_dash_effect)), 0, c_white, 1);
+	draw_healthbar(global.c*40, surface_get_height(application_surface) - global.c*30, global.c*160, surface_get_height(application_surface) - global.c*5, 100*tdash_charge/tdash_charge_max, c_gray, c_green, c_yellow, 0, true, true);
+}
