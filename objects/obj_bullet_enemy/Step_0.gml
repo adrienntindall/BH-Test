@@ -3,7 +3,7 @@
 image_blend = c_white;
 
 dt = global.dt;
-if(instance_exists(parent) && parent.slow) dt*=.75;
+//if(instance_exists(parent) && parent.slow) dt*=.75;
 
 if(grtime == "nah") graze(true);
 else if(grtime < 0 && global.graze_bts[0] != -1) {

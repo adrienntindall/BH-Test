@@ -5,5 +5,5 @@
 event_inherited();
 with(other) {
 	charged = true;
-	charged_time += 1;
+	charged_time += .5;
 }

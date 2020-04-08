@@ -30,6 +30,7 @@ if(cd[clay] <= 0) {
 		else b.theta = th_bt;
 		b.image_angle = b.theta*180/pi;
 		b.parent = argument[4];
+		apply_bullet_status(b);
 		b.t0 = t;
 	}
 	cur_bul[clay]++;

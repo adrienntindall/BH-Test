@@ -1,1 +1,1 @@
-define_transition(trans_dir.west, room_pan_test, "pan");
+define_transition(trans_dir.west, room_electric_test, "el");

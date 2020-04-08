@@ -23,7 +23,7 @@ else if(cshape == shape.rectangle) {
 	var ptheta = point_direction(obj_player.x, obj_player.y, center_x(id), center_y(id));
 	dist = power(dist_between(obj_player, id) - get_partial(id, ptheta) - get_partial(obj_player, ptheta) + 10, 2);
 }
-if(instance_exists(parent) && parent.charged) {
+if(charged) {
 	dist /= 1.2;
 	dist /= parent.charge_mult;
 	charge_mult = 1;

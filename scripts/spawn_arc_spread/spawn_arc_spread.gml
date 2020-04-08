@@ -25,6 +25,7 @@ if(cd[clay] <= 0) {
 		var yy = y-r*sin(theta_c);
 		b = instance_create_depth(xx,yy,0,bt);
 		b.parent = argument2;
+		apply_bullet_status(b);
 		b.theta = theta + c*dtheta/n;
 		b.image_angle = b.theta*180/pi;
 		cur_bul[clay]++;

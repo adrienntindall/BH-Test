@@ -90,7 +90,12 @@ else {
 }
 
 if(!invincible) with(obj_bullet_enemy) {
-	if(!other.invincible)  {	
+	if(other.tdash_own && charged) {
+		if(objects_collide(other, id)) {
+			if(destroy) instance_destroy();
+		}
+	}
+	else if(!other.invincible)  {	
 		if(objects_collide(other, id)) {
 			other.hp--; //disable to turn off damage to player
 			if(destroy) instance_destroy();

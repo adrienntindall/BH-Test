@@ -33,6 +33,8 @@ f_time = 1/15;
 ff_time = 1/10;
 cur_f_time = 0;
 
+tdash_own = false;
+
 global.active_eq = array(-1);
 global.active_own = array(-1);
 

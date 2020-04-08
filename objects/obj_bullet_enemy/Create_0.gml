@@ -24,3 +24,4 @@ grtime = "nah";
 dt = 0;
 destroy = true;
 isLazer = false;
+charged = false;

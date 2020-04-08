@@ -36,12 +36,17 @@ if(cd[clay] <= 0) {
 			b.x = xxx;
 			b.y = yyy;
 			b.in_theta = th;
+			b.parent = argument[4];
+			apply_bullet_status(b);
 		}
-		else if(copy) b = bullet_copy(bt, xxx, yyy);
-		else b = instance_create_depth(xxx,yyy,0,bt);
+		else {
+			if(copy) b = bullet_copy(bt, xxx, yyy);
+			else b = instance_create_depth(xxx,yyy,0,bt);
+			b.parent = argument[4];
+			apply_bullet_status(b);
+		}
 		b.theta = th;
 		b.image_angle = b.theta*180/pi;
-		b.parent = argument[4];
 		b.t0 = t;
 		cd[clay] = argument[7];
 		//if(variable_instance_exists(id, "cur_bul")) 
