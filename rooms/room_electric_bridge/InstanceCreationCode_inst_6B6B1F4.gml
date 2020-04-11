@@ -1,0 +1,1 @@
+define_transition(trans_dir.west, room_electric_block1, "bridge_b1");

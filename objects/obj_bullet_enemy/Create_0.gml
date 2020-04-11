@@ -25,3 +25,7 @@ dt = 0;
 destroy = true;
 isLazer = false;
 charged = false;
+limit_bts = -1;
+wall_bounce = false;
+bounce = 0;
+max_bounce = 1;

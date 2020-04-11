@@ -1,7 +1,13 @@
 ///move_linear()
 
 if(wall_collision(tilemap, id, spd*dt*cos(theta), -spd*dt*sin(theta))) {
-	if(object_index != obj_weapon && object_get_parent(object_index) != obj_weapon) instance_destroy();
+	if(wall_bounce) {
+		if(bounce == max_bounce) instance_destroy();
+		if(wall_collision(tilemap, id, 0, -spd*dt*sin(theta))) theta = -theta;
+		else theta = pi-theta;
+		bounce++;
+	}
+	else instance_destroy();
 }
 
 x += spd*dt*cos(theta);

@@ -12,4 +12,7 @@ defspd = 200;
 is_knife = false;
 is_split_cannon = false;
 dmg = 0;
+wall_bounce = true;
+bounce = 0;
+max_bounce = 999;
 define_circle();

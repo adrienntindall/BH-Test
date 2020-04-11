@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "03dbf396-af86-4406-8345-4a695352292e",
+            "Value": {
+                "id": "5b064e90-d2b8-4a1a-a1da-89366105401b",
+                "resourcePath": "rooms\\room_electric_bridge\\room_electric_bridge.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "04a7f007-c613-4ec2-be72-db80bc37a45e",
             "Value": {
                 "id": "09c8571f-e424-4760-85ae-2568bd084423",
@@ -1023,6 +1031,22 @@
             }
         },
         {
+            "Key": "5a25bddd-9e2c-4884-bf58-c0d92e6262dd",
+            "Value": {
+                "id": "28818165-7615-473b-b6aa-581a74a91135",
+                "resourcePath": "objects\\obj_electric_en_charge_spread\\obj_electric_en_charge_spread.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5cd6d352-e4c4-45fa-a64a-ff7a1340cec2",
+            "Value": {
+                "id": "afc3e3e9-c12b-4b5d-83ab-2edd9a089c7c",
+                "resourcePath": "sprites\\spr_checkpoint_bar\\spr_checkpoint_bar.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5d24dada-96ad-4cde-b3af-bc892b96bb5a",
             "Value": {
                 "id": "5406b020-a40b-4e8b-8b51-b91dee640867",
@@ -1035,6 +1059,14 @@
             "Value": {
                 "id": "8504f4b0-3471-42e0-8531-b363c0f9081e",
                 "resourcePath": "objects\\obj_tutorial_miniboss_phase2_backbt\\obj_tutorial_miniboss_phase2_backbt.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5f9993a9-fb52-4dd0-bbee-2a410b4dcaa4",
+            "Value": {
+                "id": "047f2d86-a5a8-4f0e-9396-9fa9824ec152",
+                "resourcePath": "objects\\obj_electric_activator_bt\\obj_electric_activator_bt.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1092,6 +1124,14 @@
                 "id": "5875766d-608a-4d44-b934-7ae9f092c4cc",
                 "resourcePath": "scripts\\tilemap_collision_line\\tilemap_collision_line.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6ad3519a-7eea-4d44-ad3d-234b9433819b",
+            "Value": {
+                "id": "392720d3-3404-428e-a932-ba58a48038a2",
+                "resourcePath": "objects\\obj_city_checkpoint\\obj_city_checkpoint.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1519,6 +1559,14 @@
             }
         },
         {
+            "Key": "951ba72c-9127-4cb7-8dc3-eec5ec6261f7",
+            "Value": {
+                "id": "92ec3f2d-c914-4681-91c2-9505adc2eb70",
+                "resourcePath": "sprites\\spr_checkpoint_base\\spr_checkpoint_base.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9782bc9c-95ef-458e-8a03-c9996fdb577b",
             "Value": {
                 "id": "cf492f1a-5e1b-4880-9128-cd61bfafdf9b",
@@ -1855,6 +1903,14 @@
             }
         },
         {
+            "Key": "b702e82e-ace6-411d-9f49-134eba424198",
+            "Value": {
+                "id": "e18ade6c-4dba-406d-a670-e9f89b4735dc",
+                "resourcePath": "objects\\obj_electric_en_charge_simp\\obj_electric_en_charge_simp.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b7b7c742-d636-49a3-b603-3ce3b4ea2f23",
             "Value": {
                 "id": "5e0c1e51-09df-41f0-808e-259410573971",
@@ -1907,6 +1963,14 @@
             "Value": {
                 "id": "1b688010-d444-4b47-84d8-39ac09e45fe4",
                 "resourcePath": "objects\\obj_graze_ball_ice\\obj_graze_ball_ice.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "bc72f1f6-8171-4325-973b-c181b1850909",
+            "Value": {
+                "id": "fe2f5b99-56c4-4055-b4f8-ad00d04458bc",
+                "resourcePath": "objects\\obj_electric_bt_charge_fast\\obj_electric_bt_charge_fast.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2071,6 +2135,14 @@
             }
         },
         {
+            "Key": "cf55ae24-8a6b-4af2-980d-afe5ec5f7d04",
+            "Value": {
+                "id": "c0d62640-141a-4e6e-89a0-4e4a92189477",
+                "resourcePath": "scripts\\wp_move_linear\\wp_move_linear.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d16e644e-b2f7-4076-b106-44a30b656ef7",
             "Value": {
                 "id": "d8afbb0e-4522-431f-b9cd-7496876f9b86",
@@ -2092,6 +2164,22 @@
                 "id": "f647c1db-5bb9-4203-bc7a-2df4dde756cc",
                 "resourcePath": "sprites\\spr_fire_orb\\spr_fire_orb.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d60feddb-76cf-4694-af32-38aaab65994c",
+            "Value": {
+                "id": "a135626b-ab71-40de-9fca-254d82cfc819",
+                "resourcePath": "rooms\\room_electric_block2\\room_electric_block2.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "d6eb0a03-d757-4217-b487-a01b7e0ba308",
+            "Value": {
+                "id": "8113e390-aecd-431b-a54c-59e5e1ec28d3",
+                "resourcePath": "rooms\\room_electric_block1\\room_electric_block1.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -2351,6 +2439,14 @@
             }
         },
         {
+            "Key": "f12b1d93-a53f-40b0-b29a-2c161c14a2a5",
+            "Value": {
+                "id": "d2159b0e-2b98-4661-9fa8-8d31da37b895",
+                "resourcePath": "objects\\obj_electric_charged_activator\\obj_electric_charged_activator.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f28982fd-226e-4702-aa06-ce746cd68987",
             "Value": {
                 "id": "c2fd856b-a187-433c-bf0b-fa1fc7d629e9",
@@ -2522,6 +2618,7 @@
         "35c1d7c2-1323-474d-b3ed-fde3380cb93f",
         "f9ca3a78-9fa6-444e-8dc4-7b609c623df6",
         "c1325b86-86b3-4b5d-b643-401350d75a85",
+        "cf55ae24-8a6b-4af2-980d-afe5ec5f7d04",
         "4e07a7ac-dd45-4eb0-b78c-ff0c3083a81a",
         "b918023e-745b-43ab-a376-435583e21970",
         "1b6cfdfe-46d4-458c-adbc-9dd7f7205dae",

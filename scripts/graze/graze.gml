@@ -25,7 +25,7 @@ else if(cshape == shape.rectangle) {
 }
 if(charged) {
 	dist /= 1.2;
-	dist /= parent.charge_mult;
+	if(instance_exists(parent)) dist /= parent.charge_mult;
 	charge_mult = 1;
 }
 

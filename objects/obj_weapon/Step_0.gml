@@ -27,6 +27,6 @@ if(follow)  {
 		dt = global.dt;
 		theta = point_direction(x, y, obj_player.x, obj_player.y)*pi/180;
 		spd = dtp/defspd;
-		move_linear();
+		wp_move_linear();
 	}
 }
