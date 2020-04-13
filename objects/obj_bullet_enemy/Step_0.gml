@@ -6,13 +6,13 @@ dt = global.dt;
 //if(instance_exists(parent) && parent.slow) dt*=.75;
 
 if(grtime == "nah") graze(true);
-else if(grtime < 0 && global.graze_bts[0] != -1) {
+else if(grtime < 0 && do_graze) {
 	graze(true);
 	var gb;
 	if(limit_bts == -1) {
 		gb = instance_create_depth(obj_player.x, obj_player.y, 1, global.graze_bts[floor(random(array_length_1d(global.graze_bts)))]);
 	}
-	else {
+	else if(global.graze_bts[0] != -1) {
 		gb = instance_create_depth(obj_player.x, obj_player.y, 1, limit_bts[floor(random(array_length_1d(limit_bts)))]);
 	}
 	gb.theta = random(2*pi);

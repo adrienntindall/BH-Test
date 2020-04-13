@@ -1,0 +1,1 @@
+define_transition(trans_dir.east, room_electric_block6, "b5b6");

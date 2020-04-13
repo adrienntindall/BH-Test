@@ -29,3 +29,5 @@ limit_bts = -1;
 wall_bounce = false;
 bounce = 0;
 max_bounce = 1;
+active = true;
+do_graze = true;

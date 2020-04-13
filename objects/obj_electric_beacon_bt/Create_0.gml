@@ -7,3 +7,7 @@ event_inherited();
 define_circle();
 
 destroy = false;
+
+active = false;
+
+do_graze = false;

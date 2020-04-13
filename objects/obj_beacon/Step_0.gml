@@ -28,6 +28,13 @@ for(var c = 1; c < layers+1; c++) {
 		}
 		temp[q].x = x + c*drad*cos(temp[q].theta);
 		temp[q].y = y + c*drad*sin(temp[q].theta);
+		if(charge == 0) {
+			temp[q].image_alpha = max(0, temp[q].image_alpha - dt*2);
+		}
+		else {
+			temp[q].image_alpha = min(1, temp[q].image_alpha + dt*2);
+		}
+		temp[q].active = temp[q].image_alpha >= .7;
 	}
 }
 

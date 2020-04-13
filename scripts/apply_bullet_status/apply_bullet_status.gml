@@ -4,4 +4,4 @@
 var bt = argument0;
 var par = bt.parent;
 
-bt.charged = par.charged;
+if(par.charged) bt.charged = true;
